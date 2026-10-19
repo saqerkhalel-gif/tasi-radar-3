@@ -1,0 +1,67 @@
+name: TASI Radar 3.0
+
+on:
+
+  workflow_dispatch:
+
+  schedule:
+
+    # Sunday to Thursday, 4:30 PM Riyadh time
+
+    - cron: '30 13 * * 0-4'
+
+permissions:
+
+  contents: read
+
+jobs:
+
+  scan:
+
+    runs-on: ubuntu-latest
+
+    timeout-minutes: 30
+
+    steps:
+
+      - name: Checkout repository
+
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+
+        uses: actions/setup-python@v5
+
+        with:
+
+          python-version: '3.11'
+
+          cache: pip
+
+      - name: Install dependencies
+
+        run: pip install -r requirements.txt
+
+      - name: Run TASI Radar
+
+        run: python radar.py
+
+      - name: Run tests
+
+        run: python -m unittest discover -s tests -p 'test_*.py'
+
+      - name: Upload scan results
+
+        if: always()
+
+        uses: actions/upload-artifact@v4
+
+        with:
+
+          name: tasi-radar-results
+
+          path: output/
+
+          if-no-files-found: warn
+
+          retention-days: 30
