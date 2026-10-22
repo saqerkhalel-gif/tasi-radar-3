@@ -1,0 +1,2087 @@
+{
+  "run_utc": "2026-10-22T22:29:55.460407+00:00",
+  "run_url": "https://github.com/saqerkhalel-gif/tasi-radar-3/actions/runs/39865359885",
+  "expected_session": "2026-10-22",
+  "ranking_note": "Technical candidates including Early Watch/Wait; conditional targets, not guaranteed profits; Entry requires fresh stock and TASI data, 200 bars, synchronized RS, price+volume, upside >=10%, reward/risk >=2.",
+  "count": 20,
+  "results": [
+    {
+      "symbol": "2180",
+      "date": "2026-10-22",
+      "last_bar": "2026-10-22",
+      "close": 37.46,
+      "classification": "Early Watch",
+      "technical_score": 69,
+      "data_fresh": true,
+      "expected_session": "2026-10-22",
+      "confidence": "high",
+      "missing_indicators": [],
+      "entry_blockers": [
+        "price_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": true,
+        "trend_ema": true,
+        "range_contraction": true,
+        "higher_lows": true,
+        "volume": 89918.0,
+        "volume_avg20_prior": 59925.25,
+        "volume_ratio20": 1.500503,
+        "rsi14": 54.979751,
+        "macd": 0.78404,
+        "macd_signal": 0.813528,
+        "macd_histogram": -0.029488,
+        "atr14": 1.174963,
+        "ema20": 37.256012,
+        "ema50": 35.862003,
+        "ema200": 33.065998,
+        "support20": 34.299999,
+        "resistance20": 40.0,
+        "relative_strength_20d_vs_tasi": 13.449922,
+        "relative_strength_60d_vs_tasi": 23.876468
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": 13.449922,
+          "stock_return_pct": 4.92997,
+          "tasi_return_pct": -8.519952,
+          "start_date": "2026-09-24",
+          "end_date": "2026-10-22",
+          "sessions": 20,
+          "reason": null
+        },
+        "60": {
+          "value_pct_points": 23.876468,
+          "stock_return_pct": 15.831787,
+          "tasi_return_pct": -8.044682,
+          "start_date": "2026-07-29",
+          "end_date": "2026-10-22",
+          "sessions": 60,
+          "reason": null
+        }
+      },
+      "scenario": {
+        "trigger": 40.0,
+        "reclaim_trigger": 37.256012,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 35.110075,
+        "conditional_target": 40.0,
+        "target_method": "previous 90-session high",
+        "upside_pct": 6.780566,
+        "reward_risk": 1.080885,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "up",
+        "high": 40.0,
+        "high_date": "2026-10-12",
+        "low": 30.98,
+        "low_date": "2026-06-18",
+        "retracement": {
+          "38.2": 36.55436,
+          "50": 35.49,
+          "61.8": 34.42564
+        },
+        "extension": {
+          "127.2": 42.45344,
+          "161.8": 45.57436
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 355,
+      "first_bar": "2025-05-20",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "فيبكو",
+      "sector": "المواد الأساسية",
+      "price_repairs": [
+        {
+          "date": "2026-10-22",
+          "field": "Close",
+          "source": "Yahoo regularMarketPrice",
+          "quote_timestamp": "2026-10-22T15:11:28+03:00",
+          "value": 37.46,
+          "reason": "daily Close was null; quote date and OHLC range validated"
+        }
+      ]
+    },
+    {
+      "symbol": "7211",
+      "date": "2026-10-22",
+      "last_bar": "2026-10-22",
+      "close": 30.3,
+      "classification": "Early Watch",
+      "technical_score": 49,
+      "data_fresh": true,
+      "expected_session": "2026-10-22",
+      "confidence": "high",
+      "missing_indicators": [],
+      "entry_blockers": [
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": false,
+        "trend_ema": true,
+        "range_contraction": false,
+        "higher_lows": true,
+        "volume": 350851.0,
+        "volume_avg20_prior": 346291.4,
+        "volume_ratio20": 1.013167,
+        "rsi14": 58.493653,
+        "macd": 0.812187,
+        "macd_signal": 0.880773,
+        "macd_histogram": -0.068586,
+        "atr14": 1.152209,
+        "ema20": 29.43237,
+        "ema50": 27.661744,
+        "ema200": 25.286729,
+        "support20": 26.1,
+        "resistance20": 32.400002,
+        "relative_strength_20d_vs_tasi": 19.508967,
+        "relative_strength_60d_vs_tasi": 50.969205
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": 19.508967,
+          "stock_return_pct": 10.989014,
+          "tasi_return_pct": -8.519952,
+          "start_date": "2026-09-24",
+          "end_date": "2026-10-22",
+          "sessions": 20,
+          "reason": null
+        },
+        "60": {
+          "value_pct_points": 50.969205,
+          "stock_return_pct": 42.924523,
+          "tasi_return_pct": -8.044682,
+          "start_date": "2026-07-29",
+          "end_date": "2026-10-22",
+          "sessions": 60,
+          "reason": null
+        }
+      },
+      "scenario": {
+        "trigger": 32.400002,
+        "reclaim_trigger": 29.43237,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 27.995582,
+        "conditional_target": 32.400002,
+        "target_method": "previous 90-session high",
+        "upside_pct": 6.930698,
+        "reward_risk": 0.911294,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "up",
+        "high": 32.400002,
+        "high_date": "2026-10-07",
+        "low": 20.16,
+        "low_date": "2026-07-14",
+        "retracement": {
+          "38.2": 27.724321,
+          "50": 26.280001,
+          "61.8": 24.83568
+        },
+        "extension": {
+          "127.2": 35.729282,
+          "161.8": 39.964323
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 355,
+      "first_bar": "2025-05-20",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "عزم",
+      "sector": "التطبيقات وخدمات التقنية",
+      "price_repairs": [
+        {
+          "date": "2026-10-22",
+          "field": "Close",
+          "source": "Yahoo regularMarketPrice",
+          "quote_timestamp": "2026-10-22T15:16:51+03:00",
+          "value": 30.3,
+          "reason": "daily Close was null; quote date and OHLC range validated"
+        }
+      ]
+    },
+    {
+      "symbol": "2350",
+      "date": "2026-10-22",
+      "last_bar": "2026-10-22",
+      "close": 4.87,
+      "classification": "Early Watch",
+      "technical_score": 47,
+      "data_fresh": true,
+      "expected_session": "2026-10-22",
+      "confidence": "high",
+      "missing_indicators": [],
+      "entry_blockers": [
+        "price_not_confirmed",
+        "trend_not_confirmed"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": true,
+        "trend_ema": false,
+        "range_contraction": false,
+        "higher_lows": true,
+        "volume": 15175999.0,
+        "volume_avg20_prior": 3639798.55,
+        "volume_ratio20": 4.169461,
+        "rsi14": 49.430362,
+        "macd": -0.104334,
+        "macd_signal": -0.115644,
+        "macd_histogram": 0.01131,
+        "atr14": 0.150991,
+        "ema20": 4.831879,
+        "ema50": 4.996023,
+        "ema200": 5.180221,
+        "support20": 4.52,
+        "resistance20": 5.09,
+        "relative_strength_20d_vs_tasi": 5.146937,
+        "relative_strength_60d_vs_tasi": 6.230165
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": 5.146937,
+          "stock_return_pct": -3.373015,
+          "tasi_return_pct": -8.519952,
+          "start_date": "2026-09-24",
+          "end_date": "2026-10-22",
+          "sessions": 20,
+          "reason": null
+        },
+        "60": {
+          "value_pct_points": 6.230165,
+          "stock_return_pct": -1.814517,
+          "tasi_return_pct": -8.044682,
+          "start_date": "2026-07-29",
+          "end_date": "2026-10-22",
+          "sessions": 60,
+          "reason": null
+        }
+      },
+      "scenario": {
+        "trigger": 5.09,
+        "reclaim_trigger": 4.831879,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 4.568018,
+        "conditional_target": 5.62,
+        "target_method": "previous 90-session high",
+        "upside_pct": 15.400408,
+        "reward_risk": 2.48359,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "down",
+        "high": 5.62,
+        "high_date": "2026-08-04",
+        "low": 4.52,
+        "low_date": "2026-10-15",
+        "retracement": {
+          "38.2": 4.9402,
+          "50": 5.07,
+          "61.8": 5.1998
+        },
+        "extension": {
+          "127.2": 4.2208,
+          "161.8": 3.8402
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 355,
+      "first_bar": "2025-05-20",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "كيان السعودية",
+      "sector": "المواد الأساسية",
+      "price_repairs": [
+        {
+          "date": "2026-10-22",
+          "field": "Close",
+          "source": "Yahoo regularMarketPrice",
+          "quote_timestamp": "2026-10-22T15:19:54+03:00",
+          "value": 4.87,
+          "reason": "daily Close was null; quote date and OHLC range validated"
+        }
+      ]
+    },
+    {
+      "symbol": "2330",
+      "date": "2026-10-22",
+      "last_bar": "2026-10-22",
+      "close": 23.0,
+      "classification": "Early Watch",
+      "technical_score": 47,
+      "data_fresh": true,
+      "expected_session": "2026-10-22",
+      "confidence": "high",
+      "missing_indicators": [],
+      "entry_blockers": [
+        "price_not_confirmed",
+        "trend_not_confirmed"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": true,
+        "trend_ema": false,
+        "range_contraction": false,
+        "higher_lows": true,
+        "volume": 1037856.0,
+        "volume_avg20_prior": 651423.4,
+        "volume_ratio20": 1.593213,
+        "rsi14": 53.978778,
+        "macd": 0.169256,
+        "macd_signal": -0.092003,
+        "macd_histogram": 0.261259,
+        "atr14": 0.731992,
+        "ema20": 22.565538,
+        "ema50": 22.822843,
+        "ema200": 25.119999,
+        "support20": 21.110001,
+        "resistance20": 24.370001,
+        "relative_strength_20d_vs_tasi": 13.25584,
+        "relative_strength_60d_vs_tasi": 12.022978
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": 13.25584,
+          "stock_return_pct": 4.735888,
+          "tasi_return_pct": -8.519952,
+          "start_date": "2026-09-24",
+          "end_date": "2026-10-22",
+          "sessions": 20,
+          "reason": null
+        },
+        "60": {
+          "value_pct_points": 12.022978,
+          "stock_return_pct": 3.978296,
+          "tasi_return_pct": -8.044682,
+          "start_date": "2026-07-29",
+          "end_date": "2026-10-22",
+          "sessions": 60,
+          "reason": null
+        }
+      },
+      "scenario": {
+        "trigger": 24.370001,
+        "reclaim_trigger": 22.565538,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 21.536015,
+        "conditional_target": 26.58,
+        "target_method": "previous 90-session high",
+        "upside_pct": 15.565217,
+        "reward_risk": 2.445381,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "down",
+        "high": 26.58,
+        "high_date": "2026-06-18",
+        "low": 21.110001,
+        "low_date": "2026-10-05",
+        "retracement": {
+          "38.2": 23.19954,
+          "50": 23.845,
+          "61.8": 24.49046
+        },
+        "extension": {
+          "127.2": 19.622161,
+          "161.8": 17.729541
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 355,
+      "first_bar": "2025-05-20",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "المتقدمة",
+      "sector": "المواد الأساسية",
+      "price_repairs": [
+        {
+          "date": "2026-10-22",
+          "field": "Close",
+          "source": "Yahoo regularMarketPrice",
+          "quote_timestamp": "2026-10-22T15:18:09+03:00",
+          "value": 23.0,
+          "reason": "daily Close was null; quote date and OHLC range validated"
+        }
+      ]
+    },
+    {
+      "symbol": "4030",
+      "date": "2026-10-22",
+      "last_bar": "2026-10-22",
+      "close": 34.8,
+      "classification": "Early Watch",
+      "technical_score": 44,
+      "data_fresh": true,
+      "expected_session": "2026-10-22",
+      "confidence": "high",
+      "missing_indicators": [],
+      "entry_blockers": [
+        "price_not_confirmed",
+        "trend_not_confirmed",
+        "upside_below_10pct_or_no_target"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": true,
+        "trend_ema": false,
+        "range_contraction": true,
+        "higher_lows": true,
+        "volume": 1959797.0,
+        "volume_avg20_prior": 1068246.1,
+        "volume_ratio20": 1.834593,
+        "rsi14": 46.130333,
+        "macd": 0.125195,
+        "macd_signal": 0.266372,
+        "macd_histogram": -0.141177,
+        "atr14": 0.598877,
+        "ema20": 35.189859,
+        "ema50": 34.414092,
+        "ema200": 31.36386,
+        "support20": 34.5,
+        "resistance20": 36.880001,
+        "relative_strength_20d_vs_tasi": 5.186619,
+        "relative_strength_60d_vs_tasi": 20.522949
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": 5.186619,
+          "stock_return_pct": -3.333333,
+          "tasi_return_pct": -8.519952,
+          "start_date": "2026-09-24",
+          "end_date": "2026-10-22",
+          "sessions": 20,
+          "reason": null
+        },
+        "60": {
+          "value_pct_points": 20.522949,
+          "stock_return_pct": 12.478268,
+          "tasi_return_pct": -8.044682,
+          "start_date": "2026-07-29",
+          "end_date": "2026-10-22",
+          "sessions": 60,
+          "reason": null
+        }
+      },
+      "scenario": {
+        "trigger": 36.880001,
+        "reclaim_trigger": 35.189859,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 34.5,
+        "conditional_target": 36.880001,
+        "target_method": "previous 90-session high",
+        "upside_pct": 5.977015,
+        "reward_risk": 6.933337,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "up",
+        "high": 36.880001,
+        "high_date": "2026-09-29",
+        "low": 28.522478,
+        "low_date": "2026-08-02",
+        "retracement": {
+          "38.2": 33.687427,
+          "50": 32.70124,
+          "61.8": 31.715052
+        },
+        "extension": {
+          "127.2": 39.153247,
+          "161.8": 42.04495
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 355,
+      "first_bar": "2025-05-20",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "البحري",
+      "sector": "النقل",
+      "price_repairs": [
+        {
+          "date": "2026-10-22",
+          "field": "Close",
+          "source": "Yahoo regularMarketPrice",
+          "quote_timestamp": "2026-10-22T15:15:31+03:00",
+          "value": 34.8,
+          "reason": "daily Close was null; quote date and OHLC range validated"
+        }
+      ]
+    },
+    {
+      "symbol": "1323",
+      "date": "2026-10-22",
+      "last_bar": "2026-10-22",
+      "close": 24.6,
+      "classification": "Early Watch",
+      "technical_score": 41,
+      "data_fresh": true,
+      "expected_session": "2026-10-22",
+      "confidence": "high",
+      "missing_indicators": [],
+      "entry_blockers": [
+        "price_not_confirmed",
+        "trend_not_confirmed"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": true,
+        "trend_ema": false,
+        "range_contraction": false,
+        "higher_lows": true,
+        "volume": 468595.0,
+        "volume_avg20_prior": 51892.65,
+        "volume_ratio20": 9.030084,
+        "rsi14": 46.626834,
+        "macd": -0.457403,
+        "macd_signal": -0.547072,
+        "macd_histogram": 0.089669,
+        "atr14": 0.579833,
+        "ema20": 24.619141,
+        "ema50": 25.364235,
+        "ema200": 26.474819,
+        "support20": 23.34,
+        "resistance20": 25.559999,
+        "relative_strength_20d_vs_tasi": 5.830076,
+        "relative_strength_60d_vs_tasi": -1.046226
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": 5.830076,
+          "stock_return_pct": -2.689876,
+          "tasi_return_pct": -8.519952,
+          "start_date": "2026-09-24",
+          "end_date": "2026-10-22",
+          "sessions": 20,
+          "reason": null
+        },
+        "60": {
+          "value_pct_points": -1.046226,
+          "stock_return_pct": -9.090907,
+          "tasi_return_pct": -8.044682,
+          "start_date": "2026-07-29",
+          "end_date": "2026-10-22",
+          "sessions": 60,
+          "reason": null
+        }
+      },
+      "scenario": {
+        "trigger": 25.559999,
+        "reclaim_trigger": 24.619141,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 23.440334,
+        "conditional_target": 28.540001,
+        "target_method": "previous 90-session high",
+        "upside_pct": 16.016264,
+        "reward_risk": 3.39753,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "down",
+        "high": 28.540001,
+        "high_date": "2026-08-05",
+        "low": 23.34,
+        "low_date": "2026-10-15",
+        "retracement": {
+          "38.2": 25.3264,
+          "50": 25.940001,
+          "61.8": 26.553601
+        },
+        "extension": {
+          "127.2": 21.9256,
+          "161.8": 20.1264
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 350,
+      "first_bar": "2025-05-27",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "يو سي آي سي",
+      "sector": "المواد الأساسية",
+      "price_repairs": [
+        {
+          "date": "2026-10-22",
+          "field": "Close",
+          "source": "Yahoo regularMarketPrice",
+          "quote_timestamp": "2026-10-22T15:18:49+03:00",
+          "value": 24.6,
+          "reason": "daily Close was null; quote date and OHLC range validated"
+        }
+      ]
+    },
+    {
+      "symbol": "4014",
+      "date": "2026-10-22",
+      "last_bar": "2026-10-22",
+      "close": 26.0,
+      "classification": "Early Watch",
+      "technical_score": 40,
+      "data_fresh": true,
+      "expected_session": "2026-10-22",
+      "confidence": "high",
+      "missing_indicators": [],
+      "entry_blockers": [
+        "price_not_confirmed",
+        "trend_not_confirmed"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": true,
+        "trend_ema": false,
+        "range_contraction": false,
+        "higher_lows": true,
+        "volume": 173158.0,
+        "volume_avg20_prior": 96871.15,
+        "volume_ratio20": 1.787508,
+        "rsi14": 44.219546,
+        "macd": -0.307223,
+        "macd_signal": -0.331123,
+        "macd_histogram": 0.023901,
+        "atr14": 0.847261,
+        "ema20": 26.455772,
+        "ema50": 27.054998,
+        "ema200": 29.218434,
+        "support20": 25.0,
+        "resistance20": 28.379999,
+        "relative_strength_20d_vs_tasi": 2.791164,
+        "relative_strength_60d_vs_tasi": 3.773696
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": 2.791164,
+          "stock_return_pct": -5.728789,
+          "tasi_return_pct": -8.519952,
+          "start_date": "2026-09-24",
+          "end_date": "2026-10-22",
+          "sessions": 20,
+          "reason": null
+        },
+        "60": {
+          "value_pct_points": 3.773696,
+          "stock_return_pct": -4.270986,
+          "tasi_return_pct": -8.044682,
+          "start_date": "2026-07-29",
+          "end_date": "2026-10-22",
+          "sessions": 60,
+          "reason": null
+        }
+      },
+      "scenario": {
+        "trigger": 28.379999,
+        "reclaim_trigger": 26.455772,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 25.0,
+        "conditional_target": 30.4,
+        "target_method": "previous 90-session high",
+        "upside_pct": 16.923075,
+        "reward_risk": 4.4,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "down",
+        "high": 30.4,
+        "high_date": "2026-07-26",
+        "low": 25.0,
+        "low_date": "2026-10-01",
+        "retracement": {
+          "38.2": 27.0628,
+          "50": 27.7,
+          "61.8": 28.3372
+        },
+        "extension": {
+          "127.2": 23.5312,
+          "161.8": 21.6628
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 355,
+      "first_bar": "2025-05-20",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "دار المعدات",
+      "sector": "الرعاية الصحية",
+      "price_repairs": [
+        {
+          "date": "2026-10-22",
+          "field": "Close",
+          "source": "Yahoo regularMarketPrice",
+          "quote_timestamp": "2026-10-22T15:18:39+03:00",
+          "value": 26.0,
+          "reason": "daily Close was null; quote date and OHLC range validated"
+        }
+      ]
+    },
+    {
+      "symbol": "1325",
+      "date": "2026-10-22",
+      "last_bar": "2026-10-22",
+      "close": 2.51,
+      "classification": "Early Watch",
+      "technical_score": 39,
+      "data_fresh": true,
+      "expected_session": "2026-10-22",
+      "confidence": "high",
+      "missing_indicators": [],
+      "entry_blockers": [
+        "price_not_confirmed",
+        "trend_not_confirmed"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": true,
+        "trend_ema": false,
+        "range_contraction": false,
+        "higher_lows": true,
+        "volume": 17210647.0,
+        "volume_avg20_prior": 11120166.3,
+        "volume_ratio20": 1.547697,
+        "rsi14": 49.869828,
+        "macd": 0.247559,
+        "macd_signal": 0.248384,
+        "macd_histogram": -0.000825,
+        "atr14": 0.222195,
+        "ema20": 2.617643,
+        "ema50": 2.335507,
+        "ema200": 2.083849,
+        "support20": 1.81,
+        "resistance20": 3.88,
+        "relative_strength_20d_vs_tasi": 42.030591,
+        "relative_strength_60d_vs_tasi": 24.248381
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": 42.030591,
+          "stock_return_pct": 33.510639,
+          "tasi_return_pct": -8.519952,
+          "start_date": "2026-09-24",
+          "end_date": "2026-10-22",
+          "sessions": 20,
+          "reason": null
+        },
+        "60": {
+          "value_pct_points": 24.248381,
+          "stock_return_pct": 16.203699,
+          "tasi_return_pct": -8.044682,
+          "start_date": "2026-07-29",
+          "end_date": "2026-10-22",
+          "sessions": 60,
+          "reason": null
+        }
+      },
+      "scenario": {
+        "trigger": 3.88,
+        "reclaim_trigger": 2.617643,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 2.06561,
+        "conditional_target": 3.88,
+        "target_method": "previous 90-session high",
+        "upside_pct": 54.581678,
+        "reward_risk": 3.082881,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "up",
+        "high": 3.88,
+        "high_date": "2026-10-15",
+        "low": 1.81,
+        "low_date": "2026-09-30",
+        "retracement": {
+          "38.2": 3.08926,
+          "50": 2.845,
+          "61.8": 2.60074
+        },
+        "extension": {
+          "127.2": 4.44304,
+          "161.8": 5.15926
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 355,
+      "first_bar": "2025-05-20",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "حديد وطني",
+      "sector": "المواد الأساسية",
+      "price_repairs": [
+        {
+          "date": "2026-10-22",
+          "field": "Close",
+          "source": "Yahoo regularMarketPrice",
+          "quote_timestamp": "2026-10-22T15:19:54+03:00",
+          "value": 2.51,
+          "reason": "daily Close was null; quote date and OHLC range validated"
+        }
+      ]
+    },
+    {
+      "symbol": "8120",
+      "date": "2026-10-22",
+      "last_bar": "2026-10-22",
+      "close": 12.17,
+      "classification": "Early Watch",
+      "technical_score": 34,
+      "data_fresh": true,
+      "expected_session": "2026-10-22",
+      "confidence": "high",
+      "missing_indicators": [],
+      "entry_blockers": [
+        "price_not_confirmed",
+        "trend_not_confirmed"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": true,
+        "trend_ema": false,
+        "range_contraction": false,
+        "higher_lows": true,
+        "volume": 129108.0,
+        "volume_avg20_prior": 73620.95,
+        "volume_ratio20": 1.753686,
+        "rsi14": 28.9431,
+        "macd": -0.405804,
+        "macd_signal": -0.4286,
+        "macd_histogram": 0.022796,
+        "atr14": 0.423071,
+        "ema20": 12.731335,
+        "ema50": 13.290824,
+        "ema200": 12.938395,
+        "support20": 11.51,
+        "resistance20": 13.67,
+        "relative_strength_20d_vs_tasi": 0.023711,
+        "relative_strength_60d_vs_tasi": -2.073486
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": 0.023711,
+          "stock_return_pct": -8.496242,
+          "tasi_return_pct": -8.519952,
+          "start_date": "2026-09-24",
+          "end_date": "2026-10-22",
+          "sessions": 20,
+          "reason": null
+        },
+        "60": {
+          "value_pct_points": -2.073486,
+          "stock_return_pct": -10.118168,
+          "tasi_return_pct": -8.044682,
+          "start_date": "2026-07-29",
+          "end_date": "2026-10-22",
+          "sessions": 60,
+          "reason": null
+        }
+      },
+      "scenario": {
+        "trigger": 13.67,
+        "reclaim_trigger": 12.731335,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 11.51,
+        "conditional_target": 15.34,
+        "target_method": "previous 90-session high",
+        "upside_pct": 26.047659,
+        "reward_risk": 4.803032,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "down",
+        "high": 15.34,
+        "high_date": "2026-09-08",
+        "low": 11.51,
+        "low_date": "2026-10-11",
+        "retracement": {
+          "38.2": 12.97306,
+          "50": 13.425,
+          "61.8": 13.87694
+        },
+        "extension": {
+          "127.2": 10.46824,
+          "161.8": 9.14306
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 355,
+      "first_bar": "2025-05-20",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "إتحاد الخليج الأهلية",
+      "sector": "التأمين",
+      "price_repairs": [
+        {
+          "date": "2026-10-22",
+          "field": "Close",
+          "source": "Yahoo regularMarketPrice",
+          "quote_timestamp": "2026-10-22T15:10:48+03:00",
+          "value": 12.17,
+          "reason": "daily Close was null; quote date and OHLC range validated"
+        }
+      ]
+    },
+    {
+      "symbol": "4190",
+      "date": "2026-10-22",
+      "last_bar": "2026-10-22",
+      "close": 16.34,
+      "classification": "Early Watch",
+      "technical_score": 32,
+      "data_fresh": true,
+      "expected_session": "2026-10-22",
+      "confidence": "high",
+      "missing_indicators": [],
+      "entry_blockers": [
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "trend_not_confirmed"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": false,
+        "trend_ema": false,
+        "range_contraction": false,
+        "higher_lows": true,
+        "volume": 2466772.0,
+        "volume_avg20_prior": 1930892.15,
+        "volume_ratio20": 1.27753,
+        "rsi14": 45.765463,
+        "macd": 0.103633,
+        "macd_signal": 0.081288,
+        "macd_histogram": 0.022346,
+        "atr14": 0.398493,
+        "ema20": 16.610823,
+        "ema50": 16.537337,
+        "ema200": 15.411392,
+        "support20": 15.9,
+        "resistance20": 17.33,
+        "relative_strength_20d_vs_tasi": 9.259784,
+        "relative_strength_60d_vs_tasi": 8.535719
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": 9.259784,
+          "stock_return_pct": 0.739832,
+          "tasi_return_pct": -8.519952,
+          "start_date": "2026-09-24",
+          "end_date": "2026-10-22",
+          "sessions": 20,
+          "reason": null
+        },
+        "60": {
+          "value_pct_points": 8.535719,
+          "stock_return_pct": 0.491037,
+          "tasi_return_pct": -8.044682,
+          "start_date": "2026-07-29",
+          "end_date": "2026-10-22",
+          "sessions": 60,
+          "reason": null
+        }
+      },
+      "scenario": {
+        "trigger": 17.33,
+        "reclaim_trigger": 16.610823,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 15.9,
+        "conditional_target": 18.167883,
+        "target_method": "previous 90-session high",
+        "upside_pct": 11.186552,
+        "reward_risk": 4.154275,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "down",
+        "high": 18.167883,
+        "high_date": "2026-07-15",
+        "low": 15.81535,
+        "low_date": "2026-07-26",
+        "retracement": {
+          "38.2": 16.714017,
+          "50": 16.991616,
+          "61.8": 17.269215
+        },
+        "extension": {
+          "127.2": 15.175461,
+          "161.8": 14.361484
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 355,
+      "first_bar": "2025-05-20",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "جرير",
+      "sector": "تجزئة وتوزيع السلع الكمالية",
+      "price_repairs": [
+        {
+          "date": "2026-10-22",
+          "field": "Close",
+          "source": "Yahoo regularMarketPrice",
+          "quote_timestamp": "2026-10-22T15:18:31+03:00",
+          "value": 16.34,
+          "reason": "daily Close was null; quote date and OHLC range validated"
+        }
+      ]
+    },
+    {
+      "symbol": "2250",
+      "date": "2026-10-22",
+      "last_bar": "2026-10-22",
+      "close": 11.57,
+      "classification": "Early Watch",
+      "technical_score": 32,
+      "data_fresh": true,
+      "expected_session": "2026-10-22",
+      "confidence": "high",
+      "missing_indicators": [],
+      "entry_blockers": [
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "trend_not_confirmed"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": false,
+        "trend_ema": false,
+        "range_contraction": false,
+        "higher_lows": true,
+        "volume": 934172.0,
+        "volume_avg20_prior": 949958.65,
+        "volume_ratio20": 0.983382,
+        "rsi14": 47.13392,
+        "macd": -0.094771,
+        "macd_signal": -0.133886,
+        "macd_histogram": 0.039115,
+        "atr14": 0.319877,
+        "ema20": 11.63244,
+        "ema50": 11.942135,
+        "ema200": 12.794022,
+        "support20": 11.2,
+        "resistance20": 12.3,
+        "relative_strength_20d_vs_tasi": 7.324393,
+        "relative_strength_60d_vs_tasi": 0.604682
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": 7.324393,
+          "stock_return_pct": -1.19556,
+          "tasi_return_pct": -8.519952,
+          "start_date": "2026-09-24",
+          "end_date": "2026-10-22",
+          "sessions": 20,
+          "reason": null
+        },
+        "60": {
+          "value_pct_points": 0.604682,
+          "stock_return_pct": -7.44,
+          "tasi_return_pct": -8.044682,
+          "start_date": "2026-07-29",
+          "end_date": "2026-10-22",
+          "sessions": 60,
+          "reason": null
+        }
+      },
+      "scenario": {
+        "trigger": 12.3,
+        "reclaim_trigger": 11.63244,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 11.2,
+        "conditional_target": 14.35,
+        "target_method": "previous 90-session high",
+        "upside_pct": 24.027661,
+        "reward_risk": 7.513511,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "down",
+        "high": 14.25,
+        "high_date": "2026-06-18",
+        "low": 11.2,
+        "low_date": "2026-10-15",
+        "retracement": {
+          "38.2": 12.3651,
+          "50": 12.725,
+          "61.8": 13.0849
+        },
+        "extension": {
+          "127.2": 10.3704,
+          "161.8": 9.3151
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 355,
+      "first_bar": "2025-05-20",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "المجموعة السعودية",
+      "sector": "المواد الأساسية",
+      "price_repairs": [
+        {
+          "date": "2026-10-22",
+          "field": "Close",
+          "source": "Yahoo regularMarketPrice",
+          "quote_timestamp": "2026-10-22T15:18:35+03:00",
+          "value": 11.57,
+          "reason": "daily Close was null; quote date and OHLC range validated"
+        }
+      ]
+    },
+    {
+      "symbol": "1830",
+      "date": "2026-10-22",
+      "last_bar": "2026-10-22",
+      "close": 77.2,
+      "classification": "Early Watch",
+      "technical_score": 32,
+      "data_fresh": true,
+      "expected_session": "2026-10-22",
+      "confidence": "high",
+      "missing_indicators": [],
+      "entry_blockers": [
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "trend_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": false,
+        "trend_ema": false,
+        "range_contraction": false,
+        "higher_lows": true,
+        "volume": 131777.0,
+        "volume_avg20_prior": 105367.85,
+        "volume_ratio20": 1.250638,
+        "rsi14": 47.249041,
+        "macd": 0.714581,
+        "macd_signal": 0.337276,
+        "macd_histogram": 0.377305,
+        "atr14": 2.685068,
+        "ema20": 78.39668,
+        "ema50": 78.105596,
+        "ema200": 85.951493,
+        "support20": 71.050003,
+        "resistance20": 83.199997,
+        "relative_strength_20d_vs_tasi": 11.384705,
+        "relative_strength_60d_vs_tasi": 9.28251
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": 11.384705,
+          "stock_return_pct": 2.864753,
+          "tasi_return_pct": -8.519952,
+          "start_date": "2026-09-24",
+          "end_date": "2026-10-22",
+          "sessions": 20,
+          "reason": null
+        },
+        "60": {
+          "value_pct_points": 9.28251,
+          "stock_return_pct": 1.237828,
+          "tasi_return_pct": -8.044682,
+          "start_date": "2026-07-29",
+          "end_date": "2026-10-22",
+          "sessions": 60,
+          "reason": null
+        }
+      },
+      "scenario": {
+        "trigger": 83.199997,
+        "reclaim_trigger": 78.39668,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 71.829864,
+        "conditional_target": 84.800003,
+        "target_method": "previous 90-session high",
+        "upside_pct": 9.844564,
+        "reward_risk": 1.415235,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "up",
+        "high": 84.800003,
+        "high_date": "2026-08-04",
+        "low": 68.977093,
+        "low_date": "2026-07-21",
+        "retracement": {
+          "38.2": 78.755651,
+          "50": 76.888548,
+          "61.8": 75.021444
+        },
+        "extension": {
+          "127.2": 89.103835,
+          "161.8": 94.578562
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 355,
+      "first_bar": "2025-05-20",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "لجام للرياضة",
+      "sector": "الخدمات الاستهلاكية",
+      "price_repairs": [
+        {
+          "date": "2026-10-22",
+          "field": "Close",
+          "source": "Yahoo regularMarketPrice",
+          "quote_timestamp": "2026-10-22T15:16:39+03:00",
+          "value": 77.2,
+          "reason": "daily Close was null; quote date and OHLC range validated"
+        }
+      ]
+    },
+    {
+      "symbol": "1120",
+      "date": "2026-10-22",
+      "last_bar": "2026-10-22",
+      "close": 59.8,
+      "classification": "Early Watch",
+      "technical_score": 32,
+      "data_fresh": true,
+      "expected_session": "2026-10-22",
+      "confidence": "high",
+      "missing_indicators": [],
+      "entry_blockers": [
+        "price_not_confirmed",
+        "trend_not_confirmed"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": true,
+        "trend_ema": false,
+        "range_contraction": true,
+        "higher_lows": false,
+        "volume": 9395453.0,
+        "volume_avg20_prior": 6153607.35,
+        "volume_ratio20": 1.52682,
+        "rsi14": 29.432375,
+        "macd": -1.097585,
+        "macd_signal": -0.865118,
+        "macd_histogram": -0.232467,
+        "atr14": 0.904492,
+        "ema20": 61.904503,
+        "ema50": 63.12762,
+        "ema200": 64.3529,
+        "support20": 59.549999,
+        "resistance20": 64.800003,
+        "relative_strength_20d_vs_tasi": 3.21512,
+        "relative_strength_60d_vs_tasi": 6.055869
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": 3.21512,
+          "stock_return_pct": -5.304832,
+          "tasi_return_pct": -8.519952,
+          "start_date": "2026-09-24",
+          "end_date": "2026-10-22",
+          "sessions": 20,
+          "reason": null
+        },
+        "60": {
+          "value_pct_points": 6.055869,
+          "stock_return_pct": -1.988813,
+          "tasi_return_pct": -8.044682,
+          "start_date": "2026-07-29",
+          "end_date": "2026-10-22",
+          "sessions": 60,
+          "reason": null
+        }
+      },
+      "scenario": {
+        "trigger": 64.800003,
+        "reclaim_trigger": 61.904503,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 59.549999,
+        "conditional_target": 68.223234,
+        "target_method": "previous 90-session high",
+        "upside_pct": 14.085676,
+        "reward_risk": 33.692835,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "down",
+        "high": 68.223234,
+        "high_date": "2026-08-26",
+        "low": 59.450001,
+        "low_date": "2026-10-22",
+        "retracement": {
+          "38.2": 62.801376,
+          "50": 63.836618,
+          "61.8": 64.871859
+        },
+        "extension": {
+          "127.2": 57.063681,
+          "161.8": 54.028142
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 355,
+      "first_bar": "2025-05-20",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "الراجحي",
+      "sector": "البنوك",
+      "price_repairs": [
+        {
+          "date": "2026-10-22",
+          "field": "Close",
+          "source": "Yahoo regularMarketPrice",
+          "quote_timestamp": "2026-10-22T15:18:43+03:00",
+          "value": 59.8,
+          "reason": "daily Close was null; quote date and OHLC range validated"
+        }
+      ]
+    },
+    {
+      "symbol": "1212",
+      "date": "2026-10-22",
+      "last_bar": "2026-10-22",
+      "close": 113.7,
+      "classification": "Early Watch",
+      "technical_score": 26,
+      "data_fresh": true,
+      "expected_session": "2026-10-22",
+      "confidence": "high",
+      "missing_indicators": [],
+      "entry_blockers": [
+        "price_not_confirmed",
+        "trend_not_confirmed",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": true,
+        "trend_ema": false,
+        "range_contraction": true,
+        "higher_lows": false,
+        "volume": 131995.0,
+        "volume_avg20_prior": 39063.4,
+        "volume_ratio20": 3.378994,
+        "rsi14": 26.199342,
+        "macd": -4.12209,
+        "macd_signal": -3.743207,
+        "macd_histogram": -0.378883,
+        "atr14": 2.94217,
+        "ema20": 121.121799,
+        "ema50": 126.486958,
+        "ema200": 133.459072,
+        "support20": 114.900002,
+        "resistance20": 130.899994,
+        "relative_strength_20d_vs_tasi": -4.08574,
+        "relative_strength_60d_vs_tasi": 0.861008
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": -4.08574,
+          "stock_return_pct": -12.605692,
+          "tasi_return_pct": -8.519952,
+          "start_date": "2026-09-24",
+          "end_date": "2026-10-22",
+          "sessions": 20,
+          "reason": null
+        },
+        "60": {
+          "value_pct_points": 0.861008,
+          "stock_return_pct": -7.183673,
+          "tasi_return_pct": -8.044682,
+          "start_date": "2026-07-29",
+          "end_date": "2026-10-22",
+          "sessions": 60,
+          "reason": null
+        }
+      },
+      "scenario": {
+        "trigger": 130.899994,
+        "reclaim_trigger": 121.121799,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": null,
+        "conditional_target": 141.899994,
+        "target_method": "previous 90-session high",
+        "upside_pct": 24.802105,
+        "reward_risk": null,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "down",
+        "high": 141.899994,
+        "high_date": "2026-08-30",
+        "low": 111.699997,
+        "low_date": "2026-10-22",
+        "retracement": {
+          "38.2": 123.236396,
+          "50": 126.799995,
+          "61.8": 130.363595
+        },
+        "extension": {
+          "127.2": 103.485598,
+          "161.8": 93.036399
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 355,
+      "first_bar": "2025-05-20",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "أسترا الصناعية",
+      "sector": "السلع الرأسمالية",
+      "price_repairs": [
+        {
+          "date": "2026-10-22",
+          "field": "Close",
+          "source": "Yahoo regularMarketPrice",
+          "quote_timestamp": "2026-10-22T15:15:38+03:00",
+          "value": 113.7,
+          "reason": "daily Close was null; quote date and OHLC range validated"
+        }
+      ]
+    },
+    {
+      "symbol": "4260",
+      "date": "2026-10-22",
+      "last_bar": "2026-10-22",
+      "close": 23.22,
+      "classification": "Early Watch",
+      "technical_score": 25,
+      "data_fresh": true,
+      "expected_session": "2026-10-22",
+      "confidence": "high",
+      "missing_indicators": [],
+      "entry_blockers": [
+        "price_not_confirmed",
+        "trend_not_confirmed"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": true,
+        "trend_ema": false,
+        "range_contraction": true,
+        "higher_lows": true,
+        "volume": 1133253.0,
+        "volume_avg20_prior": 517754.65,
+        "volume_ratio20": 2.188784,
+        "rsi14": 20.822698,
+        "macd": -1.645834,
+        "macd_signal": -1.543824,
+        "macd_histogram": -0.10201,
+        "atr14": 0.769852,
+        "ema20": 25.32638,
+        "ema50": 27.513254,
+        "ema200": 34.129953,
+        "support20": 22.65,
+        "resistance20": 29.879999,
+        "relative_strength_20d_vs_tasi": -12.607766,
+        "relative_strength_60d_vs_tasi": -8.488061
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": -12.607766,
+          "stock_return_pct": -21.127719,
+          "tasi_return_pct": -8.519952,
+          "start_date": "2026-09-24",
+          "end_date": "2026-10-22",
+          "sessions": 20,
+          "reason": null
+        },
+        "60": {
+          "value_pct_points": -8.488061,
+          "stock_return_pct": -16.532743,
+          "tasi_return_pct": -8.044682,
+          "start_date": "2026-07-29",
+          "end_date": "2026-10-22",
+          "sessions": 60,
+          "reason": null
+        }
+      },
+      "scenario": {
+        "trigger": 29.879999,
+        "reclaim_trigger": 25.32638,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 22.65,
+        "conditional_target": 33.518024,
+        "target_method": "previous 90-session high",
+        "upside_pct": 44.349803,
+        "reward_risk": 18.066697,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "down",
+        "high": 33.398869,
+        "high_date": "2026-06-21",
+        "low": 22.65,
+        "low_date": "2026-10-15",
+        "retracement": {
+          "38.2": 26.756068,
+          "50": 28.024434,
+          "61.8": 29.292801
+        },
+        "extension": {
+          "127.2": 19.726307,
+          "161.8": 16.007199
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 355,
+      "first_bar": "2025-05-20",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "بدجت السعودية",
+      "sector": "النقل",
+      "price_repairs": [
+        {
+          "date": "2026-10-22",
+          "field": "Close",
+          "source": "Yahoo regularMarketPrice",
+          "quote_timestamp": "2026-10-22T15:14:44+03:00",
+          "value": 23.22,
+          "reason": "daily Close was null; quote date and OHLC range validated"
+        }
+      ]
+    },
+    {
+      "symbol": "2222",
+      "date": "2026-10-22",
+      "last_bar": "2026-10-22",
+      "close": 25.4,
+      "classification": "Early Watch",
+      "technical_score": 25,
+      "data_fresh": true,
+      "expected_session": "2026-10-22",
+      "confidence": "high",
+      "missing_indicators": [],
+      "entry_blockers": [
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "trend_not_confirmed",
+        "upside_below_10pct_or_no_target"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": false,
+        "trend_ema": false,
+        "range_contraction": false,
+        "higher_lows": true,
+        "volume": 7315186.0,
+        "volume_avg20_prior": 9135102.35,
+        "volume_ratio20": 0.800778,
+        "rsi14": 43.815527,
+        "macd": -0.071597,
+        "macd_signal": -0.075098,
+        "macd_histogram": 0.003501,
+        "atr14": 0.276111,
+        "ema20": 25.616169,
+        "ema50": 25.788162,
+        "ema200": 25.632825,
+        "support20": 25.1,
+        "resistance20": 26.040001,
+        "relative_strength_20d_vs_tasi": 7.045939,
+        "relative_strength_60d_vs_tasi": 5.943006
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": 7.045939,
+          "stock_return_pct": -1.474013,
+          "tasi_return_pct": -8.519952,
+          "start_date": "2026-09-24",
+          "end_date": "2026-10-22",
+          "sessions": 20,
+          "reason": null
+        },
+        "60": {
+          "value_pct_points": 5.943006,
+          "stock_return_pct": -2.101676,
+          "tasi_return_pct": -8.044682,
+          "start_date": "2026-07-29",
+          "end_date": "2026-10-22",
+          "sessions": 60,
+          "reason": null
+        }
+      },
+      "scenario": {
+        "trigger": 26.040001,
+        "reclaim_trigger": 25.616169,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 25.1,
+        "conditional_target": 26.912804,
+        "target_method": "previous 90-session high",
+        "upside_pct": 5.95592,
+        "reward_risk": 5.042686,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "down",
+        "high": 26.912804,
+        "high_date": "2026-08-04",
+        "low": 25.1,
+        "low_date": "2026-10-15",
+        "retracement": {
+          "38.2": 25.792491,
+          "50": 26.006402,
+          "61.8": 26.220313
+        },
+        "extension": {
+          "127.2": 24.606918,
+          "161.8": 23.979688
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 355,
+      "first_bar": "2025-05-20",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "أرامكو السعودية",
+      "sector": "الطاقة",
+      "price_repairs": [
+        {
+          "date": "2026-10-22",
+          "field": "Close",
+          "source": "Yahoo regularMarketPrice",
+          "quote_timestamp": "2026-10-22T15:19:47+03:00",
+          "value": 25.4,
+          "reason": "daily Close was null; quote date and OHLC range validated"
+        }
+      ]
+    },
+    {
+      "symbol": "4327",
+      "date": "2026-10-22",
+      "last_bar": "2026-10-22",
+      "close": 53.1,
+      "classification": "Early Watch",
+      "technical_score": 24,
+      "data_fresh": true,
+      "expected_session": "2026-10-22",
+      "confidence": "high",
+      "missing_indicators": [],
+      "entry_blockers": [
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "trend_not_confirmed"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": false,
+        "trend_ema": false,
+        "range_contraction": false,
+        "higher_lows": true,
+        "volume": 91102.0,
+        "volume_avg20_prior": 121592.55,
+        "volume_ratio20": 0.74924,
+        "rsi14": 50.243447,
+        "macd": 0.261766,
+        "macd_signal": 0.273148,
+        "macd_histogram": -0.011382,
+        "atr14": 1.732644,
+        "ema20": 53.179273,
+        "ema50": 52.880605,
+        "ema200": 54.249112,
+        "support20": 50.900002,
+        "resistance20": 56.200001,
+        "relative_strength_20d_vs_tasi": 8.708632,
+        "relative_strength_60d_vs_tasi": 9.57432
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": 8.708632,
+          "stock_return_pct": 0.188679,
+          "tasi_return_pct": -8.519952,
+          "start_date": "2026-09-24",
+          "end_date": "2026-10-22",
+          "sessions": 20,
+          "reason": null
+        },
+        "60": {
+          "value_pct_points": 9.57432,
+          "stock_return_pct": 1.529638,
+          "tasi_return_pct": -8.044682,
+          "start_date": "2026-07-29",
+          "end_date": "2026-10-22",
+          "sessions": 60,
+          "reason": null
+        }
+      },
+      "scenario": {
+        "trigger": 56.200001,
+        "reclaim_trigger": 53.179273,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 50.900002,
+        "conditional_target": 62.849998,
+        "target_method": "previous 90-session high",
+        "upside_pct": 18.361579,
+        "reward_risk": 4.431821,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "down",
+        "high": 60.950001,
+        "high_date": "2026-06-18",
+        "low": 49.040001,
+        "low_date": "2026-08-13",
+        "retracement": {
+          "38.2": 53.589621,
+          "50": 54.995001,
+          "61.8": 56.400381
+        },
+        "extension": {
+          "127.2": 45.800481,
+          "161.8": 41.679621
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 209,
+      "first_bar": "2025-12-18",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "الرمز",
+      "sector": "إدارة وتطوير العقارات",
+      "price_repairs": [
+        {
+          "date": "2026-10-22",
+          "field": "Close",
+          "source": "Yahoo regularMarketPrice",
+          "quote_timestamp": "2026-10-22T15:18:53+03:00",
+          "value": 53.1,
+          "reason": "daily Close was null; quote date and OHLC range validated"
+        }
+      ]
+    },
+    {
+      "symbol": "4163",
+      "date": "2026-10-22",
+      "last_bar": "2026-10-22",
+      "close": 35.5,
+      "classification": "Early Watch",
+      "technical_score": 24,
+      "data_fresh": true,
+      "expected_session": "2026-10-22",
+      "confidence": "high",
+      "missing_indicators": [],
+      "entry_blockers": [
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "trend_not_confirmed"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": false,
+        "trend_ema": false,
+        "range_contraction": true,
+        "higher_lows": true,
+        "volume": 115705.0,
+        "volume_avg20_prior": 85043.45,
+        "volume_ratio20": 1.36054,
+        "rsi14": 44.71252,
+        "macd": -0.680201,
+        "macd_signal": -0.816744,
+        "macd_histogram": 0.136543,
+        "atr14": 0.585411,
+        "ema20": 35.566589,
+        "ema50": 37.117305,
+        "ema200": 44.361677,
+        "support20": 34.060001,
+        "resistance20": 37.380001,
+        "relative_strength_20d_vs_tasi": 4.465898,
+        "relative_strength_60d_vs_tasi": -4.902839
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": 4.465898,
+          "stock_return_pct": -4.054054,
+          "tasi_return_pct": -8.519952,
+          "start_date": "2026-09-24",
+          "end_date": "2026-10-22",
+          "sessions": 20,
+          "reason": null
+        },
+        "60": {
+          "value_pct_points": -4.902839,
+          "stock_return_pct": -12.947521,
+          "tasi_return_pct": -8.044682,
+          "start_date": "2026-07-29",
+          "end_date": "2026-10-22",
+          "sessions": 60,
+          "reason": null
+        }
+      },
+      "scenario": {
+        "trigger": 37.380001,
+        "reclaim_trigger": 35.566589,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 34.329178,
+        "conditional_target": 44.099998,
+        "target_method": "previous 90-session high",
+        "upside_pct": 24.225348,
+        "reward_risk": 7.345268,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "down",
+        "high": 44.099998,
+        "high_date": "2026-07-14",
+        "low": 34.060001,
+        "low_date": "2026-10-11",
+        "retracement": {
+          "38.2": 37.89528,
+          "50": 39.08,
+          "61.8": 40.26472
+        },
+        "extension": {
+          "127.2": 31.329122,
+          "161.8": 27.855283
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 355,
+      "first_bar": "2025-05-20",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "الدواء",
+      "sector": "تجزئة وتوزيع السلع الاستهلاكية",
+      "price_repairs": [
+        {
+          "date": "2026-10-22",
+          "field": "Close",
+          "source": "Yahoo regularMarketPrice",
+          "quote_timestamp": "2026-10-22T15:19:48+03:00",
+          "value": 35.5,
+          "reason": "daily Close was null; quote date and OHLC range validated"
+        }
+      ]
+    },
+    {
+      "symbol": "2282",
+      "date": "2026-10-22",
+      "last_bar": "2026-10-22",
+      "close": 60.1,
+      "classification": "Early Watch",
+      "technical_score": 24,
+      "data_fresh": true,
+      "expected_session": "2026-10-22",
+      "confidence": "high",
+      "missing_indicators": [],
+      "entry_blockers": [
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "trend_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": false,
+        "trend_ema": false,
+        "range_contraction": false,
+        "higher_lows": true,
+        "volume": 61740.0,
+        "volume_avg20_prior": 44128.5,
+        "volume_ratio20": 1.399096,
+        "rsi14": 49.480146,
+        "macd": 0.544799,
+        "macd_signal": 0.68511,
+        "macd_histogram": -0.14031,
+        "atr14": 1.653331,
+        "ema20": 60.525113,
+        "ema50": 59.170502,
+        "ema200": 55.960457,
+        "support20": 57.75,
+        "resistance20": 62.799999,
+        "relative_strength_20d_vs_tasi": 9.358881,
+        "relative_strength_60d_vs_tasi": 15.084425
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": 9.358881,
+          "stock_return_pct": 0.838929,
+          "tasi_return_pct": -8.519952,
+          "start_date": "2026-09-24",
+          "end_date": "2026-10-22",
+          "sessions": 20,
+          "reason": null
+        },
+        "60": {
+          "value_pct_points": 15.084425,
+          "stock_return_pct": 7.039743,
+          "tasi_return_pct": -8.044682,
+          "start_date": "2026-07-29",
+          "end_date": "2026-10-22",
+          "sessions": 60,
+          "reason": null
+        }
+      },
+      "scenario": {
+        "trigger": 62.799999,
+        "reclaim_trigger": 60.525113,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 57.75,
+        "conditional_target": 62.799999,
+        "target_method": "previous 90-session high",
+        "upside_pct": 4.492511,
+        "reward_risk": 1.148936,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "up",
+        "high": 62.799999,
+        "high_date": "2026-10-07",
+        "low": 51.284212,
+        "low_date": "2026-06-24",
+        "retracement": {
+          "38.2": 58.400968,
+          "50": 57.042106,
+          "61.8": 55.683243
+        },
+        "extension": {
+          "127.2": 65.932293,
+          "161.8": 69.916756
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 355,
+      "first_bar": "2025-05-20",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "نقي",
+      "sector": "إنتاج الأغذية",
+      "price_repairs": [
+        {
+          "date": "2026-10-22",
+          "field": "Close",
+          "source": "Yahoo regularMarketPrice",
+          "quote_timestamp": "2026-10-22T15:10:27+03:00",
+          "value": 60.1,
+          "reason": "daily Close was null; quote date and OHLC range validated"
+        }
+      ]
+    },
+    {
+      "symbol": "8150",
+      "date": "2026-10-22",
+      "last_bar": "2026-10-22",
+      "close": 5.76,
+      "classification": "Early Watch",
+      "technical_score": 20,
+      "data_fresh": true,
+      "expected_session": "2026-10-22",
+      "confidence": "high",
+      "missing_indicators": [],
+      "entry_blockers": [
+        "price_not_confirmed",
+        "trend_not_confirmed",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": true,
+        "trend_ema": false,
+        "range_contraction": true,
+        "higher_lows": false,
+        "volume": 929506.0,
+        "volume_avg20_prior": 272948.15,
+        "volume_ratio20": 3.405431,
+        "rsi14": 20.045474,
+        "macd": -0.394077,
+        "macd_signal": -0.341069,
+        "macd_histogram": -0.053008,
+        "atr14": 0.266303,
+        "ema20": 6.515669,
+        "ema50": 6.975289,
+        "ema200": 7.529604,
+        "support20": 5.87,
+        "resistance20": 7.17,
+        "relative_strength_20d_vs_tasi": -9.194333,
+        "relative_strength_60d_vs_tasi": -2.375223
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": -9.194333,
+          "stock_return_pct": -17.714286,
+          "tasi_return_pct": -8.519952,
+          "start_date": "2026-09-24",
+          "end_date": "2026-10-22",
+          "sessions": 20,
+          "reason": null
+        },
+        "60": {
+          "value_pct_points": -2.375223,
+          "stock_return_pct": -10.419904,
+          "tasi_return_pct": -8.044682,
+          "start_date": "2026-07-29",
+          "end_date": "2026-10-22",
+          "sessions": 60,
+          "reason": null
+        }
+      },
+      "scenario": {
+        "trigger": 7.17,
+        "reclaim_trigger": 6.515669,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": null,
+        "conditional_target": 9.0,
+        "target_method": "previous 90-session high",
+        "upside_pct": 56.25,
+        "reward_risk": null,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "down",
+        "high": 9.0,
+        "high_date": "2026-08-26",
+        "low": 5.75,
+        "low_date": "2026-10-22",
+        "retracement": {
+          "38.2": 6.9915,
+          "50": 7.375,
+          "61.8": 7.7585
+        },
+        "extension": {
+          "127.2": 4.866,
+          "161.8": 3.7415
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 355,
+      "first_bar": "2025-05-20",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "أسيج",
+      "sector": "التأمين",
+      "price_repairs": [
+        {
+          "date": "2026-10-22",
+          "field": "Close",
+          "source": "Yahoo regularMarketPrice",
+          "quote_timestamp": "2026-10-22T15:17:10+03:00",
+          "value": 5.76,
+          "reason": "daily Close was null; quote date and OHLC range validated"
+        }
+      ]
+    }
+  ]
+}
