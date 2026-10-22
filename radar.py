@@ -211,6 +211,20 @@ def fetch_tasi_fallback(start,end):
     return normalize(d,True)
 
 
+def merge_benchmark_sources(sources, errors):
+    """Merge only observed closes; never synthesize/fill missing sessions."""
+    merged=pd.DataFrame(columns=['Close'],index=pd.DatetimeIndex([]));used=[]
+    for label,d in sources:
+        if d is None or d.empty:continue
+        d=normalize(d,True)
+        overlap=merged.index.intersection(d.index)
+        if len(overlap) and ((merged.loc[overlap,'Close']/d.loc[overlap,'Close']-1).abs()>0.005).any():
+            errors.append(label+': source disagreement above 0.5%; rejected');continue
+        merged=d.copy() if merged.empty else pd.concat([merged,d]);merged=merged[~merged.index.duplicated(keep='last')].sort_index()
+        used.append(label)
+    return merged,used
+
+
 def fetch_yahoo(ticker,start,end,benchmark=False):
     import yfinance as yf
     import time
@@ -300,19 +314,25 @@ def run(args):
         if bench.empty:raise ValueError('No TASI closes on valid sessions')
         if len(bench)<61:benchmark_errors.append(f'insufficient TASI history: {len(bench)} closes; 61 synchronized sessions required for RS60')
     except Exception as e:benchmark_errors.append(str(e));bench=None
-    benchmark_source='Yahoo Finance ^TASI.SR'
-    if bench is None or len(bench)<61 or str(bench.index[-1].date())!=expected:
+    sources=[]
+    for label,path in [('Investing.com TASI verified seed',Path(cfg.get('benchmark_seed','data/tasi_benchmark_seed.csv'))),('prior-run observed benchmark cache',out/'benchmark.csv')]:
+        if path.exists():
+            try:
+                cached=pd.read_csv(path,index_col='Date',parse_dates=True)
+                cached=normalize(cached,True);cached=cached[cached.index.isin(sessions)]
+                sources.append((label,cached))
+            except Exception as e:benchmark_errors.append(label+': '+str(e)[:200])
+    sources.append(('Yahoo Finance ^TASI.SR current observations',bench))
+    bench,benchmark_sources=merge_benchmark_sources(sources,benchmark_errors)
+    if len(bench)<61 or str(bench.index[-1].date())!=expected or not sessions[-61:].isin(bench.index).all():
         try:
-            alternative=fetch_tasi_fallback(start,end)
-            alternative=alternative[alternative.index.isin(sessions)]
-            if len(alternative)<61:raise ValueError('Fallback TASI history shorter than 61 sessions')
-            if bench is not None and not bench.empty:
-                overlap=alternative.index.intersection(bench.index)
-                if len(overlap) and ((alternative.loc[overlap,'Close']/bench.loc[overlap,'Close']-1).abs()>0.005).any():
-                    raise ValueError('TASI source disagreement above 0.5%; fallback rejected')
-            bench=alternative;benchmark_source='Investing.com TASI 11319 (Yahoo history insufficient)'
+            alternative=fetch_tasi_fallback(start,end);alternative=alternative[alternative.index.isin(sessions)]
+            bench,used=merge_benchmark_sources([('persisted observed TASI',bench),('Investing.com online TASI 11319',alternative)],benchmark_errors)
+            benchmark_sources+=used[1:]
         except Exception as e:benchmark_errors.append('TASI fallback: '+str(e)[:250])
-    if bench is not None:bench.to_csv(out/'benchmark.csv',index_label='Date')
+    benchmark_source=' + '.join(benchmark_sources)
+    if not bench.empty:bench.to_csv(out/'benchmark.csv',index_label='Date')
+    else:bench=None
     results=[];failures=[]
     for row in universe.itertuples(index=False):
         try:

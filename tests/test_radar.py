@@ -176,3 +176,17 @@ def test_tasi_fallback_parses_numeric_close_and_date(monkeypatch):
     monkeypatch.setattr(requests,'get',lambda *a,**k:Response())
     d=radar.fetch_tasi_fallback('2026-01-01','2026-10-23')
     assert d.iloc[0]['Close']==9695.86 and str(d.index[0].date())=='2026-10-22'
+
+def test_benchmark_seed_matches_index_and_has_full_rs_history():
+    seed=pd.read_csv(CFG['benchmark_seed'],index_col='Date',parse_dates=True)
+    meta=json.loads(Path('data/tasi_benchmark_seed.meta.json').read_text())
+    assert meta['instrument_id']=='11319' and len(seed)==meta['rows'] and len(seed)>61
+    assert seed.loc['2026-10-22','Close']==pytest.approx(9695.86,abs=.01)
+
+def test_benchmark_accumulates_only_observed_dates_and_rejects_mismatch():
+    idx=pd.to_datetime(['2026-10-20','2026-10-21','2026-10-22'])
+    seed=pd.DataFrame({'Close':[100.,101.]},index=idx[:2]);quote=pd.DataFrame({'Close':[102.]},index=idx[2:])
+    errors=[];d,sources=radar.merge_benchmark_sources([('seed',seed),('quote',quote)],errors)
+    assert len(d)==3 and not errors
+    bad=pd.DataFrame({'Close':[500.]},index=idx[2:]);d,sources=radar.merge_benchmark_sources([('cache',d),('bad',bad)],errors)
+    assert d.iloc[-1]['Close']==102 and 'bad' not in sources and errors
