@@ -136,3 +136,11 @@ def test_future_repair_metadata_absent_from_historical_quality_snapshot():
     d=candles();d.attrs['price_repairs']=[{'date':str(d.index[-1].date())}]
     q=research.quality_audit(d.iloc[:-1])
     assert not q['unverified_quote_repairs'] and not q['quarantined_dates']
+
+
+def test_legacy_higher_lows_watch_has_explanation_without_new_pattern(monkeypatch):
+    d=candles(50)
+    monkeypatch.setattr(radar,'early_patterns',lambda *a:{'evidence':[], 'false_upside_breakout':False,'early_reversal_candidate':False,'accumulation_candidate':False,'breakout_retest_holds':False})
+    r=radar.analyze('T',d,CFG,d)
+    assert r['observations']['higher_lows'] and r['classification']=='Early Watch'
+    assert r['nomination_reasons'] and not r['observations']['volume_confirmed']

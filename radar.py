@@ -172,7 +172,7 @@ def analyze(symbol, df, config, benchmark=None, expected_session=None, sessions=
     return clean({'symbol':symbol,'date':date,'last_bar':date,'close':price,'classification':classification,'technical_score':score,
         'data_fresh':fresh,'expected_session':expected_session,'confidence':confidence,'missing_indicators':missing,'entry_blockers':blockers,
         'observations':obs,'relative_strength':rs,'data_quality':quality,'price_structure':structure,'early_patterns':patterns,
-        'nomination_reasons':patterns['evidence']+(['EMA_trend_confirmed'] if trend else [])+(['price_and_volume_confirmed'] if volume_confirmed and (breakout or reclaim) else []),
+        'nomination_reasons':(patterns['evidence']+(['observed_higher_lows_last10'] if higher_lows else [])+(['range_contraction_5_vs20'] if contraction else [])+(['EMA_trend_confirmed'] if trend else [])+(['close_above_prior_resistance20'] if breakout else [])+(['EMA20_reclaim'] if reclaim else [])+(['price_and_volume_confirmed'] if volume_confirmed and (breakout or reclaim) else [])) or ['no_confirmed_setup_monitoring_only'],
         'scenario':{'trigger':resistance,'reclaim_trigger':num(last['EMA20']),'trigger_rule':'daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= '+str(config['volume_confirmation_multiple']),
                     'invalidation':stop,'conditional_target':target,'target_method':target_method,'upside_pct':upside,'reward_risk':rr,
                     'forecast_window':'next 5–20 trading sessions; conditional, not a guaranteed return'},

@@ -12,6 +12,7 @@ def verify(root=Path('output')):
     assert round(100*len(r)/254,2)==p['coverage_pct']
     assert sum(x['data_fresh'] for x in r)==p['fresh_count']
     for x in r:
+        assert x.get('nomination_reasons'), 'Missing explanation for ranked/monitored stock'
         assert x['data_fresh']==(x['date']==p['expected_session'])
         if x['classification'] in ('Entry','Partial Entry'):
             assert not x['entry_blockers'] and x['data_fresh'] and p['benchmark']['fresh']
