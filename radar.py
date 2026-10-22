@@ -53,113 +53,305 @@ def fibonacci(df: pd.DataFrame, window: int=90) -> dict:
             'method':'chronological 90-session extrema; heuristic pivots, not manually validated'}
 
 
-def analyze(symbol: str, df: pd.DataFrame, config: dict, benchmark: pd.DataFrame|None=None) -> dict:
+def clean(value):
+    """Strict JSON: never publish NaN or Infinity."""
+    if isinstance(value, dict): return {k: clean(v) for k,v in value.items()}
+    if isinstance(value, (list, tuple)): return [clean(v) for v in value]
+    if isinstance(value, (np.bool_,)): return bool(value)
+    if isinstance(value, (np.integer,)): return int(value)
+    if isinstance(value, (float, np.floating)): return round(float(value), 6) if math.isfinite(value) else None
+    return value
+
+
+def session_calendar(now, cfg):
+    import exchange_calendars as xcals
+    from zoneinfo import ZoneInfo
+    local = now.astimezone(ZoneInfo('Asia/Riyadh'))
+    cal = xcals.get_calendar('XSAU')
+    # XSAU labels continuous-trading close at 15:00; include auction/last trade until 15:20.
+    dates = cal.sessions_in_range(pd.Timestamp(local.date())-pd.Timedelta(days=cfg['lookback_calendar_days']+30), pd.Timestamp(local.date()))
+    closed = set(cfg.get('extra_closed_dates', []))
+    dates = pd.DatetimeIndex([d.tz_localize(None) if d.tzinfo else d for d in dates if str(d.date()) not in closed])
+    if (local.hour, local.minute) < (15,20): dates = dates[dates.date < local.date()]
+    if dates.empty: raise ValueError('No completed XSAU session; calendar update required')
+    return dates, str(dates[-1].date())
+
+
+def relative_strength(stock, benchmark, sessions, window):
+    end = stock.index[-1]
+    grid = sessions[sessions <= end][-(window+1):]
+    if len(grid) != window+1 or grid[-1] != end:
+        return {'value_pct_points': None, 'reason': 'insufficient calendar sessions'}
+    pair = pd.concat([stock['Close'].reindex(grid).rename('stock'), benchmark['Close'].reindex(grid).rename('benchmark')], axis=1)
+    if pair.isna().any().any() or (pair<=0).any().any():
+        return {'value_pct_points': None, 'reason': 'missing synchronized stock or TASI sessions; no forward fill'}
+    a,b = pair.iloc[0], pair.iloc[-1]
+    return {'value_pct_points': float(100*((b['stock']/a['stock']-1)-(b['benchmark']/a['benchmark']-1))),
+            'stock_return_pct':float(100*(b['stock']/a['stock']-1)),
+            'tasi_return_pct':float(100*(b['benchmark']/a['benchmark']-1)),
+            'start_date':str(grid[0].date()), 'end_date':str(grid[-1].date()), 'sessions':window, 'reason':None}
+
+
+def analyze(symbol, df, config, benchmark=None, expected_session=None, sessions=None):
     d = indicators(df)
-    latest = d.iloc[-1]
-    prev = d.iloc[-2]
-    date = str(d.index[-1].date())
-    price = float(latest['Close'])
-    vol_ratio = float(latest['Volume']/latest['volume_avg20']) if latest['volume_avg20']>0 else None
-    breakout = bool(price>latest['prior_resistance20'] and vol_ratio is not None and vol_ratio>=config['volume_confirmation_multiple'])
-    trend = bool(price>latest['EMA20']>latest['EMA50'] and price>latest['EMA200'])
-    reclaim = bool(prev['Close']<prev['EMA20'] and price>latest['EMA20'] and vol_ratio is not None and vol_ratio>=1.2)
-    contraction = bool(latest['range5'] < latest['range20']*0.45)
-    higher_lows = bool(d['Low'].iloc[-10:-5].min() < d['Low'].iloc[-5:].min())
-    fib = fibonacci(d)
-    # Target is conditional: previous 90-day high / upside extension, whichever is higher.
-    targets = [float(d['High'].tail(90).max())]
-    if fib and fib['direction']=='up': targets += [float(fib['extension']['127.2']),float(fib['extension']['161.8'])]
-    target = max(targets)
-    stop = float(min(latest['prior_support20'],price-2*latest['ATR14']))
-    risk = price-stop
-    upside_pct = (target/price-1)*100
-    rr = (target-price)/risk if risk>0 else 0
-    atr_pct = float(latest['ATR14']/price*100)
-    relative_strength_20d = None
-    if benchmark is not None and len(benchmark)>21:
-        aligned = benchmark['Close'].reindex(d.index).ffill()
-        if pd.notna(aligned.iloc[-21]) and aligned.iloc[-21]>0:
-            relative_strength_20d = float((price/d['Close'].iloc[-21]-1)-(aligned.iloc[-1]/aligned.iloc[-21]-1))
-    # Entries require independent price + volume confirmation and plausible reward.
-    entry_ok = bool((breakout or reclaim) and trend and upside_pct>=config['minimum_upside_pct']
-                    and rr>=config['minimum_reward_risk'] and atr_pct<=config['max_atr_pct'])
-    classification = 'Entry' if entry_ok and breakout else 'Partial Entry' if entry_ok else 'Early Watch' if (contraction or higher_lows or trend) else 'Wait'
-    return {'symbol':symbol,'date':date,'close':round(price,3),'classification':classification,
-        'observations':{'breakout20_with_volume':breakout,'reclaim_ema20_with_volume':reclaim,
-            'trend_ema':trend,'range_contraction':contraction,'higher_lows':higher_lows,
-            'volume_ratio20':round(vol_ratio,3) if vol_ratio is not None else None,
-            'rsi14':round(float(latest['RSI14']),2),'macd':round(float(latest['MACD']),4),
-            'macd_signal':round(float(latest['MACD_signal']),4),'atr14':round(float(latest['ATR14']),3),
-            'ema20':round(float(latest['EMA20']),3),'ema50':round(float(latest['EMA50']),3),
-            'ema200':round(float(latest['EMA200']),3),
-            'relative_strength_20d_vs_tasi':relative_strength_20d},
-        'scenario':{'trigger':round(float(latest['prior_resistance20']),3),
-            'invalidation':round(stop,3),'conditional_target':round(target,3),
-            'upside_pct':round(upside_pct,2),'reward_risk':round(rr,2),
-            'note':'Projected technical scenario, not a forecast or guaranteed return'},
-        'fibonacci':fib,'volume_profile':'unavailable: daily OHLCV lacks intraday price-at-volume',
-        'elliott_wave':'not scored: low-confidence discretionary hypothesis'}
+    last = d.iloc[-1]; prev = d.iloc[-2] if len(d)>1 else last
+    price = float(last['Close']); date = str(d.index[-1].date())
+    expected_session = expected_session or date
+    sessions = pd.DatetimeIndex(sessions if sessions is not None else d.index)
+    fresh = date == expected_session
+    num = lambda x: float(x) if pd.notna(x) and np.isfinite(x) else None
+    # Exclude current volume from the average used to confirm current volume.
+    baseline = num(d['Volume'].shift(1).rolling(20,min_periods=20).mean().iloc[-1])
+    vr = float(last['Volume'])/baseline if baseline and baseline>0 else None
+    volume_confirmed = bool(vr is not None and vr >= config['volume_confirmation_multiple'] and last['Volume']>0)
+    resistance = num(last['prior_resistance20']); support = num(last['prior_support20'])
+    breakout = bool(resistance is not None and price>resistance)
+    reclaim = bool(pd.notna(prev['EMA20']) and prev['Close']<=prev['EMA20'] and price>last['EMA20'])
+    trend = bool(price>last['EMA20']>last['EMA50'] and price>last['EMA200'])
+    contraction = bool(last['range5'] < last['range20']*0.45)
+    higher_lows = bool(len(d)>=10 and d['Low'].iloc[-10:-5].min()<d['Low'].iloc[-5:].min())
+    fib = fibonacci(d) if len(d)>=20 else {}
+    atr = num(last['ATR14']); atr_pct = atr/price*100 if atr else None
+    stop = max(support,price-2*atr) if support is not None and atr else None
+    if stop is not None and not 0<stop<price: stop=None
+    # Prior high is the first objective; use one 127.2% extension only after clearing it.
+    prior_high = float(d['High'].iloc[:-1].tail(90).max()) if len(d)>1 else None
+    target = prior_high if prior_high is not None and prior_high>price else None
+    target_method = 'previous 90-session high' if target else None
+    if target is None and fib.get('direction')=='up':
+        candidate=fib['extension']['127.2']
+        if price<candidate<=price*1.30: target=candidate;target_method='conditional 127.2% swing extension (maximum 30% upside)'
+    upside = (target/price-1)*100 if target else None
+    rr = (target-price)/(price-stop) if target and stop else None
+    required = ['EMA20','EMA50','EMA200','RSI14','MACD','MACD_signal','ATR14','prior_support20','prior_resistance20']
+    missing = [x for x in required if num(last[x]) is None]
+    rs = {}
+    for n in (20,60):
+        rs[str(n)] = relative_strength(d,benchmark,sessions,n) if benchmark is not None and not benchmark.empty else {'value_pct_points':None,'reason':'TASI benchmark unavailable'}
+    if any(rs[str(n)]['value_pct_points'] is None for n in (20,60)): missing.append('synchronized_relative_strength')
+    benchmark_fresh = bool(benchmark is not None and not benchmark.empty and str(benchmark.index[-1].date())==expected_session)
+    confidence = 'high' if not missing and fresh and benchmark_fresh else 'medium' if len(d)>=60 else 'low'
+    blockers=[]
+    if not fresh: blockers.append('stale_price_data')
+    if not benchmark_fresh: blockers.append('stale_or_missing_TASI')
+    if missing or len(d)<config.get('minimum_entry_history_rows',200): blockers.append('insufficient_entry_indicators')
+    if not (breakout or reclaim): blockers.append('price_not_confirmed')
+    if not volume_confirmed: blockers.append('volume_not_confirmed')
+    if not trend: blockers.append('trend_not_confirmed')
+    if upside is None or upside < max(10,config['minimum_upside_pct']): blockers.append('upside_below_10pct_or_no_target')
+    if rr is None or rr < config['minimum_reward_risk']: blockers.append('reward_risk_below_minimum_or_missing')
+    if atr_pct is None or atr_pct>config['max_atr_pct']: blockers.append('volatility_or_missing_ATR')
+    entry = not blockers
+    classification = 'Entry' if entry and breakout else 'Partial Entry' if entry else 'Early Watch' if len(d)>=20 and (contraction or higher_lows or trend or breakout or reclaim) else 'Wait'
+    score = 25*trend+15*breakout+8*reclaim+15*volume_confirmed+8*(last['MACD']>last['MACD_signal'])+7*(45<=last['RSI14']<=70)+5*contraction+5*higher_lows
+    score += sum(6 for n in (20,60) if rs[str(n)]['value_pct_points'] is not None and rs[str(n)]['value_pct_points']>0)
+    if not fresh: score-=30
+    if confidence=='low':score-=15
+    obs={'breakout20_with_volume':breakout and volume_confirmed,'reclaim_ema20_with_volume':reclaim and volume_confirmed,
+         'price_breakout20':breakout,'volume_confirmed':volume_confirmed,'trend_ema':trend,'range_contraction':contraction,'higher_lows':higher_lows,
+         'volume':float(last['Volume']),'volume_avg20_prior':baseline,'volume_ratio20':vr,
+         'rsi14':num(last['RSI14']),'macd':num(last['MACD']),'macd_signal':num(last['MACD_signal']),
+         'macd_histogram':num(last['MACD']-last['MACD_signal']),'atr14':atr,
+         'ema20':num(last['EMA20']),'ema50':num(last['EMA50']),'ema200':num(last['EMA200']),
+         'support20':support,'resistance20':resistance,
+         'relative_strength_20d_vs_tasi':rs['20']['value_pct_points'],'relative_strength_60d_vs_tasi':rs['60']['value_pct_points']}
+    return clean({'symbol':symbol,'date':date,'last_bar':date,'close':price,'classification':classification,'technical_score':score,
+        'data_fresh':fresh,'expected_session':expected_session,'confidence':confidence,'missing_indicators':missing,'entry_blockers':blockers,
+        'observations':obs,'relative_strength':rs,
+        'scenario':{'trigger':resistance,'reclaim_trigger':num(last['EMA20']),'trigger_rule':'daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= '+str(config['volume_confirmation_multiple']),
+                    'invalidation':stop,'conditional_target':target,'target_method':target_method,'upside_pct':upside,'reward_risk':rr,
+                    'forecast_window':'next 5–20 trading sessions; conditional, not a guaranteed return'},
+        'fibonacci':fib,'bars':len(d),'first_bar':str(d.index[0].date()),'source':'Yahoo Finance/yfinance; unofficial adjusted daily prices'})
 
 
-def normalize(raw:pd.DataFrame) -> pd.DataFrame:
-    if isinstance(raw.columns,pd.MultiIndex):
-        raw.columns = raw.columns.get_level_values(0)
-    cols=['Open','High','Low','Close','Volume']
-    if not all(c in raw.columns for c in cols): raise ValueError('missing OHLCV columns')
-    d=raw[cols].copy().dropna()
-    d.index=pd.to_datetime(d.index).tz_localize(None) if d.index.tz is not None else pd.to_datetime(d.index)
+def normalize(raw, benchmark=False):
+    raw=raw.copy()
+    if isinstance(raw.columns,pd.MultiIndex):raw.columns=raw.columns.get_level_values(0)
+    cols=['Close'] if benchmark else ['Open','High','Low','Close','Volume']
+    if not all(x in raw.columns for x in cols):raise ValueError('missing '+','.join(cols)+' columns')
+    d=raw[cols].apply(pd.to_numeric,errors='coerce').replace([np.inf,-np.inf],np.nan).dropna()
+    d.index=pd.to_datetime(d.index)
+    if d.index.tz is not None:d.index=d.index.tz_localize(None)
+    d.index=d.index.normalize()
     d=d[~d.index.duplicated(keep='last')].sort_index()
-    d=d[(d['High']>=d['Low']) & (d['High']>=d['Open']) & (d['High']>=d['Close']) &
-        (d['Low']<=d['Open']) & (d['Low']<=d['Close']) & (d['Close']>0) & (d['Volume']>=0)]
-    return d
+    mask=d['Close']>0
+    if not benchmark:mask &= (d['High']>=d['Low'])&(d['High']>=d['Open'])&(d['High']>=d['Close'])&(d['Low']<=d['Open'])&(d['Low']<=d['Close'])&(d['Open']>0)&(d['Low']>0)&(d['Volume']>=0)
+    return d[mask]
 
 
-def fetch_yahoo(ticker:str, start:str) -> pd.DataFrame:
+def restore_current_close(raw, metadata, expected):
+    """Repair only a provider-null final close using its dated final-session quote."""
+    from zoneinfo import ZoneInfo
+    raw=raw.copy(); repairs=[]
+    stamp=metadata.get('regularMarketTime');price=metadata.get('regularMarketPrice')
+    try:
+        stamp=pd.Timestamp(stamp,unit='s',tz='UTC') if isinstance(stamp,(int,float)) else pd.Timestamp(stamp)
+        if stamp.tzinfo is None:return raw,repairs
+        stamp=stamp.tz_convert(ZoneInfo('Asia/Riyadh'))
+        if str(stamp.date())!=expected or metadata.get('exchangeTimezoneName')!='Asia/Riyadh':return raw,repairs
+        if not ((10,0)<=(stamp.hour,stamp.minute)<=(15,20)) or not price or not math.isfinite(float(price)):return raw,repairs
+        for i in raw.index:
+            row=raw.loc[i]
+            if str(i.date())==expected and pd.isna(row['Close']) and row['Volume']>0 and row['Low']<=price<=row['High']:
+                raw.loc[i,'Close']=float(price)
+                if 'Adj Close' in raw.columns:raw.loc[i,'Adj Close']=float(price)
+                repairs.append({'date':expected,'field':'Close','source':'Yahoo regularMarketPrice','quote_timestamp':stamp.isoformat(),'value':float(price),'reason':'daily Close was null; quote date and OHLC range validated'})
+    except (TypeError,ValueError,KeyError):pass
+    return raw,repairs
+
+
+def fetch_tasi_fallback(start,end):
+    """Public Investing.com TASI instrument 11319, identified on its TASI history page."""
+    import requests
+    url='https://api.investing.com/api/financialdata/historical/11319'
+    response=requests.get(url,params={'start-date':start,'end-date':end,'time-frame':'Daily','add-missing-rows':'false'},headers={'domain-id':'www'},timeout=25)
+    response.raise_for_status();rows=response.json().get('data') or []
+    if not rows:raise ValueError('Investing.com returned empty TASI history')
+    d=pd.DataFrame({'Close':[float(r['last_closeRaw']) for r in rows]},index=pd.to_datetime([r['rowDateTimestamp'] for r in rows],utc=True).tz_localize(None))
+    return normalize(d,True)
+
+
+def fetch_yahoo(ticker,start,end,benchmark=False):
     import yfinance as yf
-    return normalize(yf.download(ticker,start=start,auto_adjust=True,progress=False,threads=False,timeout=20))
+    import time
+    last_error='no data'
+    for attempt in range(3):
+        try:
+            # Explicit end is exclusive. Include the expected session, never today's incomplete bar.
+            instrument=yf.Ticker(ticker)
+            raw=instrument.history(start=start,end=end,interval='1d',auto_adjust=False,raise_errors=True,timeout=20)
+            repairs=[]
+            if not benchmark:
+                expected=(pd.Timestamp(end)-pd.Timedelta(days=1)).date().isoformat()
+                # Do not request metadata unless a final-session row actually has a null close.
+                null_final=any(str(i.date())==expected and pd.isna(raw.loc[i,'Close']) for i in raw.index)
+                if null_final:raw,repairs=restore_current_close(raw,instrument.history_metadata,expected)
+                if 'Adj Close' in raw.columns:
+                    ratio=raw['Adj Close']/raw['Close']
+                    raw[['Open','High','Low','Close']]=raw[['Open','High','Low','Close']].mul(ratio,axis=0)
+            d=normalize(raw,benchmark)
+            d.attrs['price_repairs']=repairs
+            if d.empty:raise ValueError('empty valid price history')
+            return d
+        except Exception as e:
+            last_error=str(e)[:250]
+            if attempt<2:time.sleep(2**attempt)
+    raise ValueError(last_error)
+
+
+def flatten(r):
+    return {'symbol':r['symbol'],'name':r.get('name'),'sector':r.get('sector'),'classification':r['classification'],
+        'technical_score':r['technical_score'],'close':r['close'],'price_date':r['date'],'data_fresh':r['data_fresh'],
+        'confidence':r['confidence'],'bars':r['bars'],'missing_indicators':';'.join(r['missing_indicators']),
+        'entry_blockers':';'.join(r['entry_blockers']),**r['observations'],**r['scenario']}
+
+
+def rank_results(results):
+    order={'Entry':3,'Partial Entry':2,'Early Watch':1,'Wait':0}
+    return sorted(results,key=lambda r:(r['data_fresh'],order[r['classification']],r['technical_score'],r['symbol']),reverse=True)
+
+
+def watch_report(results,failures,previous,symbols,expected):
+    old={r['symbol']:r for r in (previous or {}).get('results',[])}
+    current={r['symbol']:r for r in results}; failed={f['symbol']:f for f in failures}
+    rows=[]
+    for s in symbols:
+        r=current.get(s);p=old.get(s);changes=[]
+        if r:
+            if not p:changes.append('first_observation')
+            else:
+                if r['classification']!=p.get('classification'):changes.append('classification_changed')
+                if r['data_fresh']!=p.get('data_fresh'):changes.append('freshness_changed')
+                if r['date']!=p.get('date'):
+                    inv=p.get('scenario',{}).get('invalidation');trigger=p.get('scenario',{}).get('trigger')
+                    if inv and p['close']>inv>=r['close']:changes.append('prior_invalidation_crossed')
+                    if trigger and p['close']<=trigger<r['close']:changes.append('prior_trigger_crossed')
+                    if abs(r['close']/p['close']-1)>=0.05:changes.append('price_move_at_least_5pct')
+            rows.append({'symbol':s,'status':'analyzed','changes':changes,'previous_date':p.get('date') if p else None,
+                         'previous_classification':p.get('classification') if p else None,'current':r})
+        else:rows.append({'symbol':s,'status':'failed','changes':['data_failure'],'reason':failed.get(s,{}).get('reason','not in universe')})
+    return {'expected_session':expected,'comparison_run_utc':(previous or {}).get('run_utc'),'stocks':rows,'note':'First observation is a baseline, not a newly triggered signal.'}
+
+
+def validate_universe(universe,cfg):
+    s=universe['symbol']
+    if len(universe)!=cfg['expected_universe_count'] or s.duplicated().any():raise ValueError('Expected exactly 254 unique equity symbols')
+    if not s.str.fullmatch(r'\d{4}').all() or (s.astype(int)>=9000).any():raise ValueError('Invalid or Nomu symbol')
+    if s.astype(int).between(4330,4350).any() or s.astype(int).between(4700,4999).any() or universe['name'].str.contains('صندوق|ريت|REIT|ETF',case=False,regex=True).any():raise ValueError('Fund excluded from equity universe')
+    if universe[['name','sector']].isna().any().any():raise ValueError('Missing universe metadata')
 
 
 def run(args):
+    import os,hashlib,collections
     cfg=json.loads(Path(args.config).read_text(encoding='utf-8'))
-    universe=pd.read_csv(cfg['symbols_file'],dtype={'symbol':str})
-    universe=universe.drop_duplicates('symbol')
-    if args.limit: universe=universe.head(args.limit)
+    universe=pd.read_csv(cfg['symbols_file'],dtype={'symbol':str});validate_universe(universe,cfg)
+    if getattr(args,'limit',None):universe=universe.head(args.limit)
     out=Path(cfg['output_dir']);out.mkdir(parents=True,exist_ok=True)
-    start=(datetime.now(timezone.utc)-timedelta(days=cfg['lookback_calendar_days'])).date().isoformat()
-    results=[]; failures=[]; histories={}
-    try: bench=fetch_yahoo(cfg['benchmark'],start)
-    except Exception as e: bench=None; failures.append({'symbol':cfg['benchmark'],'reason':str(e)[:200]})
-    for row in universe.itertuples(index=False):
-        symbol=str(row.symbol)
+    previous=None
+    if (out/'latest.json').exists():
+        try:previous=json.loads((out/'latest.json').read_text())
+        except (ValueError,OSError):pass
+    now=datetime.now(timezone.utc);sessions,expected=session_calendar(now,cfg)
+    end=(pd.Timestamp(expected)+pd.Timedelta(days=1)).date().isoformat()
+    start=(pd.Timestamp(expected)-pd.Timedelta(days=cfg['lookback_calendar_days'])).date().isoformat()
+    bench=None;benchmark_errors=[]
+    try:
+        bench=fetch_yahoo(cfg['benchmark'],start,end,True);bench=bench[bench.index.isin(sessions)]
+        if bench.empty:raise ValueError('No TASI closes on valid sessions')
+        if len(bench)<61:benchmark_errors.append(f'insufficient TASI history: {len(bench)} closes; 61 synchronized sessions required for RS60')
+    except Exception as e:benchmark_errors.append(str(e));bench=None
+    benchmark_source='Yahoo Finance ^TASI.SR'
+    if bench is None or len(bench)<61 or str(bench.index[-1].date())!=expected:
         try:
-            d=fetch_yahoo(f'{symbol}.SR',start)
-            if len(d)<cfg['minimum_history_rows']: raise ValueError(f'insufficient bars {len(d)}')
-            r=analyze(symbol,d,cfg,bench)
-            r['name']=row.name; r['sector']=row.sector
-            r['data_source']='Yahoo Finance via yfinance; adjusted daily OHLCV (unofficial)'
-            r['bars']=len(d);r['first_bar']=str(d.index[0].date());r['last_bar']=str(d.index[-1].date())
-            results.append(r)
-            histories[symbol]=d[['Close','Volume']]
-        except Exception as e:
-            failures.append({'symbol':symbol,'reason':str(e)[:200]})
-    now=datetime.now(timezone.utc).isoformat()
-    report={'run_utc':now,'source':'Yahoo Finance via yfinance; free/unofficial; validation against Saudi Exchange pending',
-        'universe_file':cfg['symbols_file'],'universe_count':len(universe),
-        'scanned_successfully':len(results),'failed_count':len(failures),
-        'coverage_pct':round(100*len(results)/len(universe),2) if len(universe) else 0,
-        'full_tasi_coverage_claim':False,
-        'warning':'The included symbol list is a SMALL STARTER SAMPLE, not the complete TASI universe. No real-time claims.',
-        'results':results,'failures':failures}
-    (out/'latest.json').write_text(json.dumps(report,ensure_ascii=False,indent=2,allow_nan=False),encoding='utf-8')
-    # Date-stamped archive: no overwriting previous runs
-    stamp=datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
-    (out/f'run_{stamp}.json').write_text(json.dumps(report,ensure_ascii=False,indent=2,allow_nan=False),encoding='utf-8')
-    pd.DataFrame([{'symbol':r['symbol'],'date':r['date'],'classification':r['classification'],
-       'close':r['close'],'upside_pct':r['scenario']['upside_pct'],'reward_risk':r['scenario']['reward_risk']} for r in results],
-       columns=['symbol','date','classification','close','upside_pct','reward_risk']).to_csv(out/'latest.csv',index=False)
-    print(f"VERIFIED SCAN {len(results)}/{len(universe)} ({report['coverage_pct']}% of supplied sample); failures={len(failures)}")
-    for r in results:
-        if r['classification'] in ('Entry','Partial Entry'):print('SIGNAL',r['symbol'],r['classification'],r['date'])
+            alternative=fetch_tasi_fallback(start,end)
+            alternative=alternative[alternative.index.isin(sessions)]
+            if len(alternative)<61:raise ValueError('Fallback TASI history shorter than 61 sessions')
+            if bench is not None and not bench.empty:
+                overlap=alternative.index.intersection(bench.index)
+                if len(overlap) and ((alternative.loc[overlap,'Close']/bench.loc[overlap,'Close']-1).abs()>0.005).any():
+                    raise ValueError('TASI source disagreement above 0.5%; fallback rejected')
+            bench=alternative;benchmark_source='Investing.com TASI 11319 (Yahoo history insufficient)'
+        except Exception as e:benchmark_errors.append('TASI fallback: '+str(e)[:250])
+    if bench is not None:bench.to_csv(out/'benchmark.csv',index_label='Date')
+    results=[];failures=[]
+    for row in universe.itertuples(index=False):
+        try:
+            d=fetch_yahoo(str(row.symbol)+'.SR',start,end);d=d[d.index.isin(sessions)]
+            if d.empty:raise ValueError('No valid OHLCV on completed sessions')
+            r=analyze(row.symbol,d,cfg,bench,expected,sessions);r.update(name=row.name,sector=row.sector,price_repairs=d.attrs.get('price_repairs',[]));results.append(r)
+        except Exception as e:failures.append({'symbol':row.symbol,'name':row.name,'reason':str(e)[:300]})
+        print(f'{len(results)+len(failures)}/{len(universe)} {row.symbol}',flush=True)
+    run_id=os.getenv('GITHUB_RUN_ID',now.strftime('%Y%m%dT%H%M%SZ'))
+    attempt=os.getenv('GITHUB_RUN_ATTEMPT','1');run_url='https://github.com/'+os.getenv('GITHUB_REPOSITORY','saqerkhalel-gif/tasi-radar-3')+'/actions/runs/'+run_id if os.getenv('GITHUB_RUN_ID') else None
+    counts=dict(collections.Counter(r['classification'] for r in results))
+    counts={c:counts.get(c,0) for c in ['Entry','Partial Entry','Early Watch','Wait']}
+    fresh=sum(r['data_fresh'] for r in results);bmdate=str(bench.index[-1].date()) if bench is not None else None
+    report=clean({'schema_version':2,'run_utc':now.isoformat(),'completed_utc':datetime.now(timezone.utc).isoformat(),'run_id':run_id,'run_attempt':attempt,'run_url':run_url,'source_commit':os.getenv('GITHUB_SHA'),
+        'expected_session':expected,'calendar':'exchange_calendars XSAU plus configured closures; post-close 15:20 Riyadh gate',
+        'source':'Yahoo Finance via yfinance stocks; benchmark source separately disclosed; unofficial; no real-time claim',
+        'universe_file':cfg['symbols_file'],'universe_sha256':hashlib.sha256(Path(cfg['symbols_file']).read_bytes()).hexdigest(),
+        'universe_count':len(universe),'scanned_successfully':len(results),'failed_count':len(failures),
+        'coverage_pct':round(100*len(results)/len(universe),2),'fresh_count':fresh,'fresh_coverage_pct':round(100*fresh/len(universe),2),
+        'stale_count':len(results)-fresh,'classification_counts':counts,'price_dates':dict(collections.Counter(r['date'] for r in results)),
+        'benchmark':{'symbol':cfg['benchmark'],'source':benchmark_source,'last_bar':bmdate,'fresh':bmdate==expected,'bars':len(bench) if bench is not None else 0,'errors':benchmark_errors},
+        'limited_history_count':sum(bool(r['missing_indicators']) for r in results),'price_repaired_count':sum(bool(r.get('price_repairs')) for r in results),
+        'relative_strength_coverage':{str(n):sum(r['relative_strength'][str(n)]['value_pct_points'] is not None for r in results) for n in (20,60)},
+        'full_tasi_coverage_claim':False,'coverage_note':'Coverage denominator is the fixed 254-company equity snapshot, not an independently verified live constituent list.',
+        'ranking_note':'Technical candidates including Early Watch/Wait; conditional targets, not guaranteed profits; Entry requires fresh stock and TASI data, 200 bars, synchronized RS, price+volume, upside >=10%, reward/risk >=2.',
+        'results':results,'failures':failures})
+    ranked=rank_results(results)[:20]
+    top={'run_utc':report['run_utc'],'run_url':run_url,'expected_session':expected,'ranking_note':report['ranking_note'],'count':len(ranked),'results':ranked}
+    watch=watch_report(results,failures,previous,cfg['watch_symbols'],expected);watch.update(run_utc=report['run_utc'],run_url=run_url)
+    dump=lambda p,x:p.write_text(json.dumps(clean(x),ensure_ascii=False,indent=2,allow_nan=False),encoding='utf-8')
+    dump(out/'latest.json',report);dump(out/'top20.json',top);dump(out/'watchlist.json',watch)
+    columns=list(flatten(results[0])) if results else ['symbol','name','classification','price_date']
+    pd.DataFrame([flatten(r) for r in results],columns=columns).to_csv(out/'latest.csv',index=False)
+    pd.DataFrame([flatten(r) for r in ranked],columns=columns).to_csv(out/'top20.csv',index=False)
+    archive=out/'history'/f'{run_id}_{attempt}';archive.mkdir(parents=True,exist_ok=True)
+    for name in ('latest.json','latest.csv','top20.json','top20.csv','watchlist.json'):
+        (archive/name).write_bytes((out/name).read_bytes())
+    dump(out/'manifest.json',{'run_url':run_url,'run_id':run_id,'run_utc':report['run_utc'],'completed_utc':report['completed_utc'],'expected_session':expected,'classification_counts':counts,'analyzed':len(results),'failed':len(failures),'fresh':fresh,'history_path':str(archive)})
+    print(json.dumps({k:report[k] for k in ['universe_count','scanned_successfully','failed_count','coverage_pct','fresh_count','stale_count','classification_counts','benchmark','relative_strength_coverage']},ensure_ascii=False),flush=True)
     return report
 
 if __name__=='__main__':

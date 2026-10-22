@@ -1,67 +1,60 @@
 name: TASI Radar 3.0
-
 on:
-
   workflow_dispatch:
-
   schedule:
-
-    # Sunday to Thursday, 4:30 PM Riyadh time
-
-    - cron: '30 13 * * 0-4'
-
+    # 14:35 UTC = 17:35 Asia/Riyadh (UTC+3, no DST), Sunday–Thursday.
+    # Leaves time to publish before the existing ~19:00 ChatGPT report.
+    - cron: '35 14 * * 0-4'
+  push:
+    branches: [main]
+    paths:
+      - 'radar.py'
+      - 'config.json'
+      - 'requirements.txt'
+      - 'tests/**'
+      - 'scripts/**'
+      - 'data/tasi_symbols.csv'
+      - '.github/workflows/radar.yml'
 permissions:
-
-  contents: read
-
+  contents: write
+concurrency:
+  group: tasi-radar-main
+  cancel-in-progress: false
 jobs:
-
   scan:
-
     runs-on: ubuntu-latest
-
-    timeout-minutes: 30
-
+    timeout-minutes: 45
     steps:
-
-      - name: Checkout repository
-
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-
-        uses: actions/setup-python@v5
-
+      - uses: actions/checkout@v4
         with:
-
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
           python-version: '3.11'
-
           cache: pip
-
       - name: Install dependencies
-
         run: pip install -r requirements.txt
-
+      - name: Test analysis and safety gates
+        run: python -m pytest -q
       - name: Run TASI Radar
-
-        run: python radar.py
-
-      - name: Run tests
-
-        run: python -m unittest discover -s tests -p 'test_*.py'
-
+        run: python -u radar.py
+      - name: Validate actual scan output
+        run: python scripts/verify_output.py
+      - name: Persist current results and run history
+        if: success()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add output/
+          git diff --cached --quiet && exit 0
+          git commit -m "Save TASI results for run ${GITHUB_RUN_ID} [skip ci]"
+          git pull --rebase origin main
+          git push origin HEAD:main
       - name: Upload scan results
-
         if: always()
-
         uses: actions/upload-artifact@v4
-
         with:
-
-          name: tasi-radar-results
-
+          name: tasi-radar-results-${{ github.run_id }}-${{ github.run_attempt }}
           path: output/
-
-          if-no-files-found: warn
-
-          retention-days: 30
+          if-no-files-found: error
+          retention-days: 90
