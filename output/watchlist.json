@@ -1,0 +1,644 @@
+{
+  "expected_session": "2026-10-22",
+  "comparison_run_utc": null,
+  "stocks": [
+    {
+      "symbol": "7200",
+      "status": "analyzed",
+      "changes": [
+        "first_observation"
+      ],
+      "previous_date": null,
+      "previous_classification": null,
+      "current": {
+        "symbol": "7200",
+        "date": "2026-10-22",
+        "last_bar": "2026-10-22",
+        "close": 256.8,
+        "classification": "Wait",
+        "technical_score": 15,
+        "data_fresh": true,
+        "expected_session": "2026-10-22",
+        "confidence": "medium",
+        "missing_indicators": [
+          "synchronized_relative_strength"
+        ],
+        "entry_blockers": [
+          "insufficient_entry_indicators",
+          "price_not_confirmed",
+          "trend_not_confirmed",
+          "reward_risk_below_minimum_or_missing"
+        ],
+        "observations": {
+          "breakout20_with_volume": false,
+          "reclaim_ema20_with_volume": false,
+          "price_breakout20": false,
+          "volume_confirmed": true,
+          "trend_ema": false,
+          "range_contraction": false,
+          "higher_lows": false,
+          "volume": 110927.0,
+          "volume_avg20_prior": 50486.95,
+          "volume_ratio20": 2.197142,
+          "rsi14": 27.592866,
+          "macd": -5.243302,
+          "macd_signal": -1.164736,
+          "macd_histogram": -4.078566,
+          "atr14": 10.326486,
+          "ema20": 289.795602,
+          "ema50": 286.959249,
+          "ema200": 231.999088,
+          "support20": 269.0,
+          "resistance20": 305.0,
+          "relative_strength_20d_vs_tasi": null,
+          "relative_strength_60d_vs_tasi": null
+        },
+        "relative_strength": {
+          "20": {
+            "value_pct_points": null,
+            "reason": "missing synchronized stock or TASI sessions; no forward fill"
+          },
+          "60": {
+            "value_pct_points": null,
+            "reason": "missing synchronized stock or TASI sessions; no forward fill"
+          }
+        },
+        "scenario": {
+          "trigger": 305.0,
+          "reclaim_trigger": 289.795602,
+          "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+          "invalidation": null,
+          "conditional_target": 338.0,
+          "target_method": "previous 90-session high",
+          "upside_pct": 31.619938,
+          "reward_risk": null,
+          "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+        },
+        "fibonacci": {
+          "direction": "up",
+          "high": 338.0,
+          "high_date": "2026-08-26",
+          "low": 204.535102,
+          "low_date": "2026-06-18",
+          "retracement": {
+            "38.2": 287.016409,
+            "50": 271.267551,
+            "61.8": 255.518693
+          },
+          "extension": {
+            "127.2": 374.302452,
+            "161.8": 420.481307
+          },
+          "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+        },
+        "bars": 355,
+        "first_bar": "2025-05-20",
+        "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+        "name": "ام آي اس",
+        "sector": "التطبيقات وخدمات التقنية",
+        "price_repairs": [
+          {
+            "date": "2026-10-22",
+            "field": "Close",
+            "source": "Yahoo regularMarketPrice",
+            "quote_timestamp": "2026-10-22T15:19:38+03:00",
+            "value": 256.8,
+            "reason": "daily Close was null; quote date and OHLC range validated"
+          }
+        ]
+      }
+    },
+    {
+      "symbol": "2350",
+      "status": "analyzed",
+      "changes": [
+        "first_observation"
+      ],
+      "previous_date": null,
+      "previous_classification": null,
+      "current": {
+        "symbol": "2350",
+        "date": "2026-10-22",
+        "last_bar": "2026-10-22",
+        "close": 4.87,
+        "classification": "Early Watch",
+        "technical_score": 35,
+        "data_fresh": true,
+        "expected_session": "2026-10-22",
+        "confidence": "medium",
+        "missing_indicators": [
+          "synchronized_relative_strength"
+        ],
+        "entry_blockers": [
+          "insufficient_entry_indicators",
+          "price_not_confirmed",
+          "trend_not_confirmed"
+        ],
+        "observations": {
+          "breakout20_with_volume": false,
+          "reclaim_ema20_with_volume": false,
+          "price_breakout20": false,
+          "volume_confirmed": true,
+          "trend_ema": false,
+          "range_contraction": false,
+          "higher_lows": true,
+          "volume": 15175999.0,
+          "volume_avg20_prior": 3639798.55,
+          "volume_ratio20": 4.169461,
+          "rsi14": 49.430362,
+          "macd": -0.104334,
+          "macd_signal": -0.115644,
+          "macd_histogram": 0.01131,
+          "atr14": 0.150991,
+          "ema20": 4.831879,
+          "ema50": 4.996023,
+          "ema200": 5.180221,
+          "support20": 4.52,
+          "resistance20": 5.09,
+          "relative_strength_20d_vs_tasi": null,
+          "relative_strength_60d_vs_tasi": null
+        },
+        "relative_strength": {
+          "20": {
+            "value_pct_points": null,
+            "reason": "missing synchronized stock or TASI sessions; no forward fill"
+          },
+          "60": {
+            "value_pct_points": null,
+            "reason": "missing synchronized stock or TASI sessions; no forward fill"
+          }
+        },
+        "scenario": {
+          "trigger": 5.09,
+          "reclaim_trigger": 4.831879,
+          "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+          "invalidation": 4.568018,
+          "conditional_target": 5.62,
+          "target_method": "previous 90-session high",
+          "upside_pct": 15.400408,
+          "reward_risk": 2.48359,
+          "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+        },
+        "fibonacci": {
+          "direction": "down",
+          "high": 5.62,
+          "high_date": "2026-08-04",
+          "low": 4.52,
+          "low_date": "2026-10-15",
+          "retracement": {
+            "38.2": 4.9402,
+            "50": 5.07,
+            "61.8": 5.1998
+          },
+          "extension": {
+            "127.2": 4.2208,
+            "161.8": 3.8402
+          },
+          "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+        },
+        "bars": 355,
+        "first_bar": "2025-05-20",
+        "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+        "name": "كيان السعودية",
+        "sector": "المواد الأساسية",
+        "price_repairs": [
+          {
+            "date": "2026-10-22",
+            "field": "Close",
+            "source": "Yahoo regularMarketPrice",
+            "quote_timestamp": "2026-10-22T15:19:54+03:00",
+            "value": 4.87,
+            "reason": "daily Close was null; quote date and OHLC range validated"
+          }
+        ]
+      }
+    },
+    {
+      "symbol": "1150",
+      "status": "analyzed",
+      "changes": [
+        "first_observation"
+      ],
+      "previous_date": null,
+      "previous_classification": null,
+      "current": {
+        "symbol": "1150",
+        "date": "2026-10-22",
+        "last_bar": "2026-10-22",
+        "close": 21.46,
+        "classification": "Wait",
+        "technical_score": 15,
+        "data_fresh": true,
+        "expected_session": "2026-10-22",
+        "confidence": "medium",
+        "missing_indicators": [
+          "synchronized_relative_strength"
+        ],
+        "entry_blockers": [
+          "insufficient_entry_indicators",
+          "price_not_confirmed",
+          "trend_not_confirmed",
+          "reward_risk_below_minimum_or_missing"
+        ],
+        "observations": {
+          "breakout20_with_volume": false,
+          "reclaim_ema20_with_volume": false,
+          "price_breakout20": false,
+          "volume_confirmed": true,
+          "trend_ema": false,
+          "range_contraction": false,
+          "higher_lows": false,
+          "volume": 7909793.0,
+          "volume_avg20_prior": 4089970.4,
+          "volume_ratio20": 1.933949,
+          "rsi14": 19.306393,
+          "macd": -0.595757,
+          "macd_signal": -0.364618,
+          "macd_histogram": -0.23114,
+          "atr14": 0.457496,
+          "ema20": 23.564909,
+          "ema50": 24.08337,
+          "ema200": 23.573921,
+          "support20": 21.709999,
+          "resistance20": 24.82,
+          "relative_strength_20d_vs_tasi": null,
+          "relative_strength_60d_vs_tasi": null
+        },
+        "relative_strength": {
+          "20": {
+            "value_pct_points": null,
+            "reason": "missing synchronized stock or TASI sessions; no forward fill"
+          },
+          "60": {
+            "value_pct_points": null,
+            "reason": "missing synchronized stock or TASI sessions; no forward fill"
+          }
+        },
+        "scenario": {
+          "trigger": 24.82,
+          "reclaim_trigger": 23.564909,
+          "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+          "invalidation": null,
+          "conditional_target": 26.0,
+          "target_method": "previous 90-session high",
+          "upside_pct": 21.155638,
+          "reward_risk": null,
+          "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+        },
+        "fibonacci": {
+          "direction": "down",
+          "high": 26.0,
+          "high_date": "2026-08-26",
+          "low": 21.17,
+          "low_date": "2026-10-22",
+          "retracement": {
+            "38.2": 23.01506,
+            "50": 23.585,
+            "61.8": 24.15494
+          },
+          "extension": {
+            "127.2": 19.85624,
+            "161.8": 18.18506
+          },
+          "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+        },
+        "bars": 355,
+        "first_bar": "2025-05-20",
+        "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+        "name": "الإنماء",
+        "sector": "البنوك",
+        "price_repairs": [
+          {
+            "date": "2026-10-22",
+            "field": "Close",
+            "source": "Yahoo regularMarketPrice",
+            "quote_timestamp": "2026-10-22T15:19:59+03:00",
+            "value": 21.46,
+            "reason": "daily Close was null; quote date and OHLC range validated"
+          }
+        ]
+      }
+    },
+    {
+      "symbol": "1321",
+      "status": "analyzed",
+      "changes": [
+        "first_observation"
+      ],
+      "previous_date": null,
+      "previous_classification": null,
+      "current": {
+        "symbol": "1321",
+        "date": "2026-10-22",
+        "last_bar": "2026-10-22",
+        "close": 163.7,
+        "classification": "Wait",
+        "technical_score": 15,
+        "data_fresh": true,
+        "expected_session": "2026-10-22",
+        "confidence": "medium",
+        "missing_indicators": [
+          "synchronized_relative_strength"
+        ],
+        "entry_blockers": [
+          "insufficient_entry_indicators",
+          "price_not_confirmed",
+          "trend_not_confirmed",
+          "reward_risk_below_minimum_or_missing"
+        ],
+        "observations": {
+          "breakout20_with_volume": false,
+          "reclaim_ema20_with_volume": false,
+          "price_breakout20": false,
+          "volume_confirmed": true,
+          "trend_ema": false,
+          "range_contraction": false,
+          "higher_lows": false,
+          "volume": 447015.0,
+          "volume_avg20_prior": 258082.65,
+          "volume_ratio20": 1.732061,
+          "rsi14": 33.857821,
+          "macd": -6.163408,
+          "macd_signal": -5.419946,
+          "macd_histogram": -0.743462,
+          "atr14": 8.344698,
+          "ema20": 180.653981,
+          "ema50": 188.648465,
+          "ema200": 179.360263,
+          "support20": 163.800003,
+          "resistance20": 212.699997,
+          "relative_strength_20d_vs_tasi": null,
+          "relative_strength_60d_vs_tasi": null
+        },
+        "relative_strength": {
+          "20": {
+            "value_pct_points": null,
+            "reason": "missing synchronized stock or TASI sessions; no forward fill"
+          },
+          "60": {
+            "value_pct_points": null,
+            "reason": "missing synchronized stock or TASI sessions; no forward fill"
+          }
+        },
+        "scenario": {
+          "trigger": 212.699997,
+          "reclaim_trigger": 180.653981,
+          "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+          "invalidation": null,
+          "conditional_target": 231.100006,
+          "target_method": "previous 90-session high",
+          "upside_pct": 41.172881,
+          "reward_risk": null,
+          "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+        },
+        "fibonacci": {
+          "direction": "down",
+          "high": 231.100006,
+          "high_date": "2026-07-09",
+          "low": 156.199997,
+          "low_date": "2026-10-22",
+          "retracement": {
+            "38.2": 184.8118,
+            "50": 193.650002,
+            "61.8": 202.488203
+          },
+          "extension": {
+            "127.2": 135.827194,
+            "161.8": 109.911791
+          },
+          "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+        },
+        "bars": 355,
+        "first_bar": "2025-05-20",
+        "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+        "name": "أنابيب الشرق",
+        "sector": "المواد الأساسية",
+        "price_repairs": [
+          {
+            "date": "2026-10-22",
+            "field": "Close",
+            "source": "Yahoo regularMarketPrice",
+            "quote_timestamp": "2026-10-22T15:19:22+03:00",
+            "value": 163.7,
+            "reason": "daily Close was null; quote date and OHLC range validated"
+          }
+        ]
+      }
+    },
+    {
+      "symbol": "7201",
+      "status": "analyzed",
+      "changes": [
+        "first_observation"
+      ],
+      "previous_date": null,
+      "previous_classification": null,
+      "current": {
+        "symbol": "7201",
+        "date": "2026-10-22",
+        "last_bar": "2026-10-22",
+        "close": 3.82,
+        "classification": "Wait",
+        "technical_score": 15,
+        "data_fresh": true,
+        "expected_session": "2026-10-22",
+        "confidence": "medium",
+        "missing_indicators": [
+          "synchronized_relative_strength"
+        ],
+        "entry_blockers": [
+          "insufficient_entry_indicators",
+          "price_not_confirmed",
+          "volume_not_confirmed",
+          "trend_not_confirmed",
+          "reward_risk_below_minimum_or_missing"
+        ],
+        "observations": {
+          "breakout20_with_volume": false,
+          "reclaim_ema20_with_volume": false,
+          "price_breakout20": false,
+          "volume_confirmed": false,
+          "trend_ema": false,
+          "range_contraction": false,
+          "higher_lows": false,
+          "volume": 2911858.0,
+          "volume_avg20_prior": 3328553.6,
+          "volume_ratio20": 0.874812,
+          "rsi14": 50.310985,
+          "macd": 0.094644,
+          "macd_signal": 0.087781,
+          "macd_histogram": 0.006863,
+          "atr14": 0.24736,
+          "ema20": 3.850529,
+          "ema50": 3.720319,
+          "ema200": 3.821494,
+          "support20": 3.26,
+          "resistance20": 4.44,
+          "relative_strength_20d_vs_tasi": null,
+          "relative_strength_60d_vs_tasi": null
+        },
+        "relative_strength": {
+          "20": {
+            "value_pct_points": null,
+            "reason": "missing synchronized stock or TASI sessions; no forward fill"
+          },
+          "60": {
+            "value_pct_points": null,
+            "reason": "missing synchronized stock or TASI sessions; no forward fill"
+          }
+        },
+        "scenario": {
+          "trigger": 4.44,
+          "reclaim_trigger": 3.850529,
+          "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+          "invalidation": 3.325279,
+          "conditional_target": 4.44,
+          "target_method": "previous 90-session high",
+          "upside_pct": 16.230368,
+          "reward_risk": 1.253233,
+          "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+        },
+        "fibonacci": {
+          "direction": "up",
+          "high": 4.44,
+          "high_date": "2026-10-11",
+          "low": 3.21,
+          "low_date": "2026-07-29",
+          "retracement": {
+            "38.2": 3.97014,
+            "50": 3.825,
+            "61.8": 3.67986
+          },
+          "extension": {
+            "127.2": 4.77456,
+            "161.8": 5.20014
+          },
+          "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+        },
+        "bars": 355,
+        "first_bar": "2025-05-20",
+        "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+        "name": "بحر العرب",
+        "sector": "التطبيقات وخدمات التقنية",
+        "price_repairs": [
+          {
+            "date": "2026-10-22",
+            "field": "Close",
+            "source": "Yahoo regularMarketPrice",
+            "quote_timestamp": "2026-10-22T15:18:55+03:00",
+            "value": 3.82,
+            "reason": "daily Close was null; quote date and OHLC range validated"
+          }
+        ]
+      }
+    },
+    {
+      "symbol": "3008",
+      "status": "analyzed",
+      "changes": [
+        "first_observation"
+      ],
+      "previous_date": null,
+      "previous_classification": null,
+      "current": {
+        "symbol": "3008",
+        "date": "2026-10-22",
+        "last_bar": "2026-10-22",
+        "close": 1.05,
+        "classification": "Wait",
+        "technical_score": 23,
+        "data_fresh": true,
+        "expected_session": "2026-10-22",
+        "confidence": "medium",
+        "missing_indicators": [
+          "synchronized_relative_strength"
+        ],
+        "entry_blockers": [
+          "insufficient_entry_indicators",
+          "price_not_confirmed",
+          "trend_not_confirmed"
+        ],
+        "observations": {
+          "breakout20_with_volume": false,
+          "reclaim_ema20_with_volume": false,
+          "price_breakout20": false,
+          "volume_confirmed": true,
+          "trend_ema": false,
+          "range_contraction": false,
+          "higher_lows": false,
+          "volume": 23535084.0,
+          "volume_avg20_prior": 8601711.85,
+          "volume_ratio20": 2.736093,
+          "rsi14": 38.744176,
+          "macd": -0.024769,
+          "macd_signal": -0.026723,
+          "macd_histogram": 0.001953,
+          "atr14": 0.047213,
+          "ema20": 1.09135,
+          "ema50": 1.16793,
+          "ema200": 1.536586,
+          "support20": 1.04,
+          "resistance20": 1.19,
+          "relative_strength_20d_vs_tasi": null,
+          "relative_strength_60d_vs_tasi": null
+        },
+        "relative_strength": {
+          "20": {
+            "value_pct_points": null,
+            "reason": "missing synchronized stock or TASI sessions; no forward fill"
+          },
+          "60": {
+            "value_pct_points": null,
+            "reason": "missing synchronized stock or TASI sessions; no forward fill"
+          }
+        },
+        "scenario": {
+          "trigger": 1.19,
+          "reclaim_trigger": 1.09135,
+          "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+          "invalidation": 1.04,
+          "conditional_target": 1.66,
+          "target_method": "previous 90-session high",
+          "upside_pct": 58.095235,
+          "reward_risk": 60.999764,
+          "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+        },
+        "fibonacci": {
+          "direction": "down",
+          "high": 1.66,
+          "high_date": "2026-06-30",
+          "low": 1.03,
+          "low_date": "2026-09-20",
+          "retracement": {
+            "38.2": 1.27066,
+            "50": 1.345,
+            "61.8": 1.41934
+          },
+          "extension": {
+            "127.2": 0.85864,
+            "161.8": 0.64066
+          },
+          "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+        },
+        "bars": 355,
+        "first_bar": "2025-05-20",
+        "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+        "name": "الكثيري",
+        "sector": "المواد الأساسية",
+        "price_repairs": [
+          {
+            "date": "2026-10-22",
+            "field": "Close",
+            "source": "Yahoo regularMarketPrice",
+            "quote_timestamp": "2026-10-22T15:18:42+03:00",
+            "value": 1.05,
+            "reason": "daily Close was null; quote date and OHLC range validated"
+          }
+        ]
+      }
+    }
+  ],
+  "note": "First observation is a baseline, not a newly triggered signal.",
+  "run_utc": "2026-10-22T22:25:33.923911+00:00",
+  "run_url": "https://github.com/saqerkhalel-gif/tasi-radar-3/actions/runs/39864813036"
+}
