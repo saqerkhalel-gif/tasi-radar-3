@@ -1,6 +1,6 @@
 {
-  "run_utc": "2026-10-22T23:06:44.008709+00:00",
-  "run_url": "https://github.com/saqerkhalel-gif/tasi-radar-3/actions/runs/39868926114",
+  "run_utc": "2026-10-22T23:17:02.704797+00:00",
+  "run_url": "https://github.com/saqerkhalel-gif/tasi-radar-3/actions/runs/39870228858",
   "expected_session": "2026-10-22",
   "ranking_note": "Technical candidates including Early Watch/Wait; conditional targets, not guaranteed profits; Entry requires fresh stock and TASI data, 200 bars, synchronized RS, price+volume, upside >=10%, reward/risk >=2.",
   "count": 20,
@@ -224,6 +224,8 @@
       },
       "nomination_reasons": [
         "confirmed_higher_lows",
+        "observed_higher_lows_last10",
+        "range_contraction_5_vs20",
         "EMA_trend_confirmed"
       ],
       "scenario": {
@@ -469,7 +471,8 @@
       "nomination_reasons": [
         "confirmed_higher_lows",
         "momentum_improving",
-        "demand_volume_improving"
+        "demand_volume_improving",
+        "observed_higher_lows_last10"
       ],
       "scenario": {
         "trigger": 5.09,
@@ -706,7 +709,8 @@
       "nomination_reasons": [
         "confirmed_higher_lows",
         "demand_volume_improving",
-        "breakout_retest_holds"
+        "breakout_retest_holds",
+        "observed_higher_lows_last10"
       ],
       "scenario": {
         "trigger": 24.370001,
@@ -943,6 +947,7 @@
       "nomination_reasons": [
         "confirmed_higher_lows",
         "demand_volume_improving",
+        "observed_higher_lows_last10",
         "EMA_trend_confirmed"
       ],
       "scenario": {
@@ -1205,7 +1210,10 @@
         "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
-      "nomination_reasons": [],
+      "nomination_reasons": [
+        "observed_higher_lows_last10",
+        "range_contraction_5_vs20"
+      ],
       "scenario": {
         "trigger": 36.880001,
         "reclaim_trigger": 35.189859,
@@ -1438,7 +1446,8 @@
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "nomination_reasons": [
-        "demand_volume_improving"
+        "demand_volume_improving",
+        "observed_higher_lows_last10"
       ],
       "scenario": {
         "trigger": 28.379999,
@@ -1519,7 +1528,7 @@
         "atr14": 0.904492,
         "ema20": 61.904503,
         "ema50": 63.12762,
-        "ema200": 64.3529,
+        "ema200": 64.352899,
         "support20": 59.549999,
         "resistance20": 64.800003,
         "relative_strength_20d_vs_tasi": 3.21512,
@@ -1673,7 +1682,8 @@
       },
       "nomination_reasons": [
         "momentum_improving",
-        "failed_downside_breakdown"
+        "failed_downside_breakdown",
+        "range_contraction_5_vs20"
       ],
       "scenario": {
         "trigger": 64.800003,
@@ -1915,7 +1925,8 @@
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "nomination_reasons": [
-        "confirmed_higher_lows"
+        "confirmed_higher_lows",
+        "observed_higher_lows_last10"
       ],
       "scenario": {
         "trigger": 13.67,
@@ -2141,7 +2152,8 @@
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "nomination_reasons": [
-        "confirmed_higher_lows"
+        "confirmed_higher_lows",
+        "observed_higher_lows_last10"
       ],
       "scenario": {
         "trigger": 17.33,
@@ -2391,7 +2403,9 @@
         "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
-      "nomination_reasons": [],
+      "nomination_reasons": [
+        "observed_higher_lows_last10"
+      ],
       "scenario": {
         "trigger": 12.3,
         "reclaim_trigger": 11.63244,
@@ -2632,7 +2646,8 @@
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "nomination_reasons": [
-        "confirmed_higher_lows"
+        "confirmed_higher_lows",
+        "observed_higher_lows_last10"
       ],
       "scenario": {
         "trigger": 83.199997,
@@ -2878,7 +2893,8 @@
       "nomination_reasons": [
         "momentum_improving",
         "demand_volume_improving",
-        "false_upside_breakout"
+        "false_upside_breakout",
+        "observed_higher_lows_last10"
       ],
       "scenario": {
         "trigger": 25.559999,
@@ -3148,7 +3164,9 @@
       "nomination_reasons": [
         "confirmed_higher_lows",
         "momentum_improving",
-        "demand_volume_improving"
+        "demand_volume_improving",
+        "observed_higher_lows_last10",
+        "range_contraction_5_vs20"
       ],
       "scenario": {
         "trigger": 37.380001,
@@ -3398,7 +3416,8 @@
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "nomination_reasons": [
-        "confirmed_higher_lows"
+        "confirmed_higher_lows",
+        "range_contraction_5_vs20"
       ],
       "scenario": {
         "trigger": 130.899994,
@@ -3622,7 +3641,9 @@
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "nomination_reasons": [
-        "momentum_improving"
+        "momentum_improving",
+        "observed_higher_lows_last10",
+        "range_contraction_5_vs20"
       ],
       "scenario": {
         "trigger": 29.879999,
@@ -3877,7 +3898,9 @@
         "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
-      "nomination_reasons": [],
+      "nomination_reasons": [
+        "observed_higher_lows_last10"
+      ],
       "scenario": {
         "trigger": 26.040001,
         "reclaim_trigger": 25.616169,
@@ -4113,7 +4136,9 @@
         "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
-      "nomination_reasons": [],
+      "nomination_reasons": [
+        "observed_higher_lows_last10"
+      ],
       "scenario": {
         "trigger": 56.200001,
         "reclaim_trigger": 53.179273,
@@ -4367,7 +4392,9 @@
         "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
-      "nomination_reasons": [],
+      "nomination_reasons": [
+        "observed_higher_lows_last10"
+      ],
       "scenario": {
         "trigger": 62.799999,
         "reclaim_trigger": 60.525113,
@@ -4585,7 +4612,9 @@
       },
       "nomination_reasons": [
         "confirmed_higher_lows",
-        "momentum_improving"
+        "momentum_improving",
+        "observed_higher_lows_last10",
+        "range_contraction_5_vs20"
       ],
       "scenario": {
         "trigger": 64.599998,
@@ -4824,7 +4853,9 @@
         "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
-      "nomination_reasons": [],
+      "nomination_reasons": [
+        "range_contraction_5_vs20"
+      ],
       "scenario": {
         "trigger": 7.17,
         "reclaim_trigger": 6.515669,
