@@ -61,3 +61,75 @@ Tests cover synchronized RS windows and missing dates, weekends/holidays/preclos
 - yfinance exclusive end-date semantics: https://ranaroussi.github.io/yfinance/reference/yfinance.functions.html
 
 No orders, notification delivery, news scoring, Elliott Wave, intraday volume profile or return guarantees are implemented. Technical outputs are research scenarios and require price/date verification before use.
+
+## Phase 2: auditable structure and research
+
+The daily schedule remains `35 14 * * 0-4` (17:35 Riyadh, Sunday–Thursday).
+Existing `latest`, `top20`, `watchlist`, `benchmark`, manifest and immutable run
+history paths are retained. No additional ChatGPT task or delivery channel is used.
+
+`research.py` adds confirmed higher lows (two observed right-hand candles),
+clustered 90-bar pivot support/resistance zones, ATR contraction, MACD momentum
+improvement, up/down volume, failed breakouts and breakout retests. These are
+heuristic observations, with evidence per stock in `early_patterns`,
+`price_structure` and `nomination_reasons`; they do not relax entry requirements.
+The nearest overhead zone limits targets; structural invalidation uses the nearest
+support zone minus 0.25 ATR. Entry still requires fresh synchronized prices/TASI,
+200 bars, price and prior-20-session volume confirmation, >=10% conditional upside,
+and reward/risk >=2. Unconfirmed candidates remain Early Watch or Wait.
+
+### Data quality
+
+`quality_report.json` audits the previous report's quote repairs, current OHLCV,
+zero-volume rows, missing sessions and adjusted-price jumps above 22%. Same-vendor
+quote timestamp and OHLC-range checks do **not** independently validate an official
+close. Quote-substituted dates are quarantined, including any within the 200-bar
+entry history. Large unexplained adjusted-price jumps also block Entry. Available
+indicators and RS remain visible for research with low confidence. Quarantined
+bars cannot execute simulated trades or update forward opportunity outcomes.
+TASI is the observed Investing instrument 11319 seed plus observed cache and Yahoo
+`^TASI.SR`; current overlap must agree within 0.1%, recent 61 calendar sessions must
+be complete, and large index jumps/source conflicts block live Entry. The complete
+historical series has not been independently reconciled to official exchange data.
+
+### Historical execution and limitations
+
+`backtest.json`, `backtest_trades.csv` and `backtest_equity.csv` use the deployed
+rules without optimization. Every feature is calculated from the prefix available
+at that signal close; five-bar pivots are usable only after both right bars exist.
+Orders execute at the next **calendar trading session** open, not the signal close;
+remaining upside and reward/risk are checked again after gaps. Maximum ten slots,
+each at most 10% of current marked equity, no leverage, fixed stops/targets, maximum
+20 sessions; an ambiguous stop/target candle resolves to the stop. Gap stops fill
+at the open; favorable gap targets are capped at the target. Entry/exit costs are
+configured as 15.5 bps commission plus 5 bps slippage per side. Taxes, capacity and
+additional spread are not modeled. Final trusted closes liquidate open positions;
+unliquidated positions and stale marks are disclosed and invalidate a comparison.
+Daily portfolio drawdown includes cash and marked positions, not a compounded list
+of overlapping trade returns. TASI buy/hold uses the identical evaluation dates
+and cost assumption; it is close-to-close while strategy entries use opening prices.
+Tail sessions with >10% missing/quarantined stocks are excluded and listed.
+
+The last 30% of chronological evaluation dates are also reported separately, with
+fresh cash and no carried positions. This is descriptive, not independent validation
+of rules developed with knowledge of this market. Current constituents introduce
+survivorship bias; only the available ~520 calendar days are tested. Vendor-adjusted
+history is not a point-in-time archive of corporate actions. Results with zero trades
+have null win/loss statistics; they are inconclusive, not a 100% success claim.
+
+`missed_opportunities.json/.csv` evaluate matured, nonoverlapping 20-session windows
+with a subsequent high excursion >=10%, excluding quarantined/missing bars. Detection
+means Entry, Partial Entry **or Early Watch** existed at the base or prior four bars;
+it is not a claim of a profitable trade. Missed cases carry historical blockers and
+pattern evidence. High excursion and maximum closing gain are separately disclosed.
+`opportunity_ledger.json` starts forward tracking on deployment; discovery scenarios
+are frozen and only later trusted candles update trigger, invalidation, target and
+20-observed-session expiry. A later trigger crossing is not an Entry authorization.
+
+All reports include run identity and are archived under `output/history/<run>_<attempt>/`.
+The run artifact additionally preserves compressed OHLCV inputs, benchmark, quarantine
+map and config in `research_inputs/` for 90 days; input hashes appear in the backtest.
+Only reports are committed, avoiding repeated full input histories in Git. The
+workflow verifies counts, run identities, every Entry gate and historical trade
+ordering before publishing. The CSV universe remains the fixed 254 equities;
+this is not a live independently verified constituent count.

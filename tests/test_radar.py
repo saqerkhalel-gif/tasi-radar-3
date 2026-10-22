@@ -109,6 +109,9 @@ def test_end_date_is_exclusive_and_all_outputs(monkeypatch,tmp_path):
         if ticker=='1030.SR':return d.iloc[:-1]
         return d[['Close']] if benchmark else d
     monkeypatch.setattr(radar,'fetch_yahoo',fetch)
+    # Exercise historical integration on one history; separate research tests cover execution.
+    research=radar.historical_research
+    monkeypatch.setattr(radar,'historical_research',lambda histories,*args:research(dict(list(histories.items())[:1]),*args))
     cfg={**CFG,'output_dir':str(tmp_path/'output')};cf=tmp_path/'config.json';cf.write_text(json.dumps(cfg))
     r=radar.run(SimpleNamespace(config=str(cf),limit=None))
     assert r['scanned_successfully']==253 and r['failed_count']==1 and r['stale_count']==1
@@ -140,6 +143,8 @@ def test_confirmed_entry_and_each_reward_safety_gate(monkeypatch):
         for k,val in {'EMA20':110.,'EMA50':105.,'EMA200':100.,'RSI14':60.,'MACD':2.,'MACD_signal':1.,'ATR14':2.,'prior_support20':112.,'prior_resistance20':118.}.items():v[k]=val
         return v
     monkeypatch.setattr(radar,'indicators',forced)
+    structure=radar.price_structure
+    monkeypatch.setattr(radar,'price_structure',lambda d:{**structure(d),'nearest_resistance':None})
     r=radar.analyze('TEST',d,CFG,d)
     assert r['classification']=='Entry' and not r['entry_blockers']
     r=radar.analyze('TEST',d,{**CFG,'minimum_reward_risk':100},d)

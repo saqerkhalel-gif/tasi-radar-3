@@ -9,6 +9,7 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 import numpy as np
 import pandas as pd
+from research import quality_audit, price_structure, early_patterns, benchmark_audit, historical_research, update_ledger
 
 
 def indicators(df: pd.DataFrame) -> pd.DataFrame:
@@ -92,8 +93,8 @@ def relative_strength(stock, benchmark, sessions, window):
             'start_date':str(grid[0].date()), 'end_date':str(grid[-1].date()), 'sessions':window, 'reason':None}
 
 
-def analyze(symbol, df, config, benchmark=None, expected_session=None, sessions=None):
-    d = indicators(df)
+def analyze(symbol, df, config, benchmark=None, expected_session=None, sessions=None, prepared=None, research_mode=False):
+    d = prepared if prepared is not None else indicators(df)
     last = d.iloc[-1]; prev = d.iloc[-2] if len(d)>1 else last
     price = float(last['Close']); date = str(d.index[-1].date())
     expected_session = expected_session or date
@@ -110,6 +111,9 @@ def analyze(symbol, df, config, benchmark=None, expected_session=None, sessions=
     trend = bool(price>last['EMA20']>last['EMA50'] and price>last['EMA200'])
     contraction = bool(last['range5'] < last['range20']*0.45)
     higher_lows = bool(len(d)>=10 and d['Low'].iloc[-10:-5].min()<d['Low'].iloc[-5:].min())
+    quality=quality_audit(df,sessions)
+    structure=price_structure(d)
+    patterns=early_patterns(d,structure)
     fib = fibonacci(d) if len(d)>=20 else {}
     atr = num(last['ATR14']); atr_pct = atr/price*100 if atr else None
     stop = max(support,price-2*atr) if support is not None and atr else None
@@ -121,6 +125,11 @@ def analyze(symbol, df, config, benchmark=None, expected_session=None, sessions=
     if target is None and fib.get('direction')=='up':
         candidate=fib['extension']['127.2']
         if price<candidate<=price*1.30: target=candidate;target_method='conditional 127.2% swing extension (maximum 30% upside)'
+    if structure['structural_invalidation'] is not None:
+        stop=structure['structural_invalidation']
+    overhead=structure['nearest_resistance']
+    if overhead and (target is None or overhead['low']<target):
+        target=overhead['low'];target_method='nearest confirmed overhead pivot zone (conservative lower edge)'
     upside = (target/price-1)*100 if target else None
     rr = (target-price)/(price-stop) if target and stop else None
     required = ['EMA20','EMA50','EMA200','RSI14','MACD','MACD_signal','ATR14','prior_support20','prior_resistance20']
@@ -132,6 +141,9 @@ def analyze(symbol, df, config, benchmark=None, expected_session=None, sessions=
     benchmark_fresh = bool(benchmark is not None and not benchmark.empty and str(benchmark.index[-1].date())==expected_session)
     confidence = 'high' if not missing and fresh and benchmark_fresh else 'medium' if len(d)>=60 else 'low'
     blockers=[]
+    if not quality['entry_eligible']:blockers.append('unverified_or_suspicious_OHLCV')
+    if not research_mode and benchmark is not None and not benchmark.attrs.get('entry_eligible',True):blockers.append('benchmark_quality_not_verified')
+    if patterns['false_upside_breakout']:blockers.append('failed_upside_breakout')
     if not fresh: blockers.append('stale_price_data')
     if not benchmark_fresh: blockers.append('stale_or_missing_TASI')
     if missing or len(d)<config.get('minimum_entry_history_rows',200): blockers.append('insufficient_entry_indicators')
@@ -139,12 +151,14 @@ def analyze(symbol, df, config, benchmark=None, expected_session=None, sessions=
     if not volume_confirmed: blockers.append('volume_not_confirmed')
     if not trend: blockers.append('trend_not_confirmed')
     if upside is None or upside < max(10,config['minimum_upside_pct']): blockers.append('upside_below_10pct_or_no_target')
-    if rr is None or rr < config['minimum_reward_risk']: blockers.append('reward_risk_below_minimum_or_missing')
+    if rr is None or rr < max(2,config['minimum_reward_risk']): blockers.append('reward_risk_below_minimum_or_missing')
     if atr_pct is None or atr_pct>config['max_atr_pct']: blockers.append('volatility_or_missing_ATR')
     entry = not blockers
-    classification = 'Entry' if entry and breakout else 'Partial Entry' if entry else 'Early Watch' if len(d)>=20 and (contraction or higher_lows or trend or breakout or reclaim) else 'Wait'
+    classification = 'Entry' if entry and breakout else 'Partial Entry' if entry else 'Early Watch' if len(d)>=20 and (contraction or higher_lows or trend or breakout or reclaim or patterns['early_reversal_candidate'] or patterns['accumulation_candidate']) else 'Wait'
     score = 25*trend+15*breakout+8*reclaim+15*volume_confirmed+8*(last['MACD']>last['MACD_signal'])+7*(45<=last['RSI14']<=70)+5*contraction+5*higher_lows
     score += sum(6 for n in (20,60) if rs[str(n)]['value_pct_points'] is not None and rs[str(n)]['value_pct_points']>0)
+    score+=5*patterns['accumulation_candidate']+5*patterns['early_reversal_candidate']+3*patterns['breakout_retest_holds']-10*patterns['false_upside_breakout']
+    if not quality['entry_eligible']:confidence='low';score-=10
     if not fresh: score-=30
     if confidence=='low':score-=15
     obs={'breakout20_with_volume':breakout and volume_confirmed,'reclaim_ema20_with_volume':reclaim and volume_confirmed,
@@ -157,7 +171,8 @@ def analyze(symbol, df, config, benchmark=None, expected_session=None, sessions=
          'relative_strength_20d_vs_tasi':rs['20']['value_pct_points'],'relative_strength_60d_vs_tasi':rs['60']['value_pct_points']}
     return clean({'symbol':symbol,'date':date,'last_bar':date,'close':price,'classification':classification,'technical_score':score,
         'data_fresh':fresh,'expected_session':expected_session,'confidence':confidence,'missing_indicators':missing,'entry_blockers':blockers,
-        'observations':obs,'relative_strength':rs,
+        'observations':obs,'relative_strength':rs,'data_quality':quality,'price_structure':structure,'early_patterns':patterns,
+        'nomination_reasons':patterns['evidence']+(['EMA_trend_confirmed'] if trend else [])+(['price_and_volume_confirmed'] if volume_confirmed and (breakout or reclaim) else []),
         'scenario':{'trigger':resistance,'reclaim_trigger':num(last['EMA20']),'trigger_rule':'daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= '+str(config['volume_confirmation_multiple']),
                     'invalidation':stop,'conditional_target':target,'target_method':target_method,'upside_pct':upside,'reward_risk':rr,
                     'forecast_window':'next 5–20 trading sessions; conditional, not a guaranteed return'},
@@ -176,7 +191,9 @@ def normalize(raw, benchmark=False):
     d=d[~d.index.duplicated(keep='last')].sort_index()
     mask=d['Close']>0
     if not benchmark:mask &= (d['High']>=d['Low'])&(d['High']>=d['Open'])&(d['High']>=d['Close'])&(d['Low']<=d['Open'])&(d['Low']<=d['Close'])&(d['Open']>0)&(d['Low']>0)&(d['Volume']>=0)
-    return d[mask]
+    valid=d[mask].copy()
+    valid.attrs['normalization']={'source_rows':len(raw),'valid_rows':len(valid),'rejected_or_duplicate_rows':len(raw)-len(valid)}
+    return valid
 
 
 def restore_current_close(raw, metadata, expected):
@@ -257,7 +274,8 @@ def flatten(r):
     return {'symbol':r['symbol'],'name':r.get('name'),'sector':r.get('sector'),'classification':r['classification'],
         'technical_score':r['technical_score'],'close':r['close'],'price_date':r['date'],'data_fresh':r['data_fresh'],
         'confidence':r['confidence'],'bars':r['bars'],'missing_indicators':';'.join(r['missing_indicators']),
-        'entry_blockers':';'.join(r['entry_blockers']),**r['observations'],**r['scenario']}
+        'entry_blockers':';'.join(r['entry_blockers']),'nomination_reasons':';'.join(r.get('nomination_reasons',[])),
+        'quality_status':r.get('data_quality',{}).get('status'),**r['observations'],**r['scenario']}
 
 
 def rank_results(results):
@@ -314,8 +332,9 @@ def run(args):
         if bench.empty:raise ValueError('No TASI closes on valid sessions')
         if len(bench)<61:benchmark_errors.append(f'insufficient TASI history: {len(bench)} closes; 61 synchronized sessions required for RS60')
     except Exception as e:benchmark_errors.append(str(e));bench=None
+    live_benchmark=bench.copy() if bench is not None else None
     sources=[]
-    for label,path in [('Investing.com TASI verified seed',Path(cfg.get('benchmark_seed','data/tasi_benchmark_seed.csv'))),('prior-run observed benchmark cache',out/'benchmark.csv')]:
+    for label,path in [('Investing.com TASI observed seed',Path(cfg.get('benchmark_seed','data/tasi_benchmark_seed.csv'))),('prior-run observed benchmark cache',out/'benchmark.csv')]:
         if path.exists():
             try:
                 cached=pd.read_csv(path,index_col='Date',parse_dates=True)
@@ -333,11 +352,16 @@ def run(args):
     benchmark_source=' + '.join(benchmark_sources)
     if not bench.empty:bench.to_csv(out/'benchmark.csv',index_label='Date')
     else:bench=None
-    results=[];failures=[]
+    benchmark_quality=benchmark_audit(bench,live_benchmark,sessions,expected,benchmark_errors)
+    if bench is not None:
+        bench.attrs['entry_eligible']=benchmark_quality['entry_eligible']
+        bench.attrs['historical_integrity_ok']=not benchmark_quality.get('suspicious_jump_dates') and not benchmark_quality.get('mismatch_dates') and not any('disagreement' in x for x in benchmark_errors)
+    results=[];failures=[];histories={}
     for row in universe.itertuples(index=False):
         try:
             d=fetch_yahoo(str(row.symbol)+'.SR',start,end);d=d[d.index.isin(sessions)]
             if d.empty:raise ValueError('No valid OHLCV on completed sessions')
+            qa=quality_audit(d,sessions);d.attrs['quarantine']=qa['quarantined_dates'];histories[row.symbol]=d
             r=analyze(row.symbol,d,cfg,bench,expected,sessions);r.update(name=row.name,sector=row.sector,price_repairs=d.attrs.get('price_repairs',[]));results.append(r)
         except Exception as e:failures.append({'symbol':row.symbol,'name':row.name,'reason':str(e)[:300]})
         print(f'{len(results)+len(failures)}/{len(universe)} {row.symbol}',flush=True)
@@ -346,7 +370,7 @@ def run(args):
     counts=dict(collections.Counter(r['classification'] for r in results))
     counts={c:counts.get(c,0) for c in ['Entry','Partial Entry','Early Watch','Wait']}
     fresh=sum(r['data_fresh'] for r in results);bmdate=str(bench.index[-1].date()) if bench is not None else None
-    report=clean({'schema_version':2,'run_utc':now.isoformat(),'completed_utc':datetime.now(timezone.utc).isoformat(),'run_id':run_id,'run_attempt':attempt,'run_url':run_url,'source_commit':os.getenv('GITHUB_SHA'),
+    report=clean({'schema_version':3,'run_utc':now.isoformat(),'completed_utc':datetime.now(timezone.utc).isoformat(),'run_id':run_id,'run_attempt':attempt,'run_url':run_url,'source_commit':os.getenv('GITHUB_SHA'),
         'expected_session':expected,'calendar':'exchange_calendars XSAU plus configured closures; post-close 15:20 Riyadh gate',
         'source':'Yahoo Finance via yfinance stocks; benchmark source separately disclosed; unofficial; no real-time claim',
         'universe_file':cfg['symbols_file'],'universe_sha256':hashlib.sha256(Path(cfg['symbols_file']).read_bytes()).hexdigest(),
@@ -357,20 +381,55 @@ def run(args):
         'limited_history_count':sum(bool(r['missing_indicators']) for r in results),'price_repaired_count':sum(bool(r.get('price_repairs')) for r in results),
         'relative_strength_coverage':{str(n):sum(r['relative_strength'][str(n)]['value_pct_points'] is not None for r in results) for n in (20,60)},
         'full_tasi_coverage_claim':False,'coverage_note':'Coverage denominator is the fixed 254-company equity snapshot, not an independently verified live constituent list.',
+        'benchmark_quality':benchmark_quality,'quarantined_stock_count':sum(not r['data_quality']['entry_eligible'] for r in results),
         'ranking_note':'Technical candidates including Early Watch/Wait; conditional targets, not guaranteed profits; Entry requires fresh stock and TASI data, 200 bars, synchronized RS, price+volume, upside >=10%, reward/risk >=2.',
         'results':results,'failures':failures})
+    print('Starting causal historical research',flush=True)
+    backtest,missed=historical_research(histories,bench,sessions,cfg,analyze,indicators)
+    for document in (backtest,missed):document.update(run_id=run_id,run_url=run_url,run_utc=report['run_utc'],expected_session=expected)
+    prior_ledger=None
+    if (out/'opportunity_ledger.json').exists():
+        prior_ledger=json.loads((out/'opportunity_ledger.json').read_text())
+    ledger=update_ledger(prior_ledger,results,histories,run_id);ledger.update(run_id=run_id,run_url=run_url,run_utc=report['run_utc'])
+    prior_repairs=[]
+    for old in (previous or {}).get('results',[]):
+        for repair in old.get('price_repairs',[]):
+            stamp=pd.Timestamp(repair['quote_timestamp'])
+            prior_repairs.append({'symbol':old['symbol'],'repair_date':repair['date'],
+                'quote_date_matches':str(stamp.date())==repair['date'],
+                'quote_in_session':(10,0)<=(stamp.hour,stamp.minute)<=(15,20),
+                'positive_value':float(repair['value'])>0,'independently_verified':False})
+    quality_report={'run_id':run_id,'run_url':run_url,'run_utc':report['run_utc'],'benchmark':benchmark_quality,
+        'previous_run_repair_review':{'run_id':(previous or {}).get('run_id'),'recorded_repaired_stock_count':sum(bool(r.get('price_repairs')) for r in (previous or {}).get('results',[])),
+        'repair_records_reviewed':len(prior_repairs),'same_vendor_timestamp_checks_passed':sum(x['quote_date_matches'] and x['quote_in_session'] and x['positive_value'] for x in prior_repairs),
+        'records':prior_repairs,'independently_validated_count':0,'disposition':'Same-vendor quote/range checks do not independently verify exchange closes. Quarantine on all affected dates.'},
+        'stocks':[{'symbol':r['symbol'],**r['data_quality']} for r in results],
+        'quarantined_stock_count':report['quarantined_stock_count'],'failed_fetches':failures}
+    report['research_summary']={'backtest_trades':backtest['full_period']['trades_count'],'missed_10pct_excursions':missed['missed_count'],'detected_10pct_excursions':missed['detected_count']}
     ranked=rank_results(results)[:20]
     top={'run_utc':report['run_utc'],'run_url':run_url,'expected_session':expected,'ranking_note':report['ranking_note'],'count':len(ranked),'results':ranked}
     watch=watch_report(results,failures,previous,cfg['watch_symbols'],expected);watch.update(run_utc=report['run_utc'],run_url=run_url)
     dump=lambda p,x:p.write_text(json.dumps(clean(x),ensure_ascii=False,indent=2,allow_nan=False),encoding='utf-8')
+    for name,doc in [('backtest.json',backtest),('missed_opportunities.json',missed),('opportunity_ledger.json',ledger),('quality_report.json',quality_report)]:dump(out/name,doc)
+    pd.DataFrame(backtest['full_period']['trades']).to_csv(out/'backtest_trades.csv',index=False)
+    pd.DataFrame(backtest['full_period']['equity_curve']).to_csv(out/'backtest_equity.csv',index=False)
+    pd.DataFrame(missed['missed']).to_csv(out/'missed_opportunities.csv',index=False)
+    # Input snapshots are artifact-only to avoid growing Git history with every OHLCV download.
+    inputs=Path('research_inputs');inputs.mkdir(exist_ok=True)
+    for symbol,df in histories.items():df.to_csv(inputs/(symbol+'.csv.gz'),compression='gzip',index_label='Date')
+    dump(inputs/'quarantine.json',{symbol:df.attrs.get('quarantine',[]) for symbol,df in histories.items()})
+    if bench is not None:bench.to_csv(inputs/'benchmark.csv',index_label='Date')
+    dump(inputs/'config.json',cfg)
+    dump(inputs/'stock_metadata.json',{symbol:df.attrs for symbol,df in histories.items()})
+    dump(inputs/'benchmark_metadata.json',bench.attrs if bench is not None else {})
     dump(out/'latest.json',report);dump(out/'top20.json',top);dump(out/'watchlist.json',watch)
     columns=list(flatten(results[0])) if results else ['symbol','name','classification','price_date']
     pd.DataFrame([flatten(r) for r in results],columns=columns).to_csv(out/'latest.csv',index=False)
     pd.DataFrame([flatten(r) for r in ranked],columns=columns).to_csv(out/'top20.csv',index=False)
     archive=out/'history'/f'{run_id}_{attempt}';archive.mkdir(parents=True,exist_ok=True)
-    for name in ('latest.json','latest.csv','top20.json','top20.csv','watchlist.json'):
+    for name in ('latest.json','latest.csv','top20.json','top20.csv','watchlist.json','backtest.json','backtest_trades.csv','backtest_equity.csv','missed_opportunities.json','missed_opportunities.csv','opportunity_ledger.json','quality_report.json','benchmark.csv'):
         (archive/name).write_bytes((out/name).read_bytes())
-    dump(out/'manifest.json',{'run_url':run_url,'run_id':run_id,'run_utc':report['run_utc'],'completed_utc':report['completed_utc'],'expected_session':expected,'classification_counts':counts,'analyzed':len(results),'failed':len(failures),'fresh':fresh,'history_path':str(archive)})
+    dump(out/'manifest.json',{'run_url':run_url,'run_id':run_id,'run_utc':report['run_utc'],'completed_utc':report['completed_utc'],'expected_session':expected,'classification_counts':counts,'analyzed':len(results),'failed':len(failures),'fresh':fresh,'history_path':str(archive),'research_files':['backtest.json','quality_report.json','missed_opportunities.json','opportunity_ledger.json'],'input_snapshot_location':'GitHub run artifact research_inputs/ (90 days)'})
     print(json.dumps({k:report[k] for k in ['universe_count','scanned_successfully','failed_count','coverage_pct','fresh_count','stale_count','classification_counts','benchmark','relative_strength_coverage']},ensure_ascii=False),flush=True)
     return report
 

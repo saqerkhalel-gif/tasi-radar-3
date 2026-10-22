@@ -18,5 +18,11 @@
     "3008"
   ],
   "extra_closed_dates": [],
-  "benchmark_seed": "data/tasi_benchmark_seed.csv"
+  "benchmark_seed": "data/tasi_benchmark_seed.csv",
+  "backtest": {
+    "commission_bps_per_side": 15.5,
+    "slippage_bps_per_side": 5,
+    "max_positions": 10,
+    "max_hold_sessions": 20
+  }
 }
