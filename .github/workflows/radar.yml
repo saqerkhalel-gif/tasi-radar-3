@@ -37,6 +37,10 @@ jobs:
         run: pip install -r requirements.txt
       - name: Test analysis and safety gates
         run: python -m pytest -q
+      - name: Refresh prior reports without changing tested source
+        run: |
+          git fetch origin main
+          git restore --source=origin/main -- output/
       - name: Run TASI Radar
         run: python -u radar.py
       - name: Validate actual scan output
@@ -46,10 +50,17 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          # Build the report commit on the current branch head, retaining source
+          # commits and immutable history published while this run was queued.
+          report_snapshot=$(mktemp -d)
+          cp -a output/. "$report_snapshot/"
+          git fetch origin main
+          git reset --hard origin/main
+          mkdir -p output
+          cp -a "$report_snapshot/." output/
           git add output/
           git diff --cached --quiet && exit 0
           git commit -m "Save TASI results for run ${GITHUB_RUN_ID} [skip ci]"
-          git pull --rebase origin main
           git push origin HEAD:main
       - name: Upload scan results
         if: always()

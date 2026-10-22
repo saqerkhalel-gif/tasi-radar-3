@@ -158,7 +158,7 @@ def analyze(symbol, df, config, benchmark=None, expected_session=None, sessions=
     score = 25*trend+15*breakout+8*reclaim+15*volume_confirmed+8*(last['MACD']>last['MACD_signal'])+7*(45<=last['RSI14']<=70)+5*contraction+5*higher_lows
     score += sum(6 for n in (20,60) if rs[str(n)]['value_pct_points'] is not None and rs[str(n)]['value_pct_points']>0)
     score+=5*patterns['accumulation_candidate']+5*patterns['early_reversal_candidate']+3*patterns['breakout_retest_holds']-10*patterns['false_upside_breakout']
-    if not quality['entry_eligible']:confidence='low';score-=10
+    if not quality['entry_eligible'] or (not research_mode and benchmark is not None and not benchmark.attrs.get('entry_eligible',True)):confidence='low';score-=10
     if not fresh: score-=30
     if confidence=='low':score-=15
     obs={'breakout20_with_volume':breakout and volume_confirmed,'reclaim_ema20_with_volume':reclaim and volume_confirmed,
@@ -235,8 +235,8 @@ def merge_benchmark_sources(sources, errors):
         if d is None or d.empty:continue
         d=normalize(d,True)
         overlap=merged.index.intersection(d.index)
-        if len(overlap) and ((merged.loc[overlap,'Close']/d.loc[overlap,'Close']-1).abs()>0.005).any():
-            errors.append(label+': source disagreement above 0.5%; rejected');continue
+        if len(overlap) and ((merged.loc[overlap,'Close']/d.loc[overlap,'Close']-1).abs()>0.001).any():
+            errors.append(label+': source disagreement above 0.1%; rejected');continue
         merged=d.copy() if merged.empty else pd.concat([merged,d]);merged=merged[~merged.index.duplicated(keep='last')].sort_index()
         used.append(label)
     return merged,used

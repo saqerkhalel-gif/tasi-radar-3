@@ -10,7 +10,7 @@ import pandas as pd
 
 
 def quality_audit(d, sessions=None):
-    repairs=d.attrs.get('price_repairs',[])
+    repairs=[x for x in d.attrs.get('price_repairs',[]) if pd.Timestamp(x['date'])<=d.index[-1]]
     repaired={x['date'] for x in repairs}
     # A large adjusted-price discontinuity needs corporate-action verification.
     jumps=d['Close'].pct_change().abs()>0.22

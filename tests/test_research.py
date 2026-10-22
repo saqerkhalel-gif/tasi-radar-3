@@ -122,3 +122,17 @@ def test_history_future_mutation_cannot_change_earlier_signals():
     d.iloc[205:,d.columns.get_loc('High')]=99999
     research.historical_research({'T':d},b,d.index,CFG,capture,radar.indicators)
     assert seen[0]==seen[1]
+
+
+def test_small_tasi_source_conflict_rejected_before_merge():
+    d=candles()[['Close']];other=d.iloc[-1:].copy();other['Close']*=1.003
+    errors=[];merged,used=radar.merge_benchmark_sources([('seed',d),('live',other)],errors)
+    assert used==['seed'] and '0.1%' in errors[0]
+    q=research.benchmark_audit(merged,other,d.index,str(d.index[-1].date()),errors)
+    assert not q['entry_eligible']
+
+
+def test_future_repair_metadata_absent_from_historical_quality_snapshot():
+    d=candles();d.attrs['price_repairs']=[{'date':str(d.index[-1].date())}]
+    q=research.quality_audit(d.iloc[:-1])
+    assert not q['unverified_quote_repairs'] and not q['quarantined_dates']
