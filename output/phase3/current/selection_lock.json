@@ -1,0 +1,185 @@
+{
+  "plan_sha256": "15f896bb8569e87c2aa8a94d1c42bcaa4240c87535e4bb5b835e991c588e95fc",
+  "selection": {
+    "selected_on_development_only": null,
+    "candidates": {
+      "tasi_trend": {
+        "gates": {
+          "enough_development_trades": false,
+          "enough_trades_in_both_development_halves": false,
+          "positive_net_expectancy": false,
+          "portfolio_return_improves": true,
+          "daily_sharpe_improves": true,
+          "drawdown_not_materially_worse": true,
+          "adjusted_excess_return_confidence_positive": false,
+          "both_development_halves_profitable": false
+        },
+        "confidence_interval": {
+          "lower_mean_daily_excess_pct": -0.080247,
+          "upper_mean_daily_excess_pct": 0.100588,
+          "bonferroni_trials": 8,
+          "block_sessions": 5,
+          "resamples": 2000,
+          "note": "Paired moving-block bootstrap on development daily portfolio returns; small samples and multiple dependent strategies limit inference."
+        },
+        "qualifies_for_prospective_validation": false
+      },
+      "sector_strength": {
+        "gates": {
+          "enough_development_trades": false,
+          "enough_trades_in_both_development_halves": false,
+          "positive_net_expectancy": false,
+          "portfolio_return_improves": false,
+          "daily_sharpe_improves": false,
+          "drawdown_not_materially_worse": true,
+          "adjusted_excess_return_confidence_positive": false,
+          "both_development_halves_profitable": false
+        },
+        "confidence_interval": {
+          "lower_mean_daily_excess_pct": -0.076634,
+          "upper_mean_daily_excess_pct": 0.027019,
+          "bonferroni_trials": 8,
+          "block_sessions": 5,
+          "resamples": 2000,
+          "note": "Paired moving-block bootstrap on development daily portfolio returns; small samples and multiple dependent strategies limit inference."
+        },
+        "qualifies_for_prospective_validation": false
+      },
+      "confirmed_breakout": {
+        "gates": {
+          "enough_development_trades": false,
+          "enough_trades_in_both_development_halves": false,
+          "positive_net_expectancy": false,
+          "portfolio_return_improves": false,
+          "daily_sharpe_improves": false,
+          "drawdown_not_materially_worse": true,
+          "adjusted_excess_return_confidence_positive": false,
+          "both_development_halves_profitable": false
+        },
+        "confidence_interval": {
+          "lower_mean_daily_excess_pct": -0.070185,
+          "upper_mean_daily_excess_pct": 0.048234,
+          "bonferroni_trials": 8,
+          "block_sessions": 5,
+          "resamples": 2000,
+          "note": "Paired moving-block bootstrap on development daily portfolio returns; small samples and multiple dependent strategies limit inference."
+        },
+        "qualifies_for_prospective_validation": false
+      },
+      "retest": {
+        "gates": {
+          "enough_development_trades": false,
+          "enough_trades_in_both_development_halves": false,
+          "positive_net_expectancy": false,
+          "portfolio_return_improves": true,
+          "daily_sharpe_improves": false,
+          "drawdown_not_materially_worse": true,
+          "adjusted_excess_return_confidence_positive": false,
+          "both_development_halves_profitable": false
+        },
+        "confidence_interval": {
+          "lower_mean_daily_excess_pct": -0.063069,
+          "upper_mean_daily_excess_pct": 0.071013,
+          "bonferroni_trials": 8,
+          "block_sessions": 5,
+          "resamples": 2000,
+          "note": "Paired moving-block bootstrap on development daily portfolio returns; small samples and multiple dependent strategies limit inference."
+        },
+        "qualifies_for_prospective_validation": false
+      },
+      "anti_chase": {
+        "gates": {
+          "enough_development_trades": false,
+          "enough_trades_in_both_development_halves": false,
+          "positive_net_expectancy": true,
+          "portfolio_return_improves": true,
+          "daily_sharpe_improves": true,
+          "drawdown_not_materially_worse": true,
+          "adjusted_excess_return_confidence_positive": false,
+          "both_development_halves_profitable": false
+        },
+        "confidence_interval": {
+          "lower_mean_daily_excess_pct": -0.04953,
+          "upper_mean_daily_excess_pct": 0.087015,
+          "bonferroni_trials": 8,
+          "block_sessions": 5,
+          "resamples": 2000,
+          "note": "Paired moving-block bootstrap on development daily portfolio returns; small samples and multiple dependent strategies limit inference."
+        },
+        "qualifies_for_prospective_validation": false
+      },
+      "stop_atr_floor": {
+        "gates": {
+          "enough_development_trades": false,
+          "enough_trades_in_both_development_halves": false,
+          "positive_net_expectancy": false,
+          "portfolio_return_improves": true,
+          "daily_sharpe_improves": true,
+          "drawdown_not_materially_worse": true,
+          "adjusted_excess_return_confidence_positive": false,
+          "both_development_halves_profitable": false
+        },
+        "confidence_interval": {
+          "lower_mean_daily_excess_pct": -0.039765,
+          "upper_mean_daily_excess_pct": 0.074669,
+          "bonferroni_trials": 8,
+          "block_sessions": 5,
+          "resamples": 2000,
+          "note": "Paired moving-block bootstrap on development daily portfolio returns; small samples and multiple dependent strategies limit inference."
+        },
+        "qualifies_for_prospective_validation": false
+      },
+      "stop_support_buffer": {
+        "gates": {
+          "enough_development_trades": false,
+          "enough_trades_in_both_development_halves": false,
+          "positive_net_expectancy": false,
+          "portfolio_return_improves": false,
+          "daily_sharpe_improves": false,
+          "drawdown_not_materially_worse": true,
+          "adjusted_excess_return_confidence_positive": false,
+          "both_development_halves_profitable": false
+        },
+        "confidence_interval": {
+          "lower_mean_daily_excess_pct": -0.04044,
+          "upper_mean_daily_excess_pct": 0.019468,
+          "bonferroni_trials": 8,
+          "block_sessions": 5,
+          "resamples": 2000,
+          "note": "Paired moving-block bootstrap on development daily portfolio returns; small samples and multiple dependent strategies limit inference."
+        },
+        "qualifies_for_prospective_validation": false
+      },
+      "market_sector_anti_chase": {
+        "gates": {
+          "enough_development_trades": false,
+          "enough_trades_in_both_development_halves": false,
+          "positive_net_expectancy": false,
+          "portfolio_return_improves": true,
+          "daily_sharpe_improves": false,
+          "drawdown_not_materially_worse": true,
+          "adjusted_excess_return_confidence_positive": false,
+          "both_development_halves_profitable": false
+        },
+        "confidence_interval": {
+          "lower_mean_daily_excess_pct": -0.068826,
+          "upper_mean_daily_excess_pct": 0.104381,
+          "bonferroni_trials": 8,
+          "block_sessions": 5,
+          "resamples": 2000,
+          "note": "Paired moving-block bootstrap on development daily portfolio returns; small samples and multiple dependent strategies limit inference."
+        },
+        "qualifies_for_prospective_validation": false
+      }
+    },
+    "live_strategy": "baseline",
+    "adopted": false,
+    "reason": "No qualified development candidate; retain original.",
+    "historical_holdout_was_previously_exposed": true,
+    "new_unseen_trade_count": 0,
+    "required_new_unseen_trades": 20
+  },
+  "development_end": "2026-07-19",
+  "test_start": "2026-08-17",
+  "created_before_candidate_test_evaluation": true
+}
