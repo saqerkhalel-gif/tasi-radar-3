@@ -2,7 +2,7 @@
 
 https://github.com/saqerkhalel-gif/tasi-radar-3/actions/runs/39945542819
 
-**Validity warning:** NO rows encountered missing, quarantined or zero-volume/invalid holding bars. Their displayed returns/win rates are exploratory calculations, NOT reliable execution evidence or promotion evidence. Exact symbol/date/reason is exported in execution_data_issues. YES only passes internal execution checks, not independent provenance.
+**Validity warning:** Rows marked NO encountered missing, quarantined or zero-volume/invalid holding bars. Their displayed returns/win rates are exploratory calculations, NOT reliable execution evidence or promotion evidence. Exact symbol/date/reason is exported in execution_data_issues. YES only passes internal execution checks, not independent provenance.
 
 All24 registered variants use identical254-stock universe, fixed dates, sizing, fees and gap handling. Each signal has a causal historical-window screen. Legacy25/31 cohorts are separately reproduced exactly; harmonized references may contain fewer trades.
 
