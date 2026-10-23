@@ -133,3 +133,85 @@ Only reports are committed, avoiding repeated full input histories in Git. The
 workflow verifies counts, run identities, every Entry gate and historical trade
 ordering before publishing. The CSV universe remains the fixed 254 equities;
 this is not a live independently verified constituent count.
+
+## Phase 3: registered comparison, original live strategy retained
+
+The experiment protocol was committed **before results were computed**:
+[`phase3/plan.json`](phase3/plan.json), commit
+`25e6e4d1a39e81cf61bdb891acd717671203b608`. The immutable baseline is run
+`39870228858`, artifact `12466039175`, with verified hashes for all 254 OHLCV
+inputs. Every variant uses the same benchmark, prices, dates, costs and original
+price/volume, >=10% upside and >=2 reward/risk gates. No parameter grid or
+post-holdout retuning is performed. Failures and zero-trade variants are retained.
+
+Development is March 5–July 19, 2026; July 20–August 16 is a 20-session purge;
+August 17–October 21 is the reused chronological test. Indicator warmup before
+each period remains available. Positions are liquidated at each period's last
+trusted close, so development outcomes never run into the test period. Because
+the original 25 trades and the last-period result were already inspected, the
+historical test is **not virgin out-of-sample evidence**. Candidate selection uses
+only development, with two contiguous development halves. Its selection lock is
+written before candidate full-period/test evaluations. No live adoption is
+permitted from these reused historical results; at least 20 new unseen trades
+and the registered stability/risk criteria would be required.
+
+Independent ablations: TASI close > EMA50 > EMA200 with rising EMA50 over 20
+sessions; positive 20/60-session sector excess return; two closes above an earlier
+frozen breakout level; a held retest; avoiding >8% five-session gains and >2 ATR
+extension above EMA20; and two wider stop alternatives. The sector series is an
+**unofficial equal-weight leave-target-out peer basket**, with >=3 other peers
+and >=80% daily coverage, no forward filling, and no claim to historical official
+sector membership or capitalization weights. Filter variants only restrict
+original eligible signals; they never invent unconfirmed retest entries.
+
+Stop alternatives use a 2 ATR minimum distance or a 0.5 ATR support buffer.
+Wider stops reduce notional exposure, never increasing the same signal's original
+planned cash loss, with a 0.5% equity planned risk cap per trade, 3% aggregate
+planned open risk cap and 8% maximum stop distance. Gap losses can exceed planned
+risk; stops are not guaranteed fills. The unchanged original simulator is
+reproduced against all 25 original trades before comparisons can be published.
+Results include win/loss averages, expectancy, net portfolio return, daily maximum
+drawdown, daily Sharpe, original TASI comparison, full trade lists and equity
+curves. Paired five-session block-bootstrap development excess-return intervals
+apply a Bonferroni adjustment across all eight alternatives. Small samples still
+make inference inconclusive; governance trade-count thresholds are not statistical
+guarantees. High win rate alone cannot authorize adoption.
+
+Every original trade, including winners, receives causal entry-context diagnostics
+and separately labeled post-entry failure tags. Failed-breakout diagnostics are
+outcome descriptions, never filter inputs. Associations with market weakness,
+sector weakness, extension and narrow stops do not prove causality.
+
+The separate `TASI Phase 3 Research` workflow downloads the frozen snapshot,
+runs tests/research, rechecks free official-source accessibility and re-downloads
+raw Yahoo daily OHLCV for the quarantined symbols (bounded at 180 seconds). Source
+audits cannot change frozen prices, release an unverified close or change live
+Entry gates. HTTP denials, missing rows and unresolved corporate-action questions
+are disclosed in `quality_recheck.json`; same-vendor re-downloads are not independent
+exchange validation. No automatic quote substitution or model-based repair is used.
+The public official report and market-watch pages are checked without bypassing
+access restrictions. A dated complete official machine-readable feed has not been
+established; accessible HTML alone is not accepted as validated OHLCV.
+
+Reports are persisted in `output/phase3/current/` and immutable
+`output/phase3/history/<research-run>_<attempt>/`, with a 90-day artifact containing
+inputs and the registered plan. Run identity, exact baseline reproduction, every
+Entry/risk gate and hashes of the **unchanged live source, 254-stock universe and
+daily workflow** are validated before publication. The daily cron remains
+`35 14 * * 0-4` (17:35 Riyadh Sunday–Thursday). No ChatGPT task or delivery channel
+is created or changed.
+
+Reproduce locally from the baseline run artifact extracted into `frozen/`:
+
+```bash
+python -m pytest -q
+python -m phase3.experiment --snapshot frozen
+python -m phase3.quality_recheck --snapshot frozen
+python -m phase3.verify --snapshot frozen
+```
+
+`comparison.json/.csv` and `REPORT.md` contain all variants; `trade_diagnostics.json/.csv`
+contain all 25 annotated trades; `selection_lock.json` records the development-only
+decision; `quality_recheck.json` discloses unresolved source quality. The production
+strategy stays original unless genuinely new validation supports a later explicit
+change.

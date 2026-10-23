@@ -1,0 +1,71 @@
+name: TASI Phase 3 Research
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'phase3/**'
+      - '.github/workflows/phase3.yml'
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: tasi-phase3-research
+  cancel-in-progress: false
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Test live gates and research isolation
+        run: python -m pytest -q
+      - name: Download the fixed baseline input artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: tasi-radar-results-39870228858-1
+          path: frozen
+          run-id: 39870228858
+          github-token: ${{ github.token }}
+      - name: Reproduce baseline and evaluate registered variants
+        run: python -m phase3.experiment --snapshot frozen
+      - name: Audit free data sources without changing frozen data or live signals
+        run: python -m phase3.quality_recheck --snapshot frozen
+      - name: Verify actual comparison and unchanged live strategy
+        run: |
+          python -m phase3.verify --snapshot frozen
+          cat output/phase3/current/REPORT.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Preserve research run and publish reports only
+        run: |
+          mkdir -p "output/phase3/history/${GITHUB_RUN_ID}_${GITHUB_RUN_ATTEMPT}"
+          cp -a output/phase3/current/. "output/phase3/history/${GITHUB_RUN_ID}_${GITHUB_RUN_ATTEMPT}/"
+          report_snapshot=$(mktemp -d)
+          cp -a output/phase3/. "$report_snapshot/"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin main
+          git reset --hard origin/main
+          mkdir -p output/phase3
+          cp -a "$report_snapshot/." output/phase3/
+          git add output/phase3/
+          git diff --cached --quiet && exit 0
+          git commit -m "Save phase 3 comparison ${GITHUB_RUN_ID} [skip ci]"
+          git push origin HEAD:main
+      - name: Upload comparison and fixed inputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tasi-phase3-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            output/phase3/
+            frozen/research_inputs/
+            phase3/plan.json
+            phase3/production_baseline.json
+          retention-days: 90
+          if-no-files-found: error
