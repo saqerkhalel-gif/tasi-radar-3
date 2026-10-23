@@ -1,0 +1,3 @@
+# Missed-move review
+
+Events are nonoverlapping per-symbol20-session windows with vendor-eligible prior-session data and a later daily high>=8% or10%. They are not guaranteed entries or realizable profits. Earliest eligible event-date labeling can precede a later confirmed signal: read recorded_core_signals_before_first8pct_touch separately from the initial-day rejection. Counts are not a trading success denominator. Every reason uses only the prior prefix; future highs label outcomes only. No fitting or rule tuning uses this review. Daily shadow history records actually observed signals and cannot backfill unseen past observations.

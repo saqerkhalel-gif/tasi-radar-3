@@ -1,0 +1,1599 @@
+{
+  "2026-10-07": [
+    {
+      "symbol": "2081",
+      "date": "2026-10-06",
+      "close": 91.699997,
+      "engine": "failed_breakdown",
+      "variant": "failed_breakdown",
+      "classification": "Shadow Candidate",
+      "technical_score": -1.373821,
+      "_original_stop": 88.858842,
+      "scenario": {
+        "trigger": 91.699997,
+        "invalidation": 88.858842,
+        "conditional_target": 101.676474,
+        "upside_pct": 10.879473,
+        "reward_risk": 3.511416,
+        "target_source": "nearest_confirmed_major_zone"
+      },
+      "hypothesis": {
+        "frozen_reclaimed_support": 90.699997,
+        "support_lookback": 20
+      },
+      "observations": {
+        "volume_confirmed": true,
+        "price_confirmed": true,
+        "volume": 334189.0,
+        "volume_ratio": 2.334688
+      },
+      "entry_context": {
+        "market_regime": "Risk_OFF",
+        "market_filter_pass": false,
+        "sector_rs20_pct_points": -4.167898,
+        "sector_membership": "current_universe_unofficial_not_point_in_time",
+        "sector_filter_pass": false
+      },
+      "features": {
+        "EMA20": 93.098504,
+        "EMA50": 97.656783,
+        "RSI14": 37.63946,
+        "MACD": -2.145753,
+        "MACD_signal": -2.258308,
+        "ATR14": 1.894103,
+        "RS20": -1.373821,
+        "RS60": -13.911134,
+        "RS120": -12.937548,
+        "gain5": 1.046829,
+        "ROC10": -0.971924,
+        "ROC20": -5.317503,
+        "extension_atr": -0.738348
+      },
+      "history_eligibility": {
+        "eligible": true,
+        "reasons": [],
+        "required_sessions": 126,
+        "observed_in_window": 126,
+        "quote_repairs": 0,
+        "normalization": {
+          "source_rows": 356,
+          "valid_rows": 356,
+          "rejected_or_duplicate_rows": 0
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "independently_validated": false
+      },
+      "live_order_authorized": false
+    }
+  ],
+  "2026-05-31": [
+    {
+      "symbol": "4018",
+      "date": "2026-05-21",
+      "close": 118.145264,
+      "engine": "failed_breakdown",
+      "variant": "failed_breakdown",
+      "classification": "Shadow Candidate",
+      "technical_score": -10.182544,
+      "_original_stop": 108.742712,
+      "scenario": {
+        "trigger": 118.145264,
+        "invalidation": 108.742712,
+        "conditional_target": 137.794602,
+        "upside_pct": 16.631507,
+        "reward_risk": 2.089788,
+        "target_source": "nearest_confirmed_major_zone"
+      },
+      "hypothesis": {
+        "frozen_reclaimed_support": 114.253656,
+        "support_lookback": 20
+      },
+      "observations": {
+        "volume_confirmed": true,
+        "price_confirmed": true,
+        "volume": 193379.0,
+        "volume_ratio": 4.459447
+      },
+      "entry_context": {
+        "market_regime": "Risk_OFF",
+        "market_filter_pass": false,
+        "sector_rs20_pct_points": -3.659798,
+        "sector_membership": "current_universe_unofficial_not_point_in_time",
+        "sector_filter_pass": false
+      },
+      "features": {
+        "EMA20": 124.731405,
+        "EMA50": 132.987698,
+        "RSI14": 36.400218,
+        "MACD": -5.719469,
+        "MACD_signal": -4.48462,
+        "ATR14": 4.082509,
+        "RS20": -10.182544,
+        "RS60": -18.528256,
+        "RS120": -35.670433,
+        "gain5": -2.343123,
+        "ROC10": -9.425112,
+        "ROC20": -10.921093,
+        "extension_atr": -1.613258
+      },
+      "history_eligibility": {
+        "eligible": true,
+        "reasons": [],
+        "required_sessions": 126,
+        "observed_in_window": 126,
+        "quote_repairs": 0,
+        "normalization": {
+          "source_rows": 356,
+          "valid_rows": 356,
+          "rejected_or_duplicate_rows": 0
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "independently_validated": false
+      },
+      "live_order_authorized": false
+    },
+    {
+      "symbol": "4084",
+      "date": "2026-05-21",
+      "close": 22.679148,
+      "engine": "controlled_pullback",
+      "variant": "controlled_pullback",
+      "classification": "Shadow Candidate",
+      "technical_score": 5.772257,
+      "_original_stop": 21.643138,
+      "scenario": {
+        "trigger": 22.679148,
+        "invalidation": 21.643138,
+        "conditional_target": 28.551612,
+        "upside_pct": 25.893671,
+        "reward_risk": 5.66835,
+        "target_source": "prior_126_session_high"
+      },
+      "hypothesis": {
+        "initial_reversal_date": "2026-05-06",
+        "initial_reversal_gain_pct": 5.087011,
+        "pullback_sessions": 5
+      },
+      "observations": {
+        "volume_confirmed": true,
+        "price_confirmed": true,
+        "volume": 746060.0,
+        "volume_ratio": 2.000818
+      },
+      "entry_context": {
+        "market_regime": "Risk_OFF",
+        "market_filter_pass": false,
+        "sector_rs20_pct_points": -0.199199,
+        "sector_membership": "current_universe_unofficial_not_point_in_time",
+        "sector_filter_pass": false
+      },
+      "features": {
+        "EMA20": 21.924773,
+        "EMA50": 22.104116,
+        "RSI14": 60.736078,
+        "MACD": 0.129341,
+        "MACD_signal": 0.074925,
+        "ATR14": 0.472734,
+        "RS20": 5.772257,
+        "RS60": -3.465622,
+        "RS120": -20.56849,
+        "gain5": 2.996927,
+        "ROC10": 3.86667,
+        "ROC20": 5.033708,
+        "extension_atr": 1.595769
+      },
+      "history_eligibility": {
+        "eligible": true,
+        "reasons": [],
+        "required_sessions": 126,
+        "observed_in_window": 126,
+        "quote_repairs": 0,
+        "normalization": {
+          "source_rows": 356,
+          "valid_rows": 356,
+          "rejected_or_duplicate_rows": 0
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "independently_validated": false
+      },
+      "live_order_authorized": false
+    }
+  ],
+  "2026-04-09": [
+    {
+      "symbol": "4193",
+      "date": "2026-04-08",
+      "close": 12.1,
+      "engine": "failed_breakdown",
+      "variant": "failed_breakdown",
+      "classification": "Shadow Candidate",
+      "technical_score": -12.608108,
+      "_original_stop": 11.320886,
+      "scenario": {
+        "trigger": 12.1,
+        "invalidation": 11.320886,
+        "conditional_target": 17.703481,
+        "upside_pct": 46.309755,
+        "reward_risk": 7.192114,
+        "target_source": "nearest_confirmed_major_zone"
+      },
+      "hypothesis": {
+        "frozen_reclaimed_support": 11.83,
+        "support_lookback": 20
+      },
+      "observations": {
+        "volume_confirmed": true,
+        "price_confirmed": true,
+        "volume": 1727744.0,
+        "volume_ratio": 2.250759
+      },
+      "entry_context": {
+        "market_regime": "Risk_ON_or_Neutral",
+        "market_filter_pass": true,
+        "sector_rs20_pct_points": 1.125253,
+        "sector_membership": "current_universe_unofficial_not_point_in_time",
+        "sector_filter_pass": true
+      },
+      "features": {
+        "EMA20": 12.590893,
+        "EMA50": 14.217509,
+        "RSI14": 37.798238,
+        "MACD": -0.691596,
+        "MACD_signal": -0.780958,
+        "ATR14": 0.51941,
+        "RS20": -12.608108,
+        "RS60": -38.162413,
+        "RS120": -48.736291,
+        "gain5": -1.785709,
+        "ROC10": -1.626015,
+        "ROC20": -6.563702,
+        "extension_atr": -0.945097
+      },
+      "history_eligibility": {
+        "eligible": true,
+        "reasons": [],
+        "required_sessions": 126,
+        "observed_in_window": 126,
+        "quote_repairs": 0,
+        "normalization": {
+          "source_rows": 356,
+          "valid_rows": 356,
+          "rejected_or_duplicate_rows": 0
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "independently_validated": false
+      },
+      "live_order_authorized": false
+    }
+  ],
+  "2026-04-30": [
+    {
+      "symbol": "4210",
+      "date": "2026-04-29",
+      "close": 76.599998,
+      "engine": "failed_breakdown",
+      "variant": "failed_breakdown",
+      "classification": "Shadow Candidate",
+      "technical_score": -10.801395,
+      "_original_stop": 71.482503,
+      "scenario": {
+        "trigger": 76.599998,
+        "invalidation": 71.482503,
+        "conditional_target": 127.713752,
+        "upside_pct": 66.72814,
+        "reward_risk": 9.988042,
+        "target_source": "nearest_confirmed_major_zone"
+      },
+      "hypothesis": {
+        "frozen_reclaimed_support": 74.400002,
+        "support_lookback": 20
+      },
+      "observations": {
+        "volume_confirmed": true,
+        "price_confirmed": true,
+        "volume": 273551.0,
+        "volume_ratio": 1.737643
+      },
+      "entry_context": {
+        "market_regime": "Risk_ON_or_Neutral",
+        "market_filter_pass": true,
+        "sector_rs20_pct_points": -4.708636,
+        "sector_membership": "current_universe_unofficial_not_point_in_time",
+        "sector_filter_pass": false
+      },
+      "features": {
+        "EMA20": 79.647506,
+        "EMA50": 88.520662,
+        "RSI14": 40.184647,
+        "MACD": -3.37474,
+        "MACD_signal": -3.322809,
+        "ATR14": 3.411663,
+        "RS20": -10.801395,
+        "RS60": -37.991497,
+        "RS120": -52.170111,
+        "gain5": 0.196209,
+        "ROC10": -7.038839,
+        "ROC20": -11.13689,
+        "extension_atr": -0.893262
+      },
+      "history_eligibility": {
+        "eligible": true,
+        "reasons": [],
+        "required_sessions": 126,
+        "observed_in_window": 126,
+        "quote_repairs": 0,
+        "normalization": {
+          "source_rows": 356,
+          "valid_rows": 356,
+          "rejected_or_duplicate_rows": 0
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "independently_validated": false
+      },
+      "live_order_authorized": false
+    }
+  ],
+  "2026-08-18": [
+    {
+      "symbol": "4261",
+      "date": "2026-08-17",
+      "close": 20.49,
+      "engine": "failed_breakdown",
+      "variant": "failed_breakdown",
+      "classification": "Shadow Candidate",
+      "technical_score": -10.519774,
+      "_original_stop": 19.901985,
+      "scenario": {
+        "trigger": 20.49,
+        "invalidation": 19.901985,
+        "conditional_target": 22.945998,
+        "upside_pct": 11.986325,
+        "reward_risk": 4.176762,
+        "target_source": "nearest_confirmed_major_zone"
+      },
+      "hypothesis": {
+        "frozen_reclaimed_support": 20.27,
+        "support_lookback": 20
+      },
+      "observations": {
+        "volume_confirmed": true,
+        "price_confirmed": true,
+        "volume": 1432383.0,
+        "volume_ratio": 2.321205
+      },
+      "entry_context": {
+        "market_regime": "Risk_ON_or_Neutral",
+        "market_filter_pass": true,
+        "sector_rs20_pct_points": -1.837897,
+        "sector_membership": "current_universe_unofficial_not_point_in_time",
+        "sector_filter_pass": false
+      },
+      "features": {
+        "EMA20": 21.453526,
+        "EMA50": 22.987744,
+        "RSI14": 27.150754,
+        "MACD": -0.8164,
+        "MACD_signal": -0.724389,
+        "ATR14": 0.39201,
+        "RS20": -10.519774,
+        "RS60": -18.637352,
+        "RS120": -38.339701,
+        "gain5": -0.485675,
+        "ROC10": -8.811747,
+        "ROC20": -8.973791,
+        "extension_atr": -2.457912
+      },
+      "history_eligibility": {
+        "eligible": true,
+        "reasons": [],
+        "required_sessions": 126,
+        "observed_in_window": 126,
+        "quote_repairs": 0,
+        "normalization": {
+          "source_rows": 356,
+          "valid_rows": 356,
+          "rejected_or_duplicate_rows": 0
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "independently_validated": false
+      },
+      "live_order_authorized": false
+    }
+  ],
+  "2026-07-26": [
+    {
+      "symbol": "4280",
+      "date": "2026-07-23",
+      "close": 12.027114,
+      "engine": "failed_breakdown",
+      "variant": "failed_breakdown",
+      "classification": "Shadow Candidate",
+      "technical_score": 5.379794,
+      "_original_stop": 11.290257,
+      "scenario": {
+        "trigger": 12.027114,
+        "invalidation": 11.290257,
+        "conditional_target": 15.765806,
+        "upside_pct": 31.085527,
+        "reward_risk": 5.073835,
+        "target_source": "prior_126_session_high"
+      },
+      "hypothesis": {
+        "frozen_reclaimed_support": 11.26553,
+        "support_lookback": 20
+      },
+      "observations": {
+        "volume_confirmed": true,
+        "price_confirmed": true,
+        "volume": 1702075.0,
+        "volume_ratio": 2.256032
+      },
+      "entry_context": {
+        "market_regime": "Risk_OFF",
+        "market_filter_pass": false,
+        "sector_rs20_pct_points": -3.158051,
+        "sector_membership": "current_universe_unofficial_not_point_in_time",
+        "sector_filter_pass": false
+      },
+      "features": {
+        "EMA20": 11.743381,
+        "EMA50": 11.684054,
+        "RSI14": 53.883909,
+        "MACD": -0.134213,
+        "MACD_signal": -0.176571,
+        "ATR14": 0.491238,
+        "RS20": 5.379794,
+        "RS60": 17.997606,
+        "RS120": 55.07724,
+        "gain5": 2.702707,
+        "ROC10": 3.842864,
+        "ROC20": 4.198806,
+        "extension_atr": 0.577587
+      },
+      "history_eligibility": {
+        "eligible": true,
+        "reasons": [],
+        "required_sessions": 126,
+        "observed_in_window": 126,
+        "quote_repairs": 0,
+        "normalization": {
+          "source_rows": 356,
+          "valid_rows": 356,
+          "rejected_or_duplicate_rows": 0
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "independently_validated": false
+      },
+      "live_order_authorized": false
+    }
+  ],
+  "2026-06-25": [
+    {
+      "symbol": "2070",
+      "date": "2026-06-24",
+      "close": 29.5,
+      "engine": "base_contraction",
+      "variant": "base_contraction",
+      "classification": "Shadow Candidate",
+      "technical_score": 2.935128,
+      "_original_stop": 28.585269,
+      "scenario": {
+        "trigger": 29.5,
+        "invalidation": 28.585269,
+        "conditional_target": 32.714118,
+        "upside_pct": 10.895315,
+        "reward_risk": 3.513731,
+        "target_source": "prior_126_session_high"
+      },
+      "hypothesis": {
+        "base_sessions": 30,
+        "preceding_base_end": "2026-06-23"
+      },
+      "observations": {
+        "volume_confirmed": true,
+        "price_confirmed": true,
+        "volume": 1655538.0,
+        "volume_ratio": 5.528057
+      },
+      "entry_context": {
+        "market_regime": "Risk_OFF",
+        "market_filter_pass": false,
+        "sector_rs20_pct_points": null,
+        "sector_membership": "current_universe_unofficial_not_point_in_time",
+        "sector_filter_pass": false
+      },
+      "features": {
+        "EMA20": 28.799409,
+        "EMA50": 29.036277,
+        "RSI14": 57.559923,
+        "MACD": -0.077113,
+        "MACD_signal": -0.240306,
+        "ATR14": 0.609821,
+        "RS20": 2.935128,
+        "RS60": 0.546324,
+        "RS120": 3.941101,
+        "gain5": 2.787454,
+        "ROC10": 4.166668,
+        "ROC20": 3.128475,
+        "extension_atr": 1.148847
+      },
+      "history_eligibility": {
+        "eligible": true,
+        "reasons": [],
+        "required_sessions": 126,
+        "observed_in_window": 126,
+        "quote_repairs": 0,
+        "normalization": {
+          "source_rows": 356,
+          "valid_rows": 356,
+          "rejected_or_duplicate_rows": 0
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "independently_validated": false
+      },
+      "live_order_authorized": false
+    }
+  ],
+  "2026-07-15": [
+    {
+      "symbol": "4163",
+      "date": "2026-07-14",
+      "close": 43.380001,
+      "engine": "base_contraction",
+      "variant": "base_contraction",
+      "classification": "Shadow Candidate",
+      "technical_score": 4.446608,
+      "_original_stop": 42.102403,
+      "scenario": {
+        "trigger": 43.380001,
+        "invalidation": 42.102403,
+        "conditional_target": 48.135344,
+        "upside_pct": 10.962063,
+        "reward_risk": 3.722098,
+        "target_source": "nearest_confirmed_major_zone"
+      },
+      "hypothesis": {
+        "base_sessions": 30,
+        "preceding_base_end": "2026-07-13"
+      },
+      "observations": {
+        "volume_confirmed": true,
+        "price_confirmed": true,
+        "volume": 448516.0,
+        "volume_ratio": 4.901072
+      },
+      "entry_context": {
+        "market_regime": "Risk_OFF",
+        "market_filter_pass": false,
+        "sector_rs20_pct_points": 2.178101,
+        "sector_membership": "current_universe_unofficial_not_point_in_time",
+        "sector_filter_pass": true
+      },
+      "features": {
+        "EMA20": 43.145103,
+        "EMA50": 44.562393,
+        "RSI14": 48.68513,
+        "MACD": -0.539234,
+        "MACD_signal": -0.716716,
+        "ATR14": 0.564468,
+        "RS20": 4.446608,
+        "RS60": -6.804264,
+        "RS120": -11.959549,
+        "gain5": 1.544943,
+        "ROC10": 1.190332,
+        "ROC20": 0.589109,
+        "extension_atr": 0.416141
+      },
+      "history_eligibility": {
+        "eligible": true,
+        "reasons": [],
+        "required_sessions": 126,
+        "observed_in_window": 126,
+        "quote_repairs": 0,
+        "normalization": {
+          "source_rows": 356,
+          "valid_rows": 356,
+          "rejected_or_duplicate_rows": 0
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "independently_validated": false
+      },
+      "live_order_authorized": false
+    }
+  ],
+  "2026-05-07": [
+    {
+      "symbol": "4264",
+      "date": "2026-05-06",
+      "close": 52.099998,
+      "engine": "base_contraction",
+      "variant": "base_contraction",
+      "classification": "Shadow Candidate",
+      "technical_score": 1.924787,
+      "_original_stop": 50.217555,
+      "scenario": {
+        "trigger": 52.099998,
+        "invalidation": 50.217555,
+        "conditional_target": 60.452927,
+        "upside_pct": 16.032493,
+        "reward_risk": 4.43728,
+        "target_source": "nearest_confirmed_major_zone"
+      },
+      "hypothesis": {
+        "base_sessions": 30,
+        "preceding_base_end": "2026-05-05"
+      },
+      "observations": {
+        "volume_confirmed": true,
+        "price_confirmed": true,
+        "volume": 1251898.0,
+        "volume_ratio": 1.629697
+      },
+      "entry_context": {
+        "market_regime": "Risk_OFF",
+        "market_filter_pass": false,
+        "sector_rs20_pct_points": 5.519344,
+        "sector_membership": "current_universe_unofficial_not_point_in_time",
+        "sector_filter_pass": true
+      },
+      "features": {
+        "EMA20": 51.086523,
+        "EMA50": 53.005518,
+        "RSI14": 53.654404,
+        "MACD": -0.36732,
+        "MACD_signal": -0.504252,
+        "ATR14": 1.254962,
+        "RS20": 1.924787,
+        "RS60": -10.536555,
+        "RS120": -24.384878,
+        "gain5": 3.168314,
+        "ROC10": 2.559054,
+        "ROC20": -1.512293,
+        "extension_atr": 0.807574
+      },
+      "history_eligibility": {
+        "eligible": true,
+        "reasons": [],
+        "required_sessions": 126,
+        "observed_in_window": 126,
+        "quote_repairs": 0,
+        "normalization": {
+          "source_rows": 339,
+          "valid_rows": 339,
+          "rejected_or_duplicate_rows": 0
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "independently_validated": false
+      },
+      "live_order_authorized": false
+    }
+  ],
+  "2026-03-29": [
+    {
+      "symbol": "2040",
+      "date": "2026-03-26",
+      "close": 28.171255,
+      "engine": "controlled_pullback",
+      "variant": "controlled_pullback",
+      "classification": "Shadow Candidate",
+      "technical_score": 5.41184,
+      "_original_stop": 26.90234,
+      "scenario": {
+        "trigger": 28.171255,
+        "invalidation": 26.90234,
+        "conditional_target": 32.299634,
+        "upside_pct": 14.654578,
+        "reward_risk": 3.253471,
+        "target_source": "prior_126_session_high"
+      },
+      "hypothesis": {
+        "initial_reversal_date": "2026-03-04",
+        "initial_reversal_gain_pct": 4.656324,
+        "pullback_sessions": 5
+      },
+      "observations": {
+        "volume_confirmed": true,
+        "price_confirmed": true,
+        "volume": 653664.0,
+        "volume_ratio": 2.043987
+      },
+      "entry_context": {
+        "market_regime": "Risk_ON_or_Neutral",
+        "market_filter_pass": true,
+        "sector_rs20_pct_points": -3.291804,
+        "sector_membership": "current_universe_unofficial_not_point_in_time",
+        "sector_filter_pass": false
+      },
+      "features": {
+        "EMA20": 26.953881,
+        "EMA50": 26.953612,
+        "RSI14": 63.57238,
+        "MACD": 0.246604,
+        "MACD_signal": 0.063634,
+        "ATR14": 0.807844,
+        "RS20": 5.41184,
+        "RS60": -2.342669,
+        "RS120": -6.908576,
+        "gain5": 5.600591,
+        "ROC10": 4.828088,
+        "ROC20": 4.828088,
+        "extension_atr": 1.506942
+      },
+      "history_eligibility": {
+        "eligible": true,
+        "reasons": [],
+        "required_sessions": 126,
+        "observed_in_window": 126,
+        "quote_repairs": 0,
+        "normalization": {
+          "source_rows": 356,
+          "valid_rows": 356,
+          "rejected_or_duplicate_rows": 0
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "independently_validated": false
+      },
+      "live_order_authorized": false
+    }
+  ],
+  "2026-05-12": [
+    {
+      "symbol": "2100",
+      "date": "2026-05-11",
+      "close": 22.379999,
+      "engine": "controlled_pullback",
+      "variant": "controlled_pullback",
+      "classification": "Shadow Candidate",
+      "technical_score": 2.482387,
+      "_original_stop": 21.211029,
+      "scenario": {
+        "trigger": 22.379999,
+        "invalidation": 21.211029,
+        "conditional_target": 26.120001,
+        "upside_pct": 16.711358,
+        "reward_risk": 3.199398,
+        "target_source": "prior_126_session_high"
+      },
+      "hypothesis": {
+        "initial_reversal_date": "2026-04-28",
+        "initial_reversal_gain_pct": 5.263156,
+        "pullback_sessions": 5
+      },
+      "observations": {
+        "volume_confirmed": true,
+        "price_confirmed": true,
+        "volume": 551366.0,
+        "volume_ratio": 3.174959
+      },
+      "entry_context": {
+        "market_regime": "Risk_ON_or_Neutral",
+        "market_filter_pass": true,
+        "sector_rs20_pct_points": 4.179141,
+        "sector_membership": "current_universe_unofficial_not_point_in_time",
+        "sector_filter_pass": true
+      },
+      "features": {
+        "EMA20": 21.634485,
+        "EMA50": 21.195804,
+        "RSI14": 59.607481,
+        "MACD": 0.334371,
+        "MACD_signal": 0.391763,
+        "ATR14": 0.779314,
+        "RS20": 2.482387,
+        "RS60": 5.003139,
+        "RS120": -8.248405,
+        "gain5": -1.279228,
+        "ROC10": 7.596154,
+        "ROC20": 0.134223,
+        "extension_atr": 0.956629
+      },
+      "history_eligibility": {
+        "eligible": true,
+        "reasons": [],
+        "required_sessions": 126,
+        "observed_in_window": 126,
+        "quote_repairs": 0,
+        "normalization": {
+          "source_rows": 356,
+          "valid_rows": 356,
+          "rejected_or_duplicate_rows": 0
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "independently_validated": false
+      },
+      "live_order_authorized": false
+    }
+  ],
+  "2026-02-16": [
+    {
+      "symbol": "2150",
+      "date": "2026-02-15",
+      "close": 37.25,
+      "engine": "controlled_pullback",
+      "variant": "controlled_pullback",
+      "classification": "Shadow Candidate",
+      "technical_score": 4.931941,
+      "_original_stop": 35.156755,
+      "scenario": {
+        "trigger": 37.25,
+        "invalidation": 35.156755,
+        "conditional_target": 42.055354,
+        "upside_pct": 12.900278,
+        "reward_risk": 2.295648,
+        "target_source": "prior_126_session_high"
+      },
+      "hypothesis": {
+        "initial_reversal_date": "2026-02-02",
+        "initial_reversal_gain_pct": 3.135131,
+        "pullback_sessions": 5
+      },
+      "observations": {
+        "volume_confirmed": true,
+        "price_confirmed": true,
+        "volume": 201743.0,
+        "volume_ratio": 2.1088
+      },
+      "entry_context": {
+        "market_regime": "Risk_ON_or_Neutral",
+        "market_filter_pass": true,
+        "sector_rs20_pct_points": -3.016494,
+        "sector_membership": "current_universe_unofficial_not_point_in_time",
+        "sector_filter_pass": false
+      },
+      "features": {
+        "EMA20": 36.125353,
+        "EMA50": 36.231005,
+        "RSI14": 60.492719,
+        "MACD": 0.256669,
+        "MACD_signal": 0.186022,
+        "ATR14": 0.781709,
+        "RS20": 4.931941,
+        "RS60": -4.69211,
+        "RS120": -11.731271,
+        "gain5": 2.150537,
+        "ROC10": 4.798676,
+        "ROC20": 7.832003,
+        "extension_atr": 1.438703
+      },
+      "history_eligibility": {
+        "eligible": true,
+        "reasons": [],
+        "required_sessions": 126,
+        "observed_in_window": 126,
+        "quote_repairs": 0,
+        "normalization": {
+          "source_rows": 356,
+          "valid_rows": 356,
+          "rejected_or_duplicate_rows": 0
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "independently_validated": false
+      },
+      "live_order_authorized": false
+    }
+  ],
+  "2026-04-15": [
+    {
+      "symbol": "2180",
+      "date": "2026-04-14",
+      "close": 31.0,
+      "engine": "controlled_pullback",
+      "variant": "controlled_pullback",
+      "classification": "Shadow Candidate",
+      "technical_score": 11.981407,
+      "_original_stop": 29.308241,
+      "scenario": {
+        "trigger": 31.0,
+        "invalidation": 29.308241,
+        "conditional_target": 36.200001,
+        "upside_pct": 16.774196,
+        "reward_risk": 3.073723,
+        "target_source": "prior_126_session_high"
+      },
+      "hypothesis": {
+        "initial_reversal_date": "2026-03-24",
+        "initial_reversal_gain_pct": 10.814815,
+        "pullback_sessions": 5
+      },
+      "observations": {
+        "volume_confirmed": true,
+        "price_confirmed": true,
+        "volume": 106046.0,
+        "volume_ratio": 2.042494
+      },
+      "entry_context": {
+        "market_regime": "Risk_ON_or_Neutral",
+        "market_filter_pass": true,
+        "sector_rs20_pct_points": 2.58638,
+        "sector_membership": "current_universe_unofficial_not_point_in_time",
+        "sector_filter_pass": true
+      },
+      "features": {
+        "EMA20": 29.147582,
+        "EMA50": 28.964095,
+        "RSI14": 66.799086,
+        "MACD": 0.724765,
+        "MACD_signal": 0.467969,
+        "ATR14": 0.991519,
+        "RS20": 11.981407,
+        "RS60": -6.893424,
+        "RS120": -9.661778,
+        "gain5": 6.237148,
+        "ROC10": 7.192254,
+        "ROC20": 17.069488,
+        "extension_atr": 1.868262
+      },
+      "history_eligibility": {
+        "eligible": true,
+        "reasons": [],
+        "required_sessions": 126,
+        "observed_in_window": 126,
+        "quote_repairs": 0,
+        "normalization": {
+          "source_rows": 356,
+          "valid_rows": 356,
+          "rejected_or_duplicate_rows": 0
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "independently_validated": false
+      },
+      "live_order_authorized": false
+    }
+  ],
+  "2026-03-01": [
+    {
+      "symbol": "2380",
+      "date": "2026-02-26",
+      "close": 7.28,
+      "engine": "controlled_pullback",
+      "variant": "controlled_pullback",
+      "classification": "Shadow Candidate",
+      "technical_score": 12.197851,
+      "_original_stop": 6.895479,
+      "scenario": {
+        "trigger": 7.28,
+        "invalidation": 6.895479,
+        "conditional_target": 9.48,
+        "upside_pct": 30.21977,
+        "reward_risk": 5.721404,
+        "target_source": "prior_126_session_high"
+      },
+      "hypothesis": {
+        "initial_reversal_date": "2026-02-09",
+        "initial_reversal_gain_pct": 11.790392,
+        "pullback_sessions": 5
+      },
+      "observations": {
+        "volume_confirmed": true,
+        "price_confirmed": true,
+        "volume": 12780572.0,
+        "volume_ratio": 3.694015
+      },
+      "entry_context": {
+        "market_regime": "Risk_OFF",
+        "market_filter_pass": false,
+        "sector_rs20_pct_points": -2.26951,
+        "sector_membership": "current_universe_unofficial_not_point_in_time",
+        "sector_filter_pass": false
+      },
+      "features": {
+        "EMA20": 7.024429,
+        "EMA50": 7.054895,
+        "RSI14": 57.110344,
+        "MACD": 0.042525,
+        "MACD_signal": 0.053339,
+        "ATR14": 0.256347,
+        "RS20": 12.197851,
+        "RS60": 0.977667,
+        "RS120": 8.594732,
+        "gain5": 2.103788,
+        "ROC10": 1.960789,
+        "ROC20": 5.660382,
+        "extension_atr": 0.996973
+      },
+      "history_eligibility": {
+        "eligible": true,
+        "reasons": [],
+        "required_sessions": 126,
+        "observed_in_window": 126,
+        "quote_repairs": 0,
+        "normalization": {
+          "source_rows": 356,
+          "valid_rows": 356,
+          "rejected_or_duplicate_rows": 0
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "independently_validated": false
+      },
+      "live_order_authorized": false
+    }
+  ],
+  "2026-03-24": [
+    {
+      "symbol": "4090",
+      "date": "2026-03-16",
+      "close": 18.995234,
+      "engine": "controlled_pullback",
+      "variant": "controlled_pullback",
+      "classification": "Shadow Candidate",
+      "technical_score": 5.286429,
+      "_original_stop": 18.123451,
+      "scenario": {
+        "trigger": 18.995234,
+        "invalidation": 18.123451,
+        "conditional_target": 22.027915,
+        "upside_pct": 15.965486,
+        "reward_risk": 3.478712,
+        "target_source": "prior_126_session_high"
+      },
+      "hypothesis": {
+        "initial_reversal_date": "2026-03-03",
+        "initial_reversal_gain_pct": 4.428909,
+        "pullback_sessions": 5
+      },
+      "observations": {
+        "volume_confirmed": true,
+        "price_confirmed": true,
+        "volume": 498835.0,
+        "volume_ratio": 1.51125
+      },
+      "entry_context": {
+        "market_regime": "Risk_ON_or_Neutral",
+        "market_filter_pass": true,
+        "sector_rs20_pct_points": -2.329915,
+        "sector_membership": "current_universe_unofficial_not_point_in_time",
+        "sector_filter_pass": false
+      },
+      "features": {
+        "EMA20": 18.068677,
+        "EMA50": 17.878436,
+        "RSI14": 62.667255,
+        "MACD": 0.252839,
+        "MACD_signal": 0.111556,
+        "ATR14": 0.581189,
+        "RS20": 5.286429,
+        "RS60": 9.269275,
+        "RS120": -6.282088,
+        "gain5": 5.340901,
+        "ROC10": 13.186804,
+        "ROC20": 2.771611,
+        "extension_atr": 1.594245
+      },
+      "history_eligibility": {
+        "eligible": true,
+        "reasons": [],
+        "required_sessions": 126,
+        "observed_in_window": 126,
+        "quote_repairs": 0,
+        "normalization": {
+          "source_rows": 356,
+          "valid_rows": 356,
+          "rejected_or_duplicate_rows": 0
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "independently_validated": false
+      },
+      "live_order_authorized": false
+    }
+  ],
+  "2026-04-02": [
+    {
+      "symbol": "4090",
+      "date": "2026-04-01",
+      "close": 19.179655,
+      "engine": "controlled_pullback",
+      "variant": "controlled_pullback",
+      "classification": "Shadow Candidate",
+      "technical_score": 10.901458,
+      "_original_stop": 18.336588,
+      "scenario": {
+        "trigger": 19.179655,
+        "invalidation": 18.336588,
+        "conditional_target": 22.027915,
+        "upside_pct": 14.850422,
+        "reward_risk": 3.378449,
+        "target_source": "prior_126_session_high"
+      },
+      "hypothesis": {
+        "initial_reversal_date": "2026-03-03",
+        "initial_reversal_gain_pct": 9.498841,
+        "pullback_sessions": 5
+      },
+      "observations": {
+        "volume_confirmed": true,
+        "price_confirmed": true,
+        "volume": 588052.0,
+        "volume_ratio": 1.568938
+      },
+      "entry_context": {
+        "market_regime": "Risk_ON_or_Neutral",
+        "market_filter_pass": true,
+        "sector_rs20_pct_points": -1.637364,
+        "sector_membership": "current_universe_unofficial_not_point_in_time",
+        "sector_filter_pass": false
+      },
+      "features": {
+        "EMA20": 18.453379,
+        "EMA50": 18.103827,
+        "RSI14": 62.520022,
+        "MACD": 0.335692,
+        "MACD_signal": 0.255955,
+        "ATR14": 0.544487,
+        "RS20": 10.901458,
+        "RS60": 9.865792,
+        "RS120": -7.173353,
+        "gain5": 3.53983,
+        "ROC10": 3.197358,
+        "ROC20": 14.846642,
+        "extension_atr": 1.333872
+      },
+      "history_eligibility": {
+        "eligible": true,
+        "reasons": [],
+        "required_sessions": 126,
+        "observed_in_window": 126,
+        "quote_repairs": 0,
+        "normalization": {
+          "source_rows": 356,
+          "valid_rows": 356,
+          "rejected_or_duplicate_rows": 0
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "independently_validated": false
+      },
+      "live_order_authorized": false
+    }
+  ],
+  "2026-01-29": [
+    {
+      "symbol": "4130",
+      "date": "2026-01-28",
+      "close": 2.45,
+      "engine": "controlled_pullback",
+      "variant": "controlled_pullback",
+      "classification": "Shadow Candidate",
+      "technical_score": 2.141937,
+      "_original_stop": 2.322428,
+      "scenario": {
+        "trigger": 2.45,
+        "invalidation": 2.322428,
+        "conditional_target": 2.836881,
+        "upside_pct": 15.791039,
+        "reward_risk": 3.032634,
+        "target_source": "nearest_confirmed_major_zone"
+      },
+      "hypothesis": {
+        "initial_reversal_date": "2026-01-06",
+        "initial_reversal_gain_pct": 11.111111,
+        "pullback_sessions": 5
+      },
+      "observations": {
+        "volume_confirmed": true,
+        "price_confirmed": true,
+        "volume": 14215468.0,
+        "volume_ratio": 2.261426
+      },
+      "entry_context": {
+        "market_regime": "Risk_ON_or_Neutral",
+        "market_filter_pass": true,
+        "sector_rs20_pct_points": -4.468003,
+        "sector_membership": "current_universe_unofficial_not_point_in_time",
+        "sector_filter_pass": false
+      },
+      "features": {
+        "EMA20": 2.368482,
+        "EMA50": 2.394705,
+        "RSI14": 58.531718,
+        "MACD": 0.034362,
+        "MACD_signal": 0.026554,
+        "ATR14": 0.079145,
+        "RS20": 2.141937,
+        "RS60": -11.715355,
+        "RS120": -25.534409,
+        "gain5": 2.941174,
+        "ROC10": 0.409836,
+        "ROC20": 11.363636,
+        "extension_atr": 1.029989
+      },
+      "history_eligibility": {
+        "eligible": true,
+        "reasons": [],
+        "required_sessions": 126,
+        "observed_in_window": 126,
+        "quote_repairs": 0,
+        "normalization": {
+          "source_rows": 356,
+          "valid_rows": 356,
+          "rejected_or_duplicate_rows": 0
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "independently_validated": false
+      },
+      "live_order_authorized": false
+    }
+  ],
+  "2026-04-19": [
+    {
+      "symbol": "4170",
+      "date": "2026-04-16",
+      "close": 15.88,
+      "engine": "controlled_pullback",
+      "variant": "controlled_pullback",
+      "classification": "Shadow Candidate",
+      "technical_score": 4.057864,
+      "_original_stop": 14.651516,
+      "scenario": {
+        "trigger": 15.88,
+        "invalidation": 14.651516,
+        "conditional_target": 18.6,
+        "upside_pct": 17.128465,
+        "reward_risk": 2.21411,
+        "target_source": "prior_126_session_high"
+      },
+      "hypothesis": {
+        "initial_reversal_date": "2026-04-06",
+        "initial_reversal_gain_pct": 7.577807,
+        "pullback_sessions": 5
+      },
+      "observations": {
+        "volume_confirmed": true,
+        "price_confirmed": true,
+        "volume": 1843378.0,
+        "volume_ratio": 1.915044
+      },
+      "entry_context": {
+        "market_regime": "Risk_ON_or_Neutral",
+        "market_filter_pass": true,
+        "sector_rs20_pct_points": 1.082345,
+        "sector_membership": "current_universe_unofficial_not_point_in_time",
+        "sector_filter_pass": true
+      },
+      "features": {
+        "EMA20": 14.863561,
+        "EMA50": 14.263891,
+        "RSI14": 68.007842,
+        "MACD": 0.444104,
+        "MACD_signal": 0.347436,
+        "ATR14": 0.564969,
+        "RS20": 4.057864,
+        "RS60": 29.012073,
+        "RS120": 1.099353,
+        "gain5": 4.336398,
+        "ROC10": 13.672153,
+        "ROC20": 10.124827,
+        "extension_atr": 1.799106
+      },
+      "history_eligibility": {
+        "eligible": true,
+        "reasons": [],
+        "required_sessions": 126,
+        "observed_in_window": 126,
+        "quote_repairs": 0,
+        "normalization": {
+          "source_rows": 356,
+          "valid_rows": 356,
+          "rejected_or_duplicate_rows": 0
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "independently_validated": false
+      },
+      "live_order_authorized": false
+    },
+    {
+      "symbol": "4292",
+      "date": "2026-04-16",
+      "close": 58.299999,
+      "engine": "controlled_pullback",
+      "variant": "controlled_pullback",
+      "classification": "Shadow Candidate",
+      "technical_score": 5.79621,
+      "_original_stop": 55.613747,
+      "scenario": {
+        "trigger": 58.299999,
+        "invalidation": 55.613747,
+        "conditional_target": 67.789954,
+        "upside_pct": 16.277796,
+        "reward_risk": 3.532787,
+        "target_source": "prior_126_session_high"
+      },
+      "hypothesis": {
+        "initial_reversal_date": "2026-03-25",
+        "initial_reversal_gain_pct": 7.572852,
+        "pullback_sessions": 5
+      },
+      "observations": {
+        "volume_confirmed": true,
+        "price_confirmed": true,
+        "volume": 93573.0,
+        "volume_ratio": 2.083472
+      },
+      "entry_context": {
+        "market_regime": "Risk_ON_or_Neutral",
+        "market_filter_pass": true,
+        "sector_rs20_pct_points": 0.976925,
+        "sector_membership": "current_universe_unofficial_not_point_in_time",
+        "sector_filter_pass": true
+      },
+      "features": {
+        "EMA20": 56.030924,
+        "EMA50": 55.120781,
+        "RSI14": 62.829855,
+        "MACD": 1.00126,
+        "MACD_signal": 0.803907,
+        "ATR14": 1.790835,
+        "RS20": 5.79621,
+        "RS60": 12.103756,
+        "RS120": -8.422791,
+        "gain5": 3.003535,
+        "ROC10": 6.229781,
+        "ROC20": 11.863173,
+        "extension_atr": 1.267049
+      },
+      "history_eligibility": {
+        "eligible": true,
+        "reasons": [],
+        "required_sessions": 126,
+        "observed_in_window": 126,
+        "quote_repairs": 0,
+        "normalization": {
+          "source_rows": 356,
+          "valid_rows": 356,
+          "rejected_or_duplicate_rows": 0
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "independently_validated": false
+      },
+      "live_order_authorized": false
+    }
+  ],
+  "2026-06-15": [
+    {
+      "symbol": "4264",
+      "date": "2026-06-14",
+      "close": 53.799999,
+      "engine": "controlled_pullback",
+      "variant": "controlled_pullback",
+      "classification": "Shadow Candidate",
+      "technical_score": 3.557356,
+      "_original_stop": 50.667529,
+      "scenario": {
+        "trigger": 53.799999,
+        "invalidation": 50.667529,
+        "conditional_target": 74.349998,
+        "upside_pct": 38.197025,
+        "reward_risk": 6.560318,
+        "target_source": "prior_126_session_high"
+      },
+      "hypothesis": {
+        "initial_reversal_date": "2026-05-21",
+        "initial_reversal_gain_pct": 4.45737,
+        "pullback_sessions": 5
+      },
+      "observations": {
+        "volume_confirmed": true,
+        "price_confirmed": true,
+        "volume": 1264543.0,
+        "volume_ratio": 2.585424
+      },
+      "entry_context": {
+        "market_regime": "Risk_ON_or_Neutral",
+        "market_filter_pass": true,
+        "sector_rs20_pct_points": 1.078779,
+        "sector_membership": "current_universe_unofficial_not_point_in_time",
+        "sector_filter_pass": true
+      },
+      "features": {
+        "EMA20": 52.107195,
+        "EMA50": 52.478273,
+        "RSI14": 58.354698,
+        "MACD": 0.288813,
+        "MACD_signal": 0.215651,
+        "ATR14": 1.414943,
+        "RS20": 3.557356,
+        "RS60": -1.345862,
+        "RS120": -27.312806,
+        "gain5": 2.868069,
+        "ROC10": 1.797542,
+        "ROC20": 3.461537,
+        "extension_atr": 1.196376
+      },
+      "history_eligibility": {
+        "eligible": true,
+        "reasons": [],
+        "required_sessions": 126,
+        "observed_in_window": 126,
+        "quote_repairs": 0,
+        "normalization": {
+          "source_rows": 339,
+          "valid_rows": 339,
+          "rejected_or_duplicate_rows": 0
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "independently_validated": false
+      },
+      "live_order_authorized": false
+    }
+  ],
+  "2026-06-28": [
+    {
+      "symbol": "6001",
+      "date": "2026-06-25",
+      "close": 32.099998,
+      "engine": "controlled_pullback",
+      "variant": "controlled_pullback",
+      "classification": "Shadow Candidate",
+      "technical_score": 4.537387,
+      "_original_stop": 31.074324,
+      "scenario": {
+        "trigger": 32.099998,
+        "invalidation": 31.074324,
+        "conditional_target": 36.220001,
+        "upside_pct": 12.8349,
+        "reward_risk": 4.016871,
+        "target_source": "prior_126_session_high"
+      },
+      "hypothesis": {
+        "initial_reversal_date": "2026-06-14",
+        "initial_reversal_gain_pct": 3.26504,
+        "pullback_sessions": 5
+      },
+      "observations": {
+        "volume_confirmed": true,
+        "price_confirmed": true,
+        "volume": 206553.0,
+        "volume_ratio": 4.948746
+      },
+      "entry_context": {
+        "market_regime": "Risk_OFF",
+        "market_filter_pass": false,
+        "sector_rs20_pct_points": 5.218612,
+        "sector_membership": "current_universe_unofficial_not_point_in_time",
+        "sector_filter_pass": true
+      },
+      "features": {
+        "EMA20": 31.398836,
+        "EMA50": 31.380458,
+        "RSI14": 59.822565,
+        "MACD": 0.109619,
+        "MACD_signal": 0.031489,
+        "ATR14": 0.683783,
+        "RS20": 4.537387,
+        "RS60": 7.778369,
+        "RS120": -6.155377,
+        "gain5": 2.490418,
+        "ROC10": 3.883491,
+        "ROC20": 3.682169,
+        "extension_atr": 1.025416
+      },
+      "history_eligibility": {
+        "eligible": true,
+        "reasons": [],
+        "required_sessions": 126,
+        "observed_in_window": 126,
+        "quote_repairs": 0,
+        "normalization": {
+          "source_rows": 356,
+          "valid_rows": 356,
+          "rejected_or_duplicate_rows": 0
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "independently_validated": false
+      },
+      "live_order_authorized": false
+    }
+  ],
+  "2026-07-05": [
+    {
+      "symbol": "8240",
+      "date": "2026-07-02",
+      "close": 19.85,
+      "engine": "controlled_pullback",
+      "variant": "controlled_pullback",
+      "classification": "Shadow Candidate",
+      "technical_score": 9.133799,
+      "_original_stop": 18.844244,
+      "scenario": {
+        "trigger": 19.85,
+        "invalidation": 18.844244,
+        "conditional_target": 25.299999,
+        "upside_pct": 27.455913,
+        "reward_risk": 5.418804,
+        "target_source": "prior_126_session_high"
+      },
+      "hypothesis": {
+        "initial_reversal_date": "2026-06-09",
+        "initial_reversal_gain_pct": 12.493297,
+        "pullback_sessions": 5
+      },
+      "observations": {
+        "volume_confirmed": true,
+        "price_confirmed": true,
+        "volume": 1095413.0,
+        "volume_ratio": 2.17502
+      },
+      "entry_context": {
+        "market_regime": "Risk_OFF",
+        "market_filter_pass": false,
+        "sector_rs20_pct_points": 12.173725,
+        "sector_membership": "current_universe_unofficial_not_point_in_time",
+        "sector_filter_pass": true
+      },
+      "features": {
+        "EMA20": 19.2771,
+        "EMA50": 19.056132,
+        "RSI14": 59.398552,
+        "MACD": 0.144597,
+        "MACD_signal": 0.194734,
+        "ATR14": 0.670505,
+        "RS20": 9.133799,
+        "RS60": 15.434011,
+        "RS120": -8.5014,
+        "gain5": 5.026459,
+        "ROC10": -0.551096,
+        "ROC20": 7.64642,
+        "extension_atr": 0.854433
+      },
+      "history_eligibility": {
+        "eligible": true,
+        "reasons": [],
+        "required_sessions": 126,
+        "observed_in_window": 126,
+        "quote_repairs": 0,
+        "normalization": {
+          "source_rows": 356,
+          "valid_rows": 356,
+          "rejected_or_duplicate_rows": 0
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "independently_validated": false
+      },
+      "live_order_authorized": false
+    }
+  ]
+}

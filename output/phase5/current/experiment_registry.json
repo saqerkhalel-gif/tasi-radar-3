@@ -1,0 +1,383 @@
+{
+  "protocol_registration_commit": "5c7d5279b0a7544d32c7333dcce000e3a41a9a51",
+  "protocol_sha256": "5fb7b9e1d7a651ce3b138dd8f694c63f5a3fb3d1f4a2bb58c836658cb0b9519d",
+  "experiments": [
+    {
+      "variant": "failed_breakdown",
+      "specification": {
+        "engine": "failed_breakdown",
+        "native": 20,
+        "volume": 1.5,
+        "conditioning": null
+      },
+      "status": "evaluated",
+      "cost_cases": [
+        "base",
+        "stress"
+      ],
+      "folds": 3,
+      "optimized": false
+    },
+    {
+      "variant": "failed_breakdown__native_10",
+      "specification": {
+        "engine": "failed_breakdown",
+        "native": 10,
+        "volume": 1.5,
+        "conditioning": null
+      },
+      "status": "evaluated",
+      "cost_cases": [
+        "base",
+        "stress"
+      ],
+      "folds": 3,
+      "optimized": false
+    },
+    {
+      "variant": "failed_breakdown__native_30",
+      "specification": {
+        "engine": "failed_breakdown",
+        "native": 30,
+        "volume": 1.5,
+        "conditioning": null
+      },
+      "status": "evaluated",
+      "cost_cases": [
+        "base",
+        "stress"
+      ],
+      "folds": 3,
+      "optimized": false
+    },
+    {
+      "variant": "failed_breakdown__volume_1.25",
+      "specification": {
+        "engine": "failed_breakdown",
+        "native": 20,
+        "volume": 1.25,
+        "conditioning": null
+      },
+      "status": "evaluated",
+      "cost_cases": [
+        "base",
+        "stress"
+      ],
+      "folds": 3,
+      "optimized": false
+    },
+    {
+      "variant": "failed_breakdown__volume_2.0",
+      "specification": {
+        "engine": "failed_breakdown",
+        "native": 20,
+        "volume": 2.0,
+        "conditioning": null
+      },
+      "status": "evaluated",
+      "cost_cases": [
+        "base",
+        "stress"
+      ],
+      "folds": 3,
+      "optimized": false
+    },
+    {
+      "variant": "failed_breakdown__market",
+      "specification": {
+        "engine": "failed_breakdown",
+        "native": 20,
+        "volume": 1.5,
+        "conditioning": "market"
+      },
+      "status": "evaluated",
+      "cost_cases": [
+        "base",
+        "stress"
+      ],
+      "folds": 3,
+      "optimized": false
+    },
+    {
+      "variant": "failed_breakdown__sector",
+      "specification": {
+        "engine": "failed_breakdown",
+        "native": 20,
+        "volume": 1.5,
+        "conditioning": "sector"
+      },
+      "status": "evaluated",
+      "cost_cases": [
+        "base",
+        "stress"
+      ],
+      "folds": 3,
+      "optimized": false
+    },
+    {
+      "variant": "base_contraction",
+      "specification": {
+        "engine": "base_contraction",
+        "native": 30,
+        "volume": 1.5,
+        "conditioning": null
+      },
+      "status": "evaluated",
+      "cost_cases": [
+        "base",
+        "stress"
+      ],
+      "folds": 3,
+      "optimized": false
+    },
+    {
+      "variant": "base_contraction__native_20",
+      "specification": {
+        "engine": "base_contraction",
+        "native": 20,
+        "volume": 1.5,
+        "conditioning": null
+      },
+      "status": "evaluated",
+      "cost_cases": [
+        "base",
+        "stress"
+      ],
+      "folds": 3,
+      "optimized": false
+    },
+    {
+      "variant": "base_contraction__native_40",
+      "specification": {
+        "engine": "base_contraction",
+        "native": 40,
+        "volume": 1.5,
+        "conditioning": null
+      },
+      "status": "evaluated",
+      "cost_cases": [
+        "base",
+        "stress"
+      ],
+      "folds": 3,
+      "optimized": false
+    },
+    {
+      "variant": "base_contraction__volume_1.25",
+      "specification": {
+        "engine": "base_contraction",
+        "native": 30,
+        "volume": 1.25,
+        "conditioning": null
+      },
+      "status": "evaluated",
+      "cost_cases": [
+        "base",
+        "stress"
+      ],
+      "folds": 3,
+      "optimized": false
+    },
+    {
+      "variant": "base_contraction__volume_2.0",
+      "specification": {
+        "engine": "base_contraction",
+        "native": 30,
+        "volume": 2.0,
+        "conditioning": null
+      },
+      "status": "evaluated",
+      "cost_cases": [
+        "base",
+        "stress"
+      ],
+      "folds": 3,
+      "optimized": false
+    },
+    {
+      "variant": "base_contraction__market",
+      "specification": {
+        "engine": "base_contraction",
+        "native": 30,
+        "volume": 1.5,
+        "conditioning": "market"
+      },
+      "status": "evaluated",
+      "cost_cases": [
+        "base",
+        "stress"
+      ],
+      "folds": 3,
+      "optimized": false
+    },
+    {
+      "variant": "base_contraction__sector",
+      "specification": {
+        "engine": "base_contraction",
+        "native": 30,
+        "volume": 1.5,
+        "conditioning": "sector"
+      },
+      "status": "evaluated",
+      "cost_cases": [
+        "base",
+        "stress"
+      ],
+      "folds": 3,
+      "optimized": false
+    },
+    {
+      "variant": "controlled_pullback",
+      "specification": {
+        "engine": "controlled_pullback",
+        "native": 5,
+        "volume": 1.5,
+        "conditioning": null
+      },
+      "status": "evaluated",
+      "cost_cases": [
+        "base",
+        "stress"
+      ],
+      "folds": 3,
+      "optimized": false
+    },
+    {
+      "variant": "controlled_pullback__native_3",
+      "specification": {
+        "engine": "controlled_pullback",
+        "native": 3,
+        "volume": 1.5,
+        "conditioning": null
+      },
+      "status": "evaluated",
+      "cost_cases": [
+        "base",
+        "stress"
+      ],
+      "folds": 3,
+      "optimized": false
+    },
+    {
+      "variant": "controlled_pullback__native_8",
+      "specification": {
+        "engine": "controlled_pullback",
+        "native": 8,
+        "volume": 1.5,
+        "conditioning": null
+      },
+      "status": "evaluated",
+      "cost_cases": [
+        "base",
+        "stress"
+      ],
+      "folds": 3,
+      "optimized": false
+    },
+    {
+      "variant": "controlled_pullback__volume_1.25",
+      "specification": {
+        "engine": "controlled_pullback",
+        "native": 5,
+        "volume": 1.25,
+        "conditioning": null
+      },
+      "status": "evaluated",
+      "cost_cases": [
+        "base",
+        "stress"
+      ],
+      "folds": 3,
+      "optimized": false
+    },
+    {
+      "variant": "controlled_pullback__volume_2.0",
+      "specification": {
+        "engine": "controlled_pullback",
+        "native": 5,
+        "volume": 2.0,
+        "conditioning": null
+      },
+      "status": "evaluated",
+      "cost_cases": [
+        "base",
+        "stress"
+      ],
+      "folds": 3,
+      "optimized": false
+    },
+    {
+      "variant": "controlled_pullback__market",
+      "specification": {
+        "engine": "controlled_pullback",
+        "native": 5,
+        "volume": 1.5,
+        "conditioning": "market"
+      },
+      "status": "evaluated",
+      "cost_cases": [
+        "base",
+        "stress"
+      ],
+      "folds": 3,
+      "optimized": false
+    },
+    {
+      "variant": "controlled_pullback__sector",
+      "specification": {
+        "engine": "controlled_pullback",
+        "native": 5,
+        "volume": 1.5,
+        "conditioning": "sector"
+      },
+      "status": "evaluated",
+      "cost_cases": [
+        "base",
+        "stress"
+      ],
+      "folds": 3,
+      "optimized": false
+    },
+    {
+      "variant": "simple_momentum20",
+      "specification": {
+        "reference": "simple_momentum20"
+      },
+      "status": "evaluated",
+      "cost_cases": [
+        "base",
+        "stress"
+      ],
+      "folds": 3,
+      "optimized": false
+    },
+    {
+      "variant": "original_risk_matched",
+      "specification": {
+        "reference": "original_risk_matched"
+      },
+      "status": "evaluated",
+      "cost_cases": [
+        "base",
+        "stress"
+      ],
+      "folds": 3,
+      "optimized": false
+    },
+    {
+      "variant": "phase4_early_reversal",
+      "specification": {
+        "reference": "phase4_early_reversal"
+      },
+      "status": "evaluated",
+      "cost_cases": [
+        "base",
+        "stress"
+      ],
+      "folds": 3,
+      "optimized": false
+    }
+  ],
+  "familywise_trials": 23,
+  "selection": "No winning configuration selected; all24 reported including zero-trade cases."
+}
