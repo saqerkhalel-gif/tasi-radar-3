@@ -1,0 +1,87 @@
+name: TASI Phase 6 Forward Validation
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['phase6/**', '.github/workflows/phase6.yml']
+  workflow_run:
+    workflows: ['TASI Radar 3.0']
+    types: [completed]
+    branches: [main]
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: tasi-phase6-forward-ledger
+  cancel-in-progress: false
+jobs:
+  forward-validation:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.head_repository.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      SOURCE_RUN_ID: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.id || '39870228858' }}
+      SOURCE_RUN_ATTEMPT: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.run_attempt || '1' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Test existing production and shadow contracts
+        run: python -m pytest -q
+      - name: Authenticate exact daily source identity
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python -m phase6.source --run-id "$SOURCE_RUN_ID"
+      - name: Download exact completed daily artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: tasi-radar-results-${{ env.SOURCE_RUN_ID }}-${{ env.SOURCE_RUN_ATTEMPT }}
+          path: daily_snapshot
+          run-id: ${{ env.SOURCE_RUN_ID }}
+          github-token: ${{ github.token }}
+      - name: Restore latest accepted ledger before transaction
+        run: |
+          git fetch origin main
+          git checkout origin/main -- output/phase6 2>/dev/null || test ! -d output/phase6
+      - name: Audit raw OHLCV and advance prospective ledger
+        run: python -m phase6.pipeline --snapshot daily_snapshot --source-info source_run.json
+      - name: Verify protected sources and transaction integrity
+        run: |
+          python -m phase6.verify
+          cat output/phase6/current/DASHBOARD_AR.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Publish atomic ledger and reports only
+        run: python -m phase6.publish
+      - name: Record operational failure separately
+        if: failure()
+        run: |
+          mkdir -p operational_failure
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          Path('operational_failure/status.json').write_text(json.dumps({'run_id':os.environ['GITHUB_RUN_ID'],'source_run_id':os.environ['SOURCE_RUN_ID'],'status':'FAILED_SEE_JOB_LOGS','stock_opportunity':False,'production_changed':False,'partial_ledger_accepted':False}))
+          PY
+      - name: Retain exact inputs, ledger and verification anchors
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tasi-phase6-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            output/phase6/
+            daily_snapshot/research_inputs/
+            daily_snapshot/output/latest.json
+            daily_snapshot/output/backtest.json
+            source_run.json
+            phase6/protocol.json
+            phase6/registration.json
+            phase6/protected_files.json
+            phase6_publication_receipt.json
+            operational_failure/
+            research/PHASE6_PLAN.md
+          retention-days: 90
+          if-no-files-found: error
