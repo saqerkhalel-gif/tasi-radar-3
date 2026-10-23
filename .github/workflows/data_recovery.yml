@@ -45,6 +45,8 @@ jobs:
           github-token: ${{ github.token }}
       - name: Re-fetch full raw history without quote substitutions and reconcile bases
         run: python -m data_recovery.audit --snapshot daily_snapshot --source-info source_run.json
+      - name: Assess free historical candidate without promotion or orders
+        run: python -m data_recovery.provider_candidates --source-info source_run.json
       - name: Verify production and registered forward ledger unchanged
         run: |
           python -m phase6.verify
