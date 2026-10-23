@@ -1,0 +1,119 @@
+name: TASI Phase 5 Data and Shadow Research
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'phase5/**'
+      - '.github/workflows/phase5.yml'
+  workflow_run:
+    workflows: ['TASI Radar 3.0']
+    types: [completed]
+    branches: [main]
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: tasi-phase5-shadow-research
+  cancel-in-progress: false
+jobs:
+  data-first-research:
+    if: github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_repository.full_name == github.repository)
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      SOURCE_RUN_ID: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.id || '39870228858' }}
+      SOURCE_RUN_ATTEMPT: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.run_attempt || '1' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Test live isolation and causal data/execution rules
+        run: python -m pytest -q
+      - name: Download exact phase4 reproduction artifact
+        if: github.event_name != 'workflow_run'
+        uses: actions/download-artifact@v4
+        with:
+          name: tasi-phase4-39941086262-1
+          path: baseline4
+          run-id: 39941086262
+          github-token: ${{ github.token }}
+      - name: Download exactly the completed daily source run
+        if: github.event_name == 'workflow_run'
+        uses: actions/download-artifact@v4
+        with:
+          name: tasi-radar-results-${{ env.SOURCE_RUN_ID }}-${{ env.SOURCE_RUN_ATTEMPT }}
+          path: daily_snapshot
+          run-id: ${{ env.SOURCE_RUN_ID }}
+          github-token: ${{ github.token }}
+      - name: FIRST audit all historical series, source provenance and quarantines
+        if: github.event_name != 'workflow_run'
+        run: python -m phase5.data --snapshot baseline4/frozen
+      - name: SECOND diagnose all25 original and31 early-reversal trades
+        if: github.event_name != 'workflow_run'
+        run: python -m phase5.diagnostics --snapshot baseline4/frozen --phase4-results baseline4/output/phase4/current
+      - name: THIRD reproduce known cohorts and evaluate24 registered cases
+        if: github.event_name != 'workflow_run'
+        run: python -m phase5.evaluate --snapshot baseline4/frozen --phase4-results baseline4/output/phase4/current
+      - name: Review missed8-10percent moves using prior-session features
+        if: github.event_name != 'workflow_run'
+        run: python -m phase5.review_missed --snapshot baseline4/frozen
+      - name: Verify actual comparisons, provenance and protected production files
+        if: github.event_name != 'workflow_run'
+        run: |
+          python -m phase5.verify
+          cat output/phase5/current/DECISION.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Restore current prospective ledger
+        run: |
+          git fetch origin main
+          python - <<'PY'
+          import subprocess
+          from pathlib import Path
+          target=Path('output/phase5/shadow/ledger.json')
+          result=subprocess.run(['git','show','origin/main:output/phase5/shadow/ledger.json'],capture_output=True)
+          if result.returncode==0:
+              target.parent.mkdir(parents=True,exist_ok=True)
+              target.write_bytes(result.stdout)
+          PY
+      - name: Record genuinely forward shadow hypotheses and daily missed review
+        env:
+          DAILY_EVENT: ${{ github.event_name == 'workflow_run' }}
+        run: |
+          if [ "$DAILY_EVENT" = 'true' ]; then
+            python -m phase5.shadow --snapshot daily_snapshot
+          else
+            python -m phase5.shadow --snapshot baseline4/frozen
+          fi
+      - name: Publish versioned phase5 outputs only
+        env:
+          IS_RESEARCH: ${{ github.event_name != 'workflow_run' }}
+        run: |
+          if [ "$IS_RESEARCH" = 'true' ]; then
+            python -m phase5.publish --research
+          else
+            python -m phase5.publish
+          fi
+      - name: Upload results and exact source/reproduction inputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tasi-phase5-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            output/phase5/
+            baseline4/frozen/
+            baseline4/output/phase4/current/comparison.json
+            daily_snapshot/research_inputs/
+            daily_snapshot/output/latest.json
+            daily_snapshot/output/backtest.json
+            phase5/protocol.json
+            phase5/registration.json
+            phase5/protected_files.json
+            research/PHASE5_PLAN.md
+          retention-days: 90
+          if-no-files-found: error

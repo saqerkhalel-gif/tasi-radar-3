@@ -28,6 +28,21 @@ def historical_window(df,sessions,minimum=126):
     return {'eligible':not reasons,'reasons':reasons,'required_sessions':minimum,'observed_in_window':int(grid.isin(df.index).sum()),'quote_repairs':len(q['unverified_quote_repairs']),'normalization':q['normalization']}
 
 
+def eligibility_panel(data,benchmark,sessions):
+    columns={}
+    for symbol,df in data.items():
+        x=df.reindex(sessions);prices=x[['Open','High','Low','Close']]
+        valid=np.isfinite(x[['Open','High','Low','Close','Volume']]).all(axis=1)&prices.gt(0).all(axis=1)&x.Volume.ge(0)&x.Low.le(x[['Open','Close']].min(axis=1))&x.High.ge(x[['Open','Close']].max(axis=1))
+        complete=valid.rolling(126,min_periods=126).sum().eq(126)
+        repairs={pd.Timestamp(r['date']) for r in df.attrs.get('price_repairs',[])}
+        jumps=df.Close.pct_change(fill_method=None).abs().gt(.22)
+        flagged=pd.Series(df.index.isin(repairs)|jumps.to_numpy(),index=df.index).rolling(200,min_periods=1).max().reindex(sessions)
+        columns[symbol]=complete&flagged.eq(0)&x.Volume.gt(0)
+    benchmark_complete=benchmark.Close.reindex(sessions).notna().rolling(121,min_periods=121).sum().eq(121)
+    panel=pd.DataFrame(columns,index=sessions).fillna(False)
+    return panel.mul(benchmark_complete,axis=0).astype(bool)
+
+
 def source_worker(specfile,resultfile):
     import yfinance as yf
     spec=json.loads(Path(specfile).read_text());symbols=spec['symbols'];end=pd.Timestamp(spec['expected']);start=end-pd.Timedelta(days=540)
@@ -36,11 +51,11 @@ def source_worker(specfile,resultfile):
     for symbol in symbols+['^TASI']:
         ticker=symbol+'.SR'
         try:
-            d=data[ticker].dropna(how='all');d.index=pd.to_datetime(d.index).tz_localize(None)
+            d=data[ticker].dropna(how='all');action_only=int((~d[['Open','High','Low','Close','Volume']].notna().any(axis=1)).sum());d=d.loc[d[['Open','High','Low','Close','Volume']].notna().any(axis=1)];d.index=pd.to_datetime(d.index).tz_localize(None)
             raw=[valid_daily_row(v)[0] for _,v in d.iterrows()];last=d.loc[end] if end in d.index else {}
             valid,reason=valid_daily_row(last);factor=d['Adj Close']/d.Close if 'Adj Close' in d else pd.Series(np.nan,index=d.index)
             adjusted=d[['Open','High','Low','Close']].mul(factor,axis=0);adjusted['Volume']=d.Volume
-            checks=np.array([valid_daily_row(v)[0] or (v.get('Volume')==0 and np.isfinite(v.get('Close',np.nan))) for _,v in adjusted.iterrows()])
+            checks=np.array([valid_daily_row(v)[0] or (v.get('Volume')==0 and valid_daily_row({**v.to_dict(),'Volume':1.})[0]) for _,v in adjusted.iterrows()])
             repaired=[]
             for repair in spec.get('repairs',{}).get(symbol,[]):
                 date=pd.Timestamp(repair['date']);old=repair.get('repaired_close',repair.get('close',repair.get('replacement_close')))
@@ -50,7 +65,7 @@ def source_worker(specfile,resultfile):
                     'independently_reconciled':False,'same_vendor_published_now':published is not None})
             rows.append({'symbol':symbol,'fetch_success':bool(len(d)),'vendor':'Yahoo Finance via yfinance','fetched_rows':len(d),'first_date':str(d.index[0].date()) if len(d) else None,'last_date':str(d.index[-1].date()) if len(d) else None,
                 'timezone':'Daily exchange-local dates normalized naive; XSAU/Riyadh calendar','raw_basis':'unadjusted OHLC + Adj Close; adjusted OHLC = raw OHLC*AdjClose/Close; volume as supplied',
-                'duplicate_dates':int(d.index.duplicated().sum()),'raw_invalid_daily_rows':len(d)-sum(raw),'adjusted_invalid_daily_rows':len(d)-int(checks.sum()),
+                'corporate_action_only_rows':action_only,'duplicate_dates':int(d.index.duplicated().sum()),'raw_invalid_daily_rows':len(d)-sum(raw),'adjusted_invalid_daily_rows':len(d)-int(checks.sum()),
                 'zero_volume_rows':int(d.Volume.eq(0).sum()),'latest_bar_valid':valid,'latest_reason':reason,
                 'adjustment_factor_available_rows':int(np.isfinite(factor).sum()),'adjustment_factor_change_rows':int((factor.pct_change(fill_method=None).abs()>1e-6).sum()),
                 'dividend_events':int(d.get('Dividends',pd.Series(dtype=float)).fillna(0).ne(0).sum()),'split_events':int(d.get('Stock Splits',pd.Series(dtype=float)).fillna(0).ne(0).sum()),
@@ -101,7 +116,7 @@ def audit(snapshot,output,offline=False):
           'Twelve Data':'XSAU requires paid Pro+/Venture+ entitlement; no verified free Saudi EOD access. https://twelvedata.com/exchanges/XSAU'},
         'request_policy':{'public_probes':4,'timeout_seconds_each':20,'yahoo_download_batch_calls':0 if offline else 1,'yahoo_internal_threads':4,'yahoo_worker_timeout_seconds':240,'rate_limit_policy':'No retry on denial, no bypass; yfinance may batch internal ticker requests. No contractual public rate limit established; stop on error/timeout.'},
         'scope':'No frozen data, quarantine or production gate modified. Latest validity, causal-window eligibility and independent full-series verification are different denominators. Vendor-consistent causal-prefix tests are exploratory, not validated independent evidence.'}
-    out=Path(output);dump(out/'data_provenance.json',report);pd.json_normalize(rows).to_csv(out/'QUARANTINE.csv',index=False)
+    out=Path(output);panel=eligibility_panel(data,b,sessions);out.mkdir(parents=True,exist_ok=True);panel.sum(axis=1).rename('eligible_vendor_window_symbols').to_csv(out/'ELIGIBLE_UNIVERSE_BY_SESSION.csv');report['causal_eligibility_by_session']={str(date.date()):int(value) for date,value in panel.sum(axis=1).items()};dump(out/'data_provenance.json',report);pd.json_normalize(rows).to_csv(out/'QUARANTINE.csv',index=False)
     lines=['# DATA PROVENANCE — Phase 5','',f'Audit {now}; source run {p["run_id"]}; price session {p["expected_session"]}.',
       '', '## Separate denominators', '', '| Status | Stocks /254 |','|---|---:|']
     lines+=['| '+k+' | '+str(v)+' |' for k,v in report['denominators'].items()]
