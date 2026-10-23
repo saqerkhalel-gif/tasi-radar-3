@@ -1539,35 +1539,6 @@
       "note": "Future daily high is an outcome bound, not a guaranteed tradable return. Reasons were evaluated using prior-session features only; no thresholds optimized from this review."
     },
     {
-      "symbol": "6040",
-      "prior_signal_date": "2026-09-15",
-      "outcome_start": "2026-09-16",
-      "outcome_end": "2026-10-14",
-      "prior_close": 44.342037,
-      "maximum_future_high_gain_pct": 8.198616,
-      "threshold8": true,
-      "threshold10": false,
-      "prior_data_vendor_window_eligible": true,
-      "independently_validated_history": false,
-      "engine_reasons": {
-        "failed_breakdown": "bullish_close_not_confirmed;no_prior_failed_breakdown_reclaim;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "base_contraction": "bullish_close_not_confirmed;base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "controlled_pullback": "bullish_close_not_confirmed;registered_price_momentum_RS_trigger_not_fully_confirmed"
-      },
-      "prior_gate_values": {
-        "volume_ratio": 3.108784,
-        "gain5_pct": -3.023516,
-        "ema20_extension_atr": -0.610167,
-        "rs20": -2.586754
-      },
-      "recorded_core_signals_before_first8pct_touch": [],
-      "no_recorded_core_signal_before8pct_touch": true,
-      "missed_by_all_three": true,
-      "guaranteed_entry_or_profit": false,
-      "overlap_policy": "At most one event per symbol per20-session outcome horizon",
-      "note": "Future daily high is an outcome bound, not a guaranteed tradable return. Reasons were evaluated using prior-session features only; no thresholds optimized from this review."
-    },
-    {
       "symbol": "7200",
       "prior_signal_date": "2026-08-31",
       "outcome_start": "2026-09-01",
@@ -1887,9 +1858,11 @@
       "note": "Future daily high is an outcome bound, not a guaranteed tradable return. Reasons were evaluated using prior-session features only; no thresholds optimized from this review."
     }
   ],
-  "eligible_nonoverlapping_events": 65,
+  "eligible_nonoverlapping_events": 64,
   "at_least10pct": 21,
-  "missed_by_all_three": 65,
+  "missed_by_all_three": 64,
   "future_labels_used_for_entry": false,
-  "latest_daily_review": true
+  "latest_daily_review": true,
+  "excluded_unusable_outcome_windows": 291,
+  "outcome_quality_policy": "All20 future sessions must have observed OHLCV with positive volume and no quarantine; otherwise no missed-move inference."
 }

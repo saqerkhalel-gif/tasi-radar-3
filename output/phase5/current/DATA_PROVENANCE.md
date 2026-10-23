@@ -1,6 +1,6 @@
 # DATA PROVENANCE — Phase 5
 
-Audit 2026-10-23T11:15:59.616221+00:00; source run 39870228858; price session 2026-10-22.
+Audit 2026-10-23T11:22:52.382990+00:00; source run 39870228858; price session 2026-10-22.
 
 ## Separate denominators
 
@@ -14,7 +14,7 @@ Audit 2026-10-23T11:15:59.616221+00:00; source run 39870228858; price session 20
 | independently_validated_historical_series | 0 |
 | live_entries_authorized | 0 |
 | fresh_stock_fetch_success | 254 |
-| fresh_latest_valid | 251 |
+| fresh_latest_valid | 252 |
 
 ## Recovery decision
 

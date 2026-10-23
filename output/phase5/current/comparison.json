@@ -1,11 +1,12 @@
 {
   "schema_version": 1,
-  "run_id": "39944779063",
-  "run_url": "https://github.com/saqerkhalel-gif/tasi-radar-3/actions/runs/39944779063",
-  "source_commit": "035d5d18a2f080eec46315c80dd3171b70a2e12f",
+  "run_id": "39945542819",
+  "run_url": "https://github.com/saqerkhalel-gif/tasi-radar-3/actions/runs/39945542819",
+  "source_commit": "2c38aa3d74429134355d82b6bfa8e5cd8894882c",
   "protocol_registration_commit": "5c7d5279b0a7544d32c7333dcce000e3a41a9a51",
+  "quality_review_revision": "2; execution-validity trace and stricter missed-outcome OHLCV; hypothesis parameters unchanged",
   "protocol_sha256": "5fb7b9e1d7a651ce3b138dd8f694c63f5a3fb3d1f4a2bb58c836658cb0b9519d",
-  "created_utc": "2026-10-23T11:16:49.730705+00:00",
+  "created_utc": "2026-10-23T11:24:34.344020+00:00",
   "source_snapshot_run_id": "39870228858",
   "phase4_comparison_run_id": "39941086262",
   "legacy_reproductions": {
@@ -2127,6 +2128,23 @@
         "maximum_drawdown_pct": -1.303292,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4193",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4210",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4280",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 89.15379,
         "mean_gross_exposure_pct": 4.358153,
         "exposure_curve": [
@@ -3490,6 +3508,23 @@
         "maximum_drawdown_pct": -1.280708,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4193",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4210",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4280",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 87.637273,
         "mean_gross_exposure_pct": 4.269963,
         "exposure_curve": [
@@ -4865,6 +4900,18 @@
             "maximum_drawdown_pct": -1.303292,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4193",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "4210",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 31.874265,
             "mean_gross_exposure_pct": 5.749325,
             "exposure_curve": [
@@ -5359,6 +5406,18 @@
             "maximum_drawdown_pct": -1.280708,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4193",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "4210",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 30.9439,
             "mean_gross_exposure_pct": 5.583658,
             "exposure_curve": [
@@ -5866,6 +5925,7 @@
             "maximum_drawdown_pct": -0.409575,
             "tasi_buy_hold_net_return_pct": -1.892139,
             "excess_return_pct_points": 2.632536,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 16.101241,
             "mean_gross_exposure_pct": 1.842886,
             "exposure_curve": [
@@ -6334,6 +6394,7 @@
             "maximum_drawdown_pct": -0.397812,
             "tasi_buy_hold_net_return_pct": -2.088159,
             "excess_return_pct_points": 2.791553,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 15.636575,
             "mean_gross_exposure_pct": 1.789924,
             "exposure_curve": [
@@ -6815,6 +6876,7 @@
             "maximum_drawdown_pct": -1.043103,
             "tasi_buy_hold_net_return_pct": -8.743282,
             "excess_return_pct_points": 8.253752,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 39.487834,
             "mean_gross_exposure_pct": 3.99396,
             "exposure_curve": [
@@ -7304,6 +7366,7 @@
             "maximum_drawdown_pct": -1.071411,
             "tasi_buy_hold_net_return_pct": -8.925614,
             "excess_return_pct_points": 8.397203,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 39.444593,
             "mean_gross_exposure_pct": 3.990383,
             "exposure_curve": [
@@ -7983,6 +8046,28 @@
         "maximum_drawdown_pct": -2.692078,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4193",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2100",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4210",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4280",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 160.78012,
         "mean_gross_exposure_pct": 5.45339,
         "exposure_curve": [
@@ -9410,6 +9495,28 @@
         "maximum_drawdown_pct": -2.718612,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4193",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2100",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4210",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4280",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 158.767324,
         "mean_gross_exposure_pct": 5.352815,
         "exposure_curve": [
@@ -10849,6 +10956,23 @@
             "maximum_drawdown_pct": -2.340541,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4193",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2100",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "4210",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 65.100223,
             "mean_gross_exposure_pct": 8.420277,
             "exposure_curve": [
@@ -11380,6 +11504,23 @@
             "maximum_drawdown_pct": -2.334924,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4193",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2100",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "4210",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 63.775987,
             "mean_gross_exposure_pct": 8.218497,
             "exposure_curve": [
@@ -11924,6 +12065,7 @@
             "maximum_drawdown_pct": -0.514682,
             "tasi_buy_hold_net_return_pct": -1.892139,
             "excess_return_pct_points": 2.288886,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 35.704574,
             "mean_gross_exposure_pct": 2.230621,
             "exposure_curve": [
@@ -12408,6 +12550,7 @@
             "maximum_drawdown_pct": -0.536355,
             "tasi_buy_hold_net_return_pct": -2.088159,
             "excess_return_pct_points": 2.428595,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 35.218878,
             "mean_gross_exposure_pct": 2.177311,
             "exposure_curve": [
@@ -12905,6 +13048,7 @@
             "maximum_drawdown_pct": -1.507224,
             "tasi_buy_hold_net_return_pct": -8.743282,
             "excess_return_pct_points": 7.787035,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 58.904741,
             "mean_gross_exposure_pct": 4.186995,
             "exposure_curve": [
@@ -13410,6 +13554,7 @@
             "maximum_drawdown_pct": -1.554238,
             "tasi_buy_hold_net_return_pct": -8.925614,
             "excess_return_pct_points": 7.911726,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 58.834578,
             "mean_gross_exposure_pct": 4.183245,
             "exposure_curve": [
@@ -14104,6 +14249,23 @@
         "maximum_drawdown_pct": -1.303292,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4193",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4210",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4280",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 89.15379,
         "mean_gross_exposure_pct": 4.358153,
         "exposure_curve": [
@@ -15467,6 +15629,23 @@
         "maximum_drawdown_pct": -1.280708,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4193",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4210",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4280",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 87.637273,
         "mean_gross_exposure_pct": 4.269963,
         "exposure_curve": [
@@ -16842,6 +17021,18 @@
             "maximum_drawdown_pct": -1.303292,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4193",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "4210",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 31.874265,
             "mean_gross_exposure_pct": 5.749325,
             "exposure_curve": [
@@ -17336,6 +17527,18 @@
             "maximum_drawdown_pct": -1.280708,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4193",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "4210",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 30.9439,
             "mean_gross_exposure_pct": 5.583658,
             "exposure_curve": [
@@ -17843,6 +18046,7 @@
             "maximum_drawdown_pct": -0.409575,
             "tasi_buy_hold_net_return_pct": -1.892139,
             "excess_return_pct_points": 2.632536,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 16.101241,
             "mean_gross_exposure_pct": 1.842886,
             "exposure_curve": [
@@ -18311,6 +18515,7 @@
             "maximum_drawdown_pct": -0.397812,
             "tasi_buy_hold_net_return_pct": -2.088159,
             "excess_return_pct_points": 2.791553,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 15.636575,
             "mean_gross_exposure_pct": 1.789924,
             "exposure_curve": [
@@ -18792,6 +18997,7 @@
             "maximum_drawdown_pct": -1.043103,
             "tasi_buy_hold_net_return_pct": -8.743282,
             "excess_return_pct_points": 8.253752,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 39.487834,
             "mean_gross_exposure_pct": 3.99396,
             "exposure_curve": [
@@ -19281,6 +19487,7 @@
             "maximum_drawdown_pct": -1.071411,
             "tasi_buy_hold_net_return_pct": -8.925614,
             "excess_return_pct_points": 8.397203,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 39.444593,
             "mean_gross_exposure_pct": 3.990383,
             "exposure_curve": [
@@ -19959,6 +20166,23 @@
         "maximum_drawdown_pct": -1.303292,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4193",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4210",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4280",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 89.15379,
         "mean_gross_exposure_pct": 4.358153,
         "exposure_curve": [
@@ -21322,6 +21546,23 @@
         "maximum_drawdown_pct": -1.280708,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4193",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4210",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4280",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 87.637273,
         "mean_gross_exposure_pct": 4.269963,
         "exposure_curve": [
@@ -22697,6 +22938,18 @@
             "maximum_drawdown_pct": -1.303292,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4193",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "4210",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 31.874265,
             "mean_gross_exposure_pct": 5.749325,
             "exposure_curve": [
@@ -23191,6 +23444,18 @@
             "maximum_drawdown_pct": -1.280708,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4193",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "4210",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 30.9439,
             "mean_gross_exposure_pct": 5.583658,
             "exposure_curve": [
@@ -23698,6 +23963,7 @@
             "maximum_drawdown_pct": -0.409575,
             "tasi_buy_hold_net_return_pct": -1.892139,
             "excess_return_pct_points": 2.632536,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 16.101241,
             "mean_gross_exposure_pct": 1.842886,
             "exposure_curve": [
@@ -24166,6 +24432,7 @@
             "maximum_drawdown_pct": -0.397812,
             "tasi_buy_hold_net_return_pct": -2.088159,
             "excess_return_pct_points": 2.791553,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 15.636575,
             "mean_gross_exposure_pct": 1.789924,
             "exposure_curve": [
@@ -24647,6 +24914,7 @@
             "maximum_drawdown_pct": -1.043103,
             "tasi_buy_hold_net_return_pct": -8.743282,
             "excess_return_pct_points": 8.253752,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 39.487834,
             "mean_gross_exposure_pct": 3.99396,
             "exposure_curve": [
@@ -25136,6 +25404,7 @@
             "maximum_drawdown_pct": -1.071411,
             "tasi_buy_hold_net_return_pct": -8.925614,
             "excess_return_pct_points": 8.397203,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 39.444593,
             "mean_gross_exposure_pct": 3.990383,
             "exposure_curve": [
@@ -25814,6 +26083,18 @@
         "maximum_drawdown_pct": -1.252832,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4193",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4280",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 74.628163,
         "mean_gross_exposure_pct": 3.469919,
         "exposure_curve": [
@@ -27161,6 +27442,18 @@
         "maximum_drawdown_pct": -1.23172,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4193",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4280",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 73.517216,
         "mean_gross_exposure_pct": 3.405513,
         "exposure_curve": [
@@ -28520,6 +28813,13 @@
             "maximum_drawdown_pct": -1.134901,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4193",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 17.457261,
             "mean_gross_exposure_pct": 3.399592,
             "exposure_curve": [
@@ -28998,6 +29298,13 @@
             "maximum_drawdown_pct": -1.100896,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4193",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 16.921541,
             "mean_gross_exposure_pct": 3.296843,
             "exposure_curve": [
@@ -29489,6 +29796,7 @@
             "maximum_drawdown_pct": -0.409575,
             "tasi_buy_hold_net_return_pct": -1.892139,
             "excess_return_pct_points": 2.632536,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 16.101241,
             "mean_gross_exposure_pct": 1.842886,
             "exposure_curve": [
@@ -29957,6 +30265,7 @@
             "maximum_drawdown_pct": -0.397812,
             "tasi_buy_hold_net_return_pct": -2.088159,
             "excess_return_pct_points": 2.791553,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 15.636575,
             "mean_gross_exposure_pct": 1.789924,
             "exposure_curve": [
@@ -30438,6 +30747,7 @@
             "maximum_drawdown_pct": -1.043103,
             "tasi_buy_hold_net_return_pct": -8.743282,
             "excess_return_pct_points": 8.253752,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 39.487834,
             "mean_gross_exposure_pct": 3.99396,
             "exposure_curve": [
@@ -30927,6 +31237,7 @@
             "maximum_drawdown_pct": -1.071411,
             "tasi_buy_hold_net_return_pct": -8.925614,
             "excess_return_pct_points": 8.397203,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 39.444593,
             "mean_gross_exposure_pct": 3.990383,
             "exposure_curve": [
@@ -31605,6 +31916,18 @@
         "maximum_drawdown_pct": -1.303292,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4193",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4210",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 52.09445,
         "mean_gross_exposure_pct": 3.295661,
         "exposure_curve": [
@@ -32929,6 +33252,18 @@
         "maximum_drawdown_pct": -1.280708,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4193",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4210",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 51.128112,
         "mean_gross_exposure_pct": 3.236055,
         "exposure_curve": [
@@ -34265,6 +34600,18 @@
             "maximum_drawdown_pct": -1.303292,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4193",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "4210",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 31.874265,
             "mean_gross_exposure_pct": 5.749325,
             "exposure_curve": [
@@ -34757,6 +35104,18 @@
             "maximum_drawdown_pct": -1.280708,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4193",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "4210",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 30.9439,
             "mean_gross_exposure_pct": 5.583658,
             "exposure_curve": [
@@ -35262,6 +35621,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -1.892139,
             "excess_return_pct_points": 1.892139,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -35706,6 +36066,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -2.088159,
             "excess_return_pct_points": 2.088159,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -36163,6 +36524,7 @@
             "maximum_drawdown_pct": -0.664685,
             "tasi_buy_hold_net_return_pct": -8.743282,
             "excess_return_pct_points": 8.634287,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 19.890865,
             "mean_gross_exposure_pct": 3.803235,
             "exposure_curve": [
@@ -36631,6 +36993,7 @@
             "maximum_drawdown_pct": -0.67394,
             "tasi_buy_hold_net_return_pct": -8.925614,
             "excess_return_pct_points": 8.796856,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 19.871034,
             "mean_gross_exposure_pct": 3.799831,
             "exposure_curve": [
@@ -37288,6 +37651,13 @@
         "maximum_drawdown_pct": -1.134901,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4193",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 17.457261,
         "mean_gross_exposure_pct": 1.147914,
         "exposure_curve": [
@@ -38580,6 +38950,13 @@
         "maximum_drawdown_pct": -1.100896,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4193",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 16.921541,
         "mean_gross_exposure_pct": 1.11322,
         "exposure_curve": [
@@ -39884,6 +40261,13 @@
             "maximum_drawdown_pct": -1.134901,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4193",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 17.457261,
             "mean_gross_exposure_pct": 3.399592,
             "exposure_curve": [
@@ -40360,6 +40744,13 @@
             "maximum_drawdown_pct": -1.100896,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4193",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 16.921541,
             "mean_gross_exposure_pct": 3.296843,
             "exposure_curve": [
@@ -40849,6 +41240,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -1.892139,
             "excess_return_pct_points": 1.892139,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -41293,6 +41685,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -2.088159,
             "excess_return_pct_points": 2.088159,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -41750,6 +42143,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -8.743282,
             "excess_return_pct_points": 8.743282,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -42194,6 +42588,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -8.925614,
             "excess_return_pct_points": 8.925614,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -42827,6 +43222,7 @@
         "maximum_drawdown_pct": -1.28624,
         "tasi_buy_hold_net_return_pct": -8.261782,
         "excess_return_pct_points": 7.114842,
+        "execution_data_issues": [],
         "turnover_pct_initial_nav": 58.593089,
         "mean_gross_exposure_pct": 0.51129,
         "exposure_curve": [
@@ -44151,6 +44547,7 @@
         "maximum_drawdown_pct": -1.333385,
         "tasi_buy_hold_net_return_pct": -8.445076,
         "excess_return_pct_points": 7.240949,
+        "execution_data_issues": [],
         "turnover_pct_initial_nav": 58.523439,
         "mean_gross_exposure_pct": 0.51083,
         "exposure_curve": [
@@ -45487,6 +45884,7 @@
             "maximum_drawdown_pct": -0.614137,
             "tasi_buy_hold_net_return_pct": 2.378023,
             "excess_return_pct_points": -2.851911,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 19.525222,
             "mean_gross_exposure_pct": 1.32601,
             "exposure_curve": [
@@ -45963,6 +46361,7 @@
             "maximum_drawdown_pct": -0.623111,
             "tasi_buy_hold_net_return_pct": 2.17347,
             "excess_return_pct_points": -2.666392,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 19.505756,
             "mean_gross_exposure_pct": 1.324818,
             "exposure_curve": [
@@ -46452,6 +46851,7 @@
             "maximum_drawdown_pct": -0.676256,
             "tasi_buy_hold_net_return_pct": -1.892139,
             "excess_return_pct_points": 1.215883,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 39.253887,
             "mean_gross_exposure_pct": 0.191884,
             "exposure_curve": [
@@ -46936,6 +47336,7 @@
             "maximum_drawdown_pct": -0.714728,
             "tasi_buy_hold_net_return_pct": -2.088159,
             "excess_return_pct_points": 1.373431,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 39.210962,
             "mean_gross_exposure_pct": 0.191712,
             "exposure_curve": [
@@ -47433,6 +47834,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -8.743282,
             "excess_return_pct_points": 8.743282,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -47877,6 +48279,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -8.925614,
             "excess_return_pct_points": 8.925614,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -48509,6 +48912,7 @@
         "maximum_drawdown_pct": 0.0,
         "tasi_buy_hold_net_return_pct": -8.261782,
         "excess_return_pct_points": 8.261782,
+        "execution_data_issues": [],
         "turnover_pct_initial_nav": 0.0,
         "mean_gross_exposure_pct": 0.0,
         "exposure_curve": [
@@ -49777,6 +50181,7 @@
         "maximum_drawdown_pct": 0.0,
         "tasi_buy_hold_net_return_pct": -8.445076,
         "excess_return_pct_points": 8.445076,
+        "execution_data_issues": [],
         "turnover_pct_initial_nav": 0.0,
         "mean_gross_exposure_pct": 0.0,
         "exposure_curve": [
@@ -51057,6 +51462,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": 2.378023,
             "excess_return_pct_points": -2.378023,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -51509,6 +51915,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": 2.17347,
             "excess_return_pct_points": -2.17347,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -51974,6 +52381,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -1.892139,
             "excess_return_pct_points": 1.892139,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -52418,6 +52826,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -2.088159,
             "excess_return_pct_points": 2.088159,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -52875,6 +53284,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -8.743282,
             "excess_return_pct_points": 8.743282,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -53319,6 +53729,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -8.925614,
             "excess_return_pct_points": 8.925614,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -53950,6 +54361,7 @@
         "maximum_drawdown_pct": -2.340246,
         "tasi_buy_hold_net_return_pct": -8.261782,
         "excess_return_pct_points": 6.059348,
+        "execution_data_issues": [],
         "turnover_pct_initial_nav": 136.505584,
         "mean_gross_exposure_pct": 3.344254,
         "exposure_curve": [
@@ -55343,6 +55755,7 @@
         "maximum_drawdown_pct": -2.463206,
         "tasi_buy_hold_net_return_pct": -8.445076,
         "excess_return_pct_points": 6.109648,
+        "execution_data_issues": [],
         "turnover_pct_initial_nav": 136.295965,
         "mean_gross_exposure_pct": 3.341405,
         "exposure_curve": [
@@ -56748,6 +57161,7 @@
             "maximum_drawdown_pct": -0.919998,
             "tasi_buy_hold_net_return_pct": 2.378023,
             "excess_return_pct_points": -3.158203,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 39.159168,
             "mean_gross_exposure_pct": 1.901435,
             "exposure_curve": [
@@ -57240,6 +57654,7 @@
             "maximum_drawdown_pct": -0.948254,
             "tasi_buy_hold_net_return_pct": 2.17347,
             "excess_return_pct_points": -2.991961,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 39.118224,
             "mean_gross_exposure_pct": 1.899783,
             "exposure_curve": [
@@ -57745,6 +58160,7 @@
             "maximum_drawdown_pct": -1.279441,
             "tasi_buy_hold_net_return_pct": -1.892139,
             "excess_return_pct_points": 0.719077,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 78.607306,
             "mean_gross_exposure_pct": 4.270119,
             "exposure_curve": [
@@ -58266,6 +58682,7 @@
             "maximum_drawdown_pct": -1.346439,
             "tasi_buy_hold_net_return_pct": -2.088159,
             "excess_return_pct_points": 0.838087,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 78.509764,
             "mean_gross_exposure_pct": 4.266675,
             "exposure_curve": [
@@ -58800,6 +59217,7 @@
             "maximum_drawdown_pct": -1.668702,
             "tasi_buy_hold_net_return_pct": -8.743282,
             "excess_return_pct_points": 8.479817,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 19.736078,
             "mean_gross_exposure_pct": 3.889497,
             "exposure_curve": [
@@ -59268,6 +59686,7 @@
             "maximum_drawdown_pct": -1.676837,
             "tasi_buy_hold_net_return_pct": -8.925614,
             "excess_return_pct_points": 8.642695,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 19.716401,
             "mean_gross_exposure_pct": 3.886025,
             "exposure_curve": [
@@ -59923,6 +60342,7 @@
         "maximum_drawdown_pct": -1.606278,
         "tasi_buy_hold_net_return_pct": -8.261782,
         "excess_return_pct_points": 6.794352,
+        "execution_data_issues": [],
         "turnover_pct_initial_nav": 78.042636,
         "mean_gross_exposure_pct": 1.093615,
         "exposure_curve": [
@@ -61263,6 +61683,7 @@
         "maximum_drawdown_pct": -1.672345,
         "tasi_buy_hold_net_return_pct": -8.445076,
         "excess_return_pct_points": 6.901545,
+        "execution_data_issues": [],
         "turnover_pct_initial_nav": 77.942355,
         "mean_gross_exposure_pct": 1.092633,
         "exposure_curve": [
@@ -62615,6 +63036,7 @@
             "maximum_drawdown_pct": -0.614137,
             "tasi_buy_hold_net_return_pct": 2.378023,
             "excess_return_pct_points": -2.851911,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 19.525222,
             "mean_gross_exposure_pct": 1.32601,
             "exposure_curve": [
@@ -63091,6 +63513,7 @@
             "maximum_drawdown_pct": -0.623111,
             "tasi_buy_hold_net_return_pct": 2.17347,
             "excess_return_pct_points": -2.666392,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 19.505756,
             "mean_gross_exposure_pct": 1.324818,
             "exposure_curve": [
@@ -63580,6 +64003,7 @@
             "maximum_drawdown_pct": -0.676256,
             "tasi_buy_hold_net_return_pct": -1.892139,
             "excess_return_pct_points": 1.215883,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 39.253887,
             "mean_gross_exposure_pct": 0.191884,
             "exposure_curve": [
@@ -64064,6 +64488,7 @@
             "maximum_drawdown_pct": -0.714728,
             "tasi_buy_hold_net_return_pct": -2.088159,
             "excess_return_pct_points": 1.373431,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 39.210962,
             "mean_gross_exposure_pct": 0.191712,
             "exposure_curve": [
@@ -64561,6 +64986,7 @@
             "maximum_drawdown_pct": -0.410174,
             "tasi_buy_hold_net_return_pct": -8.743282,
             "excess_return_pct_points": 8.419073,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 19.67521,
             "mean_gross_exposure_pct": 1.758395,
             "exposure_curve": [
@@ -65029,6 +65455,7 @@
             "maximum_drawdown_pct": -0.419485,
             "tasi_buy_hold_net_return_pct": -8.925614,
             "excess_return_pct_points": 8.582073,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 19.655594,
             "mean_gross_exposure_pct": 1.756817,
             "exposure_curve": [
@@ -65685,6 +66112,7 @@
         "maximum_drawdown_pct": -0.676256,
         "tasi_buy_hold_net_return_pct": -8.261782,
         "excess_return_pct_points": 7.585526,
+        "execution_data_issues": [],
         "turnover_pct_initial_nav": 39.253887,
         "mean_gross_exposure_pct": 0.063546,
         "exposure_curve": [
@@ -66993,6 +67421,7 @@
         "maximum_drawdown_pct": -0.714728,
         "tasi_buy_hold_net_return_pct": -8.445076,
         "excess_return_pct_points": 7.730348,
+        "execution_data_issues": [],
         "turnover_pct_initial_nav": 39.210962,
         "mean_gross_exposure_pct": 0.063489,
         "exposure_curve": [
@@ -68313,6 +68742,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": 2.378023,
             "excess_return_pct_points": -2.378023,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -68765,6 +69195,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": 2.17347,
             "excess_return_pct_points": -2.17347,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -69230,6 +69661,7 @@
             "maximum_drawdown_pct": -0.676256,
             "tasi_buy_hold_net_return_pct": -1.892139,
             "excess_return_pct_points": 1.215883,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 39.253887,
             "mean_gross_exposure_pct": 0.191884,
             "exposure_curve": [
@@ -69714,6 +70146,7 @@
             "maximum_drawdown_pct": -0.714728,
             "tasi_buy_hold_net_return_pct": -2.088159,
             "excess_return_pct_points": 1.373431,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 39.210962,
             "mean_gross_exposure_pct": 0.191712,
             "exposure_curve": [
@@ -70211,6 +70644,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -8.743282,
             "excess_return_pct_points": 8.743282,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -70655,6 +71089,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -8.925614,
             "excess_return_pct_points": 8.925614,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -71286,6 +71721,7 @@
         "maximum_drawdown_pct": 0.0,
         "tasi_buy_hold_net_return_pct": -8.261782,
         "excess_return_pct_points": 8.261782,
+        "execution_data_issues": [],
         "turnover_pct_initial_nav": 0.0,
         "mean_gross_exposure_pct": 0.0,
         "exposure_curve": [
@@ -72554,6 +72990,7 @@
         "maximum_drawdown_pct": 0.0,
         "tasi_buy_hold_net_return_pct": -8.445076,
         "excess_return_pct_points": 8.445076,
+        "execution_data_issues": [],
         "turnover_pct_initial_nav": 0.0,
         "mean_gross_exposure_pct": 0.0,
         "exposure_curve": [
@@ -73834,6 +74271,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": 2.378023,
             "excess_return_pct_points": -2.378023,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -74286,6 +74724,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": 2.17347,
             "excess_return_pct_points": -2.17347,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -74751,6 +75190,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -1.892139,
             "excess_return_pct_points": 1.892139,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -75195,6 +75635,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -2.088159,
             "excess_return_pct_points": 2.088159,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -75652,6 +76093,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -8.743282,
             "excess_return_pct_points": 8.743282,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -76096,6 +76538,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -8.925614,
             "excess_return_pct_points": 8.925614,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -76728,6 +77171,7 @@
         "maximum_drawdown_pct": -0.946309,
         "tasi_buy_hold_net_return_pct": -8.261782,
         "excess_return_pct_points": 7.455253,
+        "execution_data_issues": [],
         "turnover_pct_initial_nav": 39.097204,
         "mean_gross_exposure_pct": 0.447744,
         "exposure_curve": [
@@ -78036,6 +78480,7 @@
         "maximum_drawdown_pct": -0.974444,
         "tasi_buy_hold_net_return_pct": -8.445076,
         "excess_return_pct_points": 7.60036,
+        "execution_data_issues": [],
         "turnover_pct_initial_nav": 39.054487,
         "mean_gross_exposure_pct": 0.447341,
         "exposure_curve": [
@@ -79356,6 +79801,7 @@
             "maximum_drawdown_pct": -0.614137,
             "tasi_buy_hold_net_return_pct": 2.378023,
             "excess_return_pct_points": -2.851911,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 19.525222,
             "mean_gross_exposure_pct": 1.32601,
             "exposure_curve": [
@@ -79832,6 +80278,7 @@
             "maximum_drawdown_pct": -0.623111,
             "tasi_buy_hold_net_return_pct": 2.17347,
             "excess_return_pct_points": -2.666392,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 19.505756,
             "mean_gross_exposure_pct": 1.324818,
             "exposure_curve": [
@@ -80321,6 +80768,7 @@
             "maximum_drawdown_pct": -0.334224,
             "tasi_buy_hold_net_return_pct": -1.892139,
             "excess_return_pct_points": 1.557914,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 19.665173,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -80789,6 +81237,7 @@
             "maximum_drawdown_pct": -0.353537,
             "tasi_buy_hold_net_return_pct": -2.088159,
             "excess_return_pct_points": 1.734623,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 19.645568,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -81270,6 +81719,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -8.743282,
             "excess_return_pct_points": 8.743282,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -81714,6 +82164,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -8.925614,
             "excess_return_pct_points": 8.925614,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -82345,6 +82796,13 @@
         "maximum_drawdown_pct": -3.860035,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4170",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 184.227714,
         "mean_gross_exposure_pct": 5.825945,
         "exposure_curve": [
@@ -83802,6 +84260,13 @@
         "maximum_drawdown_pct": -3.87449,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4170",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 178.786049,
         "mean_gross_exposure_pct": 5.679675,
         "exposure_curve": [
@@ -85271,6 +85736,13 @@
             "maximum_drawdown_pct": -2.523744,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4170",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 136.010777,
             "mean_gross_exposure_pct": 8.991199,
             "exposure_curve": [
@@ -85864,6 +86336,13 @@
             "maximum_drawdown_pct": -2.520611,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4170",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 131.473956,
             "mean_gross_exposure_pct": 8.708818,
             "exposure_curve": [
@@ -86470,6 +86949,7 @@
             "maximum_drawdown_pct": -1.687681,
             "tasi_buy_hold_net_return_pct": -1.892139,
             "excess_return_pct_points": 0.700426,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 49.12847,
             "mean_gross_exposure_pct": 5.576363,
             "exposure_curve": [
@@ -86975,6 +87455,7 @@
             "maximum_drawdown_pct": -1.693622,
             "tasi_buy_hold_net_return_pct": -2.088159,
             "excess_return_pct_points": 0.872685,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 48.246169,
             "mean_gross_exposure_pct": 5.511269,
             "exposure_curve": [
@@ -87493,6 +87974,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -8.743282,
             "excess_return_pct_points": 8.743282,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -87937,6 +88419,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -8.925614,
             "excess_return_pct_points": 8.925614,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -88575,6 +89058,13 @@
         "maximum_drawdown_pct": -4.037264,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4170",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 192.125798,
         "mean_gross_exposure_pct": 4.839798,
         "exposure_curve": [
@@ -90034,6 +90524,13 @@
         "maximum_drawdown_pct": -4.049539,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4170",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 186.907868,
         "mean_gross_exposure_pct": 4.710019,
         "exposure_curve": [
@@ -91505,6 +92002,13 @@
             "maximum_drawdown_pct": -2.796529,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4170",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 143.960857,
             "mean_gross_exposure_pct": 11.602966,
             "exposure_curve": [
@@ -92095,6 +92599,13 @@
             "maximum_drawdown_pct": -2.785815,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4170",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 139.65975,
             "mean_gross_exposure_pct": 11.279873,
             "exposure_curve": [
@@ -92698,6 +93209,7 @@
             "maximum_drawdown_pct": -1.771974,
             "tasi_buy_hold_net_return_pct": -1.892139,
             "excess_return_pct_points": 0.615707,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 48.86435,
             "mean_gross_exposure_pct": 2.783818,
             "exposure_curve": [
@@ -93203,6 +93715,7 @@
             "maximum_drawdown_pct": -1.777677,
             "tasi_buy_hold_net_return_pct": -2.088159,
             "excess_return_pct_points": 0.788221,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 47.986044,
             "mean_gross_exposure_pct": 2.721364,
             "exposure_curve": [
@@ -93721,6 +94234,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -8.743282,
             "excess_return_pct_points": 8.743282,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -94165,6 +94679,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -8.925614,
             "excess_return_pct_points": 8.925614,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -94802,6 +95317,23 @@
         "maximum_drawdown_pct": -1.482766,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4020",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4017",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4082",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 187.521956,
         "mean_gross_exposure_pct": 6.699425,
         "exposure_curve": [
@@ -96245,6 +96777,23 @@
         "maximum_drawdown_pct": -1.488205,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4020",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4017",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4082",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 183.589094,
         "mean_gross_exposure_pct": 6.587216,
         "exposure_curve": [
@@ -97700,6 +98249,18 @@
             "maximum_drawdown_pct": -1.482766,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4020",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "4017",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 115.630349,
             "mean_gross_exposure_pct": 13.472842,
             "exposure_curve": [
@@ -98258,6 +98819,18 @@
             "maximum_drawdown_pct": -1.488205,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4020",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "4017",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 112.717633,
             "mean_gross_exposure_pct": 13.205158,
             "exposure_curve": [
@@ -98829,6 +99402,7 @@
             "maximum_drawdown_pct": -1.311066,
             "tasi_buy_hold_net_return_pct": -1.892139,
             "excess_return_pct_points": 1.078941,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 29.39672,
             "mean_gross_exposure_pct": 2.579751,
             "exposure_curve": [
@@ -99318,6 +99892,7 @@
             "maximum_drawdown_pct": -1.297846,
             "tasi_buy_hold_net_return_pct": -2.088159,
             "excess_return_pct_points": 1.270386,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 28.539931,
             "mean_gross_exposure_pct": 2.517349,
             "exposure_curve": [
@@ -99820,6 +100395,13 @@
             "maximum_drawdown_pct": -0.505932,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4082",
+                "date": "2026-08-16",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 41.806859,
             "mean_gross_exposure_pct": 3.91287,
             "exposure_curve": [
@@ -100309,6 +100891,13 @@
             "maximum_drawdown_pct": -0.50548,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4082",
+                "date": "2026-08-16",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 41.76054,
             "mean_gross_exposure_pct": 3.909379,
             "exposure_curve": [
@@ -100991,6 +101580,13 @@
         "maximum_drawdown_pct": -3.860035,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4170",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 184.227714,
         "mean_gross_exposure_pct": 5.825945,
         "exposure_curve": [
@@ -102448,6 +103044,13 @@
         "maximum_drawdown_pct": -3.87449,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4170",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 178.786049,
         "mean_gross_exposure_pct": 5.679675,
         "exposure_curve": [
@@ -103917,6 +104520,13 @@
             "maximum_drawdown_pct": -2.523744,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4170",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 136.010777,
             "mean_gross_exposure_pct": 8.991199,
             "exposure_curve": [
@@ -104510,6 +105120,13 @@
             "maximum_drawdown_pct": -2.520611,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4170",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 131.473956,
             "mean_gross_exposure_pct": 8.708818,
             "exposure_curve": [
@@ -105116,6 +105733,7 @@
             "maximum_drawdown_pct": -1.687681,
             "tasi_buy_hold_net_return_pct": -1.892139,
             "excess_return_pct_points": 0.700426,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 49.12847,
             "mean_gross_exposure_pct": 5.576363,
             "exposure_curve": [
@@ -105621,6 +106239,7 @@
             "maximum_drawdown_pct": -1.693622,
             "tasi_buy_hold_net_return_pct": -2.088159,
             "excess_return_pct_points": 0.872685,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 48.246169,
             "mean_gross_exposure_pct": 5.511269,
             "exposure_curve": [
@@ -106139,6 +106758,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -8.743282,
             "excess_return_pct_points": 8.743282,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -106583,6 +107203,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -8.925614,
             "excess_return_pct_points": 8.925614,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -107220,6 +107841,7 @@
         "maximum_drawdown_pct": -3.686848,
         "tasi_buy_hold_net_return_pct": -8.261782,
         "excess_return_pct_points": 4.971406,
+        "execution_data_issues": [],
         "turnover_pct_initial_nav": 132.324648,
         "mean_gross_exposure_pct": 4.677627,
         "exposure_curve": [
@@ -108629,6 +109251,7 @@
         "maximum_drawdown_pct": -3.693477,
         "tasi_buy_hold_net_return_pct": -8.445076,
         "excess_return_pct_points": 5.117845,
+        "execution_data_issues": [],
         "turnover_pct_initial_nav": 128.675083,
         "mean_gross_exposure_pct": 4.562424,
         "exposure_curve": [
@@ -110050,6 +110673,7 @@
             "maximum_drawdown_pct": -2.348149,
             "tasi_buy_hold_net_return_pct": 2.378023,
             "excess_return_pct_points": -4.324189,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 84.416199,
             "mean_gross_exposure_pct": 5.590412,
             "exposure_curve": [
@@ -110595,6 +111219,7 @@
             "maximum_drawdown_pct": -2.337048,
             "tasi_buy_hold_net_return_pct": 2.17347,
             "excess_return_pct_points": -4.139114,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 81.630413,
             "mean_gross_exposure_pct": 5.400036,
             "exposure_curve": [
@@ -111153,6 +111778,7 @@
             "maximum_drawdown_pct": -1.687681,
             "tasi_buy_hold_net_return_pct": -1.892139,
             "excess_return_pct_points": 0.700426,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 49.12847,
             "mean_gross_exposure_pct": 5.576363,
             "exposure_curve": [
@@ -111658,6 +112284,7 @@
             "maximum_drawdown_pct": -1.693622,
             "tasi_buy_hold_net_return_pct": -2.088159,
             "excess_return_pct_points": 0.872685,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 48.246169,
             "mean_gross_exposure_pct": 5.511269,
             "exposure_curve": [
@@ -112176,6 +112803,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -8.743282,
             "excess_return_pct_points": 8.743282,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -112620,6 +113248,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -8.925614,
             "excess_return_pct_points": 8.925614,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -113257,6 +113886,13 @@
         "maximum_drawdown_pct": -2.712571,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4170",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 131.880553,
         "mean_gross_exposure_pct": 3.780901,
         "exposure_curve": [
@@ -114661,6 +115297,13 @@
         "maximum_drawdown_pct": -2.70201,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4170",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 127.567652,
         "mean_gross_exposure_pct": 3.668393,
         "exposure_curve": [
@@ -116077,6 +116720,13 @@
             "maximum_drawdown_pct": -2.42996,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4170",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 119.713868,
             "mean_gross_exposure_pct": 8.833258,
             "exposure_curve": [
@@ -116649,6 +117299,13 @@
             "maximum_drawdown_pct": -2.408476,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4170",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 115.698864,
             "mean_gross_exposure_pct": 8.555802,
             "exposure_curve": [
@@ -117234,6 +117891,7 @@
             "maximum_drawdown_pct": -0.813068,
             "tasi_buy_hold_net_return_pct": -1.892139,
             "excess_return_pct_points": 1.579451,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 12.314086,
             "mean_gross_exposure_pct": 2.410379,
             "exposure_curve": [
@@ -117702,6 +118360,7 @@
             "maximum_drawdown_pct": -0.799801,
             "tasi_buy_hold_net_return_pct": -2.088159,
             "excess_return_pct_points": 1.770853,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 12.022507,
             "mean_gross_exposure_pct": 2.353545,
             "exposure_curve": [
@@ -118183,6 +118842,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -8.743282,
             "excess_return_pct_points": 8.743282,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -118627,6 +119287,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -8.925614,
             "excess_return_pct_points": 8.925614,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -119265,6 +119926,13 @@
         "maximum_drawdown_pct": -3.205985,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4170",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 109.629782,
         "mean_gross_exposure_pct": 3.264623,
         "exposure_curve": [
@@ -120658,6 +121326,13 @@
         "maximum_drawdown_pct": -3.225589,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4170",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 106.876498,
         "mean_gross_exposure_pct": 3.203876,
         "exposure_curve": [
@@ -122063,6 +122738,13 @@
             "maximum_drawdown_pct": -2.061115,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4170",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 61.502829,
             "mean_gross_exposure_pct": 4.19918,
             "exposure_curve": [
@@ -122587,6 +123269,13 @@
             "maximum_drawdown_pct": -2.051027,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "4170",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 59.612065,
             "mean_gross_exposure_pct": 4.08312,
             "exposure_curve": [
@@ -123124,6 +123813,7 @@
             "maximum_drawdown_pct": -1.687681,
             "tasi_buy_hold_net_return_pct": -1.892139,
             "excess_return_pct_points": 0.700426,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 49.12847,
             "mean_gross_exposure_pct": 5.576363,
             "exposure_curve": [
@@ -123629,6 +124319,7 @@
             "maximum_drawdown_pct": -1.693622,
             "tasi_buy_hold_net_return_pct": -2.088159,
             "excess_return_pct_points": 0.872685,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 48.246169,
             "mean_gross_exposure_pct": 5.511269,
             "exposure_curve": [
@@ -124147,6 +124838,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -8.743282,
             "excess_return_pct_points": 8.743282,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -124591,6 +125283,7 @@
             "maximum_drawdown_pct": 0.0,
             "tasi_buy_hold_net_return_pct": -8.925614,
             "excess_return_pct_points": 8.925614,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 0.0,
             "mean_gross_exposure_pct": 0.0,
             "exposure_curve": [
@@ -125229,6 +125922,393 @@
         "maximum_drawdown_pct": -7.014726,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "2001",
+            "date": "2026-04-30",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-03",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4170",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "7040",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4040",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4017",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "1080",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2250",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2100",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-05",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-06",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-07",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-10",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-11",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-12",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-13",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-14",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-17",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-18",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-19",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-20",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-21",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-31",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-01",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-02",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-03",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-07",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-08",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-09",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-10",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-11",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-14",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-15",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-17",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-18",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-21",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-22",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-23",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-24",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-25",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-28",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-29",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-30",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-01",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-02",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-05",
+            "reason": "missing_or_quarantined_holding_bar"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-06",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-07",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-08",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-09",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-12",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-13",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-14",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-15",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-19",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-20",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-21",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-22",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-23",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-26",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-27",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-28",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-29",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4280",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4013",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "1322",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "1835",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "6018",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4200",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2020",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2330",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "8190",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "8310",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 1067.17838,
         "mean_gross_exposure_pct": 37.380153,
         "exposure_curve": [
@@ -127698,6 +128778,393 @@
         "maximum_drawdown_pct": -7.040234,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "2001",
+            "date": "2026-04-30",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-03",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4170",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "7040",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4040",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4017",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "1080",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2250",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2100",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-05",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-06",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-07",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-10",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-11",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-12",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-13",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-14",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-17",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-18",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-19",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-20",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-21",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-05-31",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-01",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-02",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-03",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-07",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-08",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-09",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-10",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-11",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-14",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-15",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-17",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-18",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-21",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-22",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-23",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-24",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-25",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-28",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-29",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-06-30",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-01",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-02",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-05",
+            "reason": "missing_or_quarantined_holding_bar"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-06",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-07",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-08",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-09",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-12",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-13",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-14",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-15",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-19",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-20",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-21",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-22",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-23",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-26",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-27",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-28",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2001",
+            "date": "2026-07-29",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4280",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4013",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "1322",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "1835",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "6018",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4200",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2020",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "2330",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "8190",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "8310",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 1030.02714,
         "mean_gross_exposure_pct": 36.172816,
         "exposure_curve": [
@@ -130163,6 +131630,128 @@
             "maximum_drawdown_pct": -2.316437,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "2001",
+                "date": "2026-04-30",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-03",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "4170",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "7040",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "4040",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "4017",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "1080",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2250",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2100",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-05",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-06",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-07",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-10",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-11",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-12",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-13",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-14",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-17",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-18",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-19",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-20",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-21",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-31",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 291.643349,
             "mean_gross_exposure_pct": 32.058084,
             "exposure_curve": [
@@ -131015,6 +132604,128 @@
             "maximum_drawdown_pct": -2.400904,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "2001",
+                "date": "2026-04-30",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-03",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "4170",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "7040",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "4040",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "4017",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "1080",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2250",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2100",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-05",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-06",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-07",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-10",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-11",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-12",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-13",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-14",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-17",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-18",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-19",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-20",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-21",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2001",
+                "date": "2026-05-31",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 280.591625,
             "mean_gross_exposure_pct": 30.85172,
             "exposure_curve": [
@@ -131864,6 +133575,7 @@
             "maximum_drawdown_pct": -5.514269,
             "tasi_buy_hold_net_return_pct": -1.892139,
             "excess_return_pct_points": 0.131946,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 420.808935,
             "mean_gross_exposure_pct": 38.295573,
             "exposure_curve": [
@@ -132787,6 +134499,7 @@
             "maximum_drawdown_pct": -5.731454,
             "tasi_buy_hold_net_return_pct": -2.088159,
             "excess_return_pct_points": -0.142704,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 408.265895,
             "mean_gross_exposure_pct": 37.178732,
             "exposure_curve": [
@@ -133723,6 +135436,28 @@
             "maximum_drawdown_pct": -5.429442,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "2330",
+                "date": "2026-08-16",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "8310",
+                "date": "2026-08-16",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "4082",
+                "date": "2026-08-16",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2020",
+                "date": "2026-08-16",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 370.680077,
             "mean_gross_exposure_pct": 28.351148,
             "exposure_curve": [
@@ -134551,6 +136286,28 @@
             "maximum_drawdown_pct": -5.501988,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "2330",
+                "date": "2026-08-16",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "8310",
+                "date": "2026-08-16",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "4082",
+                "date": "2026-08-16",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "2020",
+                "date": "2026-08-16",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 363.591708,
             "mean_gross_exposure_pct": 27.738446,
             "exposure_curve": [
@@ -135568,6 +137325,18 @@
         "maximum_drawdown_pct": -4.591136,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4280",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "6060",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 481.625763,
         "mean_gross_exposure_pct": 13.82926,
         "exposure_curve": [
@@ -137251,6 +139020,18 @@
         "maximum_drawdown_pct": -4.807768,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "4280",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "6060",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 476.633062,
         "mean_gross_exposure_pct": 13.667268,
         "exposure_curve": [
@@ -138946,6 +140727,7 @@
             "maximum_drawdown_pct": -1.655342,
             "tasi_buy_hold_net_return_pct": 2.378023,
             "excess_return_pct_points": -1.301275,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 140.093063,
             "mean_gross_exposure_pct": 10.2223,
             "exposure_curve": [
@@ -139525,6 +141307,7 @@
             "maximum_drawdown_pct": -1.680438,
             "tasi_buy_hold_net_return_pct": 2.17347,
             "excess_return_pct_points": -1.216592,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 138.638883,
             "mean_gross_exposure_pct": 10.145017,
             "exposure_curve": [
@@ -140117,6 +141900,7 @@
             "maximum_drawdown_pct": -3.905657,
             "tasi_buy_hold_net_return_pct": -1.892139,
             "excess_return_pct_points": 0.137996,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 266.883473,
             "mean_gross_exposure_pct": 19.132883,
             "exposure_curve": [
@@ -140800,6 +142584,7 @@
             "maximum_drawdown_pct": -4.05154,
             "tasi_buy_hold_net_return_pct": -2.088159,
             "excess_return_pct_points": 0.083617,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 265.031054,
             "mean_gross_exposure_pct": 18.936034,
             "exposure_curve": [
@@ -141496,6 +143281,13 @@
             "maximum_drawdown_pct": -1.533907,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "6060",
+                "date": "2026-08-16",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 70.590322,
             "mean_gross_exposure_pct": 7.312496,
             "exposure_curve": [
@@ -142017,6 +143809,13 @@
             "maximum_drawdown_pct": -1.570154,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "6060",
+                "date": "2026-08-16",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 69.54117,
             "mean_gross_exposure_pct": 7.15078,
             "exposure_curve": [
@@ -142723,6 +144522,43 @@
         "maximum_drawdown_pct": -2.966433,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "7040",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4020",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4017",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4013",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "6018",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4200",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4280",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 579.475478,
         "mean_gross_exposure_pct": 19.352857,
         "exposure_curve": [
@@ -144500,6 +146336,43 @@
         "maximum_drawdown_pct": -3.062918,
         "tasi_buy_hold_net_return_pct": null,
         "excess_return_pct_points": null,
+        "execution_data_issues": [
+          {
+            "symbol": "7040",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4020",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4017",
+            "date": "2026-05-04",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4013",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "6018",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4200",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          },
+          {
+            "symbol": "4280",
+            "date": "2026-08-16",
+            "reason": "invalid_OHLC_range_or_zero_volume"
+          }
+        ],
         "turnover_pct_initial_nav": 570.580871,
         "mean_gross_exposure_pct": 19.068873,
         "exposure_curve": [
@@ -146289,6 +148162,23 @@
             "maximum_drawdown_pct": -2.966433,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "7040",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "4020",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "4017",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 205.546542,
             "mean_gross_exposure_pct": 16.292909,
             "exposure_curve": [
@@ -146946,6 +148836,23 @@
             "maximum_drawdown_pct": -3.062918,
             "tasi_buy_hold_net_return_pct": null,
             "excess_return_pct_points": null,
+            "execution_data_issues": [
+              {
+                "symbol": "7040",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "4020",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              },
+              {
+                "symbol": "4017",
+                "date": "2026-05-04",
+                "reason": "invalid_OHLC_range_or_zero_volume"
+              }
+            ],
             "turnover_pct_initial_nav": 199.596476,
             "mean_gross_exposure_pct": 15.598363,
             "exposure_curve": [
@@ -147616,6 +149523,7 @@
             "maximum_drawdown_pct": -1.816528,
             "tasi_buy_hold_net_return_pct": -1.892139,
             "excess_return_pct_points": 2.626833,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 235.06502,
             "mean_gross_exposure_pct": 19.679029,
             "exposure_curve": [
@@ -148265,6 +150173,7 @@
             "maximum_drawdown_pct": -1.932807,
             "tasi_buy_hold_net_return_pct": -2.088159,
             "excess_return_pct_points": 2.577601,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 234.113497,
             "mean_gross_exposure_pct": 19.640886,
             "exposure_curve": [
@@ -148927,6 +150836,7 @@
             "maximum_drawdown_pct": -2.733997,
             "tasi_buy_hold_net_return_pct": -8.743282,
             "excess_return_pct_points": 8.173127,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 139.426223,
             "mean_gross_exposure_pct": 12.284171,
             "exposure_curve": [
@@ -149496,6 +151406,7 @@
             "maximum_drawdown_pct": -2.780179,
             "tasi_buy_hold_net_return_pct": -8.925614,
             "excess_return_pct_points": 8.197629,
+            "execution_data_issues": [],
             "turnover_pct_initial_nav": 138.329047,
             "mean_gross_exposure_pct": 12.246383,
             "exposure_curve": [
