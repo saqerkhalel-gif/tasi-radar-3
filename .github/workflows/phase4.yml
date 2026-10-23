@@ -1,0 +1,93 @@
+name: TASI Phase 4 Shadow Research
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'phase4/**'
+      - '.github/workflows/phase4.yml'
+  workflow_run:
+    workflows: ['TASI Radar 3.0']
+    types: [completed]
+    branches: [main]
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: tasi-phase4-shadow-research
+  cancel-in-progress: false
+jobs:
+  research-and-shadow:
+    if: github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_repository.full_name == github.repository)
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      SOURCE_RUN_ID: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.id || '39870228858' }}
+      SOURCE_RUN_ATTEMPT: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.run_attempt || '1' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Test live isolation, causality, costs and shadow lifecycle
+        run: python -m pytest -q
+      - name: Download exactly the source daily run
+        uses: actions/download-artifact@v4
+        with:
+          name: tasi-radar-results-${{ env.SOURCE_RUN_ID }}-${{ env.SOURCE_RUN_ATTEMPT }}
+          path: frozen
+          run-id: ${{ env.SOURCE_RUN_ID }}
+          github-token: ${{ github.token }}
+      - name: Reconstruct original trades and compare all registered independent engines
+        if: github.event_name != 'workflow_run'
+        run: python -m phase4.research --snapshot frozen
+      - name: Audit all 254 frozen histories and bounded free-source alternatives
+        if: github.event_name != 'workflow_run'
+        run: python -m phase4.data_audit --snapshot frozen
+      - name: Verify actual results and unchanged production files
+        if: github.event_name != 'workflow_run'
+        run: |
+          python -m phase4.verify
+          cat output/phase4/current/STRATEGY_COMPARISON.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Restore most recently published prospective ledger
+        run: |
+          git fetch origin main
+          python - <<'PY'
+          import subprocess
+          from pathlib import Path
+          target=Path('output/phase4/shadow/ledger.json')
+          result=subprocess.run(['git','show','origin/main:output/phase4/shadow/ledger.json'],capture_output=True)
+          if result.returncode==0:
+              target.parent.mkdir(parents=True,exist_ok=True)
+              target.write_bytes(result.stdout)
+          PY
+      - name: Record shadow observations without live signal changes
+        run: python -m phase4.shadow --snapshot frozen
+      - name: Preserve immutable run reports and publish only phase4 outputs
+        env:
+          IS_RESEARCH: ${{ github.event_name != 'workflow_run' }}
+        run: |
+          if [ "$IS_RESEARCH" = 'true' ]; then
+            python -m phase4.publish --research
+          else
+            python -m phase4.publish
+          fi
+      - name: Upload exact-source reproducibility inputs and reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tasi-phase4-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            output/phase4/
+            frozen/output/latest.json
+            frozen/output/backtest.json
+            frozen/research_inputs/
+            phase4/plan.json
+            phase3/production_baseline.json
+          retention-days: 90
+          if-no-files-found: error
