@@ -1,0 +1,64 @@
+name: TASI Independent Data Recovery Audit
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['data_recovery/**', 'data/independent/**', '.github/workflows/data_recovery.yml']
+  workflow_run:
+    workflows: ['TASI Radar 3.0']
+    types: [completed]
+    branches: [main]
+permissions:
+  contents: write
+  actions: read
+concurrency:
+  group: tasi-data-recovery
+  cancel-in-progress: false
+jobs:
+  recover-evidence:
+    if: github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_repository.full_name == github.repository)
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      SOURCE_RUN_ID: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.id || '39870228858' }}
+      SOURCE_RUN_ATTEMPT: ${{ github.event_name == 'workflow_run' && github.event.workflow_run.run_attempt || '1' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Test isolation and reconciliation
+        run: python -m pytest -q
+      - name: Identify exact archived source
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python -m phase6.source --run-id "$SOURCE_RUN_ID"
+      - uses: actions/download-artifact@v4
+        with:
+          name: tasi-radar-results-${{ env.SOURCE_RUN_ID }}-${{ env.SOURCE_RUN_ATTEMPT }}
+          path: daily_snapshot
+          run-id: ${{ env.SOURCE_RUN_ID }}
+          github-token: ${{ github.token }}
+      - name: Re-fetch full raw history without quote substitutions and reconcile bases
+        run: python -m data_recovery.audit --snapshot daily_snapshot --source-info source_run.json
+      - name: Verify production and registered forward ledger unchanged
+        run: |
+          python -m phase6.verify
+          cat output/data_recovery/current/REPORT_AR.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Publish recovery reports only
+        run: python -m data_recovery.publish
+      - name: Retain reports and source-vintage evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tasi-data-recovery-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            output/data_recovery/
+            source_run.json
+            data_recovery/SOURCES.md
+          retention-days: 90
+          if-no-files-found: error
