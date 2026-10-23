@@ -49,3 +49,14 @@ def test_ref_manifest_hash_provenance_and_upstream_required(tmp_path):
 
 def test_missing_reference_stays_missing(tmp_path):
     accepted,rejected=load_references(tmp_path);assert not accepted and rejected
+
+
+def test_adjustment_basis_not_confused_with_real_volume_revision():
+    from data_recovery.audit import compare_fields
+    archived=pd.Series({'Open':90.,'High':92.,'Low':89.,'Close':91.,'Volume':1000.})
+    fresh=pd.Series({'Open':100.,'High':92/.9,'Low':89/.9,'Close':91/.9,'Adj Close':91.,'Volume':1000.})
+    assert compare_fields(archived,fresh)['changed_fields']==[]
+    fresh['Volume']=2000
+    assert compare_fields(archived,fresh)['changed_fields']==['Volume']
+    fresh['Adj Close']=float('nan')
+    assert not compare_fields(archived,fresh)['basis_comparable']

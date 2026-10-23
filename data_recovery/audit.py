@@ -24,6 +24,20 @@ def classify_basis(archived,raw,adjusted):
     if close_match(archived,adjusted):return 'ADJUSTED_BASIS_ONLY_DIFFERENCE'
     return 'UNRESOLVED_PRICE_DIFFERENCE'
 
+def compare_fields(archived,fresh):
+    """Compare archived adjusted OHLC to current adjusted basis, volume separately.
+    This compares vintages; it is never evidence of historical PIT availability.
+    """
+    factor=fresh.get('Adj Close',np.nan)/fresh.get('Close',np.nan)
+    if not np.isfinite(factor) or factor<=0:return {'basis_comparable':False,'changed_fields':[],'fresh_basis':'unknown'}
+    fields=[]
+    for key in FIELDS:
+        value=fresh[key]*(factor if key!='Volume' else 1)
+        original=archived[key]
+        valid=np.isfinite(value) and np.isfinite(original) and value>0 and original>0
+        if not valid or abs(original/value-1)>.001:fields.append(key)
+    return {'basis_comparable':True,'changed_fields':fields,'fresh_basis':'current published adjustment factor for OHLC; unchanged volume','factor':float(factor)}
+
 def worker(specfile,out):
     import yfinance as yf
     spec=json.loads(Path(specfile).read_text());out=Path(out);out.mkdir(parents=True,exist_ok=True)
@@ -100,7 +114,7 @@ def run(snapshot,identity,output='output/data_recovery',references='data/indepen
                 if result.returncode:raise ValueError(result.stderr[-300:])
                 status='FRESH_FULL_HISTORY_DOWNLOAD_COMPLETED'
             except Exception as exc:status='DOWNLOAD_FAILED:'+type(exc).__name__
-    refs,reference_errors=load_references(references);rows=[];repairs=[];zeros={};fresh={}
+    refs,reference_errors=load_references(references);rows=[];repairs=[];zeros={};fresh={};field_revisions=[]
     manifest=json.loads((inputs/'manifest.json').read_text()) if (inputs/'manifest.json').exists() else {'files':{}}
     for symbol in universe.symbol:
         old=frozen.get(symbol);path=inputs/(symbol+'.csv.gz');entry={'symbol':symbol,'fetched':False,'internal_window_eligible':False,'released_for_signals':False,'execution_authorized':False,'full126_independent_match':False,'latest_independent_match':False}
@@ -116,6 +130,10 @@ def run(snapshot,identity,output='output/data_recovery',references='data/indepen
                 entry['latest_raw_valid']=pd.Timestamp(source['expected_session']) in frame.index and valid_daily_row(frame.loc[source['expected_session']])[0]
                 if old is not None and pd.Timestamp(source['expected_session']) in old.index and pd.Timestamp(source['expected_session']) in frame.index:
                     row=frame.loc[source['expected_session']];entry['last_price_basis_check']=classify_basis(float(old.loc[source['expected_session'],'Close']),float(row.Close),float(row.get('Adj Close',np.nan)))
+                if old is not None and pd.Timestamp(source['expected_session']) in old.index and pd.Timestamp(source['expected_session']) in frame.index:
+                    comparison=compare_fields(old.loc[source['expected_session']],frame.loc[source['expected_session']])
+                    entry['same_basis_changed_fields']=comparison['changed_fields']
+                    if comparison['changed_fields']:field_revisions.append({'symbol':symbol,'date':source['expected_session'],**comparison,'original':raw_row(old.loc[source['expected_session']]),'fresh_raw':raw_row(frame.loc[source['expected_session']]),'independently_resolved':False})
                 for date,row in frame.iterrows():
                     d=str(date.date());z=zeros.setdefault(d,{'date':d,'observed':0,'zero_volume':0,'invalid_OHLCV':0});z['observed']+=1;z['zero_volume']+=int(row.Volume==0);z['invalid_OHLCV']+=int(not valid_daily_row(row)[0])
                 for repair in old.attrs.get('price_repairs',[]) if old is not None else []:
@@ -124,6 +142,7 @@ def run(snapshot,identity,output='output/data_recovery',references='data/indepen
                     repairs.append({'symbol':symbol,'date':repair['date'],'archived_close':value,'raw_close_now':float(r.Close) if r is not None and pd.notna(r.Close) else None,'adjusted_close_now':float(r['Adj Close']) if r is not None and pd.notna(r.get('Adj Close')) else None,'same_vendor_basis_check':classify_basis(value,float(r.Close),float(r.get('Adj Close',np.nan))) if r is not None else 'MISSING_DATE','independently_resolved':False})
                 if symbol in refs:entry.update(reconciliation(frame,refs[symbol][0],grid[-126:]))
         rows.append(entry)
+    derived(current/'field_revisions.json',{'records':field_revisions,'stock_count':len(field_revisions),'threshold_pct':0.1,'same_vendor_only':True})
     anomaly=[x for x in sorted(zeros.values(),key=lambda x:x['date']) if x['observed']>=50 and (x['zero_volume']/x['observed']>=.8 or x['invalid_OHLCV']/x['observed']>=.8)]
     counts={key:sum(bool(r.get(key)) for r in rows) for key in ('fetched','internal_window_eligible','latest_raw_valid','full126_independent_match','latest_independent_match','released_for_signals')}
     counts['configured_universe']=254
@@ -135,7 +154,7 @@ def run(snapshot,identity,output='output/data_recovery',references='data/indepen
         valid=a.notna()&b.notna()&a.gt(0)&b.gt(0)
         bench_report.update(fresh_rows=len(fresh_b),overlap_close_sessions=int(valid.sum()),same_vendor_close_mismatch_dates=[str(t.date()) for t in dates[valid & (a/b-1).abs().gt(.001)]],missing_required_close_dates=[str(t.date()) for t in dates[b.isna()|b.le(0)]])
     derived(current/'benchmark_audit.json',bench_report)
-    summary={'schema_version':1,'run_id':os.getenv('GITHUB_RUN_ID','local'),'run_attempt':os.getenv('GITHUB_RUN_ATTEMPT','1'),'source_run_id':source['run_id'],'source_session':source['expected_session'],'created_utc':datetime.now(timezone.utc).isoformat(),'status':status,'counts':counts,'rows':rows,'repair_records_rechecked':len(repairs),'repair_basis_counts':pd.Series([r['same_vendor_basis_check'] for r in repairs],dtype=str).value_counts().to_dict(),'reference_errors':reference_errors,'adopted':False,'production_changed':False,'phase6_registered_versions_changed':False,'ledger_modified':False,'decision':'NO_RELEASE_WITHOUT_INDEPENDENT_SEQUENCE_AND_PIT_ACTION_REVIEW','limits':['Fresh raw history is candidate evidence from same vendor, not independent validation.','Do not delete widespread zero-volume dates or treat them as holidays without independent dated evidence.','Raw/adjusted basis differences alone do not prove corruption or validate old quote substitution.','No retrospective ledger rewrite or performance improvement claim.']}
+    summary={'schema_version':1,'run_id':os.getenv('GITHUB_RUN_ID','local'),'run_attempt':os.getenv('GITHUB_RUN_ATTEMPT','1'),'source_run_id':source['run_id'],'source_session':source['expected_session'],'created_utc':datetime.now(timezone.utc).isoformat(),'status':status,'counts':counts,'rows':rows,'current_bar_field_revision_stocks':len(field_revisions),'repair_records_rechecked':len(repairs),'repair_basis_counts':pd.Series([r['same_vendor_basis_check'] for r in repairs],dtype=str).value_counts().to_dict(),'reference_errors':reference_errors,'adopted':False,'production_changed':False,'phase6_registered_versions_changed':False,'ledger_modified':False,'decision':'NO_RELEASE_WITHOUT_INDEPENDENT_SEQUENCE_AND_PIT_ACTION_REVIEW','limits':['Fresh raw history is candidate evidence from same vendor, not independent validation.','Do not delete widespread zero-volume dates or treat them as holidays without independent dated evidence.','Raw/adjusted basis differences alone do not prove corruption or validate old quote substitution.','No retrospective ledger rewrite or performance improvement claim.']}
     derived(current/'summary.json',summary);derived(current/'anomaly_dates.json',{'dates':anomaly});derived(current/'repair_reconciliation.json',{'rows':repairs});derived(current/'fresh_manifest.json',manifest)
     pd.DataFrame(rows).to_csv(current/'coverage.csv',index=False);pd.DataFrame(repairs).to_csv(current/'repair_reconciliation.csv',index=False);pd.DataFrame(anomaly).to_csv(current/'anomaly_dates.csv',index=False)
     text=['# معالجة عائق البيانات','',f"تشغيل التدقيق {summary['run_id']}، جلسة المصدر {source['expected_session']}.",'',json.dumps(counts,ensure_ascii=False,indent=2),'',f"إصلاحات قديمة أعيدت مقارنتها: {len(repairs)}.",'','أعيد جلب التاريخ الكامل دون إصلاح أو ملء، مع فصل الإغلاق الخام عن الإغلاق المعدل. لا تُحذف الأيام ذات الأحجام الصفرية لمجرد انتشارها. المقارنة على أساس سعري مختلف لا تثبت خطأ السعر.','', 'لم يُرفع العزل عن أي سلسلة ولم يتغير الإنتاج أو السجل المسجل مسبقًا. مطابقة المزود لنفسه لا تعوض المصدر المستقل.','', 'الخطوة المتبقية: مرجع تاريخي مستقل ذو ترخيص استخدام واضح، يتضمن OHLCV وتواريخ وأساس الأسعار وإجراءات رأس المال؛ ثم تسجيل مجموعة مستقبلية جديدة قبل أي تغيير في قواعد القياس.']
