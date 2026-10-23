@@ -1,11 +1,11 @@
 # معالجة عائق البيانات
 
-تشغيل التدقيق 39969121436، جلسة المصدر 2026-10-22.
+تشغيل التدقيق 39971456726، جلسة المصدر 2026-10-22.
 
 {
   "fetched": 254,
   "internal_window_eligible": 0,
-  "latest_raw_valid": 251,
+  "latest_raw_valid": 252,
   "full126_independent_match": 0,
   "latest_independent_match": 0,
   "released_for_signals": 0,
