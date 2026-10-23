@@ -7,7 +7,7 @@ from phase3.quality_recheck import valid_daily_row
 def simulate(data,signals,benchmark,dates,cfg,plan=None,risk_sized=False):
     bt=cfg.get('backtest',{});cost=(bt.get('commission_bps_per_side',15.5)+bt.get('slippage_bps_per_side',5))/10000
     slots=bt.get('max_positions',10);hold=bt.get('max_hold_sessions',20)
-    cash=100000.;positions={};trades=[];curve=[];skipped=Counter();marks_stale=0;max_planned_risk_pct=0;turnover_cash=0.;exposure_curve=[]
+    cash=100000.;positions={};trades=[];curve=[];skipped=Counter();marks_stale=0;max_planned_risk_pct=0;turnover_cash=0.;exposure_curve=[];data_issues=[]
     def close_position(symbol,price,date,reason):
         nonlocal cash,turnover_cash
         p=positions.pop(symbol);turnover_cash+=p['quantity']*price;cash+=p['quantity']*price*(1-cost)
@@ -48,9 +48,9 @@ def simulate(data,signals,benchmark,dates,cfg,plan=None,risk_sized=False):
         for symbol,p in list(positions.items()):
             df=data[symbol]
             if date not in df.index or str(date.date()) in df.attrs.get('quarantine',[]):
-                marks_stale+=1;p['age']+=1;continue
+                data_issues.append({'symbol':symbol,'date':str(date.date()),'reason':'missing_or_quarantined_holding_bar'});marks_stale+=1;p['age']+=1;continue
             bar=df.loc[date]
-            if not valid_daily_row(bar)[0]:marks_stale+=1;p['age']+=1;continue
+            if not valid_daily_row(bar)[0]:data_issues.append({'symbol':symbol,'date':str(date.date()),'reason':valid_daily_row(bar)[1]});marks_stale+=1;p['age']+=1;continue
             p['age']+=1;p['last_mark']=float(bar['Close'])
             price,reason=trade_exit(bar,p['stop'],p['target'])
             if price is None and p['age']>=hold:price=float(bar['Close']);reason='time_exit'
@@ -76,5 +76,5 @@ def simulate(data,signals,benchmark,dates,cfg,plan=None,risk_sized=False):
             'expectancy_pct':float(np.mean([t['net_return_pct'] for t in trades])) if trades else None,
             'portfolio_return_pct':netreturn,'maximum_drawdown_pct':float(100*np.min(values/peak-1)),
             'tasi_buy_hold_net_return_pct':bm,'excess_return_pct_points':netreturn-bm if bm is not None else None,
-            'turnover_pct_initial_nav':100*turnover_cash/100000,'mean_gross_exposure_pct':float(np.mean([x['gross_exposure_pct'] for x in exposure_curve])) if exposure_curve else 0,'exposure_curve':exposure_curve,'comparison_valid':valid,'unliquidated_positions':unliquidated,'stale_mark_position_days':marks_stale,
+            'execution_data_issues':data_issues,'turnover_pct_initial_nav':100*turnover_cash/100000,'mean_gross_exposure_pct':float(np.mean([x['gross_exposure_pct'] for x in exposure_curve])) if exposure_curve else 0,'exposure_curve':exposure_curve,'comparison_valid':valid,'unliquidated_positions':unliquidated,'stale_mark_position_days':marks_stale,
             'skipped_orders':dict(skipped),'trades':trades,'equity_curve':curve,'maximum_aggregate_planned_risk_pct':max_planned_risk_pct if risk_sized else None}

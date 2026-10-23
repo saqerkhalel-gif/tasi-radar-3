@@ -10,7 +10,7 @@ from research import price_structure
 
 def review(data,prepared,sessions,signals,output,start='2026-03-05',end='2026-10-21',latest_review=False):
     signalkeys={(s,r['date'],name) for name,sigs in signals.items() if name in CORE for rows in sigs.values() for s,r in rows}
-    rows=[]
+    rows=[];excluded_outcome_windows=0
     for symbol,df in data.items():
         d=prepared[symbol];grid=sessions[(sessions>=start)&(sessions<=end)];blocked_until=None
         if latest_review:grid=grid[-40:]
@@ -19,7 +19,7 @@ def review(data,prepared,sessions,signals,output,start='2026-03-05',end='2026-10
             pos=sessions.get_loc(date);future=sessions[pos+1:pos+21];future=future[future<=pd.Timestamp(end)]
             if len(future)<20:continue
             f=df.reindex(future);q=set(df.attrs.get('quarantine',[]))
-            if not f[['High','Low','Close']].notna().all().all() or any(str(x.date()) in q for x in future):continue
+            if not f[['Open','High','Low','Close','Volume']].notna().all().all() or not f.Volume.gt(0).all() or any(str(x.date()) in q for x in future):excluded_outcome_windows+=1;continue
             gain=float(100*(f.High.max()/df.loc[date,'Close']-1))
             if gain<8:continue
             prefix=d.loc[:date];eligible=historical_window(prefix,sessions[:pos+1])
@@ -53,7 +53,7 @@ def review(data,prepared,sessions,signals,output,start='2026-03-05',end='2026-10
               'guaranteed_entry_or_profit':False,'overlap_policy':'At most one event per symbol per20-session outcome horizon',
               'note':'Future daily high is an outcome bound, not a guaranteed tradable return. Reasons were evaluated using prior-session features only; no thresholds optimized from this review.'})
             blocked_until=future[-1]
-    report={'schema_version':1,'events':rows,'eligible_nonoverlapping_events':len(rows),'at_least10pct':sum(r['threshold10'] for r in rows),'missed_by_all_three':sum(r['missed_by_all_three'] for r in rows),'future_labels_used_for_entry':False,'latest_daily_review':latest_review}
+    report={'schema_version':1,'events':rows,'eligible_nonoverlapping_events':len(rows),'at_least10pct':sum(r['threshold10'] for r in rows),'missed_by_all_three':sum(r['missed_by_all_three'] for r in rows),'future_labels_used_for_entry':False,'latest_daily_review':latest_review,'excluded_unusable_outcome_windows':excluded_outcome_windows,'outcome_quality_policy':'All20 future sessions must have observed OHLCV with positive volume and no quarantine; otherwise no missed-move inference.'}
     out=Path(output);dump(out/'missed_opportunities.json',report);pd.json_normalize(rows).to_csv(out/'MISSED_OPPORTUNITIES.csv',index=False)
     (out/'MISSED_OPPORTUNITIES.md').write_text('# Missed-move review\n\nEvents are nonoverlapping per-symbol20-session windows with vendor-eligible prior-session data and a later daily high>=8% or10%. They are not guaranteed entries or realizable profits. Earliest eligible event-date labeling can precede a later confirmed signal: read recorded_core_signals_before_first8pct_touch separately from the initial-day rejection. Counts are not a trading success denominator. Every reason uses only the prior prefix; future highs label outcomes only. No fitting or rule tuning uses this review. Daily shadow history records actually observed signals and cannot backfill unseen past observations.\n')
     return report

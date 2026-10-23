@@ -23,6 +23,7 @@ def verify(output='output/phase5/current'):
         for result in [v['full_period'],v['stress_costs']]+[f[k] for f in v['walk_forward'] for k in ('test','stress_test')]:
             assert result['trades_count']==len(result['trades'])
             if not result['trades']:assert result['win_rate_pct'] is None and result['expectancy_pct'] is None
+            assert len(result['execution_data_issues'])==result['stale_mark_position_days']
             if result['stale_mark_position_days']:assert result['comparison_valid'] is False
             assert result['maximum_aggregate_planned_risk_pct']<=3+1e-6
             for t in result['trades']:

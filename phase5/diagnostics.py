@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 from phase3.experiment import load_snapshot,SectorProxy
 from phase4.research import dump
+from phase3.quality_recheck import valid_daily_row
 from phase5.hypotheses import prepare,context
 from research import price_structure
 
@@ -14,7 +15,7 @@ def one_trade(t,d,benchmark,sessions,proxy,cohort):
     during=d.loc[entry:exitdate];sequence=[];cumhigh=-np.inf;cumlow=np.inf;entryprice=t['entry_price']
     for date,row in during.iterrows():
         cumhigh=max(cumhigh,float(row.High));cumlow=min(cumlow,float(row.Low));both=bool(row.High>=t['target'] and row.Low<=t['stop'])
-        sequence.append({'date':str(date.date()),'open':float(row.Open),'high':float(row.High),'low':float(row.Low),'close':float(row.Close),'cumulative_mfe_pct':100*(cumhigh/entryprice-1),'cumulative_mae_pct':100*(cumlow/entryprice-1),
+        sequence.append({'date':str(date.date()),'open':float(row.Open),'high':float(row.High),'low':float(row.Low),'close':float(row.Close),'volume':float(row.Volume),'bar_execution_ohlcv_valid':valid_daily_row(row)[0],'cumulative_mfe_pct':100*(cumhigh/entryprice-1),'cumulative_mae_pct':100*(cumlow/entryprice-1),
           'stop_and_target_same_bar':both,'within_bar_order':'UNKNOWN; stop-first execution if both touched','after_exit_unknown_on_exit_bar':date==exitdate})
     breakouts=prefix[prefix.Close>prefix.prior_resistance20];age=int(len(prefix)-1-prefix.index.get_loc(breakouts.index[-1])) if len(breakouts) else None
     base=0

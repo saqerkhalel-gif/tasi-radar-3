@@ -8,10 +8,18 @@ import pandas as pd
 from phase3.experiment import load_snapshot,causal_signals,SectorProxy,assert_baseline_reproduction,add_metrics,bootstrap_excess
 from phase4.execution import simulate as legacy_simulate
 from phase4.engines import generate as phase4_generate
-from phase4.research import dump,metrics_table
+from phase4.research import dump,metrics_table as legacy_metrics_table
 from phase5.execution import simulate
 from phase5.hypotheses import generate,specifications,CORE,context
 from phase5.data import historical_window
+
+def metrics_table(results):
+    table=legacy_metrics_table(results).splitlines()
+    table[0]+=' Execution comparison valid | Unusable holding-bar days |'
+    table[1]+='---|---:|'
+    for i,(name,r) in enumerate(results.items(),2):
+        table[i]+=' '+('YES' if r['comparison_valid'] else 'NO — descriptive only')+' | '+str(r['stale_mark_position_days'])+' |'
+    return '\n'.join(table)
 
 def wilson(wins,n):
     if not n:return {'lower_pct':None,'upper_pct':None,'confidence':.95}
@@ -100,26 +108,32 @@ def evaluate(snapshot,p4root,output):
     run_id=os.getenv('GITHUB_RUN_ID','local')
     report={'schema_version':1,'run_id':run_id,'run_url':None if run_id=='local' else 'https://github.com/saqerkhalel-gif/tasi-radar-3/actions/runs/'+run_id,
       'source_commit':os.getenv('GITHUB_SHA'),'protocol_registration_commit':json.loads(Path('phase5/registration.json').read_text())['commit'],
-      'protocol_sha256':hashlib.sha256(Path('phase5/protocol.json').read_bytes()).hexdigest(),'created_utc':datetime.now(timezone.utc).isoformat(),
+      'quality_review_revision':'2; execution-validity trace and stricter missed-outcome OHLCV; hypothesis parameters unchanged','protocol_sha256':hashlib.sha256(Path('phase5/protocol.json').read_bytes()).hexdigest(),'created_utc':datetime.now(timezone.utc).isoformat(),
       'source_snapshot_run_id':p['run_id'],'phase4_comparison_run_id':p4['run_id'],'legacy_reproductions':{'original25':original_exact,'phase4_early31':early_exact},
       'variants':results,'registry':registry,'decisions':decisions,'benchmarks':{'tasi_buy_hold_net_pct':next(iter(results.values()))['full_period']['tasi_buy_hold_net_return_pct'],'cash_pct':0},
       'period':plan['period'],'all24_cases_reported':len(results)==24,'reused_historical_evidence':True,'fresh_completed_trades':0,'adopted':False,'live_files_changed':False,
       'limitations':['Current254 universe, no complete delisted/PIT membership; survivorship unresolved.','Adjusted history lacks PIT corporate-action vintages; independent series validation zero.','Legacy exact reproductions differ from harmonized references with stricter screens/zero-volume execution refusal.','Reused2026 folds/neighborhoods cannot be virgin independent evidence.']}
     dump(out/'comparison.json',report);dump(out/'experiment_registry.json',{'protocol_registration_commit':report['protocol_registration_commit'],'protocol_sha256':report['protocol_sha256'],'experiments':registry,'familywise_trials':23,'selection':'No winning configuration selected; all24 reported including zero-trade cases.'})
-    keys=('trades_count','wins','win_rate_pct','average_win_pct','average_loss_pct','payoff_ratio','expectancy_pct','portfolio_return_pct','maximum_drawdown_pct','daily_sharpe_annualized','turnover_pct_initial_nav','mean_gross_exposure_pct','median_holding_sessions')
+    keys=('trades_count','wins','win_rate_pct','average_win_pct','average_loss_pct','payoff_ratio','expectancy_pct','portfolio_return_pct','maximum_drawdown_pct','daily_sharpe_annualized','comparison_valid','stale_mark_position_days','turnover_pct_initial_nav','mean_gross_exposure_pct','median_holding_sessions')
     pd.DataFrame([{'variant':n,'signal_count':v['signal_count'],'eligible_candidate_symbols':v['causal_screened_candidate_symbols_all_history'],**{k:v['full_period'][k] for k in keys},**{'wilson_'+k:v['full_period']['win_rate_uncertainty'][k] for k in ('lower_pct','upper_pct')}} for n,v in results.items()]).to_csv(out/'COMPARISON.csv',index=False)
+    issue_rows=[]
+    for name,v in results.items():
+        sections=[('full_base',v['full_period']),('full_stress',v['stress_costs'])]+[(f'fold{f["fold"]}_{case}',f[case]) for f in v['walk_forward'] for case in ('test','stress_test')]
+        for label,result in sections:
+            issue_rows.extend({'variant':name,'period':label,**item} for item in result['execution_data_issues'])
+    pd.DataFrame(issue_rows,columns=['variant','period','symbol','date','reason']).to_csv(out/'EXECUTION_DATA_ISSUES.csv',index=False)
     merged={}
     for n in CORE:
         for day,rows in variants[n].items():merged.setdefault(str(day.date()),[]).extend(r for _,r in rows)
     dump(out/'candidate_signals.json',merged)
-    summary='# WALK FORWARD — Phase 5\n\n'+str(report['run_url'])+'\n\nAll24 registered variants use identical254-stock universe, fixed dates, sizing, fees and gap handling. Each signal has a causal historical-window screen. Legacy25/31 cohorts are separately reproduced exactly; harmonized references may contain fewer trades.\n\n## Full reused period\n\n'+metrics_table({n:v['full_period'] for n,v in results.items()})+'\n\n## Higher-cost sensitivity\n\n'+metrics_table({n:v['stress_costs'] for n,v in results.items()})+'\n'
+    summary='# WALK FORWARD — Phase 5\n\n'+str(report['run_url'])+'\n\n**Validity warning:** NO rows encountered missing, quarantined or zero-volume/invalid holding bars. Their displayed returns/win rates are exploratory calculations, NOT reliable execution evidence or promotion evidence. Exact symbol/date/reason is exported in execution_data_issues. YES only passes internal execution checks, not independent provenance.\n\nAll24 registered variants use identical254-stock universe, fixed dates, sizing, fees and gap handling. Each signal has a causal historical-window screen. Legacy25/31 cohorts are separately reproduced exactly; harmonized references may contain fewer trades.\n\n## Full reused period\n\n'+metrics_table({n:v['full_period'] for n,v in results.items()})+'\n\n## Higher-cost sensitivity\n\n'+metrics_table({n:v['stress_costs'] for n,v in results.items()})+'\n'
     for i,(train,purge,test) in enumerate(split):
         summary+='\n## Reused temporal fold '+str(i+1)+'\n\nTrain '+str(train[0].date())+'–'+str(train[-1].date())+' ('+str(len(train))+' label-eligible sessions); purge20; test '+str(test[0].date())+'–'+str(test[-1].date())+'. Prior test and post-test20 labels excluded from training; parameters fixed/no fit. Past prices only warm causal indicators. Fresh cash and forced fold-end liquidation.\n\n'+metrics_table({n:v['walk_forward'][i]['test'] for n,v in results.items()})+'\n'
     summary+='\nTASI net buy-and-hold: '+str(report['benchmarks']['tasi_buy_hold_net_pct'])+'%; cash0%. CSV/JSON include Wilson uncertainty, payoff, turnover(two-sided/initialNAV), average close-mark gross exposure, Saudi-session median hold, regime results and fold stress cases. Intervals are descriptive: trades overlap. No newly untouched forward trade exists yet.\n'
     (out/'WALK_FORWARD.md').write_text(summary)
     decision='# DECISION — Phase 5\n\n**KEEP SHADOW / INCONCLUSIVE. No production changes and no promotion.**\n\n'
     for n,v in decisions.items():decision+='- '+n+': '+v['decision']+'; '+v['evidence_status']+'. Missing evidence: '+', '.join(v['failed_checks'])+'.\n'
-    decision+='\nResearch objective45–50% is not promised or sufficient. Require adequate independent after-cost expectancy and risk-adjusted stability. All negative cases preserved; no best historical parameter selected. Latest-bar success does not rehabilitate a full history. Untouched prospective observations are separate and never backfilled.\n\n'+'\n'.join(report['limitations'])+'\n'
+    decision+='\nWhere valid_execution_comparison is false, even an attractive win rate or return cannot support an improvement claim; inspect symbol/date execution_data_issues. Research objective45–50% is not promised or sufficient. Require adequate independent after-cost expectancy and risk-adjusted stability. All negative cases preserved; no best historical parameter selected. Latest-bar success does not rehabilitate a full history. Untouched prospective observations are separate and never backfilled.\n\n'+'\n'.join(report['limitations'])+'\n'
     (out/'DECISION.md').write_text(decision);(out/'HYPOTHESES.md').write_text(Path('phase5/docs/HYPOTHESES.md').read_text())
     return report
 

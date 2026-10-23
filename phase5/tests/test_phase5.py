@@ -121,3 +121,17 @@ def test_phase5_shadow_idempotent_and_future_only(monkeypatch,tmp_path):
     assert ledger['observations'][0]['status']=='pending'
     stage['n']=2;result=shadow.update('unused',tmp_path,datetime(2026,10,26,15,tzinfo=timezone.utc))
     assert result['prospective_closed_trades']==1 and not result['adopted']
+
+def test_unusable_holding_bar_invalidates_comparison_and_has_date_trace():
+    ix=pd.bdate_range('2026-01-01',periods=3);df=pd.DataFrame({'Open':[100]*3,'High':[101,101,113],'Low':[99]*3,'Close':[100]*3,'Volume':[100,0,100]},index=ix)
+    record={'date':'2025-12-31','technical_score':1,'scenario':{'invalidation':95,'conditional_target':112},'_original_stop':95}
+    limits={'stop_variants':{'maximum_stop_distance_pct':8,'maximum_equity_risk_per_trade_pct':.5,'maximum_aggregate_open_equity_risk_pct':3}}
+    r=simulate({'X':df},{ix[0]:[('X',record)]},df,ix,{},limits,True)
+    assert not r['comparison_valid'] and r['stale_mark_position_days']==1
+    assert r['execution_data_issues'][0]['symbol']=='X' and r['execution_data_issues'][0]['date']==str(ix[1].date())
+
+def test_zero_volume_future_high_cannot_be_missed_profit(tmp_path):
+    from phase5.missed import review
+    d=bars(260);date=d.index[-21];d.loc[d.index[-1],['High','Volume']]=[d.loc[date,'Close']*1.12,0]
+    r=review({'X':d},{'X':prepare(d,d,d.index)},d.index,{},tmp_path,start=str(date.date()),end=str(d.index[-1].date()))
+    assert r['eligible_nonoverlapping_events']==0 and r['excluded_unusable_outcome_windows']==1
