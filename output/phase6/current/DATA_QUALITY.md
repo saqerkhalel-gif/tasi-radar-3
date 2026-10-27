@@ -3,15 +3,15 @@
 {
   "configured_universe": 254,
   "fetched": 254,
-  "latest_valid": 238,
-  "historical_vendor_window_eligible": 14,
+  "latest_valid": 248,
+  "historical_vendor_window_eligible": 244,
   "independently_validated_historical": 0,
   "historical_backtest_eligible": 0,
   "signal_eligible": 0,
-  "published_raw_bar_valid": 252,
+  "published_raw_bar_valid": 248,
   "independent_current_bar_matched": 0,
   "execution_bar_verifiable": 0,
-  "quarantined": 239
+  "quarantined": 8
 }
 
 Whole historical independent coverage remains0. Published latest validity, causal historical screening, point-in-time decision vintage, signal eligibility and independently executable raw bars are separate denominators. Look-ahead adjusted history is not replayed as new evidence. Current raw bars and candidate source windows are content-addressed objects; past predictions are never rescaled on revisions.
@@ -21,7 +21,7 @@ Whole historical independent coverage remains0. Published latest validity, causa
   "execution_feed": {
     "provider": "Yahoo Finance",
     "status": "RAW_DOWNLOAD_COMPLETED",
-    "fetched_utc": "2026-10-27T07:22:03.861838+00:00",
+    "fetched_utc": "2026-10-26T15:59:28.833772+00:00",
     "basis": "published raw OHLCV, no auto adjustment/repair",
     "stock_raw_fetch_success": 254
   },
@@ -30,7 +30,7 @@ Whole historical independent coverage remains0. Published latest validity, causa
       "source": "Saudi Exchange historical reports",
       "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/reports-publications/historical-reports",
       "http_status": 403,
-      "response_sha256": "d331fe4927c6a31302849ce0315f2dc5f8a9f3b589c89ee12f5d3fceeb18d9bb",
+      "response_sha256": "147da06129334e7565cccd9bdf415cacd5c2b01a2298fe88e2aea621c4c31332",
       "status": "access_denied",
       "stock_ohlcv_coverage_count": 0,
       "access_wall_bypassed": false
@@ -39,7 +39,7 @@ Whole historical independent coverage remains0. Published latest validity, causa
       "source": "Saudi Exchange market watch",
       "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/ourmarkets/main-market-watch",
       "http_status": 403,
-      "response_sha256": "7aae91c7259f873420b7f725b38cca9a06e64b6e21b3d67d9dd53bb70af51343",
+      "response_sha256": "ab95252886cb223fe0a200569ced8f83303f420115e4dde162d23885772dd19c",
       "status": "access_denied",
       "stock_ohlcv_coverage_count": 0,
       "access_wall_bypassed": false
@@ -48,7 +48,7 @@ Whole historical independent coverage remains0. Published latest validity, causa
       "source": "Mubasher public stock page",
       "url": "https://www.mubasher.info/markets/TDWL/stocks/7200/",
       "http_status": 200,
-      "response_sha256": "515e163142bc3700e1b41d2abad4fb9ab8cd2c1cf12136b8c7a00fad4af2ebff",
+      "response_sha256": "724694a949d2d76a76f21d3bbeeb7f4c74a296c7a5c394cd269badee3af32cae",
       "status": "no_complete_dated_OHLCV_feed_verified",
       "stock_ohlcv_coverage_count": 0,
       "access_wall_bypassed": false
@@ -56,8 +56,11 @@ Whole historical independent coverage remains0. Published latest validity, causa
     {
       "source": "Stooq TASI CSV",
       "url": "https://stooq.com/q/d/l/?s=%5Etasi&i=d&d1=20250501&d2=20261022",
-      "status": "request_failed",
-      "reason": "HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=%5Etasi&i=d&d1=20250501&d2=20261022 (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443",
+      "http_status": 200,
+      "response_sha256": "18693361e05806e846e5500f24a7c206ace51cddedadec84376bcc162bb21d0a",
+      "status": "no_validated_machine_readable_index_history",
+      "reason": "",
+      "observed_overlap_sessions": 0,
       "stock_ohlcv_coverage_count": 0,
       "access_wall_bypassed": false
     }
@@ -72,22 +75,22 @@ Market-wide zero-volume dates:
 [
   {
     "date": "2025-07-17",
-    "observed": 243,
-    "zero_volume": 222
+    "observed": 244,
+    "zero_volume": 221
   },
   {
     "date": "2025-09-25",
-    "observed": 246,
-    "zero_volume": 246
+    "observed": 247,
+    "zero_volume": 247
   },
   {
     "date": "2026-05-04",
-    "observed": 251,
-    "zero_volume": 251
+    "observed": 252,
+    "zero_volume": 252
   },
   {
     "date": "2026-08-16",
-    "observed": 252,
-    "zero_volume": 251
+    "observed": 253,
+    "zero_volume": 252
   }
 ]
