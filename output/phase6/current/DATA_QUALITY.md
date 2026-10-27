@@ -21,7 +21,7 @@ Whole historical independent coverage remains0. Published latest validity, causa
   "execution_feed": {
     "provider": "Yahoo Finance",
     "status": "RAW_DOWNLOAD_COMPLETED",
-    "fetched_utc": "2026-10-27T07:20:32.331689+00:00",
+    "fetched_utc": "2026-10-27T07:22:03.861838+00:00",
     "basis": "published raw OHLCV, no auto adjustment/repair",
     "stock_raw_fetch_success": 254
   },
@@ -30,7 +30,7 @@ Whole historical independent coverage remains0. Published latest validity, causa
       "source": "Saudi Exchange historical reports",
       "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/newsandreports/reports-publications/historical-reports",
       "http_status": 403,
-      "response_sha256": "a5db30fc3505cd94b18b354a9e36a6fdb65c9830aa5d15820bdda51042bb0ccf",
+      "response_sha256": "d331fe4927c6a31302849ce0315f2dc5f8a9f3b589c89ee12f5d3fceeb18d9bb",
       "status": "access_denied",
       "stock_ohlcv_coverage_count": 0,
       "access_wall_bypassed": false
@@ -39,7 +39,7 @@ Whole historical independent coverage remains0. Published latest validity, causa
       "source": "Saudi Exchange market watch",
       "url": "https://www.saudiexchange.sa/wps/portal/saudiexchange/ourmarkets/main-market-watch",
       "http_status": 403,
-      "response_sha256": "afeb4cfd36aabacc0891822dc946764a383e852d85cbdf828162fe7eae658ec9",
+      "response_sha256": "7aae91c7259f873420b7f725b38cca9a06e64b6e21b3d67d9dd53bb70af51343",
       "status": "access_denied",
       "stock_ohlcv_coverage_count": 0,
       "access_wall_bypassed": false
@@ -48,7 +48,7 @@ Whole historical independent coverage remains0. Published latest validity, causa
       "source": "Mubasher public stock page",
       "url": "https://www.mubasher.info/markets/TDWL/stocks/7200/",
       "http_status": 200,
-      "response_sha256": "89345fec8a73481c1391816b93de922b9b744745b5be5bcf194f5062c1359540",
+      "response_sha256": "515e163142bc3700e1b41d2abad4fb9ab8cd2c1cf12136b8c7a00fad4af2ebff",
       "status": "no_complete_dated_OHLCV_feed_verified",
       "stock_ohlcv_coverage_count": 0,
       "access_wall_bypassed": false
@@ -56,11 +56,8 @@ Whole historical independent coverage remains0. Published latest validity, causa
     {
       "source": "Stooq TASI CSV",
       "url": "https://stooq.com/q/d/l/?s=%5Etasi&i=d&d1=20250501&d2=20261022",
-      "http_status": 200,
-      "response_sha256": "99ed86c4e596856007a53991dd8e68b77160d82d01a261fb351f7f596b0b6449",
-      "status": "no_validated_machine_readable_index_history",
-      "reason": "",
-      "observed_overlap_sessions": 0,
+      "status": "request_failed",
+      "reason": "HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=%5Etasi&i=d&d1=20250501&d2=20261022 (Caused by ConnectTimeoutError(<HTTPSConnection(host='stooq.com', port=443",
       "stock_ohlcv_coverage_count": 0,
       "access_wall_bypassed": false
     }

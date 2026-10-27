@@ -1,0 +1,39 @@
+{
+  "phase": "6.1",
+  "source_session": "2026-10-22",
+  "denominators": {
+    "configured_universe": 254,
+    "fetched": 254,
+    "latest_valid": 238,
+    "historical_vendor_window_eligible": 14,
+    "independently_validated_historical": 0,
+    "historical_backtest_eligible": 0,
+    "signal_eligible": 0,
+    "execution_bar_verifiable": 0
+  },
+  "latest_coverage_pct": 93.7,
+  "independent_history_validated": false,
+  "historical_backtest_proven": false,
+  "paper_execution_proven": false,
+  "forward_signal_count": 0,
+  "blockers": [
+    "NO_INDEPENDENT_FULL_HISTORY",
+    "NO_CORROBORATED_EXECUTION_BAR",
+    "NO_SIGNAL_ELIGIBLE_STOCKS"
+  ],
+  "next_actions": [
+    "Obtain lawful, independently dated historical OHLCV and corporate-action reference; verify complete series, not just last close. Do not bypass access controls.",
+    "Match dated raw OHLCV including next-session open and volume against an independent permitted source; unmatched paper fills remain NOT_EXECUTABLE.",
+    "Inspect per-symbol eligibility_reasons and distinguish source mismatch, stale bars, corporate actions, missing sessions and zero-volume history before changing any gate.",
+    "Supply the detailed quality symbols report to identify actual root causes."
+  ],
+  "decision": "KEEP_SHADOW",
+  "eligibility_reason_counts": null,
+  "safety": {
+    "changes_production": false,
+    "releases_quarantine": false,
+    "substitutes_prices": false,
+    "claims_validated_data": false,
+    "authorizes_live_orders": false
+  }
+}
