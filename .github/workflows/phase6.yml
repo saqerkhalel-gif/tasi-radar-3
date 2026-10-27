@@ -51,6 +51,8 @@ jobs:
           git checkout origin/main -- output/phase6 2>/dev/null || test ! -d output/phase6
       - name: Audit raw OHLCV and advance prospective ledger
         run: python -m phase6.pipeline --snapshot daily_snapshot --source-info source_run.json
+      - name: Publish phase 6.1 read-only blocker diagnostics
+        run: python -m phase6.recovery_diagnostics --summary output/phase6/current/summary.json --output output/phase6/current/recovery_diagnostics.json
       - name: Verify protected sources and transaction integrity
         run: |
           python -m phase6.verify
