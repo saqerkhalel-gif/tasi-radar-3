@@ -1,34 +1,36 @@
 {
-  "source_run_id": "41319687943",
-  "source_price_date": "2026-11-01",
-  "current_expected_session": "2026-11-01",
+  "source_run_id": "41471645762",
+  "source_price_date": "2026-11-02",
+  "current_expected_session": "2026-11-02",
   "benchmark_entry_eligible": true,
-  "updated_utc": "2026-11-01T15:23:09.290187+00:00",
+  "updated_utc": "2026-11-02T15:34:42.731549+00:00",
   "prospective_closed_trade_count": 0,
   "adopted": false,
   "signal_rejections": {
-    "early_reversal": {},
-    "trend_pullback": {},
-    "breakout_retest": {
-      "no_confirmed_retest": 1
-    },
-    "early_reversal__rs20_only": {},
-    "early_reversal__no_extension_guard": {
+    "early_reversal": {
       "no_accumulation_support": 3
     },
-    "early_reversal__no_pattern_support": {},
+    "trend_pullback": {},
+    "breakout_retest": {},
+    "early_reversal__rs20_only": {
+      "no_accumulation_support": 4
+    },
+    "early_reversal__no_extension_guard": {
+      "no_accumulation_support": 6
+    },
+    "early_reversal__no_pattern_support": {
+      "upside_below_10": 1,
+      "stop_over_cap": 2
+    },
     "trend_pullback__rs20_only": {},
     "trend_pullback__no_extension_guard": {},
     "trend_pullback__no_pattern_support": {},
-    "breakout_retest__rs20_only": {
-      "no_confirmed_retest": 1
-    },
+    "breakout_retest__rs20_only": {},
     "breakout_retest__no_extension_guard": {
-      "no_confirmed_retest": 4
-    },
-    "breakout_retest__no_pattern_support": {
+      "no_structure_support": 1,
       "no_confirmed_retest": 1
     },
+    "breakout_retest__no_pattern_support": {},
     "simple_breakout20": {},
     "simple_ema50": {}
   },
