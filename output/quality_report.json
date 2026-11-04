@@ -1,20 +1,20 @@
 {
-  "run_id": "41662078245",
-  "run_url": "https://github.com/saqerkhalel-gif/tasi-radar-3/actions/runs/41662078245",
-  "run_utc": "2026-11-03T15:16:33.680460+00:00",
+  "run_id": "41857159225",
+  "run_url": "https://github.com/saqerkhalel-gif/tasi-radar-3/actions/runs/41857159225",
+  "run_utc": "2026-11-04T15:23:40.620634+00:00",
   "benchmark": {
     "entry_eligible": true,
-    "rows": 375,
+    "rows": 376,
     "source_overlap_rows": 1,
     "mismatch_dates": [],
     "suspicious_jump_dates": [],
     "recent_61_sessions_complete": true,
     "independent_exchange_validation": false,
-    "sha256": "08febeaa515166226c6eac3657e2f3914da589c520f96eed2e8f403574717c0c",
+    "sha256": "1efefae77a3c31e66c76fa82df14c3d2a9d6fa3fd15ff7744df1e9d432893593",
     "note": "Persisted Investing TASI instrument 11319, observed cache and Yahoo ^TASI.SR. Overlap tolerance 0.1%; no interpolation. Full historical official exchange reconciliation unavailable."
   },
   "previous_run_repair_review": {
-    "run_id": "41471645762",
+    "run_id": "41662078245",
     "recorded_repaired_stock_count": 0,
     "repair_records_reviewed": 0,
     "same_vendor_timestamp_checks_passed": 0,
@@ -623,8 +623,8 @@
       "symbol": "1324",
       "entry_eligible": true,
       "normalization": {
-        "source_rows": 159,
-        "valid_rows": 159,
+        "source_rows": 160,
+        "valid_rows": 160,
         "rejected_or_duplicate_rows": 0
       },
       "quarantined_dates": [],
@@ -640,22 +640,48 @@
     },
     {
       "symbol": "1325",
-      "entry_eligible": true,
+      "entry_eligible": false,
       "normalization": {
-        "source_rows": 356,
-        "valid_rows": 356,
+        "source_rows": 5,
+        "valid_rows": 5,
         "rejected_or_duplicate_rows": 0
       },
-      "quarantined_dates": [],
-      "unverified_quote_repairs": [],
-      "large_adjusted_price_jumps": [],
-      "missing_session_count": 1,
-      "missing_sessions": [
-        "2025-06-10"
+      "quarantined_dates": [
+        "2026-11-04"
       ],
-      "zero_volume_rows": 13,
+      "unverified_quote_repairs": [],
+      "large_adjusted_price_jumps": [
+        "2026-11-04"
+      ],
+      "missing_session_count": 23,
+      "missing_sessions": [
+        "2026-10-01",
+        "2026-10-04",
+        "2026-10-05",
+        "2026-10-07",
+        "2026-10-08",
+        "2026-10-11",
+        "2026-10-12",
+        "2026-10-13",
+        "2026-10-14",
+        "2026-10-15",
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-11-01",
+        "2026-11-02",
+        "2026-11-03"
+      ],
+      "zero_volume_rows": 0,
       "last_bar_zero_volume": false,
-      "status": "vendor_checks_passed",
+      "status": "quarantined",
       "independent_exchange_validation": false,
       "note": "Vendor checks are not official exchange validation. Quote-substituted closes and >22% adjusted-price jumps are quarantined; no automatic price repair."
     },
@@ -1375,7 +1401,7 @@
       "missing_sessions": [
         "2025-06-10"
       ],
-      "zero_volume_rows": 130,
+      "zero_volume_rows": 131,
       "last_bar_zero_volume": true,
       "status": "vendor_checks_passed",
       "independent_exchange_validation": false,
@@ -2666,8 +2692,8 @@
       "symbol": "4019",
       "entry_eligible": true,
       "normalization": {
-        "source_rows": 341,
-        "valid_rows": 341,
+        "source_rows": 342,
+        "valid_rows": 342,
         "rejected_or_duplicate_rows": 0
       },
       "quarantined_dates": [],
@@ -3256,8 +3282,8 @@
       "symbol": "4147",
       "entry_eligible": true,
       "normalization": {
-        "source_rows": 224,
-        "valid_rows": 224,
+        "source_rows": 225,
+        "valid_rows": 225,
         "rejected_or_duplicate_rows": 0
       },
       "quarantined_dates": [],
@@ -3569,8 +3595,8 @@
       "symbol": "4194",
       "entry_eligible": true,
       "normalization": {
-        "source_rows": 293,
-        "valid_rows": 293,
+        "source_rows": 294,
+        "valid_rows": 294,
         "rejected_or_duplicate_rows": 0
       },
       "quarantined_dates": [],
@@ -3798,8 +3824,8 @@
       "symbol": "4264",
       "entry_eligible": true,
       "normalization": {
-        "source_rows": 347,
-        "valid_rows": 347,
+        "source_rows": 348,
+        "valid_rows": 348,
         "rejected_or_duplicate_rows": 0
       },
       "quarantined_dates": [],
@@ -3817,8 +3843,8 @@
       "symbol": "4265",
       "entry_eligible": true,
       "normalization": {
-        "source_rows": 230,
-        "valid_rows": 230,
+        "source_rows": 231,
+        "valid_rows": 231,
         "rejected_or_duplicate_rows": 0
       },
       "quarantined_dates": [],
@@ -4109,8 +4135,8 @@
       "symbol": "4326",
       "entry_eligible": true,
       "normalization": {
-        "source_rows": 287,
-        "valid_rows": 287,
+        "source_rows": 288,
+        "valid_rows": 288,
         "rejected_or_duplicate_rows": 0
       },
       "quarantined_dates": [],
@@ -4128,8 +4154,8 @@
       "symbol": "4327",
       "entry_eligible": true,
       "normalization": {
-        "source_rows": 217,
-        "valid_rows": 217,
+        "source_rows": 218,
+        "valid_rows": 218,
         "rejected_or_duplicate_rows": 0
       },
       "quarantined_dates": [],
@@ -4403,8 +4429,8 @@
       "symbol": "6018",
       "entry_eligible": true,
       "normalization": {
-        "source_rows": 323,
-        "valid_rows": 323,
+        "source_rows": 324,
+        "valid_rows": 324,
         "rejected_or_duplicate_rows": 0
       },
       "quarantined_dates": [],
@@ -4422,8 +4448,8 @@
       "symbol": "6019",
       "entry_eligible": true,
       "normalization": {
-        "source_rows": 229,
-        "valid_rows": 229,
+        "source_rows": 230,
+        "valid_rows": 230,
         "rejected_or_duplicate_rows": 0
       },
       "quarantined_dates": [],
@@ -4462,8 +4488,8 @@
       "symbol": "6022",
       "entry_eligible": true,
       "normalization": {
-        "source_rows": 144,
-        "valid_rows": 144,
+        "source_rows": 145,
+        "valid_rows": 145,
         "rejected_or_duplicate_rows": 0
       },
       "quarantined_dates": [],
@@ -4849,8 +4875,8 @@
       "symbol": "7205",
       "entry_eligible": true,
       "normalization": {
-        "source_rows": 113,
-        "valid_rows": 113,
+        "source_rows": 114,
+        "valid_rows": 114,
         "rejected_or_duplicate_rows": 0
       },
       "quarantined_dates": [],
@@ -5200,7 +5226,7 @@
       "missing_sessions": [
         "2025-06-10"
       ],
-      "zero_volume_rows": 41,
+      "zero_volume_rows": 42,
       "last_bar_zero_volume": true,
       "status": "vendor_checks_passed",
       "independent_exchange_validation": false,
@@ -5438,6 +5464,6 @@
       "note": "Vendor checks are not official exchange validation. Quote-substituted closes and >22% adjusted-price jumps are quarantined; no automatic price repair."
     }
   ],
-  "quarantined_stock_count": 7,
+  "quarantined_stock_count": 8,
   "failed_fetches": []
 }

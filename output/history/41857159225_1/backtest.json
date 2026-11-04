@@ -1,0 +1,1472 @@
+{
+  "strategy_version": "phase2.0",
+  "execution": "Prior-session signals, next-session open; open reward/risk rechecked; fixed stop/target, stop first on ambiguous bars, 20-session maximum hold; max 10 equal-equity slots; cash uninvested earns zero.",
+  "cost_model": {
+    "commission_bps_per_side": 15.5,
+    "slippage_bps_per_side": 5,
+    "taxes_included": false,
+    "applied_to": "entry and exit notional; configured assumptions, not broker quote"
+  },
+  "data_hashes": {
+    "1010": "3819da3258688e46702c547a6424b057ea58037a689b4542d7e48a516ba9dbf6",
+    "1020": "42574ca3ce654f5dc6f664a1f18b919aa46c9a8d00273c16f2cc148f9598c5b5",
+    "1030": "c4e0dbcf89d51bd9aceb3a91afa5a4517e0c92f72c425f5b5399d6281c3b4395",
+    "1050": "a691e3981b851a9b7934fca6c1ef6df77ab76dfe0dbea8817ecf79d5552e4fe5",
+    "1060": "a8fe5b331aa19d9324fa9b3297a5af8029797fc776e05ab8edc21d55fc5a5cef",
+    "1080": "c1a9b02b729db462f28306880f09b4b2c1fa53d99e205d418bbb7bbe82a79931",
+    "1111": "d9ab98bb3555b73a9c23b4603180b6e87186489452fc44a77b4af63fb5af0f16",
+    "1120": "dbac1399e2347c27eaa9a5e6c3a0ebc2397eb94ad227b38d296fe6f1bf2eb728",
+    "1140": "36e9e95f9166a60c27d7e9985f09236d2800d5535a1c0933ade263ab7a5c23b7",
+    "1150": "53bb86e23c2ced91ab76c0610f117e8b12eb2fa11a0eb2e0cc26866010b44996",
+    "1180": "44b336d6802de64916867cedc4a7117aa49b94e37b32661ed8a389af38306e12",
+    "1182": "d4c7aafa18c149be93072a1f49dfde170a6def68d817422b1d695a88f32f5263",
+    "1183": "ac2950eb1d2aa3662a2194cebe2585ef20fb2a3512cc0131be0595ebb97c41bf",
+    "1201": "0bc37ffa85108c05b64386bea49460f6de28036d481b10f5030d7ec79a727022",
+    "1202": "0bfcb291b243389354f6ed054ed93cedcff1a6530f7944676762a0c8434bb3b8",
+    "1210": "cdfc732d670c1179295b7467909eb4f756901e368f826148e6f37657120f7a1d",
+    "1211": "cbd3a0b39fc6a397bd7f5fbb8ff93dda6fc54d0e332942a789090050a89892bf",
+    "1212": "74d18bd1a4b94f9222826f29a63f10bd6a235cc3f4f3669cc43cb83a37206893",
+    "1213": "1ec2469d2f8a051fd965695c981511ff04be18246887958539d76119690bda61",
+    "1214": "f1f64522a27e37decf3bf9a09119a48ae37221818435ae8eb1418bed2fb1b76b",
+    "1301": "4a083250f0c87a33ce402ad43f7274468675cc7e622824ba7faf179db8a588e6",
+    "1302": "19e3c8dff052b9cc050d6e78eae0a31b8ef90eb8ee86a90ad6dbfb5b7ca477bd",
+    "1303": "302f2cb30e882d0bb592f248013a88163682e903d24bfdf284767205be38e192",
+    "1304": "9e2cbb51d6520dbd8d8b10b33a3a2f537096e0ec99c772501d95282a91c7c76f",
+    "1320": "0bb22b2e9affadd30763f6a1eb88218ca1d7dedfcea66bd2f11d9fc37c58e974",
+    "1321": "0f5db618e844a6bbba8ee4774f58f9e4c7a3f3dd359c9c1668bd6909e20ca7f0",
+    "1322": "6193c44c508874e1f7eff25b5af73ee8363b7e3c77ed13be4dc5eb4f1098b26c",
+    "1323": "ee9a829059afa7608919f59c5e7a1f221fb78bee43dbf0e4ea9eb92fcccf3d94",
+    "1324": "beaecc4d88f29b048e80f695f978765f672a351bed6024befb94e08c61840fd1",
+    "1325": "175bfd0a7b6eb120ce97290fef6a9aed3fa7170e250070230e94111085e02b99",
+    "1810": "25b750ee54266e01725231304497cd8f76694a3f7175d218edb4df95413305a1",
+    "1820": "bc27f429c03866d1b7289b8d11862bd8153f41b8494f4f3e51281349e653f79b",
+    "1830": "dc5e8c06e0e24bab714f4849d0da3f38256bab53d22b154250731eb13183493b",
+    "1831": "22ff5ad9d7554c2f990d5a952caae8fe566dda03bf61416337e857a1d7c4ce62",
+    "1832": "520d723d6a7ef79dc655016e9d12bfbf793c34b83b8a1592e52a87fd5b208d43",
+    "1833": "fc8665dd1549d0b5e817dec711ca41f8932371eadfd51714f17831c6f9f106d5",
+    "1834": "65672f056d7804816860b28e7324a8d552c5970fac92613dc36985010ce1a016",
+    "1835": "ffa2c0e931876a24117b8a85fe07daae68a8fe13cd5275d318b91b8d4a937f24",
+    "2001": "e68585ddaa0723578850acdf4306205fe2beaf1d41fff3a1d72b9875c8472a07",
+    "2010": "a0c26160997a3cd1a3d34e69aad214c103d9c2060765112d45120659e02e9e17",
+    "2020": "04f362901f8f98c6212da2f914ab79e320e0cd2888ecd2b99ff721da91e9b4ab",
+    "2030": "25cd53080f408038e9fa96bb5afa56810171a6befb0d47f176d220638f86c011",
+    "2040": "ab8ee66e501afa1cc124365f529795049a0593ffabe2e8b5d56cbeb2e1c11440",
+    "2050": "4a21bb7c3e2a5e58605f9fb7b3a97faacefe965f821fac4f3a05564569fef71a",
+    "2060": "c62a3f2a22406e3bac0a012cb8ead78cab2fb66b0b2669bdf67eff78f8fd9ea7",
+    "2070": "70d3072cc37a9ceff22d5c9ff25ceec5a4638e6a8d10065a566fc25021532839",
+    "2080": "fa2213c6ac45a34b1da94cf51cb26932f69d9dde62887bfdbfe7cb47aab79df9",
+    "2081": "c1667c69579a1676d091e3f66600f2a68a439e29e090aac692a110f595df1db3",
+    "2082": "5724c4ea5938b1e341242b823b6544666f21f29afbf4b592ff3320f55c79648f",
+    "2083": "f686f7637295f91d60cc652e61726d5e9fe04916294f3b44108ff394a2d5ce58",
+    "2084": "d04ee1143f60f191ba60a6b8ea1199c8b039e34671a671f8393a05c2001c9ac8",
+    "2090": "0cacced19b880e05a8b9d1fb55446be1b507ccb080f67b876911ce1d2ba938c0",
+    "2100": "2d0a073a0201ff8ecf02236e7fdb45bf1a9afdeba4496e6c79d569c22fee2b97",
+    "2110": "e09d490325b6e3ad5c76ac80c3f2e4086c8022649e0a4b1a9ee3b459ef30567d",
+    "2120": "10ffe714498c7ec5a9fa68a6e56a86884999ad3a18fba05b4cd4c16492da1cef",
+    "2130": "1ca3d671ad43baf4062903bc1df8c3cc05d2c038a15c293cce71249a9f78c539",
+    "2140": "3759e3e7f8894f6164f5b863a1ea6a6da4c73d7d63f438f3cd123f5a0bde3120",
+    "2150": "f1d118ed0a8bef33537fc64e8335f67ad8ae70a2c6e7afe8d95e9b4e49507aee",
+    "2160": "a9d6a96bdf1b21775338c2391046e8a1deb56f422c6ffa1037dcee264486d6d9",
+    "2170": "ebb7f4a8c3d64a92a08ca41af5cbbaebad6a629f6a5096feeb4b1d88bc879244",
+    "2180": "4b25bbfe8fcf73f5de29908248c2b95fba255669227d60a9f17e1e354ef6a6fe",
+    "2190": "c28bb1abaa8e7a210f3e07771e7b6db73d3dec76a8d4fda758f77443dda87e76",
+    "2200": "a9ee316b6cb81a5d3702f963ca93b12464a2feb261c9f214bce563ef2284c750",
+    "2210": "46f931803ada02bfcabc59b23f48f5fb3195dd415b0ffbe3ad931e362676ff6d",
+    "2220": "58cd199530aa7a54a0ebe98d068a0f566b02487dbd0997ddd024d3689eb8947c",
+    "2222": "3435f289e42d34e31d4935a3155686ba91ddf87477c1091ec5fa2c3d6a4b9fa1",
+    "2223": "188ca92be54ff49e2b89ffd9c6ac51e9c87378ef2a0df0259b36f9c6a940fdc3",
+    "2230": "469686c16fedcd18349ec48a316c8c15f4a0466610a524f4bdf950bc21e826e3",
+    "2240": "1c0a90b58b32c7b794e77a7e85a5082345d1332ac5bd37a6450a558355ce5174",
+    "2250": "ca6c6fffb5569c67078dedb8c8fa83be1e16cf12f8ddc3673e726f06fe58ca2a",
+    "2270": "c091dbcd2de7485ec6c3f8a22539acd9a066f404dfe59fcd30086a30f89fd30c",
+    "2280": "ea93e315236ad077e298e901290f71493c83cf8e3524528b9488cae962f1aebc",
+    "2281": "67ed7009e64089c6f201cba539ffb4beee50f21272e16617833a96f063c1d47c",
+    "2282": "fc000898e8ea4bb495a1d6502beaa53cb224d9ce69f2c574b3bf8252563eafc4",
+    "2283": "a2683dcc54315f05d002fa52ca823d57eea129ba9cf542d376d70cdc96997031",
+    "2284": "6d9f3b4decb9ef4cdd98d4a408272e6a86170396b25e26b9bc5f53d9add6ba05",
+    "2285": "a449e4d70e3f421fe3434eadea927ead9b9248a20a38d7919d6c3f764406eb04",
+    "2286": "723ec96eea9cf211d2491e78357f003e06700c0c828cf79d66636638eebd2de5",
+    "2287": "f565aaa773b9344b1f2862fd8571aca8cdfebfc43cca80d8de0cdbbfb53b8c9f",
+    "2288": "834cbae57dcc5f316b7acf22e04468e48cdc2e74592ec51e0f880ded81aca5b5",
+    "2290": "f029ea42997923cd1e24e60fb52f5f60869e5dbb0ad2ac264c80e5bd18fdca98",
+    "2300": "592a1d50dc04c4329088b58b21a6d42a94c1acfdab61c811234e9855562c1464",
+    "2310": "c88a2df981c402aec2a40c507b98ee52af61fe63a7c8d45e7dde2517297d8fb2",
+    "2320": "c4245e05041da61f86da24fadae2ee59acc43d9bd3495aa31a0fe255f8aada08",
+    "2330": "fead3861087c4f891b6d604b849650bb2809bcb82d4d7fd8423d6e020b6ef69b",
+    "2340": "7e7d400b796a0368d7b2dc9b613678da538cd4d40aec0e29302dc6208e78fc90",
+    "2350": "9d6bfe064038597e312a8c36cf26ef08eb495740ff41aa93c758f90736d83acc",
+    "2360": "0a2f0dc4f131eb7d6f81ef9441e3b702acb8ddaecf20610b937f57ed0957908f",
+    "2370": "9bd07a68aebbeffd9f25104252c9ad1a7fec10de834f432d2c1ea6d9e58b1cb6",
+    "2380": "f4fc6941198b665b83908d93bba72909c8115400024e218cb622c33a7ef544a5",
+    "2381": "f8ef69d5695c30d059ac624b432ff781dab0e906edaebf58ba27a1e9b07692a1",
+    "2382": "d99bc565df4789860d3144330d2f026833003bdac65823538605d596af2d8f5e",
+    "3002": "8976479bf71ec070ba196fddfd762927be83e840532973111e441dec43971b6e",
+    "3003": "e90ca282c0a6a790ab15b43f61a73393a737e144e3ba13a450d2e6af70df0320",
+    "3004": "db6082fd61218a0b240b38d362789fe73f34f0ac2d9ef61c898657fd84ee59d8",
+    "3005": "d40ddd337101029863ca094ef1be499c272612221e66f99755ed4c85fe8154ca",
+    "3007": "cd74bd75dd2db69722f2459564a09b861bb6805f4f56355204c4bc67e8f4c07b",
+    "3008": "127ab80c82e20455c764d505e11b2646b22dc155e965f458fd5ed18d0d143fea",
+    "3010": "95f77daf6c94df93cc265fb1a17ecd8ebe0a1235b1b8262df7a57661c817971c",
+    "3020": "25d72c418bd5836513702dd01a2909a3052eab95df74e54115b21d11f6983943",
+    "3030": "986e516c7a73beeefd50f6c08ee81a341ff309d9f190b9065c1b7063922ec417",
+    "3040": "dd275369efcf1510fa0cb542d1fc2a1bf18df09589a95df8499e6ae78fdd0628",
+    "3050": "550782c9644e8df9e95bc0400b75f5cc3ce056d64f426af82d36d72eeb6fd90d",
+    "3060": "28b8f8eecaded78c11fedc6431d08016f4298c7dc72bc4741998582ac57a5115",
+    "3080": "4dbc3a5dcaa2fe95ebe1695c9be6852517ae01cfb65c68847e9a071705ba1788",
+    "3090": "b1a4906ce2320c5f2c9277e5b2fdc966b91eb1f65f53ea44c5e3c7730cd8919c",
+    "3091": "03f87976f31ed1fff8a87d5da848d2c48c840e85cba6a192c913136fc12db75c",
+    "3092": "1b5664b0127aa55874fe51df1dda2e994213039941c04f2e1e076d90fe7f548e",
+    "4001": "c3aa97b3668e4fdbb654b6187dfaff7d5e590c296bd026370f799a20a6fe90e7",
+    "4002": "29d3f9eb74fecec45ad57db91bc66d55bf0e4202b649e0bf8b5f68d20f2ca423",
+    "4003": "7fa940476286d7db2fceac0087111400eddef642b4a9be697d9ff8df506ef0d6",
+    "4004": "b5aca4d07af67b7ca27f08de262df7ab4b9f8b319bc1705fbd03f7e55edc60fe",
+    "4005": "5d13d0d07ee32d24aeeb433048e338df08dec6e6bbb5326191c4a326e20cfa22",
+    "4006": "e200718dc8403c428f3d6eace2fb5f04c6d649651122ac33c932ed15e657f5f2",
+    "4007": "d957f926d5b4201e933c9ffe349841fa9a85c9e13bbc4ed0a7403f80dcb1bf44",
+    "4008": "4dac1b3c602197911a45e106050313135e33969fae5bbc46e42deb8c1ff626b1",
+    "4009": "cf31107f85849f31f22447904372fa2df605c12793ca73d9eaeb948e1f33a48d",
+    "4011": "16597d758c83f01ff3b95defa60dc0ac30ca3125fe10b452946a3feb4d2e8e88",
+    "4012": "00730b2e91b029a6ed00bb77a0442f05370150cf51f12fd5a0eaef2185ffa404",
+    "4013": "dacb6ac5b6f9988d6a01704dddfaa61d79cdc06c9f43bb5a38410c120023becb",
+    "4014": "47bc31f496ae4176064f9337794f7355a350ae60d1dea88e28eafd09f17a5a58",
+    "4015": "f1983c702941f049db74fe288d769ed429951dc2d833c74b434e2ecc2e83b07e",
+    "4016": "99c5cd122e939e522122f522f68fdaa1cb17e523fcbf27aa3386f11d25acacad",
+    "4017": "3d553d64858d65c4a268dc01e677a55c82c409cbd3b4b5ca6eca57c2563b9fa4",
+    "4018": "4cd996f845144f17523d8e8b4dd84efbdb0a5b4197078ac8a1ee20fc7cffc7d0",
+    "4019": "87bb64358aec2bf50ac512a784ee3b928fd8f7bac01071e0291974cdc0c77691",
+    "4020": "108d71d64511e78eb8abc768251a3fe3c23b3d1deeda341852a0f4d3ad568234",
+    "4021": "27fa77c14763218f48d524fc4593323e3a68f20d0ff578138e3de0e3800c615b",
+    "4030": "0c78567e7e5c8b5e5b766cbb755a118a1e5dd2d522a443a59a7d0778859db525",
+    "4031": "8cc9d607d58eea2ca035b01a52561bc5c4b7326dc82211eb1749c9b560c876f5",
+    "4040": "e187a6941b597abb7758481a84c6f770b5e18ebfa1d5f3bcf81efb19f4be6110",
+    "4050": "cf2795d3b16ac7e3a42ed72d8656fb025917b8d7332436ad418f12e0fac4ff2b",
+    "4051": "143667a04174cf72d782c96768ea7ac108225fe5224030d393e1ab0c5894cdc9",
+    "4061": "d0197005a9046205310e717f7298984184128d139d626328e6255c77abd812c6",
+    "4070": "6ccc883b4cd2ee7b76dbbb4097fc8e9a3cda26a7bad13371b219e197eedaf0a4",
+    "4071": "6bb27db41be23a98bc19ff795f8b448febf3e1c2ff1c38b40afe2331a16183d1",
+    "4072": "ce64b92f58048933917446bce87e0808986b853237e3b54132f8ec26eabeb00e",
+    "4080": "d65d2bdfa77166fe677fec6dcb4910fbdd4690ae0b573465f4c4d8a0350fb1d9",
+    "4081": "a9e2b03a8eea918a6904bbaf388c9c4cc1627a49bacb8350ad6848f0b5cd619f",
+    "4082": "3d9db37130341d811e15a8b6d3214e72402ae205fbac814391b927fa133ad5bc",
+    "4083": "7758e532a5147faa78c2ce0b7ec35ce743632bcea966c42d9242c6e11e46e971",
+    "4084": "812e27b900cc8cf23791785f06ff1c145eea6733592e6e4ef911c51d04fc6112",
+    "4090": "cbe4115dc166415cb477cbb50c1b07c5cd76d39d7b14bd83e191e4322df1429a",
+    "4100": "22cecc1168dbcac9a3251371d653fa6cfa7b43bd3214638a199c66945e6e28cc",
+    "4110": "caacfbe205d3e693d37386f38c9b79553460171bc3e505704ab504733a7f6df8",
+    "4130": "59c80239335f43362966ad5cbd9827f871c8d54f6cb8572fb97e73553ab7bda3",
+    "4140": "e5baaa0264fc73e235b3872c64ccf22a6fd4e8a1189f061ad84b3238b964bceb",
+    "4141": "6745f4039154247c7f2390e2f7d4712f0685befdcaa533752551db74ab6ae82b",
+    "4142": "4ccad5c50c128dbb9494081979316299fa974ba7dff04b6744480579c1527368",
+    "4143": "c532dfcffb8e6d66b9e652a22e5e3d431af1d5a2b54ae82d01600ba8fda5f7d7",
+    "4144": "a2a965c67dbd5a16ee5ecfbb1f23eb420367cf7fa7477c2ff64aaaf4b0439bf2",
+    "4145": "381e0095fc7fd4336425c996935905616351d530161ef9d746bd840dbad171ee",
+    "4146": "60939fa5dcdcb0d48bf821fc2b188ed63c2dad25a142261d8568fbedaad9585a",
+    "4147": "7e37473338ad438a84073ac8d1c3283e99f7db25d883d37854eda485869b6e14",
+    "4148": "14f16db7d774405b6b30154ffd1a4fb11af64b09f1695f9680a8b5aeedd0764c",
+    "4150": "31ee0cb2f16b20a77f953b4dd695f60bb19fb41e3ad2d409b0d2ad98a0f08446",
+    "4160": "28856029775ef331e5cbf2452399483d358fa6c50f8683c5d86720523876233d",
+    "4161": "6617bf70f31e8e49172310a082ed91114de4f30c1dd49f5bffdca66049447ff6",
+    "4162": "2e057fd08fd963293c3e5db4bc0227d6d7774f7c86e04efaff53b21fd1f0f033",
+    "4163": "dd7ef56860a9c39bc4ab766969a598a73bdcdc6d8b78f8bd74cea59007501a7c",
+    "4164": "ab9ef287c18741dc45b74f5a5376f466e5a2c419f6d699adddc2c744b7443442",
+    "4165": "71b28bb203fcc42c2f4657a53dee150050d54ce5fffbf2494c0664eac0bda336",
+    "4170": "9ed84024004f909b3d72299d91bf197bbd141ec87e26f15e9a6fc87bb493dce3",
+    "4180": "0ff0383c3d3cd4ff30becdd73b8bf9df497810cc1d8608e0edaad575f3dba861",
+    "4190": "5304c14890145a4cc3e4a5e644d91a35321042201bff06ddbed2522d9ea795b0",
+    "4191": "496b709aa104f0fcfd35b9e1e85e214ec0581c4028a6644a9dd02ef871c137e6",
+    "4192": "e41cd429037c9fd4778dc9a91b36bd3ac62a23fd09f50dca5a234bc95cfa4399",
+    "4193": "f02eb6332cf57d22536ff886eda92e27218c91b9e5ac0ff6073162f6c2cf6373",
+    "4194": "884c05059e0819aae0cf18d862ec5e99177ee1ec115797247671076991af89e0",
+    "4200": "48bfd25558f67bcff796a4305804f78bd2c524105412fd336be75119495e8d89",
+    "4210": "e2f3d1765d87d4220c3cb4b99d173558e0cb7e7375f46e572af3cd9c8640fd72",
+    "4220": "df3754788a98e8df7aa5173b50a59be6d090426829b20d874ed2d7f906446b63",
+    "4230": "39ed9ceeecd8ed7f7fc7a37a4a8bd3a7df55ed454572f3f175f513563c0a4ad9",
+    "4240": "ceafeaea9d186307f388502f9c83c22b71de0a1cdac90e223ed5ec25ead41509",
+    "4250": "a0d705db281ef35f3bff5993a13f479ceb0b6dff7d5d7e94f9980053ad13394c",
+    "4260": "fcb30e006baaea513eb71dcd81453e4cb0c36f8760da8611108ad35a9aef2e12",
+    "4261": "515c40e7de3262e6b764ef8680be9d25e7b7a71f44ab40b6c086f6d4460d399f",
+    "4262": "bd931e84455b51c3bdb831d6e35bada155b0f22f2d02c00c992730e100a511ce",
+    "4263": "abd8c2397d41d68a7664b7ba00a8c39027f654fb77278a0324d86a94c6e00566",
+    "4264": "6bba44f6d11276b29505db07e83059ad171e8bd1f86534ef18b881ce822100f8",
+    "4265": "095fb3dfd43429af0b79faed1fa44e89523491ab9c7e78f232b3ffa19b12240e",
+    "4270": "22d3d42b70f16c3a9061c023413e68036788b6578f2203f4dba60fc97bd331dc",
+    "4280": "5881a385cbce26a2b1f49c77a681beabcbfea9df9798a3f2767a73d79f0e26e2",
+    "4290": "1a492eb0ec486b85b00b0f6c8afb8b57abab9779a4011443a1347f9953c940d4",
+    "4291": "a8976c03a272e67f6bbbee6c7ce6679050995f508116ee01ac55ded468721b1c",
+    "4292": "423901de0a34cfa8b664a9e7589669f41cff071ba5a27b2bfcd248865a0be0e8",
+    "4300": "5c0b766c0051c004f39bf148b0533a14cc27b226e845ea307480b4f153c1a5f6",
+    "4310": "a0e805d5546734237124c073d7b0aee5e3a4f088222d8fbd132b58372793acd5",
+    "4320": "4e09233589967bf2c8217c8261942b7d535e3acdd0fd63bef7786b89db9a9133",
+    "4321": "651328692a4bfcd3ca9064baf12f9b5caea6a681e9960dc82cadeeeeec1e36b6",
+    "4322": "daf3423a12cf05cb73505d2bc917ded9ae458a6e75bb318275c0fc9c5cea7d10",
+    "4323": "f6f3bda551a66b812b703cf74a4a700d7cdaad8a14bbd5b7fd60c4f4ce24ae10",
+    "4324": "6d5f376df0103bd1a79b9036ac5bd561e86b5a79fb0c8586f41f5ba459c2a2ef",
+    "4325": "186ae8f6ffc1fc266301603e735712a0f7e130b24c4df37ff2fab6f1115b8394",
+    "4326": "3891e552de3a60f4275264674aaeb75f1399aa8e3c998e8d7632fa9a69991b39",
+    "4327": "c582ae5834225985047af3f5b4fa6e0f77fae56be9c726b5e00f3284ed78c4e9",
+    "4328": "98367f46e25a353edd22bd3758423eb20af43776806635990e83d34ace52150e",
+    "5110": "e84c8eccd30406cbd486e080c7946229c7d237a420e7b616a000021ff8e77de9",
+    "6001": "578a50df5ce8d038c1162178980477cd7ffc6d19f5c83f8ea9f453a69830f857",
+    "6002": "1527041acd3743fd9d9040a7dc508989892b2b34761613417466c08507129acb",
+    "6004": "2a8654c7280451e6fbe532ba4be1ca63fb6462097bcca9c1a08f05e2f2a1863e",
+    "6010": "80137f34cea913f9aae60b2c0f6fb4055949dcf35d4c952b5f29b1606752ad78",
+    "6012": "cd758de82efd9c6b74c9bcb60a86f5d56ea99f1f4488abdfce3c5a742bd49eab",
+    "6013": "cb6cd46ba7c81ea9d4afad41e2623da756bf460abf9494e3ca203432a3df3e00",
+    "6014": "01b8dab111a45e94ef400c1a8ad21e7b42db95b605e00cd4eb9ed4a08a5ad17a",
+    "6015": "ac246260ba439a80a1a9d73ad79921fdd1f4f88836c869fdff53872b106806c8",
+    "6016": "935ebeef1817b104e9276f1ebaf49053178df5fd5dea43f31890e504142132b6",
+    "6017": "558731778d4b90fcd0de5b7e16e1599526cc0c6ca7f8123d056f5a3ae0751cb2",
+    "6018": "19c020cc1b4e83e1492975f8dc99e140ed143b7d5651b2a2006ec13e79fac54e",
+    "6019": "a000e71b62be6b713729b4840f928605bda5f4f744f917a7476acb9f7ee9200f",
+    "6020": "b42bfbde0183a2a303cb51b9f64e7c0f16c7d3df41deb005954ee7b5a7038e2d",
+    "6022": "faca23f23e668571acc5af09cab40237daac6088b94e0dd9b7ff50661f986e6b",
+    "6040": "57ce246fdddd965b711e928d45223d1f5dfe59da7d9529684fe6231848029a8f",
+    "6050": "1fe4c17395f59653ace52aa1814b0b8a51fcade01ec4a0766eaff14b23625dfb",
+    "6060": "8acea1ae7f5f813a39e2419e6ca11425163f4d39152bcf2074cb2baf4fdcb849",
+    "6070": "a458842a707b4e978f47ebf54c299e79e73e8ae5cb1e58305743da56098fd80b",
+    "6090": "25bc3a74c98dd895ef8ce17998b609fe3edd14e51502c73cc83df4ce20b67cec",
+    "7010": "16207dc8fa2c28082da4e1e6378483788735d48339df349e077b811868279617",
+    "7020": "18c982caed206c41becbb93a3485bce9e95f81a4773c8ad7a77f3cb5def6ed11",
+    "7030": "1b11e1d0c76e067e9c0695b26580bdcf8928dd131318d6d0f1fcb91d71b89207",
+    "7040": "02c66bef36d563ecb5a8275903c106f6d99669a2b54a7fdd38eed792cb7c9959",
+    "7200": "f60f29fdb5ac4db44745533eb3d648185812d4283a297de4ef61eaabbda73c32",
+    "7201": "89aae4fc0bc64bd9d0f89c80c396899478ac3dfc4ec819d1e192b375f3eb91de",
+    "7202": "1c0f0c0098504201c5e7171433991038f67f97f65db6720e3dee5dce2c488d40",
+    "7203": "1a8d2756e59336f646ab24086982e7e39a85224efa175bb760310e3bbc39135b",
+    "7204": "93322ae3472a784c5014984f4f5bff629815492060f0efbe0689e628e4772ca0",
+    "7205": "3a5341aaf4ca8dc42f90fd548905ea1e6e7617b7292529a75d7eb8e5cd2ce52f",
+    "7211": "6062028f14dbd30f0b305a6c067436acc6cfb617a9e726941875b1929c3acb38",
+    "8010": "b169ff4969d2fa3dd80aed7b3e782edc6699a267fbd8018bdaa2bda2dfcc3816",
+    "8012": "6673c44ca4559ae968d023f64164860a9b77dc13da22e01018c917380fc5e620",
+    "8020": "6103c7fc69900d62f11276a91944e0ca3c0355b8fc4db1ace5ad2bef24bc180a",
+    "8030": "1b9da56e167de6bfd3f76f2b18af6b404992f07aa1c50098f1a5b847e4d15a43",
+    "8040": "0b67ddc6eef801528addc2f11c18b3ad595d75316e64fc2ba724c73e51e35e6d",
+    "8050": "503e4a324f346714aa52780a4f1e599cdd66e2507711feca85e95edfa16ba9b3",
+    "8060": "00233b9dce628abb725380e9be4758989fc91cf561bef77ac21715e64bcb57a7",
+    "8070": "298baad7a4d3f1ee015a4d8245d12ff6a054dcaa2a3b5dc29cd8ea2311b059bc",
+    "8100": "c882281491c4aadc2fc8f24939cc10bc5cf19a38a410b483ee0bf6de89f8507b",
+    "8120": "ef7e1526869cce7283ca981c5411346c2e2a6cbd8ca369a886577d0b7f27806b",
+    "8150": "a9c5f0ecf6eb492e6cfe1fc1facbd90efd3b4b35f93db2ad07e88091ddebdb4f",
+    "8160": "edd853616f244018412bd7507ad18148c393f3b8fcdb14247dce7456b0a7af23",
+    "8170": "ba046da5c75dcb43f87624c7d6bb78fd2abe774e9bfb8097842a0341bb36999f",
+    "8180": "cc5467910f1edb4e492162e081c0f674bdd4421c4820d8adaca1e96c48e17239",
+    "8190": "a6d4058a8a144160ffcb43114258cf48dcc21354f3191f83dfc3b88e63bedfb8",
+    "8200": "921854bc6afea5d4a628fbe14245c8c7822cb4390312a1cdc5b17b6498bb7711",
+    "8210": "3b90c2ecbb09830739a99c4917114cab2433d7d671c7c80c42a4864ad5b60806",
+    "8230": "d3f4fb336c9c0b95a6bc0e831837cb0aff39a6a430dc2938981b5a0de2a55d3e",
+    "8240": "7171d0cba76ce0897ea25281a77a34fe3c293ad1c315fc6186cc9bd709b2539d",
+    "8250": "cebb92e08317c7d6649ed71bf5e45240570b642b01c8b499c15b66d42b4933fa",
+    "8260": "38b864ca147d73cde878fe5869a7a35c95473d1517160db0a5f5dc6793098eff",
+    "8280": "2c901fdb5616fcba33d539cfb790d347c2ff9f3c63d44729fc075d6873bcc049",
+    "8300": "b24dea6af66909652658f73a19b4a79e65ccade9f412b9517dcfc06f07cfb7e6",
+    "8310": "6caccd45dacde95ea44b8ff53ad9629320977f6857de8ce442b1d5e7f132ce72",
+    "8311": "6b451b33f49ec2d3e1e64f288897363f462b03b9b3ea3ed53f62334574ddf6e0",
+    "8313": "2a435343f7bbf974eeca685b05a576e57e368a72b1edc7529429df7c86249fdc"
+  },
+  "full_period": {
+    "start_date": "2026-03-25",
+    "end_date": "2026-11-04",
+    "trades_count": 25,
+    "win_rate_pct": 20.0,
+    "average_win_pct": 9.531307,
+    "average_loss_pct": -3.806576,
+    "expectancy_pct": -1.139,
+    "portfolio_return_pct": -2.847015,
+    "maximum_drawdown_pct": -4.956666,
+    "tasi_buy_hold_net_return_pct": -9.766445,
+    "excess_return_pct_points": 6.91943,
+    "comparison_valid": true,
+    "unliquidated_positions": 0,
+    "stale_mark_position_days": 0,
+    "skipped_orders": {
+      "next_open_invalidates_reward_or_risk": 5
+    },
+    "trades": [
+      {
+        "symbol": "1303",
+        "signal_date": "2026-04-09",
+        "entry_date": "2026-04-12",
+        "entry_price": 16.952818,
+        "stop": 16.265608,
+        "target": 19.17223,
+        "signal_score": 67,
+        "exit_date": "2026-04-19",
+        "exit_price": 19.17223,
+        "exit_reason": "target",
+        "net_return_pct": 12.628974
+      },
+      {
+        "symbol": "2083",
+        "signal_date": "2026-04-16",
+        "entry_date": "2026-04-19",
+        "entry_price": 34.619999,
+        "stop": 33.886445,
+        "target": 38.330434,
+        "signal_score": 79,
+        "exit_date": "2026-04-20",
+        "exit_price": 33.886445,
+        "exit_reason": "stop",
+        "net_return_pct": -2.519365
+      },
+      {
+        "symbol": "8311",
+        "signal_date": "2026-05-17",
+        "entry_date": "2026-05-18",
+        "entry_price": 12.15,
+        "stop": 11.554066,
+        "target": 13.81584,
+        "signal_score": 85,
+        "exit_date": "2026-05-20",
+        "exit_price": 11.554066,
+        "exit_reason": "stop",
+        "net_return_pct": -5.293896
+      },
+      {
+        "symbol": "2380",
+        "signal_date": "2026-05-12",
+        "entry_date": "2026-05-13",
+        "entry_price": 15.3,
+        "stop": 14.691956,
+        "target": 17.79528,
+        "signal_score": 80,
+        "exit_date": "2026-05-31",
+        "exit_price": 14.691956,
+        "exit_reason": "stop",
+        "net_return_pct": -4.367046
+      },
+      {
+        "symbol": "7200",
+        "signal_date": "2026-05-10",
+        "entry_date": "2026-05-11",
+        "entry_price": 186.602172,
+        "stop": 176.919654,
+        "target": 215.460516,
+        "signal_score": 90,
+        "exit_date": "2026-06-14",
+        "exit_price": 194.273468,
+        "exit_reason": "time_exit",
+        "net_return_pct": 3.685061
+      },
+      {
+        "symbol": "2370",
+        "signal_date": "2026-05-11",
+        "entry_date": "2026-05-12",
+        "entry_price": 31.879844,
+        "stop": 30.81549,
+        "target": 35.770363,
+        "signal_score": 79,
+        "exit_date": "2026-06-15",
+        "exit_price": 31.919056,
+        "exit_reason": "time_exit",
+        "net_return_pct": -0.286665
+      },
+      {
+        "symbol": "8210",
+        "signal_date": "2026-06-10",
+        "entry_date": "2026-06-11",
+        "entry_price": 186.924931,
+        "stop": 179.644897,
+        "target": 206.396398,
+        "signal_score": 92,
+        "exit_date": "2026-06-21",
+        "exit_price": 179.644897,
+        "exit_reason": "stop",
+        "net_return_pct": -4.287856
+      },
+      {
+        "symbol": "8230",
+        "signal_date": "2026-06-10",
+        "entry_date": "2026-06-11",
+        "entry_price": 58.25,
+        "stop": 56.445422,
+        "target": 66.504,
+        "signal_score": 100,
+        "exit_date": "2026-06-24",
+        "exit_price": 56.0,
+        "exit_reason": "gap_stop",
+        "net_return_pct": -4.256018
+      },
+      {
+        "symbol": "4100",
+        "signal_date": "2026-06-24",
+        "entry_date": "2026-06-25",
+        "entry_price": 90.0,
+        "stop": 87.246257,
+        "target": 100.814232,
+        "signal_score": 87,
+        "exit_date": "2026-06-25",
+        "exit_price": 87.246257,
+        "exit_reason": "stop",
+        "net_return_pct": -3.456356
+      },
+      {
+        "symbol": "4170",
+        "signal_date": "2026-06-01",
+        "entry_date": "2026-06-02",
+        "entry_price": 16.809999,
+        "stop": 16.051231,
+        "target": 18.89016,
+        "signal_score": 80,
+        "exit_date": "2026-06-29",
+        "exit_price": 17.09,
+        "exit_reason": "time_exit",
+        "net_return_pct": 1.249703
+      },
+      {
+        "symbol": "1820",
+        "signal_date": "2026-06-28",
+        "entry_date": "2026-06-29",
+        "entry_price": 2.17,
+        "stop": 2.109905,
+        "target": 2.41592,
+        "signal_score": 80,
+        "exit_date": "2026-06-29",
+        "exit_price": 2.109905,
+        "exit_reason": "stop",
+        "net_return_pct": -3.167188
+      },
+      {
+        "symbol": "2381",
+        "signal_date": "2026-06-14",
+        "entry_date": "2026-06-15",
+        "entry_price": 93.400002,
+        "stop": 90.362559,
+        "target": 107.0,
+        "signal_score": 92,
+        "exit_date": "2026-06-30",
+        "exit_price": 90.362559,
+        "exit_reason": "stop",
+        "net_return_pct": -3.647935
+      },
+      {
+        "symbol": "2100",
+        "signal_date": "2026-06-30",
+        "entry_date": "2026-07-01",
+        "entry_price": 23.379999,
+        "stop": 22.45608,
+        "target": 25.84416,
+        "signal_score": 80,
+        "exit_date": "2026-07-01",
+        "exit_price": 22.45608,
+        "exit_reason": "stop",
+        "net_return_pct": -4.344742
+      },
+      {
+        "symbol": "6001",
+        "signal_date": "2026-07-05",
+        "entry_date": "2026-07-06",
+        "entry_price": 34.040001,
+        "stop": 32.956192,
+        "target": 37.888322,
+        "signal_score": 80,
+        "exit_date": "2026-07-07",
+        "exit_price": 32.956192,
+        "exit_reason": "stop",
+        "net_return_pct": -3.580061
+      },
+      {
+        "symbol": "2223",
+        "signal_date": "2026-07-09",
+        "entry_date": "2026-07-12",
+        "entry_price": 129.328131,
+        "stop": 124.269958,
+        "target": 145.365652,
+        "signal_score": 87,
+        "exit_date": "2026-07-29",
+        "exit_price": 123.999999,
+        "exit_reason": "gap_stop",
+        "net_return_pct": -4.51216
+      },
+      {
+        "symbol": "4144",
+        "signal_date": "2026-07-28",
+        "entry_date": "2026-07-29",
+        "entry_price": 79.5,
+        "stop": 76.819178,
+        "target": 88.616,
+        "signal_score": 82,
+        "exit_date": "2026-07-29",
+        "exit_price": 76.819178,
+        "exit_reason": "stop",
+        "net_return_pct": -3.767467
+      },
+      {
+        "symbol": "7200",
+        "signal_date": "2026-07-30",
+        "entry_date": "2026-08-02",
+        "entry_price": 239.603951,
+        "stop": 232.461823,
+        "target": 269.149396,
+        "signal_score": 74,
+        "exit_date": "2026-08-04",
+        "exit_price": 269.149396,
+        "exit_reason": "gap_target_capped",
+        "net_return_pct": 11.871336
+      },
+      {
+        "symbol": "1833",
+        "signal_date": "2026-07-08",
+        "entry_date": "2026-07-09",
+        "entry_price": 106.443291,
+        "stop": 100.718198,
+        "target": 119.172593,
+        "signal_score": 79,
+        "exit_date": "2026-08-05",
+        "exit_price": 106.344826,
+        "exit_reason": "time_exit",
+        "net_return_pct": -0.501288
+      },
+      {
+        "symbol": "4270",
+        "signal_date": "2026-07-30",
+        "entry_date": "2026-08-02",
+        "entry_price": 82.703217,
+        "stop": 79.326325,
+        "target": 94.327411,
+        "signal_score": 88,
+        "exit_date": "2026-08-09",
+        "exit_price": 79.326325,
+        "exit_reason": "stop",
+        "net_return_pct": -4.475599
+      },
+      {
+        "symbol": "2380",
+        "signal_date": "2026-08-03",
+        "entry_date": "2026-08-04",
+        "entry_price": 17.0,
+        "stop": 15.942097,
+        "target": 19.205839,
+        "signal_score": 85,
+        "exit_date": "2026-08-09",
+        "exit_price": 15.942097,
+        "exit_reason": "stop",
+        "net_return_pct": -6.606658
+      },
+      {
+        "symbol": "4280",
+        "signal_date": "2026-07-22",
+        "entry_date": "2026-07-23",
+        "entry_price": 11.908425,
+        "stop": 11.537397,
+        "target": 15.765805,
+        "signal_score": 75,
+        "exit_date": "2026-08-19",
+        "exit_price": 14.136154,
+        "exit_reason": "time_exit",
+        "net_return_pct": 18.221461
+      },
+      {
+        "symbol": "4240",
+        "signal_date": "2026-08-20",
+        "entry_date": "2026-08-23",
+        "entry_price": 17.9,
+        "stop": 17.112575,
+        "target": 20.135281,
+        "signal_score": 80,
+        "exit_date": "2026-08-27",
+        "exit_price": 17.112575,
+        "exit_reason": "stop",
+        "net_return_pct": -4.790182
+      },
+      {
+        "symbol": "6060",
+        "signal_date": "2026-08-11",
+        "entry_date": "2026-08-12",
+        "entry_price": 14.94,
+        "stop": 13.816448,
+        "target": 17.209999,
+        "signal_score": 61,
+        "exit_date": "2026-09-08",
+        "exit_price": 14.56,
+        "exit_reason": "time_exit",
+        "net_return_pct": -2.942256
+      },
+      {
+        "symbol": "2290",
+        "signal_date": "2026-08-24",
+        "entry_date": "2026-08-25",
+        "entry_price": 33.462289,
+        "stop": 31.890242,
+        "target": 37.305407,
+        "signal_score": 80,
+        "exit_date": "2026-09-15",
+        "exit_price": 31.890242,
+        "exit_reason": "stop",
+        "net_return_pct": -5.087905
+      },
+      {
+        "symbol": "2180",
+        "signal_date": "2026-10-12",
+        "entry_date": "2026-10-13",
+        "entry_price": 38.779999,
+        "stop": 37.287953,
+        "target": 43.06816,
+        "signal_score": 88,
+        "exit_date": "2026-10-22",
+        "exit_price": 37.287953,
+        "exit_reason": "stop",
+        "net_return_pct": -4.240881
+      }
+    ],
+    "equity_curve": [
+      {
+        "date": "2026-03-25",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-03-26",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-03-29",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-03-30",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-03-31",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-04-01",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-04-02",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-04-05",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-04-06",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-04-07",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-04-08",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-04-09",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-04-12",
+        "equity": 99887.458596
+      },
+      {
+        "date": "2026-04-13",
+        "equity": 99985.297452
+      },
+      {
+        "date": "2026-04-14",
+        "equity": 99985.297452
+      },
+      {
+        "date": "2026-04-15",
+        "equity": 100497.511189
+      },
+      {
+        "date": "2026-04-16",
+        "equity": 100992.459773
+      },
+      {
+        "date": "2026-04-19",
+        "equity": 101073.387071
+      },
+      {
+        "date": "2026-04-20",
+        "equity": 101008.460509
+      },
+      {
+        "date": "2026-04-21",
+        "equity": 101008.460509
+      },
+      {
+        "date": "2026-04-22",
+        "equity": 101008.460509
+      },
+      {
+        "date": "2026-04-23",
+        "equity": 101008.460509
+      },
+      {
+        "date": "2026-04-26",
+        "equity": 101008.460509
+      },
+      {
+        "date": "2026-04-27",
+        "equity": 101008.460509
+      },
+      {
+        "date": "2026-04-28",
+        "equity": 101008.460509
+      },
+      {
+        "date": "2026-04-29",
+        "equity": 101008.460509
+      },
+      {
+        "date": "2026-04-30",
+        "equity": 101008.460509
+      },
+      {
+        "date": "2026-05-03",
+        "equity": 101008.460509
+      },
+      {
+        "date": "2026-05-04",
+        "equity": 101008.460509
+      },
+      {
+        "date": "2026-05-05",
+        "equity": 101008.460509
+      },
+      {
+        "date": "2026-05-06",
+        "equity": 101008.460509
+      },
+      {
+        "date": "2026-05-07",
+        "equity": 101008.460509
+      },
+      {
+        "date": "2026-05-10",
+        "equity": 101008.460509
+      },
+      {
+        "date": "2026-05-11",
+        "equity": 101025.468834
+      },
+      {
+        "date": "2026-05-12",
+        "equity": 101664.622384
+      },
+      {
+        "date": "2026-05-13",
+        "equity": 101907.013045
+      },
+      {
+        "date": "2026-05-14",
+        "equity": 101873.839029
+      },
+      {
+        "date": "2026-05-17",
+        "equity": 101406.074506
+      },
+      {
+        "date": "2026-05-18",
+        "equity": 101394.115395
+      },
+      {
+        "date": "2026-05-19",
+        "equity": 101351.466678
+      },
+      {
+        "date": "2026-05-20",
+        "equity": 100905.986427
+      },
+      {
+        "date": "2026-05-21",
+        "equity": 100794.356947
+      },
+      {
+        "date": "2026-05-31",
+        "equity": 100224.391816
+      },
+      {
+        "date": "2026-06-01",
+        "equity": 100120.500256
+      },
+      {
+        "date": "2026-06-02",
+        "equity": 100121.721239
+      },
+      {
+        "date": "2026-06-03",
+        "equity": 100130.584489
+      },
+      {
+        "date": "2026-06-04",
+        "equity": 99949.673017
+      },
+      {
+        "date": "2026-06-07",
+        "equity": 100260.953537
+      },
+      {
+        "date": "2026-06-08",
+        "equity": 100519.464051
+      },
+      {
+        "date": "2026-06-09",
+        "equity": 100639.862125
+      },
+      {
+        "date": "2026-06-10",
+        "equity": 100225.747526
+      },
+      {
+        "date": "2026-06-11",
+        "equity": 100413.744391
+      },
+      {
+        "date": "2026-06-14",
+        "equity": 101333.879769
+      },
+      {
+        "date": "2026-06-15",
+        "equity": 100550.465552
+      },
+      {
+        "date": "2026-06-16",
+        "equity": 100910.928888
+      },
+      {
+        "date": "2026-06-17",
+        "equity": 100613.365001
+      },
+      {
+        "date": "2026-06-18",
+        "equity": 100894.064406
+      },
+      {
+        "date": "2026-06-21",
+        "equity": 100310.612701
+      },
+      {
+        "date": "2026-06-22",
+        "equity": 100502.154067
+      },
+      {
+        "date": "2026-06-23",
+        "equity": 100062.832657
+      },
+      {
+        "date": "2026-06-24",
+        "equity": 99723.643981
+      },
+      {
+        "date": "2026-06-25",
+        "equity": 99062.545956
+      },
+      {
+        "date": "2026-06-28",
+        "equity": 99229.503429
+      },
+      {
+        "date": "2026-06-29",
+        "equity": 98792.295136
+      },
+      {
+        "date": "2026-06-30",
+        "equity": 98611.1895
+      },
+      {
+        "date": "2026-07-01",
+        "equity": 98182.749286
+      },
+      {
+        "date": "2026-07-02",
+        "equity": 98182.749286
+      },
+      {
+        "date": "2026-07-05",
+        "equity": 98182.749286
+      },
+      {
+        "date": "2026-07-06",
+        "equity": 97920.874523
+      },
+      {
+        "date": "2026-07-07",
+        "equity": 97831.249033
+      },
+      {
+        "date": "2026-07-08",
+        "equity": 97831.249033
+      },
+      {
+        "date": "2026-07-09",
+        "equity": 97657.698502
+      },
+      {
+        "date": "2026-07-12",
+        "equity": 97641.55715
+      },
+      {
+        "date": "2026-07-13",
+        "equity": 98055.419821
+      },
+      {
+        "date": "2026-07-14",
+        "equity": 98137.078951
+      },
+      {
+        "date": "2026-07-15",
+        "equity": 97988.968644
+      },
+      {
+        "date": "2026-07-16",
+        "equity": 97880.821887
+      },
+      {
+        "date": "2026-07-19",
+        "equity": 97835.056785
+      },
+      {
+        "date": "2026-07-20",
+        "equity": 97734.210476
+      },
+      {
+        "date": "2026-07-21",
+        "equity": 97870.665337
+      },
+      {
+        "date": "2026-07-22",
+        "equity": 97930.567363
+      },
+      {
+        "date": "2026-07-23",
+        "equity": 97883.97589
+      },
+      {
+        "date": "2026-07-26",
+        "equity": 97740.984186
+      },
+      {
+        "date": "2026-07-27",
+        "equity": 97843.463734
+      },
+      {
+        "date": "2026-07-28",
+        "equity": 97481.895206
+      },
+      {
+        "date": "2026-07-29",
+        "equity": 97019.88361
+      },
+      {
+        "date": "2026-07-30",
+        "equity": 96855.823064
+      },
+      {
+        "date": "2026-08-02",
+        "equity": 97486.722551
+      },
+      {
+        "date": "2026-08-03",
+        "equity": 97776.348883
+      },
+      {
+        "date": "2026-08-04",
+        "equity": 98770.94793
+      },
+      {
+        "date": "2026-08-05",
+        "equity": 98544.066695
+      },
+      {
+        "date": "2026-08-06",
+        "equity": 98219.216226
+      },
+      {
+        "date": "2026-08-09",
+        "equity": 97693.319876
+      },
+      {
+        "date": "2026-08-10",
+        "equity": 98117.856462
+      },
+      {
+        "date": "2026-08-11",
+        "equity": 97995.394016
+      },
+      {
+        "date": "2026-08-12",
+        "equity": 97916.506105
+      },
+      {
+        "date": "2026-08-13",
+        "equity": 97708.439622
+      },
+      {
+        "date": "2026-08-16",
+        "equity": 97708.439622
+      },
+      {
+        "date": "2026-08-17",
+        "equity": 98458.069121
+      },
+      {
+        "date": "2026-08-18",
+        "equity": 98477.416897
+      },
+      {
+        "date": "2026-08-19",
+        "equity": 98409.504274
+      },
+      {
+        "date": "2026-08-20",
+        "equity": 98396.41291
+      },
+      {
+        "date": "2026-08-23",
+        "equity": 98758.166357
+      },
+      {
+        "date": "2026-08-24",
+        "equity": 98750.004438
+      },
+      {
+        "date": "2026-08-25",
+        "equity": 98151.770759
+      },
+      {
+        "date": "2026-08-26",
+        "equity": 97904.265698
+      },
+      {
+        "date": "2026-08-27",
+        "equity": 97953.365596
+      },
+      {
+        "date": "2026-08-30",
+        "equity": 98263.509544
+      },
+      {
+        "date": "2026-08-31",
+        "equity": 98030.347323
+      },
+      {
+        "date": "2026-09-01",
+        "equity": 97936.217317
+      },
+      {
+        "date": "2026-09-02",
+        "equity": 97837.290844
+      },
+      {
+        "date": "2026-09-03",
+        "equity": 97831.574751
+      },
+      {
+        "date": "2026-09-06",
+        "equity": 97831.574751
+      },
+      {
+        "date": "2026-09-07",
+        "equity": 97660.749987
+      },
+      {
+        "date": "2026-09-08",
+        "equity": 97930.506327
+      },
+      {
+        "date": "2026-09-09",
+        "equity": 98354.59255
+      },
+      {
+        "date": "2026-09-10",
+        "equity": 98342.812096
+      },
+      {
+        "date": "2026-09-13",
+        "equity": 97853.934502
+      },
+      {
+        "date": "2026-09-14",
+        "equity": 97747.912665
+      },
+      {
+        "date": "2026-09-15",
+        "equity": 97566.753571
+      },
+      {
+        "date": "2026-09-16",
+        "equity": 97566.753571
+      },
+      {
+        "date": "2026-09-17",
+        "equity": 97566.753571
+      },
+      {
+        "date": "2026-09-20",
+        "equity": 97566.753571
+      },
+      {
+        "date": "2026-09-21",
+        "equity": 97566.753571
+      },
+      {
+        "date": "2026-09-22",
+        "equity": 97566.753571
+      },
+      {
+        "date": "2026-09-24",
+        "equity": 97566.753571
+      },
+      {
+        "date": "2026-09-27",
+        "equity": 97566.753571
+      },
+      {
+        "date": "2026-09-28",
+        "equity": 97566.753571
+      },
+      {
+        "date": "2026-09-29",
+        "equity": 97566.753571
+      },
+      {
+        "date": "2026-09-30",
+        "equity": 97566.753571
+      },
+      {
+        "date": "2026-10-01",
+        "equity": 97566.753571
+      },
+      {
+        "date": "2026-10-04",
+        "equity": 97566.753571
+      },
+      {
+        "date": "2026-10-05",
+        "equity": 97566.753571
+      },
+      {
+        "date": "2026-10-06",
+        "equity": 97566.753571
+      },
+      {
+        "date": "2026-10-07",
+        "equity": 97566.753571
+      },
+      {
+        "date": "2026-10-08",
+        "equity": 97566.753571
+      },
+      {
+        "date": "2026-10-11",
+        "equity": 97566.753571
+      },
+      {
+        "date": "2026-10-12",
+        "equity": 97566.753571
+      },
+      {
+        "date": "2026-10-13",
+        "equity": 97391.126643
+      },
+      {
+        "date": "2026-10-14",
+        "equity": 97350.954571
+      },
+      {
+        "date": "2026-10-15",
+        "equity": 97436.320345
+      },
+      {
+        "date": "2026-10-18",
+        "equity": 97581.943749
+      },
+      {
+        "date": "2026-10-19",
+        "equity": 97471.470789
+      },
+      {
+        "date": "2026-10-20",
+        "equity": 97411.213159
+      },
+      {
+        "date": "2026-10-21",
+        "equity": 97310.782498
+      },
+      {
+        "date": "2026-10-22",
+        "equity": 97152.984574
+      },
+      {
+        "date": "2026-10-25",
+        "equity": 97152.984574
+      },
+      {
+        "date": "2026-10-26",
+        "equity": 97152.984574
+      },
+      {
+        "date": "2026-10-27",
+        "equity": 97152.984574
+      },
+      {
+        "date": "2026-10-28",
+        "equity": 97152.984574
+      },
+      {
+        "date": "2026-10-29",
+        "equity": 97152.984574
+      },
+      {
+        "date": "2026-11-01",
+        "equity": 97152.984574
+      },
+      {
+        "date": "2026-11-02",
+        "equity": 97152.984574
+      },
+      {
+        "date": "2026-11-03",
+        "equity": 97152.984574
+      },
+      {
+        "date": "2026-11-04",
+        "equity": 97152.984574
+      }
+    ]
+  },
+  "chronological_last_30pct": {
+    "start_date": "2026-08-31",
+    "end_date": "2026-11-04",
+    "trades_count": 1,
+    "win_rate_pct": 0.0,
+    "average_win_pct": null,
+    "average_loss_pct": -4.240881,
+    "expectancy_pct": -4.240881,
+    "portfolio_return_pct": -0.424088,
+    "maximum_drawdown_pct": -0.439589,
+    "tasi_buy_hold_net_return_pct": -10.148805,
+    "excess_return_pct_points": 9.724717,
+    "comparison_valid": true,
+    "unliquidated_positions": 0,
+    "stale_mark_position_days": 0,
+    "skipped_orders": {},
+    "trades": [
+      {
+        "symbol": "2180",
+        "signal_date": "2026-10-12",
+        "entry_date": "2026-10-13",
+        "entry_price": 38.779999,
+        "stop": 37.287953,
+        "target": 43.06816,
+        "signal_score": 88,
+        "exit_date": "2026-10-22",
+        "exit_price": 37.287953,
+        "exit_reason": "stop",
+        "net_return_pct": -4.240881
+      }
+    ],
+    "equity_curve": [
+      {
+        "date": "2026-08-31",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-09-01",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-09-02",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-09-03",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-09-06",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-09-07",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-09-08",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-09-09",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-09-10",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-09-13",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-09-14",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-09-15",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-09-16",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-09-17",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-09-20",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-09-21",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-09-22",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-09-24",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-09-27",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-09-28",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-09-29",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-09-30",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-10-01",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-10-04",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-10-05",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-10-06",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-10-07",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-10-08",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-10-11",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-10-12",
+        "equity": 100000.0
+      },
+      {
+        "date": "2026-10-13",
+        "equity": 99819.99306
+      },
+      {
+        "date": "2026-10-14",
+        "equity": 99778.819124
+      },
+      {
+        "date": "2026-10-15",
+        "equity": 99866.31386
+      },
+      {
+        "date": "2026-10-18",
+        "equity": 100015.56901
+      },
+      {
+        "date": "2026-10-19",
+        "equity": 99902.340932
+      },
+      {
+        "date": "2026-10-20",
+        "equity": 99840.580519
+      },
+      {
+        "date": "2026-10-21",
+        "equity": 99737.645188
+      },
+      {
+        "date": "2026-10-22",
+        "equity": 99575.911894
+      },
+      {
+        "date": "2026-10-25",
+        "equity": 99575.911894
+      },
+      {
+        "date": "2026-10-26",
+        "equity": 99575.911894
+      },
+      {
+        "date": "2026-10-27",
+        "equity": 99575.911894
+      },
+      {
+        "date": "2026-10-28",
+        "equity": 99575.911894
+      },
+      {
+        "date": "2026-10-29",
+        "equity": 99575.911894
+      },
+      {
+        "date": "2026-11-01",
+        "equity": 99575.911894
+      },
+      {
+        "date": "2026-11-02",
+        "equity": 99575.911894
+      },
+      {
+        "date": "2026-11-03",
+        "equity": 99575.911894
+      },
+      {
+        "date": "2026-11-04",
+        "equity": 99575.911894
+      }
+    ]
+  },
+  "excluded_tail_sessions": [],
+  "signal_count": 34,
+  "holdout_note": "Chronological 70/30 descriptive split; no optimization, no claim of independent out-of-sample validation.",
+  "limitations": [
+    "Current 254-company snapshot creates survivorship bias; delisted equities absent.",
+    "Only about 520 calendar days available; short history, few trades and one market regime can be inconclusive.",
+    "Vendor retrospectively adjusted prices are not point-in-time corporate-action snapshots.",
+    "Quarantined bars cannot generate signals, execute orders or value exits; missing position marks are carried and counted.",
+    "TASI comparison uses observed close-to-close values over identical evaluation dates; stocks enter at next open.",
+    "No tax, spread beyond assumed slippage, liquidity capacity or dividend cash-flow model; adjusted closes embed vendor adjustments.",
+    "No reconstruction of how old source corrections were known in real time."
+  ],
+  "run_id": "41857159225",
+  "run_url": "https://github.com/saqerkhalel-gif/tasi-radar-3/actions/runs/41857159225",
+  "run_utc": "2026-11-04T15:23:40.620634+00:00",
+  "expected_session": "2026-11-04"
+}
