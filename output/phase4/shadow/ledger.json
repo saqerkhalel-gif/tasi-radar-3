@@ -10,7 +10,7 @@
       "source_run_id": "41857159225",
       "source_run_url": "https://github.com/saqerkhalel-gif/tasi-radar-3/actions/runs/41857159225",
       "source_price_date": "2026-11-04",
-      "status": "pending",
+      "status": "open",
       "scenario": {
         "trigger": 37.5,
         "invalidation": 35.544777,
@@ -42,12 +42,57 @@
       ],
       "eligible_prospective": true,
       "input_close_sha256": "44b336d6802de64916867cedc4a7117aa49b94e37b32661ed8a389af38306e12",
+      "live_order_authorized": false,
+      "entry_date": "2026-11-05",
+      "entry_price": 38.0
+    },
+    {
+      "id": "early_reversal:8300:2026-11-05",
+      "engine": "early_reversal",
+      "symbol": "8300",
+      "signal_date": "2026-11-05",
+      "recorded_utc": "2026-11-05T15:35:29.803680+00:00",
+      "source_run_id": "42055128221",
+      "source_run_url": "https://github.com/saqerkhalel-gif/tasi-radar-3/actions/runs/42055128221",
+      "source_price_date": "2026-11-05",
+      "status": "pending",
+      "scenario": {
+        "trigger": 13.53,
+        "invalidation": 12.676798,
+        "conditional_target": 15.2678,
+        "upside_pct": 12.844051,
+        "reward_risk": 2.036798,
+        "target_source": "nearest_confirmed_major_zone"
+      },
+      "features": {
+        "EMA20": 12.807313,
+        "EMA50": 13.262377,
+        "EMA200": 13.625336,
+        "RSI14": 57.281741,
+        "MACD": -0.195182,
+        "MACD_signal": -0.368022,
+        "ATR14": 0.568801,
+        "RS20": 3.676904,
+        "RS60": -3.729882,
+        "RS120": 14.591545,
+        "volume_ratio": 2.431294,
+        "gain5": 5.703121,
+        "extension_atr": 1.270543
+      },
+      "reasons": [
+        "early_reversal",
+        "bullish_price_and_1.5x_volume",
+        "confirmed_target_10pct_RR2",
+        "verified_vendor_checks_only_not_exchange_certification"
+      ],
+      "eligible_prospective": true,
+      "input_close_sha256": "545cee9c607466cebb7d3aa99dd6255f180a847029d68cf37ba3dd72efd4148a",
       "live_order_authorized": false
     }
   ],
-  "updated_utc": "2026-11-04T15:38:18.763835+00:00",
-  "source_run_id": "41857159225",
-  "source_price_date": "2026-11-04",
+  "updated_utc": "2026-11-05T15:35:29.803680+00:00",
+  "source_run_id": "42055128221",
+  "source_price_date": "2026-11-05",
   "live_strategy_changed": false,
   "paper_outcome_method": "Unit-notional after-cost hypothetical trades, no portfolio return claim; simultaneous names are not an investable capped portfolio.",
   "new_observations": 1
