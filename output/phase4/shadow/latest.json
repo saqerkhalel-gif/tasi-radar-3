@@ -1,65 +1,49 @@
 {
-  "source_run_id": "42055128221",
-  "source_price_date": "2026-11-05",
-  "current_expected_session": "2026-11-05",
+  "source_run_id": "42493666393",
+  "source_price_date": "2026-11-08",
+  "current_expected_session": "2026-11-08",
   "benchmark_entry_eligible": true,
-  "updated_utc": "2026-11-05T15:35:29.803680+00:00",
+  "updated_utc": "2026-11-08T15:27:53.686138+00:00",
   "prospective_closed_trade_count": 0,
   "adopted": false,
   "signal_rejections": {
     "early_reversal": {
-      "upside_below_10": 3,
-      "no_accumulation_support": 3
+      "upside_below_10": 2,
+      "stop_over_cap": 1
     },
-    "trend_pullback": {
-      "upside_below_10": 1
-    },
+    "trend_pullback": {},
     "breakout_retest": {
-      "no_confirmed_retest": 3,
-      "upside_below_10": 1
+      "no_confirmed_retest": 1
     },
     "early_reversal__rs20_only": {
-      "upside_below_10": 3,
-      "stop_over_cap": 2,
-      "no_accumulation_support": 3
+      "stop_over_cap": 5,
+      "upside_below_10": 2
     },
     "early_reversal__no_extension_guard": {
-      "upside_below_10": 5,
-      "no_accumulation_support": 4,
-      "quarantined_or_zero_volume": 1
+      "no_accumulation_support": 1,
+      "stop_over_cap": 3,
+      "upside_below_10": 3,
+      "invalid_levels": 1
     },
     "early_reversal__no_pattern_support": {
-      "upside_below_10": 4,
-      "stop_over_cap": 2
+      "upside_below_10": 2,
+      "stop_over_cap": 1
     },
-    "trend_pullback__rs20_only": {
-      "upside_below_10": 1
-    },
-    "trend_pullback__no_extension_guard": {
-      "upside_below_10": 1
-    },
-    "trend_pullback__no_pattern_support": {
-      "upside_below_10": 1
-    },
+    "trend_pullback__rs20_only": {},
+    "trend_pullback__no_extension_guard": {},
+    "trend_pullback__no_pattern_support": {},
     "breakout_retest__rs20_only": {
-      "no_confirmed_retest": 5,
-      "upside_below_10": 1
+      "no_confirmed_retest": 2
     },
     "breakout_retest__no_extension_guard": {
-      "no_confirmed_retest": 5,
-      "upside_below_10": 1,
-      "quarantined_or_zero_volume": 1
+      "no_confirmed_retest": 3,
+      "invalid_levels": 1
     },
     "breakout_retest__no_pattern_support": {
-      "no_confirmed_retest": 3,
-      "upside_below_10": 1
+      "no_confirmed_retest": 1
     },
-    "simple_breakout20": {
-      "upside_below_10": 4
-    },
-    "simple_ema50": {
-      "upside_below_10": 2
-    }
+    "simple_breakout20": {},
+    "simple_ema50": {}
   },
   "engines": {
     "early_reversal": {
