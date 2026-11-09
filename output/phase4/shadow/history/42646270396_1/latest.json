@@ -1,0 +1,75 @@
+{
+  "source_run_id": "42644871668",
+  "source_price_date": "2026-11-09",
+  "current_expected_session": "2026-11-09",
+  "benchmark_entry_eligible": true,
+  "updated_utc": "2026-11-09T15:36:27.589183+00:00",
+  "prospective_closed_trade_count": 0,
+  "adopted": false,
+  "signal_rejections": {
+    "early_reversal": {
+      "stop_over_cap": 2,
+      "upside_below_10": 3,
+      "no_accumulation_support": 2
+    },
+    "trend_pullback": {
+      "upside_below_10": 1
+    },
+    "breakout_retest": {
+      "no_confirmed_retest": 1
+    },
+    "early_reversal__rs20_only": {
+      "stop_over_cap": 3,
+      "upside_below_10": 3,
+      "no_accumulation_support": 2
+    },
+    "early_reversal__no_extension_guard": {
+      "stop_over_cap": 5,
+      "no_accumulation_support": 5,
+      "upside_below_10": 6
+    },
+    "early_reversal__no_pattern_support": {
+      "stop_over_cap": 3,
+      "upside_below_10": 4
+    },
+    "trend_pullback__rs20_only": {
+      "upside_below_10": 1
+    },
+    "trend_pullback__no_extension_guard": {
+      "upside_below_10": 1
+    },
+    "trend_pullback__no_pattern_support": {
+      "upside_below_10": 1
+    },
+    "breakout_retest__rs20_only": {
+      "no_confirmed_retest": 2
+    },
+    "breakout_retest__no_extension_guard": {
+      "no_confirmed_retest": 4
+    },
+    "breakout_retest__no_pattern_support": {
+      "no_confirmed_retest": 1
+    },
+    "simple_breakout20": {},
+    "simple_ema50": {
+      "upside_below_10": 1
+    }
+  },
+  "engines": {
+    "early_reversal": {
+      "recorded_prospective": 2,
+      "closed_trades": 0,
+      "win_rate_pct": null
+    },
+    "trend_pullback": {
+      "recorded_prospective": 0,
+      "closed_trades": 0,
+      "win_rate_pct": null
+    },
+    "breakout_retest": {
+      "recorded_prospective": 0,
+      "closed_trades": 0,
+      "win_rate_pct": null
+    }
+  }
+}
