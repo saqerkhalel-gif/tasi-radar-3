@@ -90,12 +90,55 @@
       "live_order_authorized": false,
       "entry_date": "2026-11-08",
       "entry_price": 13.4
+    },
+    {
+      "id": "early_reversal:8180:2026-11-10",
+      "engine": "early_reversal",
+      "symbol": "8180",
+      "signal_date": "2026-11-10",
+      "recorded_utc": "2026-11-10T15:27:11.757903+00:00",
+      "source_run_id": "42842642581",
+      "source_run_url": "https://github.com/saqerkhalel-gif/tasi-radar-3/actions/runs/42842642581",
+      "source_price_date": "2026-11-10",
+      "status": "pending",
+      "scenario": {
+        "trigger": 9.46,
+        "invalidation": 8.884542,
+        "conditional_target": 11.07909,
+        "upside_pct": 17.115119,
+        "reward_risk": 2.813567,
+        "target_source": "nearest_confirmed_major_zone"
+      },
+      "features": {
+        "EMA20": 9.075091,
+        "EMA50": 9.628739,
+        "EMA200": 10.5278,
+        "RSI14": 54.979495,
+        "MACD": -0.179569,
+        "MACD_signal": -0.307819,
+        "ATR14": 0.383639,
+        "RS20": 0.928374,
+        "RS60": -9.127503,
+        "RS120": -8.192277,
+        "volume_ratio": 1.667475,
+        "gain5": 7.622299,
+        "extension_atr": 1.003312
+      },
+      "reasons": [
+        "early_reversal",
+        "bullish_price_and_1.5x_volume",
+        "confirmed_target_10pct_RR2",
+        "verified_vendor_checks_only_not_exchange_certification"
+      ],
+      "eligible_prospective": true,
+      "input_close_sha256": "9e694ffc0a835d56e6fd19acb75071e051f8b59461a8b712bf6b86b515c808a6",
+      "live_order_authorized": false
     }
   ],
-  "updated_utc": "2026-11-09T15:36:27.589183+00:00",
-  "source_run_id": "42644871668",
-  "source_price_date": "2026-11-09",
+  "updated_utc": "2026-11-10T15:27:11.757903+00:00",
+  "source_run_id": "42842642581",
+  "source_price_date": "2026-11-10",
   "live_strategy_changed": false,
   "paper_outcome_method": "Unit-notional after-cost hypothetical trades, no portfolio return claim; simultaneous names are not an investable capped portfolio.",
-  "new_observations": 0
+  "new_observations": 1
 }
