@@ -1,60 +1,60 @@
 {
-  "source_run_id": "42842642581",
-  "source_price_date": "2026-11-10",
-  "current_expected_session": "2026-11-10",
+  "source_run_id": "43047184632",
+  "source_price_date": "2026-11-11",
+  "current_expected_session": "2026-11-11",
   "benchmark_entry_eligible": true,
-  "updated_utc": "2026-11-10T15:27:11.757903+00:00",
+  "updated_utc": "2026-11-11T15:32:44.955431+00:00",
   "prospective_closed_trade_count": 0,
   "adopted": false,
   "signal_rejections": {
     "early_reversal": {
-      "stop_over_cap": 1,
-      "upside_below_10": 4
+      "upside_below_10": 2,
+      "no_accumulation_support": 5,
+      "stop_over_cap": 1
     },
-    "trend_pullback": {
-      "upside_below_10": 1
-    },
+    "trend_pullback": {},
     "breakout_retest": {
-      "no_confirmed_retest": 4
-    },
-    "early_reversal__rs20_only": {
-      "no_accumulation_support": 1,
-      "stop_over_cap": 1,
-      "upside_below_10": 4
-    },
-    "early_reversal__no_extension_guard": {
-      "stop_over_cap": 4,
-      "no_accumulation_support": 3,
-      "reward_risk_below_2": 3,
-      "upside_below_10": 9
-    },
-    "early_reversal__no_pattern_support": {
-      "stop_over_cap": 1,
-      "upside_below_10": 4
-    },
-    "trend_pullback__rs20_only": {
-      "upside_below_10": 1
-    },
-    "trend_pullback__no_extension_guard": {
-      "upside_below_10": 1,
       "no_structure_support": 1
     },
-    "trend_pullback__no_pattern_support": {
-      "upside_below_10": 1
+    "early_reversal__rs20_only": {
+      "stop_over_cap": 4,
+      "no_accumulation_support": 10,
+      "upside_below_10": 2
     },
+    "early_reversal__no_extension_guard": {
+      "upside_below_10": 8,
+      "no_accumulation_support": 7,
+      "stop_over_cap": 4,
+      "reward_risk_below_2": 1,
+      "quarantined_or_zero_volume": 1
+    },
+    "early_reversal__no_pattern_support": {
+      "upside_below_10": 4,
+      "stop_over_cap": 4
+    },
+    "trend_pullback__rs20_only": {},
+    "trend_pullback__no_extension_guard": {},
+    "trend_pullback__no_pattern_support": {},
     "breakout_retest__rs20_only": {
-      "no_confirmed_retest": 5
+      "upside_below_10": 2,
+      "no_structure_support": 1,
+      "no_confirmed_retest": 1
     },
     "breakout_retest__no_extension_guard": {
-      "no_confirmed_retest": 7,
+      "no_confirmed_retest": 1,
+      "stop_over_cap": 1,
+      "no_structure_support": 1,
       "upside_below_10": 1
     },
     "breakout_retest__no_pattern_support": {
-      "no_confirmed_retest": 4
+      "upside_below_10": 1
     },
-    "simple_breakout20": {},
+    "simple_breakout20": {
+      "upside_below_10": 2
+    },
     "simple_ema50": {
-      "upside_below_10": 4
+      "upside_below_10": 2,
+      "stop_over_cap": 1
     }
   },
   "engines": {
