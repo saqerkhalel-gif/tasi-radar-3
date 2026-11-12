@@ -1,60 +1,59 @@
 {
-  "source_run_id": "43047184632",
-  "source_price_date": "2026-11-11",
-  "current_expected_session": "2026-11-11",
+  "source_run_id": "43248032963",
+  "source_price_date": "2026-11-12",
+  "current_expected_session": "2026-11-12",
   "benchmark_entry_eligible": true,
-  "updated_utc": "2026-11-11T15:32:44.955431+00:00",
+  "updated_utc": "2026-11-12T15:41:44.808093+00:00",
   "prospective_closed_trade_count": 0,
   "adopted": false,
   "signal_rejections": {
     "early_reversal": {
-      "upside_below_10": 2,
-      "no_accumulation_support": 5,
-      "stop_over_cap": 1
+      "no_accumulation_support": 1
     },
-    "trend_pullback": {},
+    "trend_pullback": {
+      "upside_below_10": 1
+    },
     "breakout_retest": {
-      "no_structure_support": 1
-    },
-    "early_reversal__rs20_only": {
-      "stop_over_cap": 4,
-      "no_accumulation_support": 10,
-      "upside_below_10": 2
-    },
-    "early_reversal__no_extension_guard": {
-      "upside_below_10": 8,
-      "no_accumulation_support": 7,
-      "stop_over_cap": 4,
-      "reward_risk_below_2": 1,
-      "quarantined_or_zero_volume": 1
-    },
-    "early_reversal__no_pattern_support": {
-      "upside_below_10": 4,
-      "stop_over_cap": 4
-    },
-    "trend_pullback__rs20_only": {},
-    "trend_pullback__no_extension_guard": {},
-    "trend_pullback__no_pattern_support": {},
-    "breakout_retest__rs20_only": {
-      "upside_below_10": 2,
-      "no_structure_support": 1,
       "no_confirmed_retest": 1
     },
-    "breakout_retest__no_extension_guard": {
-      "no_confirmed_retest": 1,
+    "early_reversal__rs20_only": {
+      "quarantined_or_zero_volume": 1,
+      "no_accumulation_support": 1,
+      "incomplete_calendar_history": 1
+    },
+    "early_reversal__no_extension_guard": {
+      "upside_below_10": 3,
+      "no_accumulation_support": 2,
       "stop_over_cap": 1,
-      "no_structure_support": 1,
+      "invalid_levels": 1
+    },
+    "early_reversal__no_pattern_support": {
+      "upside_below_10": 1
+    },
+    "trend_pullback__rs20_only": {
+      "upside_below_10": 1
+    },
+    "trend_pullback__no_extension_guard": {
+      "upside_below_10": 2,
+      "invalid_levels": 1
+    },
+    "trend_pullback__no_pattern_support": {
+      "upside_below_10": 1
+    },
+    "breakout_retest__rs20_only": {
+      "no_confirmed_retest": 1,
+      "incomplete_calendar_history": 1
+    },
+    "breakout_retest__no_extension_guard": {
+      "no_confirmed_retest": 7,
       "upside_below_10": 1
     },
     "breakout_retest__no_pattern_support": {
-      "upside_below_10": 1
+      "no_confirmed_retest": 1
     },
-    "simple_breakout20": {
-      "upside_below_10": 2
-    },
+    "simple_breakout20": {},
     "simple_ema50": {
-      "upside_below_10": 2,
-      "stop_over_cap": 1
+      "incomplete_calendar_history": 1
     }
   },
   "engines": {
