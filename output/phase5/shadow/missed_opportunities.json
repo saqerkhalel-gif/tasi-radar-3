@@ -263,6 +263,35 @@
       "note": "Future daily high is an outcome bound, not a guaranteed tradable return. Reasons were evaluated using prior-session features only; no thresholds optimized from this review."
     },
     {
+      "symbol": "1325",
+      "prior_signal_date": "2026-10-06",
+      "outcome_start": "2026-10-07",
+      "outcome_end": "2026-11-03",
+      "prior_close": 2.0,
+      "maximum_future_high_gain_pct": 94.000006,
+      "threshold8": true,
+      "threshold10": true,
+      "prior_data_vendor_window_eligible": true,
+      "independently_validated_history": false,
+      "engine_reasons": {
+        "failed_breakdown": "volume_below1.5x;bullish_close_not_confirmed;no_prior_failed_breakdown_reclaim;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "base_contraction": "volume_below1.5x;bullish_close_not_confirmed;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "controlled_pullback": "volume_below1.5x;bullish_close_not_confirmed;registered_price_momentum_RS_trigger_not_fully_confirmed"
+      },
+      "prior_gate_values": {
+        "volume_ratio": 0.258498,
+        "gain5_pct": 6.382979,
+        "ema20_extension_atr": 1.712745,
+        "rs20": 6.507782
+      },
+      "recorded_core_signals_before_first8pct_touch": [],
+      "no_recorded_core_signal_before8pct_touch": true,
+      "missed_by_all_three": true,
+      "guaranteed_entry_or_profit": false,
+      "overlap_policy": "At most one event per symbol per20-session outcome horizon",
+      "note": "Future daily high is an outcome bound, not a guaranteed tradable return. Reasons were evaluated using prior-session features only; no thresholds optimized from this review."
+    },
+    {
       "symbol": "1810",
       "prior_signal_date": "2026-10-15",
       "outcome_start": "2026-10-18",
@@ -612,11 +641,11 @@
     },
     {
       "symbol": "2130",
-      "prior_signal_date": "2026-09-17",
-      "outcome_start": "2026-09-20",
-      "outcome_end": "2026-10-18",
-      "prior_close": 16.110001,
-      "maximum_future_high_gain_pct": 10.49037,
+      "prior_signal_date": "2026-09-20",
+      "outcome_start": "2026-09-21",
+      "outcome_end": "2026-10-19",
+      "prior_close": 15.9,
+      "maximum_future_high_gain_pct": 11.949683,
       "threshold8": true,
       "threshold10": true,
       "prior_data_vendor_window_eligible": true,
@@ -627,10 +656,10 @@
         "controlled_pullback": "volume_below1.5x;bullish_close_not_confirmed;registered_price_momentum_RS_trigger_not_fully_confirmed"
       },
       "prior_gate_values": {
-        "volume_ratio": 0.266247,
-        "gain5_pct": -5.954458,
-        "ema20_extension_atr": -0.507331,
-        "rs20": 0.567168
+        "volume_ratio": 0.370901,
+        "gain5_pct": -4.790426,
+        "ema20_extension_atr": -0.8487,
+        "rs20": 0.218904
       },
       "recorded_core_signals_before_first8pct_touch": [],
       "no_recorded_core_signal_before8pct_touch": true,
@@ -641,25 +670,25 @@
     },
     {
       "symbol": "2140",
-      "prior_signal_date": "2026-09-17",
-      "outcome_start": "2026-09-20",
-      "outcome_end": "2026-10-18",
-      "prior_close": 8.82,
-      "maximum_future_high_gain_pct": 12.244898,
+      "prior_signal_date": "2026-09-20",
+      "outcome_start": "2026-09-21",
+      "outcome_end": "2026-10-19",
+      "prior_close": 8.5,
+      "maximum_future_high_gain_pct": 16.470584,
       "threshold8": true,
       "threshold10": true,
       "prior_data_vendor_window_eligible": true,
       "independently_validated_history": false,
       "engine_reasons": {
-        "failed_breakdown": "volume_below1.5x;no_prior_failed_breakdown_reclaim;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "base_contraction": "volume_below1.5x;base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "controlled_pullback": "volume_below1.5x;registered_price_momentum_RS_trigger_not_fully_confirmed"
+        "failed_breakdown": "bullish_close_not_confirmed;no_prior_failed_breakdown_reclaim;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "base_contraction": "bullish_close_not_confirmed;base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "controlled_pullback": "bullish_close_not_confirmed;registered_price_momentum_RS_trigger_not_fully_confirmed"
       },
       "prior_gate_values": {
-        "volume_ratio": 0.808715,
-        "gain5_pct": -7.740593,
-        "ema20_extension_atr": -2.233871,
-        "rs20": -1.252044
+        "volume_ratio": 1.959055,
+        "gain5_pct": -9.284951,
+        "ema20_extension_atr": -2.696018,
+        "rs20": -4.234037
       },
       "recorded_core_signals_before_first8pct_touch": [],
       "no_recorded_core_signal_before8pct_touch": true,
@@ -699,25 +728,25 @@
     },
     {
       "symbol": "2180",
-      "prior_signal_date": "2026-09-17",
-      "outcome_start": "2026-09-20",
-      "outcome_end": "2026-10-18",
-      "prior_close": 34.540001,
-      "maximum_future_high_gain_pct": 15.807756,
+      "prior_signal_date": "2026-09-20",
+      "outcome_start": "2026-09-21",
+      "outcome_end": "2026-10-19",
+      "prior_close": 34.279999,
+      "maximum_future_high_gain_pct": 16.686119,
       "threshold8": true,
       "threshold10": true,
       "prior_data_vendor_window_eligible": true,
       "independently_validated_history": false,
       "engine_reasons": {
-        "failed_breakdown": "no_prior_failed_breakdown_reclaim;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "base_contraction": "base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "controlled_pullback": "registered_price_momentum_RS_trigger_not_fully_confirmed"
+        "failed_breakdown": "volume_below1.5x;bullish_close_not_confirmed;no_prior_failed_breakdown_reclaim;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "base_contraction": "volume_below1.5x;bullish_close_not_confirmed;base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "controlled_pullback": "volume_below1.5x;bullish_close_not_confirmed;registered_price_momentum_RS_trigger_not_fully_confirmed"
       },
       "prior_gate_values": {
-        "volume_ratio": 2.013645,
-        "gain5_pct": -1.539341,
-        "ema20_extension_atr": -0.383013,
-        "rs20": 5.335123
+        "volume_ratio": 0.205401,
+        "gain5_pct": -2.447355,
+        "ema20_extension_atr": -0.612197,
+        "rs20": 3.97297
       },
       "recorded_core_signals_before_first8pct_touch": [],
       "no_recorded_core_signal_before8pct_touch": true,
@@ -805,6 +834,35 @@
         "gain5_pct": -3.082197,
         "ema20_extension_atr": -2.223053,
         "rs20": -2.527909
+      },
+      "recorded_core_signals_before_first8pct_touch": [],
+      "no_recorded_core_signal_before8pct_touch": true,
+      "missed_by_all_three": true,
+      "guaranteed_entry_or_profit": false,
+      "overlap_policy": "At most one event per symbol per20-session outcome horizon",
+      "note": "Future daily high is an outcome bound, not a guaranteed tradable return. Reasons were evaluated using prior-session features only; no thresholds optimized from this review."
+    },
+    {
+      "symbol": "2270",
+      "prior_signal_date": "2026-10-18",
+      "outcome_start": "2026-10-19",
+      "outcome_end": "2026-11-15",
+      "prior_close": 170.5,
+      "maximum_future_high_gain_pct": 8.621699,
+      "threshold8": true,
+      "threshold10": false,
+      "prior_data_vendor_window_eligible": true,
+      "independently_validated_history": false,
+      "engine_reasons": {
+        "failed_breakdown": "bullish_close_not_confirmed;no_prior_failed_breakdown_reclaim;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "base_contraction": "bullish_close_not_confirmed;base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "controlled_pullback": "bullish_close_not_confirmed;registered_price_momentum_RS_trigger_not_fully_confirmed"
+      },
+      "prior_gate_values": {
+        "volume_ratio": 2.285825,
+        "gain5_pct": -6.932313,
+        "ema20_extension_atr": -3.670527,
+        "rs20": -8.691873
       },
       "recorded_core_signals_before_first8pct_touch": [],
       "no_recorded_core_signal_before8pct_touch": true,
@@ -902,25 +960,25 @@
     },
     {
       "symbol": "2287",
-      "prior_signal_date": "2026-09-17",
-      "outcome_start": "2026-09-20",
-      "outcome_end": "2026-10-18",
-      "prior_close": 20.34,
-      "maximum_future_high_gain_pct": 15.044245,
+      "prior_signal_date": "2026-09-20",
+      "outcome_start": "2026-09-21",
+      "outcome_end": "2026-10-19",
+      "prior_close": 21.290001,
+      "maximum_future_high_gain_pct": 9.91075,
       "threshold8": true,
-      "threshold10": true,
+      "threshold10": false,
       "prior_data_vendor_window_eligible": true,
       "independently_validated_history": false,
       "engine_reasons": {
-        "failed_breakdown": "volume_below1.5x;bullish_close_not_confirmed;no_prior_failed_breakdown_reclaim;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "base_contraction": "volume_below1.5x;bullish_close_not_confirmed;base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "controlled_pullback": "volume_below1.5x;bullish_close_not_confirmed;registered_price_momentum_RS_trigger_not_fully_confirmed"
+        "failed_breakdown": "registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "base_contraction": "base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "controlled_pullback": "registered_price_momentum_RS_trigger_not_fully_confirmed"
       },
       "prior_gate_values": {
-        "volume_ratio": 1.412679,
-        "gain5_pct": -9.960159,
-        "ema20_extension_atr": -3.88056,
-        "rs20": -10.791703
+        "volume_ratio": 6.80402,
+        "gain5_pct": -4.14227,
+        "ema20_extension_atr": -1.440581,
+        "rs20": -5.655401
       },
       "recorded_core_signals_before_first8pct_touch": [],
       "no_recorded_core_signal_before8pct_touch": true,
@@ -931,25 +989,25 @@
     },
     {
       "symbol": "2288",
-      "prior_signal_date": "2026-09-17",
-      "outcome_start": "2026-09-20",
-      "outcome_end": "2026-10-18",
-      "prior_close": 6.65,
-      "maximum_future_high_gain_pct": 12.932333,
+      "prior_signal_date": "2026-10-14",
+      "outcome_start": "2026-10-15",
+      "outcome_end": "2026-11-11",
+      "prior_close": 5.9,
+      "maximum_future_high_gain_pct": 12.711864,
       "threshold8": true,
       "threshold10": true,
       "prior_data_vendor_window_eligible": true,
       "independently_validated_history": false,
       "engine_reasons": {
-        "failed_breakdown": "no_prior_failed_breakdown_reclaim;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "base_contraction": "base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "controlled_pullback": "no_confirmed_higher_lows"
+        "failed_breakdown": "volume_below1.5x;bullish_close_not_confirmed;no_prior_failed_breakdown_reclaim;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "base_contraction": "volume_below1.5x;bullish_close_not_confirmed;base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "controlled_pullback": "volume_below1.5x;bullish_close_not_confirmed;registered_price_momentum_RS_trigger_not_fully_confirmed"
       },
       "prior_gate_values": {
-        "volume_ratio": 23.495599,
-        "gain5_pct": 7.085347,
-        "ema20_extension_atr": 1.979833,
-        "rs20": 9.72616
+        "volume_ratio": 0.293927,
+        "gain5_pct": -3.908791,
+        "ema20_extension_atr": -1.034499,
+        "rs20": 4.624114
       },
       "recorded_core_signals_before_first8pct_touch": [],
       "no_recorded_core_signal_before8pct_touch": true,
@@ -1047,13 +1105,13 @@
     },
     {
       "symbol": "2360",
-      "prior_signal_date": "2026-09-17",
-      "outcome_start": "2026-09-20",
-      "outcome_end": "2026-10-18",
-      "prior_close": 57.782791,
-      "maximum_future_high_gain_pct": 8.400003,
+      "prior_signal_date": "2026-09-20",
+      "outcome_start": "2026-09-21",
+      "outcome_end": "2026-10-19",
+      "prior_close": 56.164875,
+      "maximum_future_high_gain_pct": 11.522632,
       "threshold8": true,
-      "threshold10": false,
+      "threshold10": true,
       "prior_data_vendor_window_eligible": true,
       "independently_validated_history": false,
       "engine_reasons": {
@@ -1062,10 +1120,10 @@
         "controlled_pullback": "volume_below1.5x;bullish_close_not_confirmed;registered_price_momentum_RS_trigger_not_fully_confirmed"
       },
       "prior_gate_values": {
-        "volume_ratio": 0.719263,
-        "gain5_pct": -10.714289,
-        "ema20_extension_atr": -1.936699,
-        "rs20": 0.817745
+        "volume_ratio": 0.775487,
+        "gain5_pct": -11.406247,
+        "ema20_extension_atr": -2.230942,
+        "rs20": -9.348382
       },
       "recorded_core_signals_before_first8pct_touch": [],
       "no_recorded_core_signal_before8pct_touch": true,
@@ -1105,25 +1163,25 @@
     },
     {
       "symbol": "2381",
-      "prior_signal_date": "2026-09-17",
-      "outcome_start": "2026-09-20",
-      "outcome_end": "2026-10-18",
-      "prior_close": 93.300003,
-      "maximum_future_high_gain_pct": 9.217576,
+      "prior_signal_date": "2026-09-20",
+      "outcome_start": "2026-09-21",
+      "outcome_end": "2026-10-19",
+      "prior_close": 92.900002,
+      "maximum_future_high_gain_pct": 9.687836,
       "threshold8": true,
       "threshold10": false,
       "prior_data_vendor_window_eligible": true,
       "independently_validated_history": false,
       "engine_reasons": {
-        "failed_breakdown": "volume_below1.5x;no_prior_failed_breakdown_reclaim;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "base_contraction": "volume_below1.5x;base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "controlled_pullback": "volume_below1.5x;registered_price_momentum_RS_trigger_not_fully_confirmed"
+        "failed_breakdown": "volume_below1.5x;bullish_close_not_confirmed;no_prior_failed_breakdown_reclaim;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "base_contraction": "volume_below1.5x;bullish_close_not_confirmed;base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "controlled_pullback": "volume_below1.5x;bullish_close_not_confirmed;registered_price_momentum_RS_trigger_not_fully_confirmed"
       },
       "prior_gate_values": {
-        "volume_ratio": 0.462326,
-        "gain5_pct": -3.215766,
-        "ema20_extension_atr": -0.117676,
-        "rs20": 8.976183
+        "volume_ratio": 0.350581,
+        "gain5_pct": -0.694817,
+        "ema20_extension_atr": -0.28011,
+        "rs20": 8.240325
       },
       "recorded_core_signals_before_first8pct_touch": [],
       "no_recorded_core_signal_before8pct_touch": true,
@@ -1163,9 +1221,9 @@
     },
     {
       "symbol": "3002",
-      "prior_signal_date": "2026-09-17",
-      "outcome_start": "2026-09-20",
-      "outcome_end": "2026-10-18",
+      "prior_signal_date": "2026-09-20",
+      "outcome_start": "2026-09-21",
+      "outcome_end": "2026-10-19",
       "prior_close": 5.4,
       "maximum_future_high_gain_pct": 11.666669,
       "threshold8": true,
@@ -1178,10 +1236,10 @@
         "controlled_pullback": "volume_below1.5x;bullish_close_not_confirmed;registered_price_momentum_RS_trigger_not_fully_confirmed"
       },
       "prior_gate_values": {
-        "volume_ratio": 0.683842,
-        "gain5_pct": -6.574396,
-        "ema20_extension_atr": -1.665091,
-        "rs20": -0.739422
+        "volume_ratio": 0.622555,
+        "gain5_pct": -4.929573,
+        "ema20_extension_atr": -1.536711,
+        "rs20": -0.772114
       },
       "recorded_core_signals_before_first8pct_touch": [],
       "no_recorded_core_signal_before8pct_touch": true,
@@ -1395,25 +1453,25 @@
     },
     {
       "symbol": "4014",
-      "prior_signal_date": "2026-09-17",
-      "outcome_start": "2026-09-20",
-      "outcome_end": "2026-10-18",
-      "prior_close": 26.48,
-      "maximum_future_high_gain_pct": 8.836859,
+      "prior_signal_date": "2026-09-20",
+      "outcome_start": "2026-09-21",
+      "outcome_end": "2026-10-19",
+      "prior_close": 26.200001,
+      "maximum_future_high_gain_pct": 9.999996,
       "threshold8": true,
       "threshold10": false,
       "prior_data_vendor_window_eligible": true,
       "independently_validated_history": false,
       "engine_reasons": {
-        "failed_breakdown": "volume_below1.5x;bullish_close_not_confirmed;no_prior_failed_breakdown_reclaim;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "base_contraction": "volume_below1.5x;bullish_close_not_confirmed;base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "controlled_pullback": "volume_below1.5x;bullish_close_not_confirmed;registered_price_momentum_RS_trigger_not_fully_confirmed"
+        "failed_breakdown": "volume_below1.5x;no_prior_failed_breakdown_reclaim;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "base_contraction": "volume_below1.5x;base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "controlled_pullback": "volume_below1.5x;registered_price_momentum_RS_trigger_not_fully_confirmed"
       },
       "prior_gate_values": {
-        "volume_ratio": 0.649659,
-        "gain5_pct": -4.816679,
-        "ema20_extension_atr": -2.556149,
-        "rs20": -3.136806
+        "volume_ratio": 0.6212,
+        "gain5_pct": -4.379558,
+        "ema20_extension_atr": -2.888579,
+        "rs20": -2.919601
       },
       "recorded_core_signals_before_first8pct_touch": [],
       "no_recorded_core_signal_before8pct_touch": true,
@@ -2032,35 +2090,6 @@
       "note": "Future daily high is an outcome bound, not a guaranteed tradable return. Reasons were evaluated using prior-session features only; no thresholds optimized from this review."
     },
     {
-      "symbol": "4250",
-      "prior_signal_date": "2026-09-17",
-      "outcome_start": "2026-09-20",
-      "outcome_end": "2026-10-18",
-      "prior_close": 17.059999,
-      "maximum_future_high_gain_pct": 9.964835,
-      "threshold8": true,
-      "threshold10": false,
-      "prior_data_vendor_window_eligible": true,
-      "independently_validated_history": false,
-      "engine_reasons": {
-        "failed_breakdown": "volume_below1.5x;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "base_contraction": "volume_below1.5x;base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "controlled_pullback": "volume_below1.5x;registered_price_momentum_RS_trigger_not_fully_confirmed"
-      },
-      "prior_gate_values": {
-        "volume_ratio": 1.095894,
-        "gain5_pct": -3.397511,
-        "ema20_extension_atr": -1.737932,
-        "rs20": -7.595638
-      },
-      "recorded_core_signals_before_first8pct_touch": [],
-      "no_recorded_core_signal_before8pct_touch": true,
-      "missed_by_all_three": true,
-      "guaranteed_entry_or_profit": false,
-      "overlap_policy": "At most one event per symbol per20-session outcome horizon",
-      "note": "Future daily high is an outcome bound, not a guaranteed tradable return. Reasons were evaluated using prior-session features only; no thresholds optimized from this review."
-    },
-    {
       "symbol": "4260",
       "prior_signal_date": "2026-10-12",
       "outcome_start": "2026-10-13",
@@ -2178,25 +2207,25 @@
     },
     {
       "symbol": "4280",
-      "prior_signal_date": "2026-09-17",
-      "outcome_start": "2026-09-20",
-      "outcome_end": "2026-10-18",
-      "prior_close": 13.031923,
-      "maximum_future_high_gain_pct": 8.042379,
+      "prior_signal_date": "2026-09-20",
+      "outcome_start": "2026-09-21",
+      "outcome_end": "2026-10-19",
+      "prior_close": 12.64395,
+      "maximum_future_high_gain_pct": 11.35761,
       "threshold8": true,
-      "threshold10": false,
+      "threshold10": true,
       "prior_data_vendor_window_eligible": true,
       "independently_validated_history": false,
       "engine_reasons": {
-        "failed_breakdown": "volume_below1.5x;no_prior_failed_breakdown_reclaim;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "base_contraction": "volume_below1.5x;base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "controlled_pullback": "volume_below1.5x;registered_price_momentum_RS_trigger_not_fully_confirmed"
+        "failed_breakdown": "volume_below1.5x;bullish_close_not_confirmed;no_prior_failed_breakdown_reclaim;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "base_contraction": "volume_below1.5x;bullish_close_not_confirmed;base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "controlled_pullback": "volume_below1.5x;bullish_close_not_confirmed;registered_price_momentum_RS_trigger_not_fully_confirmed"
       },
       "prior_gate_values": {
-        "volume_ratio": 0.431941,
-        "gain5_pct": -4.239762,
-        "ema20_extension_atr": -0.988099,
-        "rs20": -5.083754
+        "volume_ratio": 0.921591,
+        "gain5_pct": -5.007474,
+        "ema20_extension_atr": -1.624666,
+        "rs20": -5.721324
       },
       "recorded_core_signals_before_first8pct_touch": [],
       "no_recorded_core_signal_before8pct_touch": true,
@@ -2236,11 +2265,11 @@
     },
     {
       "symbol": "4310",
-      "prior_signal_date": "2026-09-17",
-      "outcome_start": "2026-09-20",
-      "outcome_end": "2026-10-18",
-      "prior_close": 18.879999,
-      "maximum_future_high_gain_pct": 22.98729,
+      "prior_signal_date": "2026-09-20",
+      "outcome_start": "2026-09-21",
+      "outcome_end": "2026-10-19",
+      "prior_close": 19.700001,
+      "maximum_future_high_gain_pct": 17.868012,
       "threshold8": true,
       "threshold10": true,
       "prior_data_vendor_window_eligible": true,
@@ -2251,10 +2280,10 @@
         "controlled_pullback": "volume_below1.5x;registered_price_momentum_RS_trigger_not_fully_confirmed"
       },
       "prior_gate_values": {
-        "volume_ratio": 0.279238,
-        "gain5_pct": -5.07793,
-        "ema20_extension_atr": 0.122885,
-        "rs20": 6.093959
+        "volume_ratio": 0.726247,
+        "gain5_pct": 4.343229,
+        "ema20_extension_atr": 1.065105,
+        "rs20": 12.41565
       },
       "recorded_core_signals_before_first8pct_touch": [],
       "no_recorded_core_signal_before8pct_touch": true,
@@ -2352,25 +2381,25 @@
     },
     {
       "symbol": "4327",
-      "prior_signal_date": "2026-09-17",
-      "outcome_start": "2026-09-20",
-      "outcome_end": "2026-10-18",
-      "prior_close": 52.0,
-      "maximum_future_high_gain_pct": 8.076925,
+      "prior_signal_date": "2026-09-20",
+      "outcome_start": "2026-09-21",
+      "outcome_end": "2026-10-19",
+      "prior_close": 51.0,
+      "maximum_future_high_gain_pct": 10.19608,
       "threshold8": true,
-      "threshold10": false,
+      "threshold10": true,
       "prior_data_vendor_window_eligible": true,
       "independently_validated_history": false,
       "engine_reasons": {
-        "failed_breakdown": "volume_below1.5x;no_prior_failed_breakdown_reclaim;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "base_contraction": "volume_below1.5x;base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "controlled_pullback": "volume_below1.5x;registered_price_momentum_RS_trigger_not_fully_confirmed"
+        "failed_breakdown": "volume_below1.5x;bullish_close_not_confirmed;no_prior_failed_breakdown_reclaim;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "base_contraction": "volume_below1.5x;bullish_close_not_confirmed;base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "controlled_pullback": "volume_below1.5x;bullish_close_not_confirmed;registered_price_momentum_RS_trigger_not_fully_confirmed"
       },
       "prior_gate_values": {
-        "volume_ratio": 0.857373,
-        "gain5_pct": -3.970455,
-        "ema20_extension_atr": 0.022106,
-        "rs20": 3.9736
+        "volume_ratio": 0.237982,
+        "gain5_pct": -2.94957,
+        "ema20_extension_atr": -0.60106,
+        "rs20": 2.77551
       },
       "recorded_core_signals_before_first8pct_touch": [],
       "no_recorded_core_signal_before8pct_touch": true,
@@ -2381,11 +2410,11 @@
     },
     {
       "symbol": "4328",
-      "prior_signal_date": "2026-09-17",
-      "outcome_start": "2026-09-20",
-      "outcome_end": "2026-10-18",
-      "prior_close": 1.8,
-      "maximum_future_high_gain_pct": 13.888889,
+      "prior_signal_date": "2026-09-20",
+      "outcome_start": "2026-09-21",
+      "outcome_end": "2026-10-19",
+      "prior_close": 1.66,
+      "maximum_future_high_gain_pct": 31.325308,
       "threshold8": true,
       "threshold10": true,
       "prior_data_vendor_window_eligible": true,
@@ -2396,10 +2425,10 @@
         "controlled_pullback": "bullish_close_not_confirmed;registered_price_momentum_RS_trigger_not_fully_confirmed"
       },
       "prior_gate_values": {
-        "volume_ratio": 4.336598,
-        "gain5_pct": -13.043478,
-        "ema20_extension_atr": -4.430351,
-        "rs20": -22.117418
+        "volume_ratio": 3.12468,
+        "gain5_pct": -19.02439,
+        "ema20_extension_atr": -5.255565,
+        "rs20": -27.280904
       },
       "recorded_core_signals_before_first8pct_touch": [],
       "no_recorded_core_signal_before8pct_touch": true,
@@ -2410,25 +2439,25 @@
     },
     {
       "symbol": "6012",
-      "prior_signal_date": "2026-09-17",
-      "outcome_start": "2026-09-20",
-      "outcome_end": "2026-10-18",
-      "prior_close": 16.51,
-      "maximum_future_high_gain_pct": 21.138702,
+      "prior_signal_date": "2026-09-20",
+      "outcome_start": "2026-09-21",
+      "outcome_end": "2026-10-19",
+      "prior_close": 16.01,
+      "maximum_future_high_gain_pct": 24.921922,
       "threshold8": true,
       "threshold10": true,
       "prior_data_vendor_window_eligible": true,
       "independently_validated_history": false,
       "engine_reasons": {
-        "failed_breakdown": "bullish_close_not_confirmed;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "base_contraction": "bullish_close_not_confirmed;base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "controlled_pullback": "bullish_close_not_confirmed;registered_price_momentum_RS_trigger_not_fully_confirmed"
+        "failed_breakdown": "volume_below1.5x;bullish_close_not_confirmed;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "base_contraction": "volume_below1.5x;bullish_close_not_confirmed;base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "controlled_pullback": "volume_below1.5x;bullish_close_not_confirmed;registered_price_momentum_RS_trigger_not_fully_confirmed"
       },
       "prior_gate_values": {
-        "volume_ratio": 2.90817,
-        "gain5_pct": 3.836482,
-        "ema20_extension_atr": 0.640341,
-        "rs20": -2.622942
+        "volume_ratio": 0.486343,
+        "gain5_pct": 3.893578,
+        "ema20_extension_atr": -0.017241,
+        "rs20": -7.185922
       },
       "recorded_core_signals_before_first8pct_touch": [],
       "no_recorded_core_signal_before8pct_touch": true,
@@ -2642,25 +2671,25 @@
     },
     {
       "symbol": "7201",
-      "prior_signal_date": "2026-09-17",
-      "outcome_start": "2026-09-20",
-      "outcome_end": "2026-10-18",
-      "prior_close": 3.64,
-      "maximum_future_high_gain_pct": 21.97802,
+      "prior_signal_date": "2026-09-20",
+      "outcome_start": "2026-09-21",
+      "outcome_end": "2026-10-19",
+      "prior_close": 3.54,
+      "maximum_future_high_gain_pct": 25.423732,
       "threshold8": true,
       "threshold10": true,
       "prior_data_vendor_window_eligible": true,
       "independently_validated_history": false,
       "engine_reasons": {
-        "failed_breakdown": "volume_below1.5x;no_prior_failed_breakdown_reclaim;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "base_contraction": "volume_below1.5x;base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "controlled_pullback": "volume_below1.5x;registered_price_momentum_RS_trigger_not_fully_confirmed"
+        "failed_breakdown": "volume_below1.5x;bullish_close_not_confirmed;no_prior_failed_breakdown_reclaim;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "base_contraction": "volume_below1.5x;bullish_close_not_confirmed;base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "controlled_pullback": "volume_below1.5x;bullish_close_not_confirmed;registered_price_momentum_RS_trigger_not_fully_confirmed"
       },
       "prior_gate_values": {
-        "volume_ratio": 0.361192,
-        "gain5_pct": -8.312341,
-        "ema20_extension_atr": -0.672642,
-        "rs20": 5.315101
+        "volume_ratio": 0.416775,
+        "gain5_pct": -6.842105,
+        "ema20_extension_atr": -1.391458,
+        "rs20": 4.114058
       },
       "recorded_core_signals_before_first8pct_touch": [],
       "no_recorded_core_signal_before8pct_touch": true,
@@ -2700,25 +2729,25 @@
     },
     {
       "symbol": "7211",
-      "prior_signal_date": "2026-09-17",
-      "outcome_start": "2026-09-20",
-      "outcome_end": "2026-10-18",
-      "prior_close": 27.620001,
-      "maximum_future_high_gain_pct": 17.306302,
+      "prior_signal_date": "2026-09-20",
+      "outcome_start": "2026-09-21",
+      "outcome_end": "2026-10-19",
+      "prior_close": 26.700001,
+      "maximum_future_high_gain_pct": 21.348317,
       "threshold8": true,
       "threshold10": true,
       "prior_data_vendor_window_eligible": true,
       "independently_validated_history": false,
       "engine_reasons": {
-        "failed_breakdown": "volume_below1.5x;no_prior_failed_breakdown_reclaim;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "base_contraction": "volume_below1.5x;base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "controlled_pullback": "volume_below1.5x;registered_price_momentum_RS_trigger_not_fully_confirmed"
+        "failed_breakdown": "volume_below1.5x;bullish_close_not_confirmed;no_prior_failed_breakdown_reclaim;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "base_contraction": "volume_below1.5x;bullish_close_not_confirmed;base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "controlled_pullback": "volume_below1.5x;bullish_close_not_confirmed;registered_price_momentum_RS_trigger_not_fully_confirmed"
       },
       "prior_gate_values": {
-        "volume_ratio": 0.36809,
-        "gain5_pct": -0.288808,
-        "ema20_extension_atr": 1.079384,
-        "rs20": 19.343713
+        "volume_ratio": 0.486374,
+        "gain5_pct": -5.25195,
+        "ema20_extension_atr": 0.011053,
+        "rs20": 9.430535
       },
       "recorded_core_signals_before_first8pct_touch": [],
       "no_recorded_core_signal_before8pct_touch": true,
@@ -2758,25 +2787,25 @@
     },
     {
       "symbol": "8050",
-      "prior_signal_date": "2026-09-17",
-      "outcome_start": "2026-09-20",
-      "outcome_end": "2026-10-18",
-      "prior_close": 7.4,
-      "maximum_future_high_gain_pct": 9.459463,
+      "prior_signal_date": "2026-09-20",
+      "outcome_start": "2026-09-21",
+      "outcome_end": "2026-10-19",
+      "prior_close": 7.02,
+      "maximum_future_high_gain_pct": 15.384621,
       "threshold8": true,
-      "threshold10": false,
+      "threshold10": true,
       "prior_data_vendor_window_eligible": true,
       "independently_validated_history": false,
       "engine_reasons": {
-        "failed_breakdown": "bullish_close_not_confirmed;no_prior_failed_breakdown_reclaim;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "base_contraction": "bullish_close_not_confirmed;base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "controlled_pullback": "bullish_close_not_confirmed;registered_price_momentum_RS_trigger_not_fully_confirmed"
+        "failed_breakdown": "volume_below1.5x;bullish_close_not_confirmed;no_prior_failed_breakdown_reclaim;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "base_contraction": "volume_below1.5x;bullish_close_not_confirmed;base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "controlled_pullback": "volume_below1.5x;bullish_close_not_confirmed;registered_price_momentum_RS_trigger_not_fully_confirmed"
       },
       "prior_gate_values": {
-        "volume_ratio": 2.739789,
-        "gain5_pct": -12.941175,
-        "ema20_extension_atr": -3.661204,
-        "rs20": -14.297697
+        "volume_ratio": 0.780918,
+        "gain5_pct": -14.702304,
+        "ema20_extension_atr": -4.451004,
+        "rs20": -17.165317
       },
       "recorded_core_signals_before_first8pct_touch": [],
       "no_recorded_core_signal_before8pct_touch": true,
@@ -2961,40 +2990,11 @@
     },
     {
       "symbol": "8310",
-      "prior_signal_date": "2026-09-17",
-      "outcome_start": "2026-09-20",
-      "outcome_end": "2026-10-18",
-      "prior_close": 6.65,
-      "maximum_future_high_gain_pct": 8.1203,
-      "threshold8": true,
-      "threshold10": false,
-      "prior_data_vendor_window_eligible": true,
-      "independently_validated_history": false,
-      "engine_reasons": {
-        "failed_breakdown": "volume_below1.5x;bullish_close_not_confirmed;no_prior_failed_breakdown_reclaim;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "base_contraction": "volume_below1.5x;bullish_close_not_confirmed;base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
-        "controlled_pullback": "volume_below1.5x;bullish_close_not_confirmed;registered_price_momentum_RS_trigger_not_fully_confirmed"
-      },
-      "prior_gate_values": {
-        "volume_ratio": 0.681438,
-        "gain5_pct": -12.499998,
-        "ema20_extension_atr": -2.812499,
-        "rs20": -8.280205
-      },
-      "recorded_core_signals_before_first8pct_touch": [],
-      "no_recorded_core_signal_before8pct_touch": true,
-      "missed_by_all_three": true,
-      "guaranteed_entry_or_profit": false,
-      "overlap_policy": "At most one event per symbol per20-session outcome horizon",
-      "note": "Future daily high is an outcome bound, not a guaranteed tradable return. Reasons were evaluated using prior-session features only; no thresholds optimized from this review."
-    },
-    {
-      "symbol": "8311",
-      "prior_signal_date": "2026-09-17",
-      "outcome_start": "2026-09-20",
-      "outcome_end": "2026-10-18",
-      "prior_close": 9.35,
-      "maximum_future_high_gain_pct": 25.775398,
+      "prior_signal_date": "2026-09-20",
+      "outcome_start": "2026-09-21",
+      "outcome_end": "2026-10-19",
+      "prior_close": 6.22,
+      "maximum_future_high_gain_pct": 15.59486,
       "threshold8": true,
       "threshold10": true,
       "prior_data_vendor_window_eligible": true,
@@ -3005,10 +3005,39 @@
         "controlled_pullback": "volume_below1.5x;bullish_close_not_confirmed;registered_price_momentum_RS_trigger_not_fully_confirmed"
       },
       "prior_gate_values": {
-        "volume_ratio": 0.220988,
-        "gain5_pct": -10.096147,
-        "ema20_extension_atr": -2.317173,
-        "rs20": -1.094113
+        "volume_ratio": 0.67166,
+        "gain5_pct": -16.510068,
+        "ema20_extension_atr": -3.727383,
+        "rs20": -11.823324
+      },
+      "recorded_core_signals_before_first8pct_touch": [],
+      "no_recorded_core_signal_before8pct_touch": true,
+      "missed_by_all_three": true,
+      "guaranteed_entry_or_profit": false,
+      "overlap_policy": "At most one event per symbol per20-session outcome horizon",
+      "note": "Future daily high is an outcome bound, not a guaranteed tradable return. Reasons were evaluated using prior-session features only; no thresholds optimized from this review."
+    },
+    {
+      "symbol": "8311",
+      "prior_signal_date": "2026-09-20",
+      "outcome_start": "2026-09-21",
+      "outcome_end": "2026-10-19",
+      "prior_close": 9.0,
+      "maximum_future_high_gain_pct": 30.666669,
+      "threshold8": true,
+      "threshold10": true,
+      "prior_data_vendor_window_eligible": true,
+      "independently_validated_history": false,
+      "engine_reasons": {
+        "failed_breakdown": "volume_below1.5x;bullish_close_not_confirmed;no_prior_failed_breakdown_reclaim;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "base_contraction": "volume_below1.5x;bullish_close_not_confirmed;base_not_contracting;registered_price_momentum_RS_trigger_not_fully_confirmed",
+        "controlled_pullback": "volume_below1.5x;bullish_close_not_confirmed;registered_price_momentum_RS_trigger_not_fully_confirmed"
+      },
+      "prior_gate_values": {
+        "volume_ratio": 0.236408,
+        "gain5_pct": -12.195122,
+        "ema20_extension_atr": -2.6559,
+        "rs20": -3.764546
       },
       "recorded_core_signals_before_first8pct_touch": [],
       "no_recorded_core_signal_before8pct_touch": true,
@@ -3047,11 +3076,11 @@
       "note": "Future daily high is an outcome bound, not a guaranteed tradable return. Reasons were evaluated using prior-session features only; no thresholds optimized from this review."
     }
   ],
-  "eligible_nonoverlapping_events": 105,
-  "at_least10pct": 43,
-  "missed_by_all_three": 105,
+  "eligible_nonoverlapping_events": 106,
+  "at_least10pct": 48,
+  "missed_by_all_three": 106,
   "future_labels_used_for_entry": false,
   "latest_daily_review": true,
-  "excluded_unusable_outcome_windows": 68,
+  "excluded_unusable_outcome_windows": 78,
   "outcome_quality_policy": "All20 future sessions must have observed OHLCV with positive volume and no quarantine; otherwise no missed-move inference."
 }
