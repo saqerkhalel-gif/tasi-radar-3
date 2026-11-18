@@ -1,0 +1,4320 @@
+{
+  "run_utc": "2026-11-18T15:28:22.326987+00:00",
+  "run_url": "https://github.com/saqerkhalel-gif/tasi-radar-3/actions/runs/44335906226",
+  "expected_session": "2026-11-18",
+  "ranking_note": "Technical candidates including Early Watch/Wait; conditional targets, not guaranteed profits; Entry requires fresh stock and TASI data, 200 bars, synchronized RS, price+volume, upside >=10%, reward/risk >=2.",
+  "count": 20,
+  "results": [
+    {
+      "symbol": "2110",
+      "date": "2026-11-18",
+      "last_bar": "2026-11-18",
+      "close": 199.300003,
+      "classification": "Early Watch",
+      "technical_score": 68,
+      "data_fresh": true,
+      "expected_session": "2026-11-18",
+      "confidence": "medium",
+      "missing_indicators": [
+        "synchronized_relative_strength"
+      ],
+      "entry_blockers": [
+        "insufficient_entry_indicators",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "observations": {
+        "breakout20_with_volume": true,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": true,
+        "volume_confirmed": true,
+        "trend_ema": true,
+        "range_contraction": false,
+        "higher_lows": true,
+        "volume": 72558.0,
+        "volume_avg20_prior": 23782.85,
+        "volume_ratio20": 3.050854,
+        "rsi14": 73.282411,
+        "macd": 3.453952,
+        "macd_signal": -1.034615,
+        "macd_histogram": 4.488568,
+        "atr14": 6.990233,
+        "ema20": 174.534928,
+        "ema50": 174.05327,
+        "ema200": 166.36643,
+        "support20": 151.0,
+        "resistance20": 191.0,
+        "relative_strength_20d_vs_tasi": null,
+        "relative_strength_60d_vs_tasi": null
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        },
+        "60": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "normalization": {
+          "source_rows": 359,
+          "valid_rows": 359,
+          "rejected_or_duplicate_rows": 0
+        },
+        "quarantined_dates": [],
+        "unverified_quote_repairs": [],
+        "large_adjusted_price_jumps": [],
+        "missing_session_count": 1,
+        "missing_sessions": [
+          "2026-11-15"
+        ],
+        "zero_volume_rows": 4,
+        "last_bar_zero_volume": false,
+        "status": "vendor_checks_passed",
+        "independent_exchange_validation": false,
+        "note": "Vendor checks are not official exchange validation. Quote-substituted closes and >22% adjusted-price jumps are quarantined; no automatic price repair."
+      },
+      "price_structure": {
+        "zones": [
+          {
+            "low": 150.002442,
+            "high": 153.497558,
+            "center": 151.75,
+            "touches": 2,
+            "last_pivot_date": "2026-10-25",
+            "side": "support"
+          },
+          {
+            "low": 154.752442,
+            "high": 158.247558,
+            "center": 156.5,
+            "touches": 3,
+            "last_pivot_date": "2026-11-02",
+            "side": "support"
+          },
+          {
+            "low": 163.152443,
+            "high": 166.64756,
+            "center": 164.900002,
+            "touches": 2,
+            "last_pivot_date": "2026-07-28",
+            "side": "support"
+          },
+          {
+            "low": 172.55244,
+            "high": 176.047556,
+            "center": 174.299998,
+            "touches": 6,
+            "last_pivot_date": "2026-10-28",
+            "side": "support"
+          },
+          {
+            "low": 179.962442,
+            "high": 183.457559,
+            "center": 181.710001,
+            "touches": 10,
+            "last_pivot_date": "2026-10-18",
+            "side": "support"
+          },
+          {
+            "low": 186.677441,
+            "high": 190.172557,
+            "center": 188.424999,
+            "touches": 4,
+            "last_pivot_date": "2026-09-10",
+            "side": "support"
+          }
+        ],
+        "nearest_support": {
+          "low": 186.677441,
+          "high": 190.172557,
+          "center": 188.424999,
+          "touches": 4,
+          "last_pivot_date": "2026-09-10",
+          "side": "support"
+        },
+        "nearest_resistance": null,
+        "structural_invalidation": 184.929883,
+        "confirmed_higher_lows": false,
+        "last_confirmed_lows": [
+          {
+            "side": "support",
+            "price": 151.0,
+            "date": "2026-10-25",
+            "confirmed_date": "2026-10-27"
+          },
+          {
+            "side": "support",
+            "price": 156.800003,
+            "date": "2026-11-01",
+            "confirmed_date": "2026-11-03"
+          },
+          {
+            "side": "support",
+            "price": 156.800003,
+            "date": "2026-11-02",
+            "confirmed_date": "2026-11-04"
+          }
+        ],
+        "pivot_confirmation_sessions": 2,
+        "method": "90 observed bars; five-bar confirmed pivots clustered within max(0.5 ATR,0.5% price); heuristic zones"
+      },
+      "early_patterns": {
+        "confirmed_higher_lows": false,
+        "volatility_contraction": false,
+        "momentum_improving": true,
+        "demand_volume_improving": true,
+        "false_upside_breakout": false,
+        "failed_downside_breakdown": false,
+        "breakout_retest_holds": false,
+        "accumulation_candidate": false,
+        "early_reversal_candidate": false,
+        "retest_level": null,
+        "up_down_volume_ratio10": 9.808033,
+        "evidence": [
+          "momentum_improving",
+          "demand_volume_improving"
+        ],
+        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
+      },
+      "nomination_reasons": [
+        "momentum_improving",
+        "demand_volume_improving",
+        "observed_higher_lows_last10",
+        "EMA_trend_confirmed",
+        "close_above_prior_resistance20",
+        "price_and_volume_confirmed"
+      ],
+      "scenario": {
+        "trigger": 191.0,
+        "reclaim_trigger": 174.534928,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 184.929883,
+        "conditional_target": 213.200792,
+        "target_method": "conditional 127.2% swing extension (maximum 30% upside)",
+        "upside_pct": 6.974806,
+        "reward_risk": 0.96734,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "up",
+        "high": 199.899994,
+        "high_date": "2026-11-18",
+        "low": 151.0,
+        "low_date": "2026-10-25",
+        "retracement": {
+          "38.2": 181.220196,
+          "50": 175.449997,
+          "61.8": 169.679798
+        },
+        "extension": {
+          "127.2": 213.200792,
+          "161.8": 230.12019
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 359,
+      "first_bar": "2025-06-16",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "الكابلات السعودية",
+      "sector": "السلع الرأسمالية",
+      "price_repairs": []
+    },
+    {
+      "symbol": "6018",
+      "date": "2026-11-18",
+      "last_bar": "2026-11-18",
+      "close": 8.79,
+      "classification": "Early Watch",
+      "technical_score": 58,
+      "data_fresh": true,
+      "expected_session": "2026-11-18",
+      "confidence": "medium",
+      "missing_indicators": [
+        "synchronized_relative_strength"
+      ],
+      "entry_blockers": [
+        "failed_upside_breakout",
+        "insufficient_entry_indicators",
+        "price_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": true,
+        "trend_ema": true,
+        "range_contraction": true,
+        "higher_lows": true,
+        "volume": 2840450.0,
+        "volume_avg20_prior": 1296788.1,
+        "volume_ratio20": 2.190373,
+        "rsi14": 63.921249,
+        "macd": 0.247873,
+        "macd_signal": 0.137618,
+        "macd_histogram": 0.110255,
+        "atr14": 0.341599,
+        "ema20": 8.233707,
+        "ema50": 8.029614,
+        "ema200": 7.932951,
+        "support20": 6.57,
+        "resistance20": 8.93,
+        "relative_strength_20d_vs_tasi": null,
+        "relative_strength_60d_vs_tasi": null
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        },
+        "60": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "normalization": {
+          "source_rows": 333,
+          "valid_rows": 333,
+          "rejected_or_duplicate_rows": 0
+        },
+        "quarantined_dates": [],
+        "unverified_quote_repairs": [],
+        "large_adjusted_price_jumps": [],
+        "missing_session_count": 1,
+        "missing_sessions": [
+          "2026-11-15"
+        ],
+        "zero_volume_rows": 3,
+        "last_bar_zero_volume": false,
+        "status": "vendor_checks_passed",
+        "independent_exchange_validation": false,
+        "note": "Vendor checks are not official exchange validation. Quote-substituted closes and >22% adjusted-price jumps are quarantined; no automatic price repair."
+      },
+      "price_structure": {
+        "zones": [
+          {
+            "low": 6.527934,
+            "high": 6.698733,
+            "center": 6.613333,
+            "touches": 3,
+            "last_pivot_date": "2026-10-25",
+            "side": "support"
+          },
+          {
+            "low": 6.8546,
+            "high": 7.0254,
+            "center": 6.94,
+            "touches": 2,
+            "last_pivot_date": "2026-07-28",
+            "side": "support"
+          },
+          {
+            "low": 7.6266,
+            "high": 7.7974,
+            "center": 7.712,
+            "touches": 5,
+            "last_pivot_date": "2026-11-03",
+            "side": "support"
+          },
+          {
+            "low": 7.9946,
+            "high": 8.1654,
+            "center": 8.08,
+            "touches": 7,
+            "last_pivot_date": "2026-11-01",
+            "side": "support"
+          },
+          {
+            "low": 8.410314,
+            "high": 8.581114,
+            "center": 8.495714,
+            "touches": 7,
+            "last_pivot_date": "2026-11-16",
+            "side": "support"
+          },
+          {
+            "low": 8.7746,
+            "high": 8.9454,
+            "center": 8.86,
+            "touches": 2,
+            "last_pivot_date": "2026-11-12",
+            "side": "resistance"
+          }
+        ],
+        "nearest_support": {
+          "low": 8.410314,
+          "high": 8.581114,
+          "center": 8.495714,
+          "touches": 7,
+          "last_pivot_date": "2026-11-16",
+          "side": "support"
+        },
+        "nearest_resistance": null,
+        "structural_invalidation": 8.324915,
+        "confirmed_higher_lows": true,
+        "last_confirmed_lows": [
+          {
+            "side": "support",
+            "price": 6.57,
+            "date": "2026-10-25",
+            "confirmed_date": "2026-10-27"
+          },
+          {
+            "side": "support",
+            "price": 7.53,
+            "date": "2026-11-03",
+            "confirmed_date": "2026-11-05"
+          },
+          {
+            "side": "support",
+            "price": 8.4,
+            "date": "2026-11-16",
+            "confirmed_date": "2026-11-18"
+          }
+        ],
+        "pivot_confirmation_sessions": 2,
+        "method": "90 observed bars; five-bar confirmed pivots clustered within max(0.5 ATR,0.5% price); heuristic zones"
+      },
+      "early_patterns": {
+        "confirmed_higher_lows": true,
+        "volatility_contraction": false,
+        "momentum_improving": false,
+        "demand_volume_improving": true,
+        "false_upside_breakout": true,
+        "failed_downside_breakdown": false,
+        "breakout_retest_holds": true,
+        "accumulation_candidate": false,
+        "early_reversal_candidate": false,
+        "retest_level": 8.45,
+        "up_down_volume_ratio10": 5.704322,
+        "evidence": [
+          "confirmed_higher_lows",
+          "demand_volume_improving",
+          "false_upside_breakout",
+          "breakout_retest_holds"
+        ],
+        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
+      },
+      "nomination_reasons": [
+        "confirmed_higher_lows",
+        "demand_volume_improving",
+        "false_upside_breakout",
+        "breakout_retest_holds",
+        "observed_higher_lows_last10",
+        "range_contraction_5_vs20",
+        "EMA_trend_confirmed"
+      ],
+      "scenario": {
+        "trigger": 8.93,
+        "reclaim_trigger": 8.233707,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 8.324915,
+        "conditional_target": 8.93,
+        "target_method": "previous 90-session high",
+        "upside_pct": 1.592723,
+        "reward_risk": 0.301021,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "up",
+        "high": 9.0,
+        "high_date": "2026-11-18",
+        "low": 6.57,
+        "low_date": "2026-10-25",
+        "retracement": {
+          "38.2": 8.07174,
+          "50": 7.785,
+          "61.8": 7.49826
+        },
+        "extension": {
+          "127.2": 9.66096,
+          "161.8": 10.50174
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 333,
+      "first_bar": "2025-07-22",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "الأندية للرياضة",
+      "sector": "الخدمات الاستهلاكية",
+      "price_repairs": []
+    },
+    {
+      "symbol": "1323",
+      "date": "2026-11-18",
+      "last_bar": "2026-11-18",
+      "close": 29.0,
+      "classification": "Early Watch",
+      "technical_score": 56,
+      "data_fresh": true,
+      "expected_session": "2026-11-18",
+      "confidence": "medium",
+      "missing_indicators": [
+        "synchronized_relative_strength"
+      ],
+      "entry_blockers": [
+        "insufficient_entry_indicators",
+        "price_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": true,
+        "trend_ema": true,
+        "range_contraction": false,
+        "higher_lows": true,
+        "volume": 362124.0,
+        "volume_avg20_prior": 175629.6,
+        "volume_ratio20": 2.061862,
+        "rsi14": 74.825237,
+        "macd": 1.022956,
+        "macd_signal": 0.484782,
+        "macd_histogram": 0.538174,
+        "atr14": 0.779915,
+        "ema20": 26.352319,
+        "ema50": 25.771814,
+        "ema200": 26.062462,
+        "support20": 23.219999,
+        "resistance20": 29.799999,
+        "relative_strength_20d_vs_tasi": null,
+        "relative_strength_60d_vs_tasi": null
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        },
+        "60": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "normalization": {
+          "source_rows": 359,
+          "valid_rows": 359,
+          "rejected_or_duplicate_rows": 0
+        },
+        "quarantined_dates": [],
+        "unverified_quote_repairs": [],
+        "large_adjusted_price_jumps": [],
+        "missing_session_count": 1,
+        "missing_sessions": [
+          "2026-11-15"
+        ],
+        "zero_volume_rows": 4,
+        "last_bar_zero_volume": false,
+        "status": "vendor_checks_passed",
+        "independent_exchange_validation": false,
+        "note": "Vendor checks are not official exchange validation. Quote-substituted closes and >22% adjusted-price jumps are quarantined; no automatic price repair."
+      },
+      "price_structure": {
+        "zones": [
+          {
+            "low": 23.085021,
+            "high": 23.474978,
+            "center": 23.28,
+            "touches": 2,
+            "last_pivot_date": "2026-10-25",
+            "side": "support"
+          },
+          {
+            "low": 23.890021,
+            "high": 24.279978,
+            "center": 24.085,
+            "touches": 4,
+            "last_pivot_date": "2026-11-01",
+            "side": "support"
+          },
+          {
+            "low": 24.805021,
+            "high": 25.194979,
+            "center": 25.0,
+            "touches": 3,
+            "last_pivot_date": "2026-10-27",
+            "side": "support"
+          },
+          {
+            "low": 25.338355,
+            "high": 25.728312,
+            "center": 25.533333,
+            "touches": 3,
+            "last_pivot_date": "2026-10-22",
+            "side": "support"
+          },
+          {
+            "low": 27.041021,
+            "high": 27.430978,
+            "center": 27.236,
+            "touches": 5,
+            "last_pivot_date": "2026-09-06",
+            "side": "support"
+          },
+          {
+            "low": 27.845022,
+            "high": 28.234979,
+            "center": 28.04,
+            "touches": 3,
+            "last_pivot_date": "2026-08-30",
+            "side": "support"
+          }
+        ],
+        "nearest_support": {
+          "low": 27.845022,
+          "high": 28.234979,
+          "center": 28.04,
+          "touches": 3,
+          "last_pivot_date": "2026-08-30",
+          "side": "support"
+        },
+        "nearest_resistance": null,
+        "structural_invalidation": 27.650043,
+        "confirmed_higher_lows": true,
+        "last_confirmed_lows": [
+          {
+            "side": "support",
+            "price": 23.34,
+            "date": "2026-10-15",
+            "confirmed_date": "2026-10-19"
+          },
+          {
+            "side": "support",
+            "price": 23.219999,
+            "date": "2026-10-25",
+            "confirmed_date": "2026-10-27"
+          },
+          {
+            "side": "support",
+            "price": 24.059999,
+            "date": "2026-11-01",
+            "confirmed_date": "2026-11-03"
+          }
+        ],
+        "pivot_confirmation_sessions": 2,
+        "method": "90 observed bars; five-bar confirmed pivots clustered within max(0.5 ATR,0.5% price); heuristic zones"
+      },
+      "early_patterns": {
+        "confirmed_higher_lows": true,
+        "volatility_contraction": false,
+        "momentum_improving": false,
+        "demand_volume_improving": true,
+        "false_upside_breakout": false,
+        "failed_downside_breakdown": false,
+        "breakout_retest_holds": true,
+        "accumulation_candidate": false,
+        "early_reversal_candidate": false,
+        "retest_level": 28.5,
+        "up_down_volume_ratio10": 2.683429,
+        "evidence": [
+          "confirmed_higher_lows",
+          "demand_volume_improving",
+          "breakout_retest_holds"
+        ],
+        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
+      },
+      "nomination_reasons": [
+        "confirmed_higher_lows",
+        "demand_volume_improving",
+        "breakout_retest_holds",
+        "observed_higher_lows_last10",
+        "EMA_trend_confirmed"
+      ],
+      "scenario": {
+        "trigger": 29.799999,
+        "reclaim_trigger": 26.352319,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 27.650043,
+        "conditional_target": 29.799999,
+        "target_method": "previous 90-session high",
+        "upside_pct": 2.758618,
+        "reward_risk": 0.592611,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "up",
+        "high": 29.799999,
+        "high_date": "2026-11-16",
+        "low": 23.219999,
+        "low_date": "2026-10-25",
+        "retracement": {
+          "38.2": 27.286439,
+          "50": 26.509999,
+          "61.8": 25.733559
+        },
+        "extension": {
+          "127.2": 31.589759,
+          "161.8": 33.866439
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 359,
+      "first_bar": "2025-06-16",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "يو سي آي سي",
+      "sector": "المواد الأساسية",
+      "price_repairs": []
+    },
+    {
+      "symbol": "7211",
+      "date": "2026-11-18",
+      "last_bar": "2026-11-18",
+      "close": 34.700001,
+      "classification": "Early Watch",
+      "technical_score": 53,
+      "data_fresh": true,
+      "expected_session": "2026-11-18",
+      "confidence": "medium",
+      "missing_indicators": [
+        "synchronized_relative_strength"
+      ],
+      "entry_blockers": [
+        "insufficient_entry_indicators",
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": false,
+        "trend_ema": true,
+        "range_contraction": false,
+        "higher_lows": true,
+        "volume": 306095.0,
+        "volume_avg20_prior": 388435.25,
+        "volume_ratio20": 0.788021,
+        "rsi14": 68.367141,
+        "macd": 1.240241,
+        "macd_signal": 0.831328,
+        "macd_histogram": 0.408914,
+        "atr14": 1.304275,
+        "ema20": 31.581872,
+        "ema50": 29.657304,
+        "ema200": 26.227196,
+        "support20": 27.799999,
+        "resistance20": 35.040001,
+        "relative_strength_20d_vs_tasi": null,
+        "relative_strength_60d_vs_tasi": null
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        },
+        "60": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "normalization": {
+          "source_rows": 359,
+          "valid_rows": 359,
+          "rejected_or_duplicate_rows": 0
+        },
+        "quarantined_dates": [],
+        "unverified_quote_repairs": [],
+        "large_adjusted_price_jumps": [],
+        "missing_session_count": 1,
+        "missing_sessions": [
+          "2026-11-15"
+        ],
+        "zero_volume_rows": 68,
+        "last_bar_zero_volume": false,
+        "status": "vendor_checks_passed",
+        "independent_exchange_validation": false,
+        "note": "Vendor checks are not official exchange validation. Quote-substituted closes and >22% adjusted-price jumps are quarantined; no automatic price repair."
+      },
+      "price_structure": {
+        "zones": [
+          {
+            "low": 20.433931,
+            "high": 21.086068,
+            "center": 20.759999,
+            "touches": 2,
+            "last_pivot_date": "2026-07-30",
+            "side": "support"
+          },
+          {
+            "low": 22.228932,
+            "high": 22.881069,
+            "center": 22.555,
+            "touches": 2,
+            "last_pivot_date": "2026-07-22",
+            "side": "support"
+          },
+          {
+            "low": 27.661931,
+            "high": 28.314068,
+            "center": 27.988,
+            "touches": 5,
+            "last_pivot_date": "2026-10-25",
+            "side": "support"
+          },
+          {
+            "low": 28.520598,
+            "high": 29.172735,
+            "center": 28.846666,
+            "touches": 3,
+            "last_pivot_date": "2026-11-03",
+            "side": "support"
+          },
+          {
+            "low": 31.947265,
+            "high": 32.599403,
+            "center": 32.273334,
+            "touches": 3,
+            "last_pivot_date": "2026-10-27",
+            "side": "support"
+          }
+        ],
+        "nearest_support": {
+          "low": 31.947265,
+          "high": 32.599403,
+          "center": 32.273334,
+          "touches": 3,
+          "last_pivot_date": "2026-10-27",
+          "side": "support"
+        },
+        "nearest_resistance": null,
+        "structural_invalidation": 31.621196,
+        "confirmed_higher_lows": true,
+        "last_confirmed_lows": [
+          {
+            "side": "support",
+            "price": 28.299999,
+            "date": "2026-10-15",
+            "confirmed_date": "2026-10-19"
+          },
+          {
+            "side": "support",
+            "price": 27.799999,
+            "date": "2026-10-25",
+            "confirmed_date": "2026-10-27"
+          },
+          {
+            "side": "support",
+            "price": 28.799999,
+            "date": "2026-11-03",
+            "confirmed_date": "2026-11-05"
+          }
+        ],
+        "pivot_confirmation_sessions": 2,
+        "method": "90 observed bars; five-bar confirmed pivots clustered within max(0.5 ATR,0.5% price); heuristic zones"
+      },
+      "early_patterns": {
+        "confirmed_higher_lows": true,
+        "volatility_contraction": false,
+        "momentum_improving": true,
+        "demand_volume_improving": true,
+        "false_upside_breakout": false,
+        "failed_downside_breakdown": false,
+        "breakout_retest_holds": true,
+        "accumulation_candidate": false,
+        "early_reversal_candidate": true,
+        "retest_level": 34.0,
+        "up_down_volume_ratio10": 9.699329,
+        "evidence": [
+          "confirmed_higher_lows",
+          "momentum_improving",
+          "demand_volume_improving",
+          "breakout_retest_holds"
+        ],
+        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
+      },
+      "nomination_reasons": [
+        "confirmed_higher_lows",
+        "momentum_improving",
+        "demand_volume_improving",
+        "breakout_retest_holds",
+        "observed_higher_lows_last10",
+        "EMA_trend_confirmed"
+      ],
+      "scenario": {
+        "trigger": 35.040001,
+        "reclaim_trigger": 31.581872,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 31.621196,
+        "conditional_target": 35.040001,
+        "target_method": "previous 90-session high",
+        "upside_pct": 0.979828,
+        "reward_risk": 0.110433,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "up",
+        "high": 35.040001,
+        "high_date": "2026-11-16",
+        "low": 20.16,
+        "low_date": "2026-07-14",
+        "retracement": {
+          "38.2": 29.355841,
+          "50": 27.6,
+          "61.8": 25.84416
+        },
+        "extension": {
+          "127.2": 39.087361,
+          "161.8": 44.235842
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 359,
+      "first_bar": "2025-06-16",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "عزم",
+      "sector": "التطبيقات وخدمات التقنية",
+      "price_repairs": []
+    },
+    {
+      "symbol": "4190",
+      "date": "2026-11-18",
+      "last_bar": "2026-11-18",
+      "close": 17.42,
+      "classification": "Early Watch",
+      "technical_score": 53,
+      "data_fresh": true,
+      "expected_session": "2026-11-18",
+      "confidence": "medium",
+      "missing_indicators": [
+        "synchronized_relative_strength"
+      ],
+      "entry_blockers": [
+        "insufficient_entry_indicators",
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": false,
+        "trend_ema": true,
+        "range_contraction": true,
+        "higher_lows": true,
+        "volume": 1515607.0,
+        "volume_avg20_prior": 2182212.45,
+        "volume_ratio20": 0.694528,
+        "rsi14": 60.950151,
+        "macd": 0.353115,
+        "macd_signal": 0.233554,
+        "macd_histogram": 0.119561,
+        "atr14": 0.408348,
+        "ema20": 16.868467,
+        "ema50": 16.530929,
+        "ema200": 15.401656,
+        "support20": 14.768269,
+        "resistance20": 17.719999,
+        "relative_strength_20d_vs_tasi": null,
+        "relative_strength_60d_vs_tasi": null
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        },
+        "60": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "normalization": {
+          "source_rows": 359,
+          "valid_rows": 359,
+          "rejected_or_duplicate_rows": 0
+        },
+        "quarantined_dates": [],
+        "unverified_quote_repairs": [],
+        "large_adjusted_price_jumps": [],
+        "missing_session_count": 1,
+        "missing_sessions": [
+          "2026-11-15"
+        ],
+        "zero_volume_rows": 4,
+        "last_bar_zero_volume": false,
+        "status": "vendor_checks_passed",
+        "independent_exchange_validation": false,
+        "note": "Vendor checks are not official exchange validation. Quote-substituted closes and >22% adjusted-price jumps are quarantined; no automatic price repair."
+      },
+      "price_structure": {
+        "zones": [
+          {
+            "low": 15.585906,
+            "high": 15.79008,
+            "center": 15.687993,
+            "touches": 7,
+            "last_pivot_date": "2026-11-01",
+            "side": "support"
+          },
+          {
+            "low": 16.169773,
+            "high": 16.373947,
+            "center": 16.27186,
+            "touches": 7,
+            "last_pivot_date": "2026-10-07",
+            "side": "support"
+          },
+          {
+            "low": 16.514673,
+            "high": 16.718847,
+            "center": 16.61676,
+            "touches": 2,
+            "last_pivot_date": "2026-10-28",
+            "side": "support"
+          },
+          {
+            "low": 16.850488,
+            "high": 17.054662,
+            "center": 16.952575,
+            "touches": 5,
+            "last_pivot_date": "2026-10-13",
+            "side": "support"
+          }
+        ],
+        "nearest_support": {
+          "low": 16.850488,
+          "high": 17.054662,
+          "center": 16.952575,
+          "touches": 5,
+          "last_pivot_date": "2026-10-13",
+          "side": "support"
+        },
+        "nearest_resistance": null,
+        "structural_invalidation": 16.748402,
+        "confirmed_higher_lows": true,
+        "last_confirmed_lows": [
+          {
+            "side": "support",
+            "price": 16.518436,
+            "date": "2026-10-18",
+            "confirmed_date": "2026-10-20"
+          },
+          {
+            "side": "support",
+            "price": 14.768269,
+            "date": "2026-10-25",
+            "confirmed_date": "2026-10-27"
+          },
+          {
+            "side": "support",
+            "price": 15.731844,
+            "date": "2026-11-01",
+            "confirmed_date": "2026-11-03"
+          }
+        ],
+        "pivot_confirmation_sessions": 2,
+        "method": "90 observed bars; five-bar confirmed pivots clustered within max(0.5 ATR,0.5% price); heuristic zones"
+      },
+      "early_patterns": {
+        "confirmed_higher_lows": true,
+        "volatility_contraction": false,
+        "momentum_improving": false,
+        "demand_volume_improving": true,
+        "false_upside_breakout": false,
+        "failed_downside_breakdown": false,
+        "breakout_retest_holds": true,
+        "accumulation_candidate": false,
+        "early_reversal_candidate": false,
+        "retest_level": 17.206705,
+        "up_down_volume_ratio10": 7.349044,
+        "evidence": [
+          "confirmed_higher_lows",
+          "demand_volume_improving",
+          "breakout_retest_holds"
+        ],
+        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
+      },
+      "nomination_reasons": [
+        "confirmed_higher_lows",
+        "demand_volume_improving",
+        "breakout_retest_holds",
+        "observed_higher_lows_last10",
+        "range_contraction_5_vs20",
+        "EMA_trend_confirmed"
+      ],
+      "scenario": {
+        "trigger": 17.719999,
+        "reclaim_trigger": 16.868467,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 16.748402,
+        "conditional_target": 17.863394,
+        "target_method": "previous 90-session high",
+        "upside_pct": 2.545313,
+        "reward_risk": 0.660206,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "down",
+        "high": 17.863394,
+        "high_date": "2026-07-15",
+        "low": 14.768269,
+        "low_date": "2026-10-25",
+        "retracement": {
+          "38.2": 15.950606,
+          "50": 16.315831,
+          "61.8": 16.681056
+        },
+        "extension": {
+          "127.2": 13.926395,
+          "161.8": 12.855481
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 359,
+      "first_bar": "2025-06-16",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "جرير",
+      "sector": "تجزئة وتوزيع السلع الكمالية",
+      "price_repairs": []
+    },
+    {
+      "symbol": "4164",
+      "date": "2026-11-18",
+      "last_bar": "2026-11-18",
+      "close": 95.25,
+      "classification": "Early Watch",
+      "technical_score": 53,
+      "data_fresh": true,
+      "expected_session": "2026-11-18",
+      "confidence": "medium",
+      "missing_indicators": [
+        "synchronized_relative_strength"
+      ],
+      "entry_blockers": [
+        "insufficient_entry_indicators",
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": false,
+        "trend_ema": true,
+        "range_contraction": true,
+        "higher_lows": true,
+        "volume": 71831.0,
+        "volume_avg20_prior": 181706.3,
+        "volume_ratio20": 0.395314,
+        "rsi14": 61.691351,
+        "macd": 1.534632,
+        "macd_signal": 0.90393,
+        "macd_histogram": 0.630702,
+        "atr14": 2.010822,
+        "ema20": 92.142782,
+        "ema50": 91.250592,
+        "ema200": 94.268108,
+        "support20": 81.099998,
+        "resistance20": 95.449997,
+        "relative_strength_20d_vs_tasi": null,
+        "relative_strength_60d_vs_tasi": null
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        },
+        "60": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "normalization": {
+          "source_rows": 359,
+          "valid_rows": 359,
+          "rejected_or_duplicate_rows": 0
+        },
+        "quarantined_dates": [],
+        "unverified_quote_repairs": [],
+        "large_adjusted_price_jumps": [],
+        "missing_session_count": 1,
+        "missing_sessions": [
+          "2026-11-15"
+        ],
+        "zero_volume_rows": 4,
+        "last_bar_zero_volume": false,
+        "status": "vendor_checks_passed",
+        "independent_exchange_validation": false,
+        "note": "Vendor checks are not official exchange validation. Quote-substituted closes and >22% adjusted-price jumps are quarantined; no automatic price repair."
+      },
+      "price_structure": {
+        "zones": [
+          {
+            "low": 89.111252,
+            "high": 90.116663,
+            "center": 89.613958,
+            "touches": 5,
+            "last_pivot_date": "2026-10-19",
+            "side": "support"
+          },
+          {
+            "low": 91.299336,
+            "high": 92.304747,
+            "center": 91.802042,
+            "touches": 10,
+            "last_pivot_date": "2026-10-29",
+            "side": "support"
+          },
+          {
+            "low": 93.033682,
+            "high": 94.039093,
+            "center": 93.536387,
+            "touches": 5,
+            "last_pivot_date": "2026-11-05",
+            "side": "support"
+          },
+          {
+            "low": 94.672294,
+            "high": 95.677705,
+            "center": 95.174999,
+            "touches": 2,
+            "last_pivot_date": "2026-08-30",
+            "side": "support"
+          }
+        ],
+        "nearest_support": {
+          "low": 93.033682,
+          "high": 94.039093,
+          "center": 93.536387,
+          "touches": 5,
+          "last_pivot_date": "2026-11-05",
+          "side": "support"
+        },
+        "nearest_resistance": null,
+        "structural_invalidation": 92.530977,
+        "confirmed_higher_lows": false,
+        "last_confirmed_lows": [
+          {
+            "side": "support",
+            "price": 90.0,
+            "date": "2026-10-05",
+            "confirmed_date": "2026-10-07"
+          },
+          {
+            "side": "support",
+            "price": 86.099998,
+            "date": "2026-10-15",
+            "confirmed_date": "2026-10-19"
+          },
+          {
+            "side": "support",
+            "price": 81.099998,
+            "date": "2026-10-25",
+            "confirmed_date": "2026-10-27"
+          }
+        ],
+        "pivot_confirmation_sessions": 2,
+        "method": "90 observed bars; five-bar confirmed pivots clustered within max(0.5 ATR,0.5% price); heuristic zones"
+      },
+      "early_patterns": {
+        "confirmed_higher_lows": false,
+        "volatility_contraction": false,
+        "momentum_improving": false,
+        "demand_volume_improving": true,
+        "false_upside_breakout": false,
+        "failed_downside_breakdown": false,
+        "breakout_retest_holds": true,
+        "accumulation_candidate": false,
+        "early_reversal_candidate": false,
+        "retest_level": 94.650002,
+        "up_down_volume_ratio10": 4.921201,
+        "evidence": [
+          "demand_volume_improving",
+          "breakout_retest_holds"
+        ],
+        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
+      },
+      "nomination_reasons": [
+        "demand_volume_improving",
+        "breakout_retest_holds",
+        "observed_higher_lows_last10",
+        "range_contraction_5_vs20",
+        "EMA_trend_confirmed"
+      ],
+      "scenario": {
+        "trigger": 95.449997,
+        "reclaim_trigger": 92.142782,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 92.530977,
+        "conditional_target": 95.5,
+        "target_method": "previous 90-session high",
+        "upside_pct": 0.262467,
+        "reward_risk": 0.091945,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "down",
+        "high": 95.5,
+        "high_date": "2026-08-16",
+        "low": 81.099998,
+        "low_date": "2026-10-25",
+        "retracement": {
+          "38.2": 86.600799,
+          "50": 88.299999,
+          "61.8": 89.999199
+        },
+        "extension": {
+          "127.2": 77.183198,
+          "161.8": 72.200798
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 359,
+      "first_bar": "2025-06-16",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "النهدي",
+      "sector": "تجزئة وتوزيع السلع الاستهلاكية",
+      "price_repairs": []
+    },
+    {
+      "symbol": "2381",
+      "date": "2026-11-18",
+      "last_bar": "2026-11-18",
+      "close": 102.800003,
+      "classification": "Early Watch",
+      "technical_score": 53,
+      "data_fresh": true,
+      "expected_session": "2026-11-18",
+      "confidence": "medium",
+      "missing_indicators": [
+        "synchronized_relative_strength"
+      ],
+      "entry_blockers": [
+        "insufficient_entry_indicators",
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": false,
+        "trend_ema": true,
+        "range_contraction": true,
+        "higher_lows": true,
+        "volume": 119525.0,
+        "volume_avg20_prior": 152646.6,
+        "volume_ratio20": 0.783018,
+        "rsi14": 64.436773,
+        "macd": 2.433661,
+        "macd_signal": 1.238456,
+        "macd_histogram": 1.195205,
+        "atr14": 2.988617,
+        "ema20": 97.98425,
+        "ema50": 95.621483,
+        "ema200": 91.480933,
+        "support20": 84.099998,
+        "resistance20": 105.400002,
+        "relative_strength_20d_vs_tasi": null,
+        "relative_strength_60d_vs_tasi": null
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        },
+        "60": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "normalization": {
+          "source_rows": 359,
+          "valid_rows": 359,
+          "rejected_or_duplicate_rows": 0
+        },
+        "quarantined_dates": [],
+        "unverified_quote_repairs": [],
+        "large_adjusted_price_jumps": [],
+        "missing_session_count": 1,
+        "missing_sessions": [
+          "2026-11-15"
+        ],
+        "zero_volume_rows": 4,
+        "last_bar_zero_volume": false,
+        "status": "vendor_checks_passed",
+        "independent_exchange_validation": false,
+        "note": "Vendor checks are not official exchange validation. Quote-substituted closes and >22% adjusted-price jumps are quarantined; no automatic price repair."
+      },
+      "price_structure": {
+        "zones": [
+          {
+            "low": 78.427845,
+            "high": 79.922154,
+            "center": 79.174999,
+            "touches": 2,
+            "last_pivot_date": "2026-08-10",
+            "side": "support"
+          },
+          {
+            "low": 83.052845,
+            "high": 84.547154,
+            "center": 83.799999,
+            "touches": 2,
+            "last_pivot_date": "2026-10-26",
+            "side": "support"
+          },
+          {
+            "low": 87.990347,
+            "high": 89.484655,
+            "center": 88.737501,
+            "touches": 4,
+            "last_pivot_date": "2026-11-04",
+            "side": "support"
+          },
+          {
+            "low": 91.111178,
+            "high": 92.605487,
+            "center": 91.858332,
+            "touches": 6,
+            "last_pivot_date": "2026-09-28",
+            "side": "support"
+          },
+          {
+            "low": 93.815346,
+            "high": 95.309654,
+            "center": 94.5625,
+            "touches": 4,
+            "last_pivot_date": "2026-10-29",
+            "side": "support"
+          },
+          {
+            "low": 96.740347,
+            "high": 98.234655,
+            "center": 97.487501,
+            "touches": 4,
+            "last_pivot_date": "2026-10-19",
+            "side": "support"
+          },
+          {
+            "low": 100.719513,
+            "high": 102.213822,
+            "center": 101.466667,
+            "touches": 3,
+            "last_pivot_date": "2026-10-13",
+            "side": "support"
+          }
+        ],
+        "nearest_support": {
+          "low": 100.719513,
+          "high": 102.213822,
+          "center": 101.466667,
+          "touches": 3,
+          "last_pivot_date": "2026-10-13",
+          "side": "support"
+        },
+        "nearest_resistance": null,
+        "structural_invalidation": 99.972358,
+        "confirmed_higher_lows": false,
+        "last_confirmed_lows": [
+          {
+            "side": "support",
+            "price": 84.099998,
+            "date": "2026-10-26",
+            "confirmed_date": "2026-10-28"
+          },
+          {
+            "side": "support",
+            "price": 88.650002,
+            "date": "2026-11-03",
+            "confirmed_date": "2026-11-05"
+          },
+          {
+            "side": "support",
+            "price": 88.650002,
+            "date": "2026-11-04",
+            "confirmed_date": "2026-11-08"
+          }
+        ],
+        "pivot_confirmation_sessions": 2,
+        "method": "90 observed bars; five-bar confirmed pivots clustered within max(0.5 ATR,0.5% price); heuristic zones"
+      },
+      "early_patterns": {
+        "confirmed_higher_lows": false,
+        "volatility_contraction": false,
+        "momentum_improving": false,
+        "demand_volume_improving": true,
+        "false_upside_breakout": false,
+        "failed_downside_breakdown": false,
+        "breakout_retest_holds": true,
+        "accumulation_candidate": false,
+        "early_reversal_candidate": false,
+        "retest_level": 102.0,
+        "up_down_volume_ratio10": 7.321456,
+        "evidence": [
+          "demand_volume_improving",
+          "breakout_retest_holds"
+        ],
+        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
+      },
+      "nomination_reasons": [
+        "demand_volume_improving",
+        "breakout_retest_holds",
+        "observed_higher_lows_last10",
+        "range_contraction_5_vs20",
+        "EMA_trend_confirmed"
+      ],
+      "scenario": {
+        "trigger": 105.400002,
+        "reclaim_trigger": 97.98425,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 99.972358,
+        "conditional_target": 105.400002,
+        "target_method": "previous 90-session high",
+        "upside_pct": 2.529181,
+        "reward_risk": 0.919493,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "up",
+        "high": 105.400002,
+        "high_date": "2026-11-17",
+        "low": 78.5,
+        "low_date": "2026-07-29",
+        "retracement": {
+          "38.2": 95.124201,
+          "50": 91.950001,
+          "61.8": 88.775801
+        },
+        "extension": {
+          "127.2": 112.716802,
+          "161.8": 122.024202
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 359,
+      "first_bar": "2025-06-16",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "الحفر العربية",
+      "sector": "الطاقة",
+      "price_repairs": []
+    },
+    {
+      "symbol": "2282",
+      "date": "2026-11-18",
+      "last_bar": "2026-11-18",
+      "close": 60.950001,
+      "classification": "Early Watch",
+      "technical_score": 53,
+      "data_fresh": true,
+      "expected_session": "2026-11-18",
+      "confidence": "medium",
+      "missing_indicators": [
+        "synchronized_relative_strength"
+      ],
+      "entry_blockers": [
+        "insufficient_entry_indicators",
+        "volume_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": false,
+        "trend_ema": true,
+        "range_contraction": false,
+        "higher_lows": true,
+        "volume": 22924.0,
+        "volume_avg20_prior": 51480.5,
+        "volume_ratio20": 0.445295,
+        "rsi14": 52.289929,
+        "macd": 0.368669,
+        "macd_signal": 0.303847,
+        "macd_histogram": 0.064822,
+        "atr14": 1.8362,
+        "ema20": 60.7262,
+        "ema50": 59.874588,
+        "ema200": 56.620336,
+        "support20": 56.299999,
+        "resistance20": 62.25,
+        "relative_strength_20d_vs_tasi": null,
+        "relative_strength_60d_vs_tasi": null
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        },
+        "60": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "normalization": {
+          "source_rows": 359,
+          "valid_rows": 359,
+          "rejected_or_duplicate_rows": 0
+        },
+        "quarantined_dates": [],
+        "unverified_quote_repairs": [],
+        "large_adjusted_price_jumps": [],
+        "missing_session_count": 1,
+        "missing_sessions": [
+          "2026-11-15"
+        ],
+        "zero_volume_rows": 4,
+        "last_bar_zero_volume": false,
+        "status": "vendor_checks_passed",
+        "independent_exchange_validation": false,
+        "note": "Vendor checks are not official exchange validation. Quote-substituted closes and >22% adjusted-price jumps are quarantined; no automatic price repair."
+      },
+      "price_structure": {
+        "zones": [
+          {
+            "low": 55.347201,
+            "high": 56.2653,
+            "center": 55.806251,
+            "touches": 8,
+            "last_pivot_date": "2026-10-25",
+            "side": "support"
+          },
+          {
+            "low": 56.919521,
+            "high": 57.837621,
+            "center": 57.378571,
+            "touches": 7,
+            "last_pivot_date": "2026-10-15",
+            "side": "support"
+          },
+          {
+            "low": 58.342529,
+            "high": 59.260629,
+            "center": 58.801579,
+            "touches": 5,
+            "last_pivot_date": "2026-11-12",
+            "side": "support"
+          },
+          {
+            "low": 60.59095,
+            "high": 61.50905,
+            "center": 61.05,
+            "touches": 4,
+            "last_pivot_date": "2026-11-03",
+            "side": "resistance"
+          },
+          {
+            "low": 61.84095,
+            "high": 62.75905,
+            "center": 62.3,
+            "touches": 4,
+            "last_pivot_date": "2026-11-16",
+            "side": "resistance"
+          }
+        ],
+        "nearest_support": {
+          "low": 58.342529,
+          "high": 59.260629,
+          "center": 58.801579,
+          "touches": 5,
+          "last_pivot_date": "2026-11-12",
+          "side": "support"
+        },
+        "nearest_resistance": {
+          "low": 61.84095,
+          "high": 62.75905,
+          "center": 62.3,
+          "touches": 4,
+          "last_pivot_date": "2026-11-16",
+          "side": "resistance"
+        },
+        "structural_invalidation": 57.883479,
+        "confirmed_higher_lows": true,
+        "last_confirmed_lows": [
+          {
+            "side": "support",
+            "price": 56.299999,
+            "date": "2026-10-25",
+            "confirmed_date": "2026-10-27"
+          },
+          {
+            "side": "support",
+            "price": 59.0,
+            "date": "2026-11-08",
+            "confirmed_date": "2026-11-10"
+          },
+          {
+            "side": "support",
+            "price": 59.049999,
+            "date": "2026-11-12",
+            "confirmed_date": "2026-11-17"
+          }
+        ],
+        "pivot_confirmation_sessions": 2,
+        "method": "90 observed bars; five-bar confirmed pivots clustered within max(0.5 ATR,0.5% price); heuristic zones"
+      },
+      "early_patterns": {
+        "confirmed_higher_lows": true,
+        "volatility_contraction": false,
+        "momentum_improving": false,
+        "demand_volume_improving": true,
+        "false_upside_breakout": false,
+        "failed_downside_breakdown": false,
+        "breakout_retest_holds": false,
+        "accumulation_candidate": false,
+        "early_reversal_candidate": false,
+        "retest_level": null,
+        "up_down_volume_ratio10": 2.701465,
+        "evidence": [
+          "confirmed_higher_lows",
+          "demand_volume_improving"
+        ],
+        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
+      },
+      "nomination_reasons": [
+        "confirmed_higher_lows",
+        "demand_volume_improving",
+        "observed_higher_lows_last10",
+        "EMA_trend_confirmed",
+        "EMA20_reclaim"
+      ],
+      "scenario": {
+        "trigger": 62.25,
+        "reclaim_trigger": 60.7262,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 57.883479,
+        "conditional_target": 61.84095,
+        "target_method": "nearest confirmed overhead pivot zone (conservative lower edge)",
+        "upside_pct": 1.461771,
+        "reward_risk": 0.290541,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "up",
+        "high": 62.799999,
+        "high_date": "2026-10-07",
+        "low": 53.985968,
+        "low_date": "2026-07-19",
+        "retracement": {
+          "38.2": 59.433039,
+          "50": 58.392984,
+          "61.8": 57.352928
+        },
+        "extension": {
+          "127.2": 65.197416,
+          "161.8": 68.247071
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 359,
+      "first_bar": "2025-06-16",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "نقي",
+      "sector": "إنتاج الأغذية",
+      "price_repairs": []
+    },
+    {
+      "symbol": "2222",
+      "date": "2026-11-18",
+      "last_bar": "2026-11-18",
+      "close": 26.440001,
+      "classification": "Early Watch",
+      "technical_score": 53,
+      "data_fresh": true,
+      "expected_session": "2026-11-18",
+      "confidence": "medium",
+      "missing_indicators": [
+        "synchronized_relative_strength"
+      ],
+      "entry_blockers": [
+        "insufficient_entry_indicators",
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": false,
+        "trend_ema": true,
+        "range_contraction": false,
+        "higher_lows": true,
+        "volume": 8971424.0,
+        "volume_avg20_prior": 9537485.05,
+        "volume_ratio20": 0.940649,
+        "rsi14": 64.860997,
+        "macd": 0.225668,
+        "macd_signal": 0.139978,
+        "macd_histogram": 0.085689,
+        "atr14": 0.325219,
+        "ema20": 25.814499,
+        "ema50": 25.650106,
+        "ema200": 25.373896,
+        "support20": 24.584047,
+        "resistance20": 26.440193,
+        "relative_strength_20d_vs_tasi": null,
+        "relative_strength_60d_vs_tasi": null
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        },
+        "60": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "normalization": {
+          "source_rows": 359,
+          "valid_rows": 359,
+          "rejected_or_duplicate_rows": 0
+        },
+        "quarantined_dates": [],
+        "unverified_quote_repairs": [],
+        "large_adjusted_price_jumps": [],
+        "missing_session_count": 1,
+        "missing_sessions": [
+          "2026-11-15"
+        ],
+        "zero_volume_rows": 4,
+        "last_bar_zero_volume": false,
+        "status": "vendor_checks_passed",
+        "independent_exchange_validation": false,
+        "note": "Vendor checks are not official exchange validation. Quote-substituted closes and >22% adjusted-price jumps are quarantined; no automatic price repair."
+      },
+      "price_structure": {
+        "zones": [
+          {
+            "low": 24.710079,
+            "high": 24.872688,
+            "center": 24.791384,
+            "touches": 2,
+            "last_pivot_date": "2026-10-15",
+            "side": "support"
+          },
+          {
+            "low": 25.040827,
+            "high": 25.203437,
+            "center": 25.122132,
+            "touches": 4,
+            "last_pivot_date": "2026-11-10",
+            "side": "support"
+          },
+          {
+            "low": 25.462877,
+            "high": 25.625487,
+            "center": 25.544182,
+            "touches": 7,
+            "last_pivot_date": "2026-10-18",
+            "side": "support"
+          },
+          {
+            "low": 25.759315,
+            "high": 25.921925,
+            "center": 25.84062,
+            "touches": 12,
+            "last_pivot_date": "2026-11-09",
+            "side": "support"
+          },
+          {
+            "low": 26.144682,
+            "high": 26.307291,
+            "center": 26.225987,
+            "touches": 4,
+            "last_pivot_date": "2026-08-24",
+            "side": "support"
+          },
+          {
+            "low": 26.424446,
+            "high": 26.587056,
+            "center": 26.505751,
+            "touches": 2,
+            "last_pivot_date": "2026-11-16",
+            "side": "resistance"
+          }
+        ],
+        "nearest_support": {
+          "low": 26.144682,
+          "high": 26.307291,
+          "center": 26.225987,
+          "touches": 4,
+          "last_pivot_date": "2026-08-24",
+          "side": "support"
+        },
+        "nearest_resistance": null,
+        "structural_invalidation": 26.063377,
+        "confirmed_higher_lows": true,
+        "last_confirmed_lows": [
+          {
+            "side": "support",
+            "price": 24.78151,
+            "date": "2026-10-15",
+            "confirmed_date": "2026-10-19"
+          },
+          {
+            "side": "support",
+            "price": 24.584047,
+            "date": "2026-10-25",
+            "confirmed_date": "2026-10-27"
+          },
+          {
+            "side": "support",
+            "price": 25.136941,
+            "date": "2026-11-10",
+            "confirmed_date": "2026-11-12"
+          }
+        ],
+        "pivot_confirmation_sessions": 2,
+        "method": "90 observed bars; five-bar confirmed pivots clustered within max(0.5 ATR,0.5% price); heuristic zones"
+      },
+      "early_patterns": {
+        "confirmed_higher_lows": true,
+        "volatility_contraction": false,
+        "momentum_improving": true,
+        "demand_volume_improving": true,
+        "false_upside_breakout": false,
+        "failed_downside_breakdown": false,
+        "breakout_retest_holds": true,
+        "accumulation_candidate": false,
+        "early_reversal_candidate": true,
+        "retest_level": 26.203239,
+        "up_down_volume_ratio10": 1.431083,
+        "evidence": [
+          "confirmed_higher_lows",
+          "momentum_improving",
+          "demand_volume_improving",
+          "breakout_retest_holds"
+        ],
+        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
+      },
+      "nomination_reasons": [
+        "confirmed_higher_lows",
+        "momentum_improving",
+        "demand_volume_improving",
+        "breakout_retest_holds",
+        "observed_higher_lows_last10",
+        "EMA_trend_confirmed"
+      ],
+      "scenario": {
+        "trigger": 26.440193,
+        "reclaim_trigger": 25.814499,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 26.063377,
+        "conditional_target": 26.571309,
+        "target_method": "previous 90-session high",
+        "upside_pct": 0.496629,
+        "reward_risk": 0.348647,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "down",
+        "high": 26.571309,
+        "high_date": "2026-08-04",
+        "low": 24.584047,
+        "low_date": "2026-10-25",
+        "retracement": {
+          "38.2": 25.343181,
+          "50": 25.577678,
+          "61.8": 25.812175
+        },
+        "extension": {
+          "127.2": 24.043511,
+          "161.8": 23.355919
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 359,
+      "first_bar": "2025-06-16",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "أرامكو السعودية",
+      "sector": "الطاقة",
+      "price_repairs": []
+    },
+    {
+      "symbol": "1010",
+      "date": "2026-11-18",
+      "last_bar": "2026-11-18",
+      "close": 20.43,
+      "classification": "Early Watch",
+      "technical_score": 53,
+      "data_fresh": true,
+      "expected_session": "2026-11-18",
+      "confidence": "medium",
+      "missing_indicators": [
+        "synchronized_relative_strength"
+      ],
+      "entry_blockers": [
+        "insufficient_entry_indicators",
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": false,
+        "trend_ema": true,
+        "range_contraction": true,
+        "higher_lows": true,
+        "volume": 1135007.0,
+        "volume_avg20_prior": 2076859.45,
+        "volume_ratio20": 0.546502,
+        "rsi14": 61.31614,
+        "macd": 0.211049,
+        "macd_signal": 0.105915,
+        "macd_histogram": 0.105134,
+        "atr14": 0.327524,
+        "ema20": 19.969778,
+        "ema50": 19.902794,
+        "ema200": 19.913831,
+        "support20": 18.59,
+        "resistance20": 20.459999,
+        "relative_strength_20d_vs_tasi": null,
+        "relative_strength_60d_vs_tasi": null
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        },
+        "60": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "normalization": {
+          "source_rows": 359,
+          "valid_rows": 359,
+          "rejected_or_duplicate_rows": 0
+        },
+        "quarantined_dates": [],
+        "unverified_quote_repairs": [],
+        "large_adjusted_price_jumps": [],
+        "missing_session_count": 1,
+        "missing_sessions": [
+          "2026-11-15"
+        ],
+        "zero_volume_rows": 3,
+        "last_bar_zero_volume": false,
+        "status": "vendor_checks_passed",
+        "independent_exchange_validation": false,
+        "note": "Vendor checks are not official exchange validation. Quote-substituted closes and >22% adjusted-price jumps are quarantined; no automatic price repair."
+      },
+      "price_structure": {
+        "zones": [
+          {
+            "low": 18.893119,
+            "high": 19.05688,
+            "center": 18.974999,
+            "touches": 2,
+            "last_pivot_date": "2026-10-20",
+            "side": "support"
+          },
+          {
+            "low": 19.098119,
+            "high": 19.261881,
+            "center": 19.18,
+            "touches": 2,
+            "last_pivot_date": "2026-11-01",
+            "side": "support"
+          },
+          {
+            "low": 19.48312,
+            "high": 19.646881,
+            "center": 19.565001,
+            "touches": 4,
+            "last_pivot_date": "2026-10-21",
+            "side": "support"
+          },
+          {
+            "low": 19.896453,
+            "high": 20.060214,
+            "center": 19.978333,
+            "touches": 6,
+            "last_pivot_date": "2026-10-27",
+            "side": "support"
+          },
+          {
+            "low": 20.113119,
+            "high": 20.276881,
+            "center": 20.195,
+            "touches": 4,
+            "last_pivot_date": "2026-11-05",
+            "side": "support"
+          },
+          {
+            "low": 20.450659,
+            "high": 20.61442,
+            "center": 20.53254,
+            "touches": 6,
+            "last_pivot_date": "2026-09-02",
+            "side": "resistance"
+          }
+        ],
+        "nearest_support": {
+          "low": 20.113119,
+          "high": 20.276881,
+          "center": 20.195,
+          "touches": 4,
+          "last_pivot_date": "2026-11-05",
+          "side": "support"
+        },
+        "nearest_resistance": {
+          "low": 20.450659,
+          "high": 20.61442,
+          "center": 20.53254,
+          "touches": 6,
+          "last_pivot_date": "2026-09-02",
+          "side": "resistance"
+        },
+        "structural_invalidation": 20.031238,
+        "confirmed_higher_lows": true,
+        "last_confirmed_lows": [
+          {
+            "side": "support",
+            "price": 18.9,
+            "date": "2026-10-20",
+            "confirmed_date": "2026-10-22"
+          },
+          {
+            "side": "support",
+            "price": 18.59,
+            "date": "2026-10-25",
+            "confirmed_date": "2026-10-27"
+          },
+          {
+            "side": "support",
+            "price": 19.17,
+            "date": "2026-11-01",
+            "confirmed_date": "2026-11-03"
+          }
+        ],
+        "pivot_confirmation_sessions": 2,
+        "method": "90 observed bars; five-bar confirmed pivots clustered within max(0.5 ATR,0.5% price); heuristic zones"
+      },
+      "early_patterns": {
+        "confirmed_higher_lows": true,
+        "volatility_contraction": false,
+        "momentum_improving": false,
+        "demand_volume_improving": true,
+        "false_upside_breakout": false,
+        "failed_downside_breakdown": false,
+        "breakout_retest_holds": true,
+        "accumulation_candidate": false,
+        "early_reversal_candidate": false,
+        "retest_level": 20.389999,
+        "up_down_volume_ratio10": 28.296182,
+        "evidence": [
+          "confirmed_higher_lows",
+          "demand_volume_improving",
+          "breakout_retest_holds"
+        ],
+        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
+      },
+      "nomination_reasons": [
+        "confirmed_higher_lows",
+        "demand_volume_improving",
+        "breakout_retest_holds",
+        "observed_higher_lows_last10",
+        "range_contraction_5_vs20",
+        "EMA_trend_confirmed"
+      ],
+      "scenario": {
+        "trigger": 20.459999,
+        "reclaim_trigger": 19.969778,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 20.031238,
+        "conditional_target": 20.450659,
+        "target_method": "nearest confirmed overhead pivot zone (conservative lower edge)",
+        "upside_pct": 0.101118,
+        "reward_risk": 0.051806,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "down",
+        "high": 21.15,
+        "high_date": "2026-08-27",
+        "low": 18.59,
+        "low_date": "2026-10-25",
+        "retracement": {
+          "38.2": 19.56792,
+          "50": 19.87,
+          "61.8": 20.17208
+        },
+        "extension": {
+          "127.2": 17.89368,
+          "161.8": 17.00792
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 359,
+      "first_bar": "2025-06-16",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "الرياض",
+      "sector": "البنوك",
+      "price_repairs": []
+    },
+    {
+      "symbol": "8313",
+      "date": "2026-11-18",
+      "last_bar": "2026-11-18",
+      "close": 139.800003,
+      "classification": "Early Watch",
+      "technical_score": 50,
+      "data_fresh": true,
+      "expected_session": "2026-11-18",
+      "confidence": "medium",
+      "missing_indicators": [
+        "synchronized_relative_strength"
+      ],
+      "entry_blockers": [
+        "insufficient_entry_indicators",
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": false,
+        "trend_ema": true,
+        "range_contraction": true,
+        "higher_lows": true,
+        "volume": 237842.0,
+        "volume_avg20_prior": 276640.95,
+        "volume_ratio20": 0.85975,
+        "rsi14": 52.321304,
+        "macd": 1.665203,
+        "macd_signal": 0.809048,
+        "macd_histogram": 0.856155,
+        "atr14": 5.142051,
+        "ema20": 138.615569,
+        "ema50": 137.866943,
+        "ema200": 134.269267,
+        "support20": 116.0,
+        "resistance20": 150.0,
+        "relative_strength_20d_vs_tasi": null,
+        "relative_strength_60d_vs_tasi": null
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        },
+        "60": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "normalization": {
+          "source_rows": 359,
+          "valid_rows": 359,
+          "rejected_or_duplicate_rows": 0
+        },
+        "quarantined_dates": [],
+        "unverified_quote_repairs": [],
+        "large_adjusted_price_jumps": [],
+        "missing_session_count": 1,
+        "missing_sessions": [
+          "2026-11-15"
+        ],
+        "zero_volume_rows": 4,
+        "last_bar_zero_volume": false,
+        "status": "vendor_checks_passed",
+        "independent_exchange_validation": false,
+        "note": "Vendor checks are not official exchange validation. Quote-substituted closes and >22% adjusted-price jumps are quarantined; no automatic price repair."
+      },
+      "price_structure": {
+        "zones": [
+          {
+            "low": 132.391412,
+            "high": 134.962437,
+            "center": 133.676924,
+            "touches": 13,
+            "last_pivot_date": "2026-11-08",
+            "side": "support"
+          },
+          {
+            "low": 139.004485,
+            "high": 141.575511,
+            "center": 140.289998,
+            "touches": 10,
+            "last_pivot_date": "2026-11-05",
+            "side": "resistance"
+          },
+          {
+            "low": 144.739485,
+            "high": 147.310511,
+            "center": 146.024998,
+            "touches": 4,
+            "last_pivot_date": "2026-10-13",
+            "side": "resistance"
+          }
+        ],
+        "nearest_support": {
+          "low": 132.391412,
+          "high": 134.962437,
+          "center": 133.676924,
+          "touches": 13,
+          "last_pivot_date": "2026-11-08",
+          "side": "support"
+        },
+        "nearest_resistance": {
+          "low": 144.739485,
+          "high": 147.310511,
+          "center": 146.024998,
+          "touches": 4,
+          "last_pivot_date": "2026-10-13",
+          "side": "resistance"
+        },
+        "structural_invalidation": 131.105899,
+        "confirmed_higher_lows": true,
+        "last_confirmed_lows": [
+          {
+            "side": "support",
+            "price": 116.0,
+            "date": "2026-10-25",
+            "confirmed_date": "2026-10-27"
+          },
+          {
+            "side": "support",
+            "price": 133.300003,
+            "date": "2026-11-01",
+            "confirmed_date": "2026-11-03"
+          },
+          {
+            "side": "support",
+            "price": 135.199997,
+            "date": "2026-11-08",
+            "confirmed_date": "2026-11-10"
+          }
+        ],
+        "pivot_confirmation_sessions": 2,
+        "method": "90 observed bars; five-bar confirmed pivots clustered within max(0.5 ATR,0.5% price); heuristic zones"
+      },
+      "early_patterns": {
+        "confirmed_higher_lows": true,
+        "volatility_contraction": false,
+        "momentum_improving": false,
+        "demand_volume_improving": false,
+        "false_upside_breakout": false,
+        "failed_downside_breakdown": false,
+        "breakout_retest_holds": false,
+        "accumulation_candidate": false,
+        "early_reversal_candidate": false,
+        "retest_level": null,
+        "up_down_volume_ratio10": 1.230482,
+        "evidence": [
+          "confirmed_higher_lows"
+        ],
+        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
+      },
+      "nomination_reasons": [
+        "confirmed_higher_lows",
+        "observed_higher_lows_last10",
+        "range_contraction_5_vs20",
+        "EMA_trend_confirmed"
+      ],
+      "scenario": {
+        "trigger": 150.0,
+        "reclaim_trigger": 138.615569,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 131.105899,
+        "conditional_target": 144.739485,
+        "target_method": "nearest confirmed overhead pivot zone (conservative lower edge)",
+        "upside_pct": 3.533249,
+        "reward_risk": 0.568142,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "up",
+        "high": 150.0,
+        "high_date": "2026-11-17",
+        "low": 116.0,
+        "low_date": "2026-10-25",
+        "retracement": {
+          "38.2": 137.012,
+          "50": 133.0,
+          "61.8": 128.988
+        },
+        "extension": {
+          "127.2": 159.248,
+          "161.8": 171.012
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 359,
+      "first_bar": "2025-06-16",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "رسن",
+      "sector": "التأمين",
+      "price_repairs": []
+    },
+    {
+      "symbol": "8200",
+      "date": "2026-11-18",
+      "last_bar": "2026-11-18",
+      "close": 29.5,
+      "classification": "Early Watch",
+      "technical_score": 50,
+      "data_fresh": true,
+      "expected_session": "2026-11-18",
+      "confidence": "medium",
+      "missing_indicators": [
+        "synchronized_relative_strength"
+      ],
+      "entry_blockers": [
+        "insufficient_entry_indicators",
+        "trend_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "observations": {
+        "breakout20_with_volume": true,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": true,
+        "volume_confirmed": true,
+        "trend_ema": false,
+        "range_contraction": false,
+        "higher_lows": true,
+        "volume": 2228271.0,
+        "volume_avg20_prior": 895271.7,
+        "volume_ratio20": 2.488933,
+        "rsi14": 68.009275,
+        "macd": 0.301256,
+        "macd_signal": -0.298029,
+        "macd_histogram": 0.599286,
+        "atr14": 1.184483,
+        "ema20": 25.94894,
+        "ema50": 26.039705,
+        "ema200": 26.698106,
+        "support20": 22.75,
+        "resistance20": 29.459999,
+        "relative_strength_20d_vs_tasi": null,
+        "relative_strength_60d_vs_tasi": null
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        },
+        "60": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "normalization": {
+          "source_rows": 359,
+          "valid_rows": 359,
+          "rejected_or_duplicate_rows": 0
+        },
+        "quarantined_dates": [],
+        "unverified_quote_repairs": [],
+        "large_adjusted_price_jumps": [],
+        "missing_session_count": 1,
+        "missing_sessions": [
+          "2026-11-15"
+        ],
+        "zero_volume_rows": 3,
+        "last_bar_zero_volume": false,
+        "status": "vendor_checks_passed",
+        "independent_exchange_validation": false,
+        "note": "Vendor checks are not official exchange validation. Quote-substituted closes and >22% adjusted-price jumps are quarantined; no automatic price repair."
+      },
+      "price_structure": {
+        "zones": [
+          {
+            "low": 23.085879,
+            "high": 23.678121,
+            "center": 23.382,
+            "touches": 5,
+            "last_pivot_date": "2026-11-09",
+            "side": "support"
+          },
+          {
+            "low": 24.96888,
+            "high": 25.561121,
+            "center": 25.265,
+            "touches": 6,
+            "last_pivot_date": "2026-11-05",
+            "side": "support"
+          },
+          {
+            "low": 25.76388,
+            "high": 26.356121,
+            "center": 26.06,
+            "touches": 2,
+            "last_pivot_date": "2026-10-01",
+            "side": "support"
+          },
+          {
+            "low": 26.663879,
+            "high": 27.256121,
+            "center": 26.96,
+            "touches": 2,
+            "last_pivot_date": "2026-10-29",
+            "side": "support"
+          },
+          {
+            "low": 27.92388,
+            "high": 28.516121,
+            "center": 28.22,
+            "touches": 2,
+            "last_pivot_date": "2026-09-20",
+            "side": "support"
+          },
+          {
+            "low": 28.930545,
+            "high": 29.522787,
+            "center": 29.226666,
+            "touches": 3,
+            "last_pivot_date": "2026-10-07",
+            "side": "support"
+          }
+        ],
+        "nearest_support": {
+          "low": 27.92388,
+          "high": 28.516121,
+          "center": 28.22,
+          "touches": 2,
+          "last_pivot_date": "2026-09-20",
+          "side": "support"
+        },
+        "nearest_resistance": null,
+        "structural_invalidation": 27.627759,
+        "confirmed_higher_lows": false,
+        "last_confirmed_lows": [
+          {
+            "side": "support",
+            "price": 22.75,
+            "date": "2026-10-25",
+            "confirmed_date": "2026-10-27"
+          },
+          {
+            "side": "support",
+            "price": 23.639999,
+            "date": "2026-11-01",
+            "confirmed_date": "2026-11-03"
+          },
+          {
+            "side": "support",
+            "price": 23.620001,
+            "date": "2026-11-09",
+            "confirmed_date": "2026-11-11"
+          }
+        ],
+        "pivot_confirmation_sessions": 2,
+        "method": "90 observed bars; five-bar confirmed pivots clustered within max(0.5 ATR,0.5% price); heuristic zones"
+      },
+      "early_patterns": {
+        "confirmed_higher_lows": false,
+        "volatility_contraction": false,
+        "momentum_improving": true,
+        "demand_volume_improving": true,
+        "false_upside_breakout": false,
+        "failed_downside_breakdown": false,
+        "breakout_retest_holds": false,
+        "accumulation_candidate": false,
+        "early_reversal_candidate": false,
+        "retest_level": null,
+        "up_down_volume_ratio10": 5.143214,
+        "evidence": [
+          "momentum_improving",
+          "demand_volume_improving"
+        ],
+        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
+      },
+      "nomination_reasons": [
+        "momentum_improving",
+        "demand_volume_improving",
+        "observed_higher_lows_last10",
+        "close_above_prior_resistance20",
+        "price_and_volume_confirmed"
+      ],
+      "scenario": {
+        "trigger": 29.459999,
+        "reclaim_trigger": 25.94894,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 27.627759,
+        "conditional_target": 29.940001,
+        "target_method": "previous 90-session high",
+        "upside_pct": 1.491527,
+        "reward_risk": 0.235013,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "up",
+        "high": 29.959999,
+        "high_date": "2026-11-18",
+        "low": 22.75,
+        "low_date": "2026-10-25",
+        "retracement": {
+          "38.2": 27.205779,
+          "50": 26.355,
+          "61.8": 25.50422
+        },
+        "extension": {
+          "127.2": 31.921119,
+          "161.8": 34.415779
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 359,
+      "first_bar": "2025-06-16",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "الإعادة السعودية",
+      "sector": "التأمين",
+      "price_repairs": []
+    },
+    {
+      "symbol": "6014",
+      "date": "2026-11-18",
+      "last_bar": "2026-11-18",
+      "close": 46.48,
+      "classification": "Early Watch",
+      "technical_score": 50,
+      "data_fresh": true,
+      "expected_session": "2026-11-18",
+      "confidence": "medium",
+      "missing_indicators": [
+        "synchronized_relative_strength"
+      ],
+      "entry_blockers": [
+        "insufficient_entry_indicators",
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": false,
+        "trend_ema": true,
+        "range_contraction": true,
+        "higher_lows": true,
+        "volume": 56569.0,
+        "volume_avg20_prior": 151196.8,
+        "volume_ratio20": 0.374142,
+        "rsi14": 69.29071,
+        "macd": 2.011348,
+        "macd_signal": 1.379497,
+        "macd_histogram": 0.631851,
+        "atr14": 1.936558,
+        "ema20": 42.931091,
+        "ema50": 41.212808,
+        "ema200": 41.275238,
+        "support20": 34.279999,
+        "resistance20": 48.400002,
+        "relative_strength_20d_vs_tasi": null,
+        "relative_strength_60d_vs_tasi": null
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        },
+        "60": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "normalization": {
+          "source_rows": 359,
+          "valid_rows": 359,
+          "rejected_or_duplicate_rows": 0
+        },
+        "quarantined_dates": [],
+        "unverified_quote_repairs": [],
+        "large_adjusted_price_jumps": [],
+        "missing_session_count": 1,
+        "missing_sessions": [
+          "2026-11-15"
+        ],
+        "zero_volume_rows": 4,
+        "last_bar_zero_volume": false,
+        "status": "vendor_checks_passed",
+        "independent_exchange_validation": false,
+        "note": "Vendor checks are not official exchange validation. Quote-substituted closes and >22% adjusted-price jumps are quarantined; no automatic price repair."
+      },
+      "price_structure": {
+        "zones": [
+          {
+            "low": 36.526328,
+            "high": 37.494607,
+            "center": 37.010467,
+            "touches": 7,
+            "last_pivot_date": "2026-11-01",
+            "side": "support"
+          },
+          {
+            "low": 38.77566,
+            "high": 39.743939,
+            "center": 39.259799,
+            "touches": 9,
+            "last_pivot_date": "2026-10-28",
+            "side": "support"
+          },
+          {
+            "low": 40.775059,
+            "high": 41.743338,
+            "center": 41.259198,
+            "touches": 6,
+            "last_pivot_date": "2026-11-10",
+            "side": "support"
+          },
+          {
+            "low": 42.062123,
+            "high": 43.030402,
+            "center": 42.546262,
+            "touches": 4,
+            "last_pivot_date": "2026-08-27",
+            "side": "support"
+          }
+        ],
+        "nearest_support": {
+          "low": 42.062123,
+          "high": 43.030402,
+          "center": 42.546262,
+          "touches": 4,
+          "last_pivot_date": "2026-08-27",
+          "side": "support"
+        },
+        "nearest_resistance": null,
+        "structural_invalidation": 41.577984,
+        "confirmed_higher_lows": true,
+        "last_confirmed_lows": [
+          {
+            "side": "support",
+            "price": 34.279999,
+            "date": "2026-10-25",
+            "confirmed_date": "2026-10-27"
+          },
+          {
+            "side": "support",
+            "price": 37.540001,
+            "date": "2026-11-01",
+            "confirmed_date": "2026-11-03"
+          },
+          {
+            "side": "support",
+            "price": 42.0,
+            "date": "2026-11-10",
+            "confirmed_date": "2026-11-12"
+          }
+        ],
+        "pivot_confirmation_sessions": 2,
+        "method": "90 observed bars; five-bar confirmed pivots clustered within max(0.5 ATR,0.5% price); heuristic zones"
+      },
+      "early_patterns": {
+        "confirmed_higher_lows": true,
+        "volatility_contraction": false,
+        "momentum_improving": false,
+        "demand_volume_improving": true,
+        "false_upside_breakout": false,
+        "failed_downside_breakdown": false,
+        "breakout_retest_holds": false,
+        "accumulation_candidate": false,
+        "early_reversal_candidate": false,
+        "retest_level": null,
+        "up_down_volume_ratio10": 10.114539,
+        "evidence": [
+          "confirmed_higher_lows",
+          "demand_volume_improving"
+        ],
+        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
+      },
+      "nomination_reasons": [
+        "confirmed_higher_lows",
+        "demand_volume_improving",
+        "observed_higher_lows_last10",
+        "range_contraction_5_vs20",
+        "EMA_trend_confirmed"
+      ],
+      "scenario": {
+        "trigger": 48.400002,
+        "reclaim_trigger": 42.931091,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 41.577984,
+        "conditional_target": 48.400002,
+        "target_method": "previous 90-session high",
+        "upside_pct": 4.130813,
+        "reward_risk": 0.391676,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "up",
+        "high": 48.400002,
+        "high_date": "2026-11-08",
+        "low": 34.279999,
+        "low_date": "2026-10-25",
+        "retracement": {
+          "38.2": 43.00616,
+          "50": 41.34,
+          "61.8": 39.67384
+        },
+        "extension": {
+          "127.2": 52.240642,
+          "161.8": 57.126163
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 359,
+      "first_bar": "2025-06-16",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "الآمار",
+      "sector": "الخدمات الاستهلاكية",
+      "price_repairs": []
+    },
+    {
+      "symbol": "4147",
+      "date": "2026-11-18",
+      "last_bar": "2026-11-18",
+      "close": 7.21,
+      "classification": "Early Watch",
+      "technical_score": 50,
+      "data_fresh": true,
+      "expected_session": "2026-11-18",
+      "confidence": "medium",
+      "missing_indicators": [
+        "synchronized_relative_strength"
+      ],
+      "entry_blockers": [
+        "insufficient_entry_indicators",
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": false,
+        "trend_ema": true,
+        "range_contraction": true,
+        "higher_lows": true,
+        "volume": 660837.0,
+        "volume_avg20_prior": 2337169.0,
+        "volume_ratio20": 0.282751,
+        "rsi14": 58.678756,
+        "macd": 0.371471,
+        "macd_signal": 0.272981,
+        "macd_histogram": 0.098489,
+        "atr14": 0.38527,
+        "ema20": 6.826534,
+        "ema50": 6.523858,
+        "ema200": 7.035109,
+        "support20": 5.1,
+        "resistance20": 8.1,
+        "relative_strength_20d_vs_tasi": null,
+        "relative_strength_60d_vs_tasi": null
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        },
+        "60": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "normalization": {
+          "source_rows": 234,
+          "valid_rows": 234,
+          "rejected_or_duplicate_rows": 0
+        },
+        "quarantined_dates": [],
+        "unverified_quote_repairs": [],
+        "large_adjusted_price_jumps": [],
+        "missing_session_count": 1,
+        "missing_sessions": [
+          "2026-11-15"
+        ],
+        "zero_volume_rows": 2,
+        "last_bar_zero_volume": false,
+        "status": "vendor_checks_passed",
+        "independent_exchange_validation": false,
+        "note": "Vendor checks are not official exchange validation. Quote-substituted closes and >22% adjusted-price jumps are quarantined; no automatic price repair."
+      },
+      "price_structure": {
+        "zones": [
+          {
+            "low": 5.820933,
+            "high": 6.013568,
+            "center": 5.917251,
+            "touches": 3,
+            "last_pivot_date": "2026-10-14",
+            "side": "support"
+          },
+          {
+            "low": 6.177994,
+            "high": 6.370629,
+            "center": 6.274311,
+            "touches": 15,
+            "last_pivot_date": "2026-11-01",
+            "side": "support"
+          },
+          {
+            "low": 6.438936,
+            "high": 6.631571,
+            "center": 6.535253,
+            "touches": 6,
+            "last_pivot_date": "2026-09-27",
+            "side": "support"
+          },
+          {
+            "low": 7.938683,
+            "high": 8.131318,
+            "center": 8.035,
+            "touches": 2,
+            "last_pivot_date": "2026-11-12",
+            "side": "resistance"
+          }
+        ],
+        "nearest_support": {
+          "low": 6.438936,
+          "high": 6.631571,
+          "center": 6.535253,
+          "touches": 6,
+          "last_pivot_date": "2026-09-27",
+          "side": "support"
+        },
+        "nearest_resistance": {
+          "low": 7.938683,
+          "high": 8.131318,
+          "center": 8.035,
+          "touches": 2,
+          "last_pivot_date": "2026-11-12",
+          "side": "resistance"
+        },
+        "structural_invalidation": 6.342618,
+        "confirmed_higher_lows": true,
+        "last_confirmed_lows": [
+          {
+            "side": "support",
+            "price": 5.9,
+            "date": "2026-10-14",
+            "confirmed_date": "2026-10-18"
+          },
+          {
+            "side": "support",
+            "price": 5.1,
+            "date": "2026-10-25",
+            "confirmed_date": "2026-10-27"
+          },
+          {
+            "side": "support",
+            "price": 5.51,
+            "date": "2026-11-03",
+            "confirmed_date": "2026-11-05"
+          }
+        ],
+        "pivot_confirmation_sessions": 2,
+        "method": "90 observed bars; five-bar confirmed pivots clustered within max(0.5 ATR,0.5% price); heuristic zones"
+      },
+      "early_patterns": {
+        "confirmed_higher_lows": true,
+        "volatility_contraction": false,
+        "momentum_improving": false,
+        "demand_volume_improving": true,
+        "false_upside_breakout": false,
+        "failed_downside_breakdown": false,
+        "breakout_retest_holds": false,
+        "accumulation_candidate": false,
+        "early_reversal_candidate": false,
+        "retest_level": null,
+        "up_down_volume_ratio10": 6.293127,
+        "evidence": [
+          "confirmed_higher_lows",
+          "demand_volume_improving"
+        ],
+        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
+      },
+      "nomination_reasons": [
+        "confirmed_higher_lows",
+        "demand_volume_improving",
+        "observed_higher_lows_last10",
+        "range_contraction_5_vs20",
+        "EMA_trend_confirmed"
+      ],
+      "scenario": {
+        "trigger": 8.1,
+        "reclaim_trigger": 6.826534,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 6.342618,
+        "conditional_target": 7.938683,
+        "target_method": "nearest confirmed overhead pivot zone (conservative lower edge)",
+        "upside_pct": 10.106554,
+        "reward_risk": 0.840094,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "up",
+        "high": 8.1,
+        "high_date": "2026-11-12",
+        "low": 5.1,
+        "low_date": "2026-10-25",
+        "retracement": {
+          "38.2": 6.954,
+          "50": 6.6,
+          "61.8": 6.246
+        },
+        "extension": {
+          "127.2": 8.916001,
+          "161.8": 9.954001
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 234,
+      "first_bar": "2025-12-09",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "سي جي إس",
+      "sector": "السلع الرأسمالية",
+      "price_repairs": []
+    },
+    {
+      "symbol": "4144",
+      "date": "2026-11-18",
+      "last_bar": "2026-11-18",
+      "close": 76.949997,
+      "classification": "Early Watch",
+      "technical_score": 50,
+      "data_fresh": true,
+      "expected_session": "2026-11-18",
+      "confidence": "medium",
+      "missing_indicators": [
+        "synchronized_relative_strength"
+      ],
+      "entry_blockers": [
+        "failed_upside_breakout",
+        "insufficient_entry_indicators",
+        "price_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": true,
+        "trend_ema": true,
+        "range_contraction": false,
+        "higher_lows": true,
+        "volume": 1819069.0,
+        "volume_avg20_prior": 302616.7,
+        "volume_ratio20": 6.011132,
+        "rsi14": 52.250764,
+        "macd": 1.141293,
+        "macd_signal": -0.487181,
+        "macd_histogram": 1.628474,
+        "atr14": 5.821,
+        "ema20": 75.159496,
+        "ema50": 74.97014,
+        "ema200": 71.257854,
+        "support20": 64.300003,
+        "resistance20": 88.449997,
+        "relative_strength_20d_vs_tasi": null,
+        "relative_strength_60d_vs_tasi": null
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        },
+        "60": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "normalization": {
+          "source_rows": 359,
+          "valid_rows": 359,
+          "rejected_or_duplicate_rows": 0
+        },
+        "quarantined_dates": [],
+        "unverified_quote_repairs": [],
+        "large_adjusted_price_jumps": [],
+        "missing_session_count": 1,
+        "missing_sessions": [
+          "2026-11-15"
+        ],
+        "zero_volume_rows": 58,
+        "last_bar_zero_volume": false,
+        "status": "vendor_checks_passed",
+        "independent_exchange_validation": false,
+        "note": "Vendor checks are not official exchange validation. Quote-substituted closes and >22% adjusted-price jumps are quarantined; no automatic price repair."
+      },
+      "price_structure": {
+        "zones": [
+          {
+            "low": 64.161416,
+            "high": 67.071916,
+            "center": 65.616666,
+            "touches": 3,
+            "last_pivot_date": "2026-11-08",
+            "side": "support"
+          },
+          {
+            "low": 69.522528,
+            "high": 72.433028,
+            "center": 70.977778,
+            "touches": 9,
+            "last_pivot_date": "2026-11-12",
+            "side": "support"
+          },
+          {
+            "low": 75.62475,
+            "high": 78.53525,
+            "center": 77.08,
+            "touches": 10,
+            "last_pivot_date": "2026-10-15",
+            "side": "resistance"
+          },
+          {
+            "low": 80.804749,
+            "high": 83.715249,
+            "center": 82.259999,
+            "touches": 5,
+            "last_pivot_date": "2026-10-19",
+            "side": "resistance"
+          }
+        ],
+        "nearest_support": {
+          "low": 69.522528,
+          "high": 72.433028,
+          "center": 70.977778,
+          "touches": 9,
+          "last_pivot_date": "2026-11-12",
+          "side": "support"
+        },
+        "nearest_resistance": {
+          "low": 80.804749,
+          "high": 83.715249,
+          "center": 82.259999,
+          "touches": 5,
+          "last_pivot_date": "2026-10-19",
+          "side": "resistance"
+        },
+        "structural_invalidation": 68.067278,
+        "confirmed_higher_lows": true,
+        "last_confirmed_lows": [
+          {
+            "side": "support",
+            "price": 64.300003,
+            "date": "2026-11-02",
+            "confirmed_date": "2026-11-04"
+          },
+          {
+            "side": "support",
+            "price": 65.449997,
+            "date": "2026-11-08",
+            "confirmed_date": "2026-11-10"
+          },
+          {
+            "side": "support",
+            "price": 72.650002,
+            "date": "2026-11-12",
+            "confirmed_date": "2026-11-17"
+          }
+        ],
+        "pivot_confirmation_sessions": 2,
+        "method": "90 observed bars; five-bar confirmed pivots clustered within max(0.5 ATR,0.5% price); heuristic zones"
+      },
+      "early_patterns": {
+        "confirmed_higher_lows": true,
+        "volatility_contraction": false,
+        "momentum_improving": false,
+        "demand_volume_improving": false,
+        "false_upside_breakout": true,
+        "failed_downside_breakdown": false,
+        "breakout_retest_holds": false,
+        "accumulation_candidate": false,
+        "early_reversal_candidate": false,
+        "retest_level": null,
+        "up_down_volume_ratio10": 0.549654,
+        "evidence": [
+          "confirmed_higher_lows",
+          "false_upside_breakout"
+        ],
+        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
+      },
+      "nomination_reasons": [
+        "confirmed_higher_lows",
+        "false_upside_breakout",
+        "observed_higher_lows_last10",
+        "EMA_trend_confirmed"
+      ],
+      "scenario": {
+        "trigger": 88.449997,
+        "reclaim_trigger": 75.159496,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 68.067278,
+        "conditional_target": 80.804749,
+        "target_method": "nearest confirmed overhead pivot zone (conservative lower edge)",
+        "upside_pct": 5.009425,
+        "reward_risk": 0.433961,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "up",
+        "high": 89.849998,
+        "high_date": "2026-11-18",
+        "low": 64.300003,
+        "low_date": "2026-11-02",
+        "retracement": {
+          "38.2": 80.0899,
+          "50": 77.075001,
+          "61.8": 74.060101
+        },
+        "extension": {
+          "127.2": 96.799597,
+          "161.8": 105.639896
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 359,
+      "first_bar": "2025-06-16",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "رؤوم",
+      "sector": "تجزئة وتوزيع السلع الكمالية",
+      "price_repairs": []
+    },
+    {
+      "symbol": "2150",
+      "date": "2026-11-18",
+      "last_bar": "2026-11-18",
+      "close": 36.299999,
+      "classification": "Early Watch",
+      "technical_score": 50,
+      "data_fresh": true,
+      "expected_session": "2026-11-18",
+      "confidence": "medium",
+      "missing_indicators": [
+        "synchronized_relative_strength"
+      ],
+      "entry_blockers": [
+        "insufficient_entry_indicators",
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": false,
+        "trend_ema": true,
+        "range_contraction": true,
+        "higher_lows": true,
+        "volume": 98114.0,
+        "volume_avg20_prior": 166752.95,
+        "volume_ratio20": 0.588379,
+        "rsi14": 57.286148,
+        "macd": 0.388914,
+        "macd_signal": 0.287257,
+        "macd_histogram": 0.101657,
+        "atr14": 0.783605,
+        "ema20": 35.702108,
+        "ema50": 35.473151,
+        "ema200": 35.877306,
+        "support20": 32.308658,
+        "resistance20": 36.880001,
+        "relative_strength_20d_vs_tasi": null,
+        "relative_strength_60d_vs_tasi": null
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        },
+        "60": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "normalization": {
+          "source_rows": 359,
+          "valid_rows": 359,
+          "rejected_or_duplicate_rows": 0
+        },
+        "quarantined_dates": [],
+        "unverified_quote_repairs": [],
+        "large_adjusted_price_jumps": [],
+        "missing_session_count": 1,
+        "missing_sessions": [
+          "2026-11-15"
+        ],
+        "zero_volume_rows": 4,
+        "last_bar_zero_volume": false,
+        "status": "vendor_checks_passed",
+        "independent_exchange_validation": false,
+        "note": "Vendor checks are not official exchange validation. Quote-substituted closes and >22% adjusted-price jumps are quarantined; no automatic price repair."
+      },
+      "price_structure": {
+        "zones": [
+          {
+            "low": 33.248456,
+            "high": 33.640258,
+            "center": 33.444357,
+            "touches": 2,
+            "last_pivot_date": "2026-10-15",
+            "side": "support"
+          },
+          {
+            "low": 34.702863,
+            "high": 35.094665,
+            "center": 34.898764,
+            "touches": 11,
+            "last_pivot_date": "2026-11-01",
+            "side": "support"
+          },
+          {
+            "low": 35.400655,
+            "high": 35.792458,
+            "center": 35.596557,
+            "touches": 7,
+            "last_pivot_date": "2026-11-16",
+            "side": "support"
+          },
+          {
+            "low": 36.601293,
+            "high": 36.993095,
+            "center": 36.797194,
+            "touches": 2,
+            "last_pivot_date": "2026-11-12",
+            "side": "resistance"
+          },
+          {
+            "low": 38.829044,
+            "high": 39.220846,
+            "center": 39.024945,
+            "touches": 2,
+            "last_pivot_date": "2026-08-27",
+            "side": "resistance"
+          }
+        ],
+        "nearest_support": {
+          "low": 35.400655,
+          "high": 35.792458,
+          "center": 35.596557,
+          "touches": 7,
+          "last_pivot_date": "2026-11-16",
+          "side": "support"
+        },
+        "nearest_resistance": {
+          "low": 36.601293,
+          "high": 36.993095,
+          "center": 36.797194,
+          "touches": 2,
+          "last_pivot_date": "2026-11-12",
+          "side": "resistance"
+        },
+        "structural_invalidation": 35.204754,
+        "confirmed_higher_lows": true,
+        "last_confirmed_lows": [
+          {
+            "side": "support",
+            "price": 32.308658,
+            "date": "2026-10-25",
+            "confirmed_date": "2026-10-27"
+          },
+          {
+            "side": "support",
+            "price": 34.619999,
+            "date": "2026-11-01",
+            "confirmed_date": "2026-11-03"
+          },
+          {
+            "side": "support",
+            "price": 35.880001,
+            "date": "2026-11-16",
+            "confirmed_date": "2026-11-18"
+          }
+        ],
+        "pivot_confirmation_sessions": 2,
+        "method": "90 observed bars; five-bar confirmed pivots clustered within max(0.5 ATR,0.5% price); heuristic zones"
+      },
+      "early_patterns": {
+        "confirmed_higher_lows": true,
+        "volatility_contraction": false,
+        "momentum_improving": false,
+        "demand_volume_improving": true,
+        "false_upside_breakout": false,
+        "failed_downside_breakdown": false,
+        "breakout_retest_holds": false,
+        "accumulation_candidate": false,
+        "early_reversal_candidate": false,
+        "retest_level": null,
+        "up_down_volume_ratio10": 5.25229,
+        "evidence": [
+          "confirmed_higher_lows",
+          "demand_volume_improving"
+        ],
+        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
+      },
+      "nomination_reasons": [
+        "confirmed_higher_lows",
+        "demand_volume_improving",
+        "observed_higher_lows_last10",
+        "range_contraction_5_vs20",
+        "EMA_trend_confirmed"
+      ],
+      "scenario": {
+        "trigger": 36.880001,
+        "reclaim_trigger": 35.702108,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 35.204754,
+        "conditional_target": 36.601293,
+        "target_method": "nearest confirmed overhead pivot zone (conservative lower edge)",
+        "upside_pct": 0.830009,
+        "reward_risk": 0.275092,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "down",
+        "high": 39.044527,
+        "high_date": "2026-08-24",
+        "low": 32.308658,
+        "low_date": "2026-10-25",
+        "retracement": {
+          "38.2": 34.88176,
+          "50": 35.676592,
+          "61.8": 36.471425
+        },
+        "extension": {
+          "127.2": 30.476501,
+          "161.8": 28.14589
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 359,
+      "first_bar": "2025-06-16",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "زجاج",
+      "sector": "المواد الأساسية",
+      "price_repairs": []
+    },
+    {
+      "symbol": "4016",
+      "date": "2026-11-18",
+      "last_bar": "2026-11-18",
+      "close": 65.800003,
+      "classification": "Early Watch",
+      "technical_score": 48,
+      "data_fresh": true,
+      "expected_session": "2026-11-18",
+      "confidence": "medium",
+      "missing_indicators": [
+        "synchronized_relative_strength"
+      ],
+      "entry_blockers": [
+        "insufficient_entry_indicators",
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": false,
+        "trend_ema": true,
+        "range_contraction": false,
+        "higher_lows": true,
+        "volume": 47504.0,
+        "volume_avg20_prior": 80707.0,
+        "volume_ratio20": 0.588598,
+        "rsi14": 59.25686,
+        "macd": 0.982368,
+        "macd_signal": 0.36015,
+        "macd_histogram": 0.622218,
+        "atr14": 2.029859,
+        "ema20": 63.365095,
+        "ema50": 62.730833,
+        "ema200": 62.155794,
+        "support20": 55.599998,
+        "resistance20": 68.400002,
+        "relative_strength_20d_vs_tasi": null,
+        "relative_strength_60d_vs_tasi": null
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        },
+        "60": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "normalization": {
+          "source_rows": 359,
+          "valid_rows": 359,
+          "rejected_or_duplicate_rows": 0
+        },
+        "quarantined_dates": [],
+        "unverified_quote_repairs": [],
+        "large_adjusted_price_jumps": [],
+        "missing_session_count": 1,
+        "missing_sessions": [
+          "2026-11-15"
+        ],
+        "zero_volume_rows": 3,
+        "last_bar_zero_volume": false,
+        "status": "vendor_checks_passed",
+        "independent_exchange_validation": false,
+        "note": "Vendor checks are not official exchange validation. Quote-substituted closes and >22% adjusted-price jumps are quarantined; no automatic price repair."
+      },
+      "price_structure": {
+        "zones": [
+          {
+            "low": 58.069822,
+            "high": 59.084752,
+            "center": 58.577287,
+            "touches": 4,
+            "last_pivot_date": "2026-11-01",
+            "side": "support"
+          },
+          {
+            "low": 60.143346,
+            "high": 61.158276,
+            "center": 60.650811,
+            "touches": 2,
+            "last_pivot_date": "2026-08-26",
+            "side": "support"
+          },
+          {
+            "low": 61.427958,
+            "high": 62.442888,
+            "center": 61.935423,
+            "touches": 6,
+            "last_pivot_date": "2026-11-11",
+            "side": "support"
+          },
+          {
+            "low": 62.617535,
+            "high": 63.632465,
+            "center": 63.125,
+            "touches": 2,
+            "last_pivot_date": "2026-10-18",
+            "side": "support"
+          },
+          {
+            "low": 64.402536,
+            "high": 65.417465,
+            "center": 64.910001,
+            "touches": 5,
+            "last_pivot_date": "2026-11-08",
+            "side": "support"
+          },
+          {
+            "low": 67.117535,
+            "high": 68.132465,
+            "center": 67.625,
+            "touches": 2,
+            "last_pivot_date": "2026-09-08",
+            "side": "resistance"
+          }
+        ],
+        "nearest_support": {
+          "low": 64.402536,
+          "high": 65.417465,
+          "center": 64.910001,
+          "touches": 5,
+          "last_pivot_date": "2026-11-08",
+          "side": "support"
+        },
+        "nearest_resistance": {
+          "low": 67.117535,
+          "high": 68.132465,
+          "center": 67.625,
+          "touches": 2,
+          "last_pivot_date": "2026-09-08",
+          "side": "resistance"
+        },
+        "structural_invalidation": 63.895071,
+        "confirmed_higher_lows": false,
+        "last_confirmed_lows": [
+          {
+            "side": "support",
+            "price": 62.049999,
+            "date": "2026-11-09",
+            "confirmed_date": "2026-11-11"
+          },
+          {
+            "side": "support",
+            "price": 62.049999,
+            "date": "2026-11-10",
+            "confirmed_date": "2026-11-12"
+          },
+          {
+            "side": "support",
+            "price": 62.049999,
+            "date": "2026-11-11",
+            "confirmed_date": "2026-11-16"
+          }
+        ],
+        "pivot_confirmation_sessions": 2,
+        "method": "90 observed bars; five-bar confirmed pivots clustered within max(0.5 ATR,0.5% price); heuristic zones"
+      },
+      "early_patterns": {
+        "confirmed_higher_lows": false,
+        "volatility_contraction": false,
+        "momentum_improving": false,
+        "demand_volume_improving": true,
+        "false_upside_breakout": false,
+        "failed_downside_breakdown": false,
+        "breakout_retest_holds": true,
+        "accumulation_candidate": false,
+        "early_reversal_candidate": false,
+        "retest_level": 65.550003,
+        "up_down_volume_ratio10": 4.965488,
+        "evidence": [
+          "demand_volume_improving",
+          "breakout_retest_holds"
+        ],
+        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
+      },
+      "nomination_reasons": [
+        "demand_volume_improving",
+        "breakout_retest_holds",
+        "observed_higher_lows_last10",
+        "EMA_trend_confirmed"
+      ],
+      "scenario": {
+        "trigger": 68.400002,
+        "reclaim_trigger": 63.365095,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 63.895071,
+        "conditional_target": 67.117535,
+        "target_method": "nearest confirmed overhead pivot zone (conservative lower edge)",
+        "upside_pct": 2.002328,
+        "reward_risk": 0.691643,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "up",
+        "high": 68.400002,
+        "high_date": "2026-11-17",
+        "low": 55.599998,
+        "low_date": "2026-10-26",
+        "retracement": {
+          "38.2": 63.5104,
+          "50": 62.0,
+          "61.8": 60.4896
+        },
+        "extension": {
+          "127.2": 71.881602,
+          "161.8": 76.310403
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 359,
+      "first_bar": "2025-06-16",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "أفالون فارما",
+      "sector": "الأدوية",
+      "price_repairs": []
+    },
+    {
+      "symbol": "2083",
+      "date": "2026-11-18",
+      "last_bar": "2026-11-18",
+      "close": 46.18,
+      "classification": "Early Watch",
+      "technical_score": 48,
+      "data_fresh": true,
+      "expected_session": "2026-11-18",
+      "confidence": "medium",
+      "missing_indicators": [
+        "synchronized_relative_strength"
+      ],
+      "entry_blockers": [
+        "failed_upside_breakout",
+        "insufficient_entry_indicators",
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": false,
+        "trend_ema": true,
+        "range_contraction": true,
+        "higher_lows": true,
+        "volume": 608876.0,
+        "volume_avg20_prior": 536361.05,
+        "volume_ratio20": 1.135198,
+        "rsi14": 63.09495,
+        "macd": 0.842973,
+        "macd_signal": 0.413055,
+        "macd_histogram": 0.429918,
+        "atr14": 1.476072,
+        "ema20": 43.565905,
+        "ema50": 42.682749,
+        "ema200": 39.491637,
+        "support20": 38.599998,
+        "resistance20": 46.259998,
+        "relative_strength_20d_vs_tasi": null,
+        "relative_strength_60d_vs_tasi": null
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        },
+        "60": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "normalization": {
+          "source_rows": 359,
+          "valid_rows": 359,
+          "rejected_or_duplicate_rows": 0
+        },
+        "quarantined_dates": [],
+        "unverified_quote_repairs": [],
+        "large_adjusted_price_jumps": [],
+        "missing_session_count": 1,
+        "missing_sessions": [
+          "2026-11-15"
+        ],
+        "zero_volume_rows": 4,
+        "last_bar_zero_volume": false,
+        "status": "vendor_checks_passed",
+        "independent_exchange_validation": false,
+        "note": "Vendor checks are not official exchange validation. Quote-substituted closes and >22% adjusted-price jumps are quarantined; no automatic price repair."
+      },
+      "price_structure": {
+        "zones": [
+          {
+            "low": 35.070981,
+            "high": 35.809017,
+            "center": 35.439999,
+            "touches": 2,
+            "last_pivot_date": "2026-08-06",
+            "side": "support"
+          },
+          {
+            "low": 38.420981,
+            "high": 39.159017,
+            "center": 38.789999,
+            "touches": 2,
+            "last_pivot_date": "2026-10-25",
+            "side": "support"
+          },
+          {
+            "low": 39.957648,
+            "high": 40.695684,
+            "center": 40.326666,
+            "touches": 6,
+            "last_pivot_date": "2026-11-01",
+            "side": "support"
+          },
+          {
+            "low": 40.857649,
+            "high": 41.595685,
+            "center": 41.226667,
+            "touches": 3,
+            "last_pivot_date": "2026-11-09",
+            "side": "support"
+          },
+          {
+            "low": 42.807648,
+            "high": 43.545684,
+            "center": 43.176666,
+            "touches": 6,
+            "last_pivot_date": "2026-11-05",
+            "side": "support"
+          },
+          {
+            "low": 45.335981,
+            "high": 46.074017,
+            "center": 45.704999,
+            "touches": 4,
+            "last_pivot_date": "2026-11-10",
+            "side": "support"
+          }
+        ],
+        "nearest_support": {
+          "low": 45.335981,
+          "high": 46.074017,
+          "center": 45.704999,
+          "touches": 4,
+          "last_pivot_date": "2026-11-10",
+          "side": "support"
+        },
+        "nearest_resistance": null,
+        "structural_invalidation": 44.966963,
+        "confirmed_higher_lows": true,
+        "last_confirmed_lows": [
+          {
+            "side": "support",
+            "price": 38.599998,
+            "date": "2026-10-25",
+            "confirmed_date": "2026-10-27"
+          },
+          {
+            "side": "support",
+            "price": 40.220001,
+            "date": "2026-11-01",
+            "confirmed_date": "2026-11-03"
+          },
+          {
+            "side": "support",
+            "price": 41.080002,
+            "date": "2026-11-09",
+            "confirmed_date": "2026-11-11"
+          }
+        ],
+        "pivot_confirmation_sessions": 2,
+        "method": "90 observed bars; five-bar confirmed pivots clustered within max(0.5 ATR,0.5% price); heuristic zones"
+      },
+      "early_patterns": {
+        "confirmed_higher_lows": true,
+        "volatility_contraction": false,
+        "momentum_improving": true,
+        "demand_volume_improving": true,
+        "false_upside_breakout": true,
+        "failed_downside_breakdown": false,
+        "breakout_retest_holds": true,
+        "accumulation_candidate": false,
+        "early_reversal_candidate": true,
+        "retest_level": 45.939999,
+        "up_down_volume_ratio10": 10.83469,
+        "evidence": [
+          "confirmed_higher_lows",
+          "momentum_improving",
+          "demand_volume_improving",
+          "false_upside_breakout",
+          "breakout_retest_holds"
+        ],
+        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
+      },
+      "nomination_reasons": [
+        "confirmed_higher_lows",
+        "momentum_improving",
+        "demand_volume_improving",
+        "false_upside_breakout",
+        "breakout_retest_holds",
+        "observed_higher_lows_last10",
+        "range_contraction_5_vs20",
+        "EMA_trend_confirmed"
+      ],
+      "scenario": {
+        "trigger": 46.259998,
+        "reclaim_trigger": 43.565905,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 44.966963,
+        "conditional_target": 46.259998,
+        "target_method": "previous 90-session high",
+        "upside_pct": 0.173231,
+        "reward_risk": 0.065949,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "up",
+        "high": 47.0,
+        "high_date": "2026-11-18",
+        "low": 35.419998,
+        "low_date": "2026-08-06",
+        "retracement": {
+          "38.2": 42.576439,
+          "50": 41.209999,
+          "61.8": 39.843559
+        },
+        "extension": {
+          "127.2": 50.14976,
+          "161.8": 54.156441
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 359,
+      "first_bar": "2025-06-16",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "مرافق",
+      "sector": "المرافق العامة",
+      "price_repairs": []
+    },
+    {
+      "symbol": "6015",
+      "date": "2026-11-18",
+      "last_bar": "2026-11-18",
+      "close": 2.67,
+      "classification": "Early Watch",
+      "technical_score": 43,
+      "data_fresh": true,
+      "expected_session": "2026-11-18",
+      "confidence": "medium",
+      "missing_indicators": [
+        "synchronized_relative_strength"
+      ],
+      "entry_blockers": [
+        "failed_upside_breakout",
+        "insufficient_entry_indicators",
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": false,
+        "volume_confirmed": false,
+        "trend_ema": true,
+        "range_contraction": true,
+        "higher_lows": true,
+        "volume": 6074401.0,
+        "volume_avg20_prior": 17455075.2,
+        "volume_ratio20": 0.348002,
+        "rsi14": 65.485107,
+        "macd": 0.059489,
+        "macd_signal": 0.046645,
+        "macd_histogram": 0.012844,
+        "atr14": 0.073194,
+        "ema20": 2.55991,
+        "ema50": 2.476334,
+        "ema200": 2.22013,
+        "support20": 2.21,
+        "resistance20": 2.69,
+        "relative_strength_20d_vs_tasi": null,
+        "relative_strength_60d_vs_tasi": null
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        },
+        "60": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "normalization": {
+          "source_rows": 359,
+          "valid_rows": 359,
+          "rejected_or_duplicate_rows": 0
+        },
+        "quarantined_dates": [],
+        "unverified_quote_repairs": [],
+        "large_adjusted_price_jumps": [],
+        "missing_session_count": 1,
+        "missing_sessions": [
+          "2026-11-15"
+        ],
+        "zero_volume_rows": 4,
+        "last_bar_zero_volume": false,
+        "status": "vendor_checks_passed",
+        "independent_exchange_validation": false,
+        "note": "Vendor checks are not official exchange validation. Quote-substituted closes and >22% adjusted-price jumps are quarantined; no automatic price repair."
+      },
+      "price_structure": {
+        "zones": [
+          {
+            "low": 2.044217,
+            "high": 2.080814,
+            "center": 2.062516,
+            "touches": 3,
+            "last_pivot_date": "2026-07-28",
+            "side": "support"
+          },
+          {
+            "low": 2.316701,
+            "high": 2.353298,
+            "center": 2.335,
+            "touches": 2,
+            "last_pivot_date": "2026-09-29",
+            "side": "support"
+          },
+          {
+            "low": 2.371702,
+            "high": 2.408299,
+            "center": 2.39,
+            "touches": 6,
+            "last_pivot_date": "2026-10-15",
+            "side": "support"
+          },
+          {
+            "low": 2.437257,
+            "high": 2.473854,
+            "center": 2.455556,
+            "touches": 9,
+            "last_pivot_date": "2026-11-03",
+            "side": "support"
+          },
+          {
+            "low": 2.501701,
+            "high": 2.538299,
+            "center": 2.52,
+            "touches": 4,
+            "last_pivot_date": "2026-11-10",
+            "side": "support"
+          },
+          {
+            "low": 2.631702,
+            "high": 2.668299,
+            "center": 2.65,
+            "touches": 2,
+            "last_pivot_date": "2026-11-08",
+            "side": "support"
+          }
+        ],
+        "nearest_support": {
+          "low": 2.631702,
+          "high": 2.668299,
+          "center": 2.65,
+          "touches": 2,
+          "last_pivot_date": "2026-11-08",
+          "side": "support"
+        },
+        "nearest_resistance": null,
+        "structural_invalidation": 2.613403,
+        "confirmed_higher_lows": true,
+        "last_confirmed_lows": [
+          {
+            "side": "support",
+            "price": 2.47,
+            "date": "2026-11-03",
+            "confirmed_date": "2026-11-05"
+          },
+          {
+            "side": "support",
+            "price": 2.54,
+            "date": "2026-11-10",
+            "confirmed_date": "2026-11-12"
+          },
+          {
+            "side": "support",
+            "price": 2.59,
+            "date": "2026-11-16",
+            "confirmed_date": "2026-11-18"
+          }
+        ],
+        "pivot_confirmation_sessions": 2,
+        "method": "90 observed bars; five-bar confirmed pivots clustered within max(0.5 ATR,0.5% price); heuristic zones"
+      },
+      "early_patterns": {
+        "confirmed_higher_lows": true,
+        "volatility_contraction": false,
+        "momentum_improving": false,
+        "demand_volume_improving": true,
+        "false_upside_breakout": true,
+        "failed_downside_breakdown": false,
+        "breakout_retest_holds": true,
+        "accumulation_candidate": false,
+        "early_reversal_candidate": false,
+        "retest_level": 2.66,
+        "up_down_volume_ratio10": 4.978513,
+        "evidence": [
+          "confirmed_higher_lows",
+          "demand_volume_improving",
+          "false_upside_breakout",
+          "breakout_retest_holds"
+        ],
+        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
+      },
+      "nomination_reasons": [
+        "confirmed_higher_lows",
+        "demand_volume_improving",
+        "false_upside_breakout",
+        "breakout_retest_holds",
+        "observed_higher_lows_last10",
+        "range_contraction_5_vs20",
+        "EMA_trend_confirmed"
+      ],
+      "scenario": {
+        "trigger": 2.69,
+        "reclaim_trigger": 2.55991,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 2.613403,
+        "conditional_target": 2.69,
+        "target_method": "previous 90-session high",
+        "upside_pct": 0.749063,
+        "reward_risk": 0.353375,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "up",
+        "high": 2.72,
+        "high_date": "2026-11-18",
+        "low": 2.0592,
+        "low_date": "2026-07-20",
+        "retracement": {
+          "38.2": 2.467574,
+          "50": 2.3896,
+          "61.8": 2.311626
+        },
+        "extension": {
+          "127.2": 2.899738,
+          "161.8": 3.128374
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 359,
+      "first_bar": "2025-06-16",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "أمريكانا",
+      "sector": "الخدمات الاستهلاكية",
+      "price_repairs": []
+    },
+    {
+      "symbol": "2270",
+      "date": "2026-11-18",
+      "last_bar": "2026-11-18",
+      "close": 188.699997,
+      "classification": "Early Watch",
+      "technical_score": 43,
+      "data_fresh": true,
+      "expected_session": "2026-11-18",
+      "confidence": "medium",
+      "missing_indicators": [
+        "synchronized_relative_strength"
+      ],
+      "entry_blockers": [
+        "insufficient_entry_indicators",
+        "volume_not_confirmed",
+        "trend_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "observations": {
+        "breakout20_with_volume": false,
+        "reclaim_ema20_with_volume": false,
+        "price_breakout20": true,
+        "volume_confirmed": false,
+        "trend_ema": false,
+        "range_contraction": false,
+        "higher_lows": true,
+        "volume": 34716.0,
+        "volume_avg20_prior": 52267.7,
+        "volume_ratio20": 0.664196,
+        "rsi14": 63.786104,
+        "macd": 1.344667,
+        "macd_signal": -0.811904,
+        "macd_histogram": 2.156572,
+        "atr14": 4.587512,
+        "ema20": 179.472002,
+        "ema50": 182.817041,
+        "ema200": 200.987676,
+        "support20": 158.800003,
+        "resistance20": 187.300003,
+        "relative_strength_20d_vs_tasi": null,
+        "relative_strength_60d_vs_tasi": null
+      },
+      "relative_strength": {
+        "20": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        },
+        "60": {
+          "value_pct_points": null,
+          "reason": "missing synchronized stock or TASI sessions; no forward fill"
+        }
+      },
+      "data_quality": {
+        "entry_eligible": true,
+        "normalization": {
+          "source_rows": 359,
+          "valid_rows": 359,
+          "rejected_or_duplicate_rows": 0
+        },
+        "quarantined_dates": [],
+        "unverified_quote_repairs": [],
+        "large_adjusted_price_jumps": [],
+        "missing_session_count": 1,
+        "missing_sessions": [
+          "2026-11-15"
+        ],
+        "zero_volume_rows": 4,
+        "last_bar_zero_volume": false,
+        "status": "vendor_checks_passed",
+        "independent_exchange_validation": false,
+        "note": "Vendor checks are not official exchange validation. Quote-substituted closes and >22% adjusted-price jumps are quarantined; no automatic price repair."
+      },
+      "price_structure": {
+        "zones": [
+          {
+            "low": 181.153125,
+            "high": 183.446881,
+            "center": 182.300003,
+            "touches": 2,
+            "last_pivot_date": "2026-11-05",
+            "side": "support"
+          },
+          {
+            "low": 194.453638,
+            "high": 196.747394,
+            "center": 195.600516,
+            "touches": 4,
+            "last_pivot_date": "2026-09-09",
+            "side": "resistance"
+          },
+          {
+            "low": 201.201606,
+            "high": 203.495362,
+            "center": 202.348484,
+            "touches": 7,
+            "last_pivot_date": "2026-09-15",
+            "side": "resistance"
+          }
+        ],
+        "nearest_support": {
+          "low": 181.153125,
+          "high": 183.446881,
+          "center": 182.300003,
+          "touches": 2,
+          "last_pivot_date": "2026-11-05",
+          "side": "support"
+        },
+        "nearest_resistance": {
+          "low": 194.453638,
+          "high": 196.747394,
+          "center": 195.600516,
+          "touches": 4,
+          "last_pivot_date": "2026-09-09",
+          "side": "resistance"
+        },
+        "structural_invalidation": 180.006247,
+        "confirmed_higher_lows": false,
+        "last_confirmed_lows": [
+          {
+            "side": "support",
+            "price": 158.800003,
+            "date": "2026-10-25",
+            "confirmed_date": "2026-10-27"
+          },
+          {
+            "side": "support",
+            "price": 173.300003,
+            "date": "2026-11-02",
+            "confirmed_date": "2026-11-04"
+          },
+          {
+            "side": "support",
+            "price": 170.600006,
+            "date": "2026-11-08",
+            "confirmed_date": "2026-11-10"
+          }
+        ],
+        "pivot_confirmation_sessions": 2,
+        "method": "90 observed bars; five-bar confirmed pivots clustered within max(0.5 ATR,0.5% price); heuristic zones"
+      },
+      "early_patterns": {
+        "confirmed_higher_lows": false,
+        "volatility_contraction": false,
+        "momentum_improving": true,
+        "demand_volume_improving": true,
+        "false_upside_breakout": false,
+        "failed_downside_breakdown": false,
+        "breakout_retest_holds": true,
+        "accumulation_candidate": false,
+        "early_reversal_candidate": true,
+        "retest_level": 185.199997,
+        "up_down_volume_ratio10": 1.578612,
+        "evidence": [
+          "momentum_improving",
+          "demand_volume_improving",
+          "breakout_retest_holds"
+        ],
+        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
+      },
+      "nomination_reasons": [
+        "momentum_improving",
+        "demand_volume_improving",
+        "breakout_retest_holds",
+        "observed_higher_lows_last10",
+        "close_above_prior_resistance20"
+      ],
+      "scenario": {
+        "trigger": 187.300003,
+        "reclaim_trigger": 179.472002,
+        "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
+        "invalidation": 180.006247,
+        "conditional_target": 194.453638,
+        "target_method": "nearest confirmed overhead pivot zone (conservative lower edge)",
+        "upside_pct": 3.049094,
+        "reward_risk": 0.661813,
+        "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
+      },
+      "fibonacci": {
+        "direction": "down",
+        "high": 213.816893,
+        "high_date": "2026-07-14",
+        "low": 158.800003,
+        "low_date": "2026-10-25",
+        "retracement": {
+          "38.2": 179.816455,
+          "50": 186.308448,
+          "61.8": 192.800441
+        },
+        "extension": {
+          "127.2": 143.835409,
+          "161.8": 124.799565
+        },
+        "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
+      },
+      "bars": 359,
+      "first_bar": "2025-06-16",
+      "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
+      "name": "سدافكو",
+      "sector": "إنتاج الأغذية",
+      "price_repairs": []
+    }
+  ]
+}
