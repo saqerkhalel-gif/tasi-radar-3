@@ -1,17 +1,17 @@
 {
   "window_sessions": 20,
   "minimum_excursion_pct": 10,
-  "detected_count": 1318,
-  "missed_count": 124,
+  "detected_count": 1310,
+  "missed_count": 128,
   "missed_reason_counts": {
-    "no_early_pattern_or_trend_confirmation": 124,
-    "insufficient_entry_indicators": 103,
-    "price_not_confirmed": 124,
-    "volume_not_confirmed": 89,
-    "trend_not_confirmed": 124,
-    "upside_below_10pct_or_no_target": 95,
-    "reward_risk_below_minimum_or_missing": 104,
-    "unverified_or_suspicious_OHLCV": 2
+    "no_early_pattern_or_trend_confirmation": 128,
+    "insufficient_entry_indicators": 107,
+    "price_not_confirmed": 128,
+    "volume_not_confirmed": 93,
+    "trend_not_confirmed": 128,
+    "upside_below_10pct_or_no_target": 98,
+    "reward_risk_below_minimum_or_missing": 107,
+    "unverified_or_suspicious_OHLCV": 7
   },
   "detected": [
     {
@@ -90,8 +90,8 @@
       "base_date": "2026-03-01",
       "evaluation_end": "2026-04-05",
       "base_close": 19.227734,
-      "maximum_high_gain_pct": 10.830853,
-      "maximum_close_gain_pct": 9.49554,
+      "maximum_high_gain_pct": 10.830863,
+      "maximum_close_gain_pct": 9.495549,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -489,8 +489,8 @@
       "base_date": "2025-12-30",
       "evaluation_end": "2026-01-27",
       "base_close": 30.32737,
-      "maximum_high_gain_pct": 10.460767,
-      "maximum_close_gain_pct": 10.398499,
+      "maximum_high_gain_pct": 10.460779,
+      "maximum_close_gain_pct": 10.398511,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -527,7 +527,7 @@
       "evaluation_end": "2026-04-05",
       "base_close": 31.158257,
       "maximum_high_gain_pct": 13.454545,
-      "maximum_close_gain_pct": 13.030307,
+      "maximum_close_gain_pct": 13.030295,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -561,8 +561,8 @@
       "base_date": "2025-08-03",
       "evaluation_end": "2025-08-31",
       "base_close": 20.340944,
-      "maximum_high_gain_pct": 13.941645,
-      "maximum_close_gain_pct": 12.135247,
+      "maximum_high_gain_pct": 13.941635,
+      "maximum_close_gain_pct": 12.135238,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -584,7 +584,7 @@
         "breakout_retest_holds": true,
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
-        "retest_level": 20.256149,
+        "retest_level": 20.256151,
         "up_down_volume_ratio10": 2.230616,
         "evidence": [
           "confirmed_higher_lows",
@@ -600,8 +600,8 @@
       "base_date": "2025-09-01",
       "evaluation_end": "2025-09-30",
       "base_close": 21.763586,
-      "maximum_high_gain_pct": 11.774881,
-      "maximum_close_gain_pct": 6.969693,
+      "maximum_high_gain_pct": 11.77489,
+      "maximum_close_gain_pct": 6.969685,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -622,7 +622,7 @@
         "breakout_retest_holds": true,
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
-        "retest_level": 21.443257,
+        "retest_level": 21.443255,
         "up_down_volume_ratio10": 2.302696,
         "evidence": [
           "confirmed_higher_lows",
@@ -885,7 +885,7 @@
       "base_date": "2025-08-28",
       "evaluation_end": "2025-09-28",
       "base_close": 60.109371,
-      "maximum_high_gain_pct": 12.045273,
+      "maximum_high_gain_pct": 12.04526,
       "maximum_close_gain_pct": 10.011968,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
@@ -899,8 +899,8 @@
       ],
       "missing_detection_reasons": [],
       "patterns_at_base": {
-        "confirmed_higher_lows": true,
-        "volatility_contraction": false,
+        "confirmed_higher_lows": false,
+        "volatility_contraction": true,
         "momentum_improving": false,
         "demand_volume_improving": false,
         "false_upside_breakout": false,
@@ -911,7 +911,7 @@
         "retest_level": null,
         "up_down_volume_ratio10": 0.746509,
         "evidence": [
-          "confirmed_higher_lows"
+          "volatility_contraction"
         ],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
@@ -1064,9 +1064,9 @@
       "symbol": "1150",
       "base_date": "2025-08-28",
       "evaluation_end": "2025-09-28",
-      "base_close": 20.088173,
-      "maximum_high_gain_pct": 10.952358,
-      "maximum_close_gain_pct": 10.952358,
+      "base_close": 20.088175,
+      "maximum_high_gain_pct": 10.952357,
+      "maximum_close_gain_pct": 10.952357,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -1079,7 +1079,7 @@
       ],
       "missing_detection_reasons": [],
       "patterns_at_base": {
-        "confirmed_higher_lows": true,
+        "confirmed_higher_lows": false,
         "volatility_contraction": true,
         "momentum_improving": false,
         "demand_volume_improving": false,
@@ -1091,7 +1091,6 @@
         "retest_level": null,
         "up_down_volume_ratio10": 0.906674,
         "evidence": [
-          "confirmed_higher_lows",
           "volatility_contraction"
         ],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
@@ -1103,8 +1102,8 @@
       "base_date": "2025-12-17",
       "evaluation_end": "2026-01-14",
       "base_close": 19.599346,
-      "maximum_high_gain_pct": 10.288068,
-      "maximum_close_gain_pct": 9.876551,
+      "maximum_high_gain_pct": 10.288058,
+      "maximum_close_gain_pct": 9.876542,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -1141,8 +1140,8 @@
       "base_date": "2026-01-15",
       "evaluation_end": "2026-02-12",
       "base_close": 21.147938,
-      "maximum_high_gain_pct": 11.594194,
-      "maximum_close_gain_pct": 11.594194,
+      "maximum_high_gain_pct": 11.594203,
+      "maximum_close_gain_pct": 11.594203,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -1163,7 +1162,7 @@
         "breakout_retest_holds": true,
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
-        "retest_level": 20.970493,
+        "retest_level": 20.970491,
         "up_down_volume_ratio10": 2.458878,
         "evidence": [
           "confirmed_higher_lows",
@@ -1318,38 +1317,35 @@
     },
     {
       "symbol": "1182",
-      "base_date": "2025-07-14",
-      "evaluation_end": "2025-08-11",
-      "base_close": 10.924379,
-      "maximum_high_gain_pct": 10.159526,
-      "maximum_close_gain_pct": 9.15197,
+      "base_date": "2025-07-17",
+      "evaluation_end": "2025-08-14",
+      "base_close": 10.851,
+      "maximum_high_gain_pct": 10.904485,
+      "maximum_close_gain_pct": 9.890115,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "unverified_or_suspicious_OHLCV",
         "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
         "trend_not_confirmed",
-        "upside_below_10pct_or_no_target",
-        "reward_risk_below_minimum_or_missing"
+        "upside_below_10pct_or_no_target"
       ],
       "missing_detection_reasons": [],
       "patterns_at_base": {
-        "confirmed_higher_lows": true,
+        "confirmed_higher_lows": false,
         "volatility_contraction": false,
         "momentum_improving": false,
-        "demand_volume_improving": true,
+        "demand_volume_improving": false,
         "false_upside_breakout": false,
         "failed_downside_breakdown": false,
         "breakout_retest_holds": false,
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
         "retest_level": null,
-        "up_down_volume_ratio10": 1.329031,
-        "evidence": [
-          "confirmed_higher_lows",
-          "demand_volume_improving"
-        ],
+        "up_down_volume_ratio10": 1.237008,
+        "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
@@ -1359,7 +1355,7 @@
       "base_date": "2025-12-29",
       "evaluation_end": "2026-01-26",
       "base_close": 9.750307,
-      "maximum_high_gain_pct": 11.006578,
+      "maximum_high_gain_pct": 11.006589,
       "maximum_close_gain_pct": 6.961427,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
@@ -1460,17 +1456,16 @@
     },
     {
       "symbol": "1183",
-      "base_date": "2025-07-14",
-      "evaluation_end": "2025-08-11",
-      "base_close": 20.807791,
-      "maximum_high_gain_pct": 15.813956,
-      "maximum_close_gain_pct": 11.023262,
+      "base_date": "2025-07-20",
+      "evaluation_end": "2025-08-17",
+      "base_close": 21.001352,
+      "maximum_high_gain_pct": 14.746543,
+      "maximum_close_gain_pct": 10.000003,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
         "insufficient_entry_indicators",
         "price_not_confirmed",
-        "volume_not_confirmed",
         "trend_not_confirmed",
         "reward_risk_below_minimum_or_missing"
       ],
@@ -1486,7 +1481,7 @@
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
         "retest_level": null,
-        "up_down_volume_ratio10": 64.932392,
+        "up_down_volume_ratio10": 7.552581,
         "evidence": [
           "confirmed_higher_lows",
           "demand_volume_improving"
@@ -2505,6 +2500,7 @@
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
         "trend_not_confirmed",
@@ -3020,16 +3016,18 @@
     },
     {
       "symbol": "1302",
-      "base_date": "2025-07-16",
-      "evaluation_end": "2025-08-13",
+      "base_date": "2025-07-17",
+      "evaluation_end": "2025-08-14",
       "base_close": 54.75,
       "maximum_high_gain_pct": 12.146122,
       "maximum_close_gain_pct": 7.945203,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "unverified_or_suspicious_OHLCV",
         "insufficient_entry_indicators",
         "price_not_confirmed",
+        "volume_not_confirmed",
         "trend_not_confirmed",
         "upside_below_10pct_or_no_target",
         "reward_risk_below_minimum_or_missing"
@@ -3046,7 +3044,7 @@
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
         "retest_level": null,
-        "up_down_volume_ratio10": 2.093896,
+        "up_down_volume_ratio10": 1.873399,
         "evidence": [
           "demand_volume_improving"
         ],
@@ -3166,9 +3164,9 @@
       "symbol": "1303",
       "base_date": "2025-07-17",
       "evaluation_end": "2025-08-14",
-      "base_close": 8.366969,
-      "maximum_high_gain_pct": 12.067328,
-      "maximum_close_gain_pct": 11.371973,
+      "base_close": 8.36697,
+      "maximum_high_gain_pct": 12.067315,
+      "maximum_close_gain_pct": 11.37196,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -3182,7 +3180,7 @@
       ],
       "missing_detection_reasons": [],
       "patterns_at_base": {
-        "confirmed_higher_lows": true,
+        "confirmed_higher_lows": false,
         "volatility_contraction": false,
         "momentum_improving": false,
         "demand_volume_improving": true,
@@ -3194,7 +3192,6 @@
         "retest_level": null,
         "up_down_volume_ratio10": 1.329584,
         "evidence": [
-          "confirmed_higher_lows",
           "demand_volume_improving"
         ],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
@@ -3999,7 +3996,7 @@
       "base_date": "2025-08-03",
       "evaluation_end": "2025-08-31",
       "base_close": 99.596649,
-      "maximum_high_gain_pct": 10.196356,
+      "maximum_high_gain_pct": 10.196364,
       "maximum_close_gain_pct": 7.223273,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
@@ -4033,7 +4030,7 @@
       "evaluation_end": "2025-09-30",
       "base_close": 101.155136,
       "maximum_high_gain_pct": 25.873463,
-      "maximum_close_gain_pct": 23.890445,
+      "maximum_close_gain_pct": 23.89046,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -4046,7 +4043,7 @@
       "missing_detection_reasons": [],
       "patterns_at_base": {
         "confirmed_higher_lows": true,
-        "volatility_contraction": false,
+        "volatility_contraction": true,
         "momentum_improving": false,
         "demand_volume_improving": false,
         "false_upside_breakout": false,
@@ -4057,7 +4054,8 @@
         "retest_level": null,
         "up_down_volume_ratio10": 0.22698,
         "evidence": [
-          "confirmed_higher_lows"
+          "confirmed_higher_lows",
+          "volatility_contraction"
         ],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
@@ -4068,8 +4066,8 @@
       "base_date": "2025-10-01",
       "evaluation_end": "2025-10-29",
       "base_close": 122.933571,
-      "maximum_high_gain_pct": 13.442122,
-      "maximum_close_gain_pct": 11.732722,
+      "maximum_high_gain_pct": 13.442109,
+      "maximum_close_gain_pct": 11.73271,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -4182,7 +4180,9 @@
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "insufficient_entry_indicators",
         "volume_not_confirmed",
+        "trend_not_confirmed",
         "upside_below_10pct_or_no_target",
         "reward_risk_below_minimum_or_missing"
       ],
@@ -4548,6 +4548,7 @@
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
         "trend_not_confirmed",
@@ -4714,9 +4715,9 @@
       "symbol": "1323",
       "base_date": "2025-09-01",
       "evaluation_end": "2025-09-30",
-      "base_close": 27.727482,
-      "maximum_high_gain_pct": 10.641201,
-      "maximum_close_gain_pct": 7.980905,
+      "base_close": 26.027304,
+      "maximum_high_gain_pct": 10.641197,
+      "maximum_close_gain_pct": 7.980901,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -4752,9 +4753,9 @@
       "symbol": "1323",
       "base_date": "2025-10-22",
       "evaluation_end": "2025-11-19",
-      "base_close": 27.405949,
-      "maximum_high_gain_pct": 10.213944,
-      "maximum_close_gain_pct": 8.764668,
+      "base_close": 25.725487,
+      "maximum_high_gain_pct": 10.213942,
+      "maximum_close_gain_pct": 8.764666,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -4789,9 +4790,9 @@
       "symbol": "1323",
       "base_date": "2026-03-03",
       "evaluation_end": "2026-04-07",
-      "base_close": 22.601206,
-      "maximum_high_gain_pct": 10.802617,
-      "maximum_close_gain_pct": 10.542307,
+      "base_close": 21.215359,
+      "maximum_high_gain_pct": 10.802613,
+      "maximum_close_gain_pct": 10.542304,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -4826,9 +4827,9 @@
       "symbol": "1323",
       "base_date": "2026-04-09",
       "evaluation_end": "2026-05-07",
-      "base_close": 23.660179,
-      "maximum_high_gain_pct": 11.833469,
-      "maximum_close_gain_pct": 9.213037,
+      "base_close": 22.209396,
+      "maximum_high_gain_pct": 11.833477,
+      "maximum_close_gain_pct": 9.213045,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -4863,9 +4864,9 @@
       "symbol": "1323",
       "base_date": "2026-07-09",
       "evaluation_end": "2026-08-06",
-      "base_close": 25.860001,
-      "maximum_high_gain_pct": 10.363497,
-      "maximum_close_gain_pct": 9.126058,
+      "base_close": 24.274332,
+      "maximum_high_gain_pct": 10.36349,
+      "maximum_close_gain_pct": 9.126052,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -4899,9 +4900,9 @@
       "symbol": "1323",
       "base_date": "2026-10-14",
       "evaluation_end": "2026-11-11",
-      "base_close": 23.66,
-      "maximum_high_gain_pct": 12.003382,
-      "maximum_close_gain_pct": 11.918849,
+      "base_close": 22.209229,
+      "maximum_high_gain_pct": 12.003385,
+      "maximum_close_gain_pct": 11.918853,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -5505,14 +5506,15 @@
     },
     {
       "symbol": "1820",
-      "base_date": "2025-07-14",
-      "evaluation_end": "2025-08-11",
-      "base_close": 2.38,
-      "maximum_high_gain_pct": 11.764704,
-      "maximum_close_gain_pct": 6.302515,
+      "base_date": "2025-07-17",
+      "evaluation_end": "2025-08-14",
+      "base_close": 2.29,
+      "maximum_high_gain_pct": 16.157211,
+      "maximum_close_gain_pct": 10.48035,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "unverified_or_suspicious_OHLCV",
         "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
@@ -5524,17 +5526,15 @@
         "confirmed_higher_lows": false,
         "volatility_contraction": false,
         "momentum_improving": false,
-        "demand_volume_improving": true,
+        "demand_volume_improving": false,
         "false_upside_breakout": false,
         "failed_downside_breakdown": false,
         "breakout_retest_holds": false,
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
         "retest_level": null,
-        "up_down_volume_ratio10": 3.436829,
-        "evidence": [
-          "demand_volume_improving"
-        ],
+        "up_down_volume_ratio10": 0.530621,
+        "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
@@ -5559,7 +5559,7 @@
       "missing_detection_reasons": [],
       "patterns_at_base": {
         "confirmed_higher_lows": false,
-        "volatility_contraction": true,
+        "volatility_contraction": false,
         "momentum_improving": true,
         "demand_volume_improving": false,
         "false_upside_breakout": false,
@@ -5570,7 +5570,6 @@
         "retest_level": null,
         "up_down_volume_ratio10": 0.559944,
         "evidence": [
-          "volatility_contraction",
           "momentum_improving"
         ],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
@@ -5790,14 +5789,15 @@
     },
     {
       "symbol": "1830",
-      "base_date": "2025-07-16",
-      "evaluation_end": "2025-08-13",
-      "base_close": 126.96048,
-      "maximum_high_gain_pct": 11.337523,
-      "maximum_close_gain_pct": 10.811273,
+      "base_date": "2025-07-17",
+      "evaluation_end": "2025-08-14",
+      "base_close": 126.960495,
+      "maximum_high_gain_pct": 11.563037,
+      "maximum_close_gain_pct": 11.487867,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "unverified_or_suspicious_OHLCV",
         "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
@@ -5817,7 +5817,7 @@
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
         "retest_level": null,
-        "up_down_volume_ratio10": 0.747049,
+        "up_down_volume_ratio10": 1.00819,
         "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
@@ -6432,9 +6432,9 @@
       "symbol": "1833",
       "base_date": "2025-09-10",
       "evaluation_end": "2025-10-09",
-      "base_close": 84.980347,
-      "maximum_high_gain_pct": 11.538467,
-      "maximum_close_gain_pct": 10.683766,
+      "base_close": 84.980354,
+      "maximum_high_gain_pct": 11.538466,
+      "maximum_close_gain_pct": 10.683765,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -6469,7 +6469,7 @@
       "base_date": "2025-10-22",
       "evaluation_end": "2025-11-19",
       "base_close": 98.054253,
-      "maximum_high_gain_pct": 10.14815,
+      "maximum_high_gain_pct": 10.148158,
       "maximum_close_gain_pct": 6.148146,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
@@ -6760,9 +6760,9 @@
       "symbol": "1835",
       "base_date": "2025-07-23",
       "evaluation_end": "2025-08-20",
-      "base_close": 49.736118,
-      "maximum_high_gain_pct": 10.157287,
-      "maximum_close_gain_pct": 9.013789,
+      "base_close": 49.736122,
+      "maximum_high_gain_pct": 10.157271,
+      "maximum_close_gain_pct": 9.013772,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -6799,7 +6799,7 @@
       "evaluation_end": "2025-09-22",
       "base_close": 51.375561,
       "maximum_high_gain_pct": 10.332095,
-      "maximum_close_gain_pct": 8.02582,
+      "maximum_close_gain_pct": 8.025828,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -7050,9 +7050,9 @@
       "symbol": "2010",
       "base_date": "2025-07-22",
       "evaluation_end": "2025-08-19",
-      "base_close": 49.738838,
-      "maximum_high_gain_pct": 10.841127,
-      "maximum_close_gain_pct": 10.654214,
+      "base_close": 49.738842,
+      "maximum_high_gain_pct": 10.84111,
+      "maximum_close_gain_pct": 10.654197,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -7086,8 +7086,8 @@
       "base_date": "2025-08-20",
       "evaluation_end": "2025-09-17",
       "base_close": 54.850964,
-      "maximum_high_gain_pct": 10.86957,
-      "maximum_close_gain_pct": 7.826091,
+      "maximum_high_gain_pct": 10.869562,
+      "maximum_close_gain_pct": 7.826084,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -7126,7 +7126,7 @@
       "evaluation_end": "2026-01-25",
       "base_close": 48.841209,
       "maximum_high_gain_pct": 10.156244,
-      "maximum_close_gain_pct": 9.472641,
+      "maximum_close_gain_pct": 9.472649,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -7196,8 +7196,8 @@
       "base_date": "2025-12-25",
       "evaluation_end": "2026-01-22",
       "base_close": 105.139061,
-      "maximum_high_gain_pct": 10.540548,
-      "maximum_close_gain_pct": 9.819831,
+      "maximum_high_gain_pct": 10.54054,
+      "maximum_close_gain_pct": 9.819824,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -7931,7 +7931,7 @@
       ],
       "missing_detection_reasons": [],
       "patterns_at_base": {
-        "confirmed_higher_lows": true,
+        "confirmed_higher_lows": false,
         "volatility_contraction": false,
         "momentum_improving": false,
         "demand_volume_improving": false,
@@ -7942,9 +7942,7 @@
         "early_reversal_candidate": false,
         "retest_level": null,
         "up_down_volume_ratio10": 0.410186,
-        "evidence": [
-          "confirmed_higher_lows"
-        ],
+        "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
@@ -8033,6 +8031,7 @@
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
         "trend_not_confirmed",
@@ -8652,7 +8651,7 @@
       "missing_detection_reasons": [],
       "patterns_at_base": {
         "confirmed_higher_lows": true,
-        "volatility_contraction": true,
+        "volatility_contraction": false,
         "momentum_improving": false,
         "demand_volume_improving": false,
         "false_upside_breakout": false,
@@ -8663,8 +8662,7 @@
         "retest_level": null,
         "up_down_volume_ratio10": 0.568731,
         "evidence": [
-          "confirmed_higher_lows",
-          "volatility_contraction"
+          "confirmed_higher_lows"
         ],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
@@ -9285,8 +9283,7 @@
         "price_not_confirmed",
         "volume_not_confirmed",
         "trend_not_confirmed",
-        "upside_below_10pct_or_no_target",
-        "reward_risk_below_minimum_or_missing"
+        "upside_below_10pct_or_no_target"
       ],
       "missing_detection_reasons": [],
       "patterns_at_base": {
@@ -9746,14 +9743,15 @@
     },
     {
       "symbol": "2110",
-      "base_date": "2025-07-16",
-      "evaluation_end": "2025-08-13",
+      "base_date": "2025-07-17",
+      "evaluation_end": "2025-08-14",
       "base_close": 137.300003,
-      "maximum_high_gain_pct": 10.633642,
+      "maximum_high_gain_pct": 12.163144,
       "maximum_close_gain_pct": 10.269476,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "unverified_or_suspicious_OHLCV",
         "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
@@ -9773,7 +9771,7 @@
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
         "retest_level": null,
-        "up_down_volume_ratio10": 0.912016,
+        "up_down_volume_ratio10": 1.067899,
         "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
@@ -10179,14 +10177,15 @@
     },
     {
       "symbol": "2130",
-      "base_date": "2025-07-14",
-      "evaluation_end": "2025-08-11",
-      "base_close": 32.0,
-      "maximum_high_gain_pct": 11.562502,
-      "maximum_close_gain_pct": 9.937501,
+      "base_date": "2025-07-17",
+      "evaluation_end": "2025-08-14",
+      "base_close": 31.4,
+      "maximum_high_gain_pct": 13.694271,
+      "maximum_close_gain_pct": 12.038219,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "unverified_or_suspicious_OHLCV",
         "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
@@ -10206,44 +10205,8 @@
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
         "retest_level": null,
-        "up_down_volume_ratio10": 1.270409,
+        "up_down_volume_ratio10": 1.278312,
         "evidence": [],
-        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
-      },
-      "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
-    },
-    {
-      "symbol": "2130",
-      "base_date": "2025-08-13",
-      "evaluation_end": "2025-09-10",
-      "base_close": 30.120001,
-      "maximum_high_gain_pct": 13.014608,
-      "maximum_close_gain_pct": 10.424958,
-      "classification_at_base": "Wait",
-      "detected_in_previous_5_observed_bars": true,
-      "not_entry_reasons": [
-        "insufficient_entry_indicators",
-        "price_not_confirmed",
-        "trend_not_confirmed",
-        "upside_below_10pct_or_no_target",
-        "reward_risk_below_minimum_or_missing"
-      ],
-      "missing_detection_reasons": [],
-      "patterns_at_base": {
-        "confirmed_higher_lows": true,
-        "volatility_contraction": false,
-        "momentum_improving": false,
-        "demand_volume_improving": false,
-        "false_upside_breakout": false,
-        "failed_downside_breakdown": false,
-        "breakout_retest_holds": false,
-        "accumulation_candidate": false,
-        "early_reversal_candidate": false,
-        "retest_level": null,
-        "up_down_volume_ratio10": 0.118893,
-        "evidence": [
-          "confirmed_higher_lows"
-        ],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
@@ -10882,7 +10845,7 @@
       "missing_detection_reasons": [],
       "patterns_at_base": {
         "confirmed_higher_lows": true,
-        "volatility_contraction": true,
+        "volatility_contraction": false,
         "momentum_improving": false,
         "demand_volume_improving": false,
         "false_upside_breakout": false,
@@ -10893,8 +10856,7 @@
         "retest_level": null,
         "up_down_volume_ratio10": 0.315908,
         "evidence": [
-          "confirmed_higher_lows",
-          "volatility_contraction"
+          "confirmed_higher_lows"
         ],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
@@ -11447,7 +11409,7 @@
       ],
       "missing_detection_reasons": [],
       "patterns_at_base": {
-        "confirmed_higher_lows": true,
+        "confirmed_higher_lows": false,
         "volatility_contraction": false,
         "momentum_improving": false,
         "demand_volume_improving": false,
@@ -11458,9 +11420,7 @@
         "early_reversal_candidate": false,
         "retest_level": null,
         "up_down_volume_ratio10": 0.638057,
-        "evidence": [
-          "confirmed_higher_lows"
-        ],
+        "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
@@ -12028,56 +11988,21 @@
     },
     {
       "symbol": "2220",
-      "base_date": "2025-07-14",
-      "evaluation_end": "2025-08-11",
-      "base_close": 16.040001,
-      "maximum_high_gain_pct": 15.211961,
-      "maximum_close_gain_pct": 9.725682,
+      "base_date": "2025-07-17",
+      "evaluation_end": "2025-08-14",
+      "base_close": 15.75,
+      "maximum_high_gain_pct": 17.33333,
+      "maximum_close_gain_pct": 11.746034,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "unverified_or_suspicious_OHLCV",
         "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
         "trend_not_confirmed",
         "upside_below_10pct_or_no_target",
         "reward_risk_below_minimum_or_missing"
-      ],
-      "missing_detection_reasons": [],
-      "patterns_at_base": {
-        "confirmed_higher_lows": true,
-        "volatility_contraction": false,
-        "momentum_improving": false,
-        "demand_volume_improving": false,
-        "false_upside_breakout": false,
-        "failed_downside_breakdown": false,
-        "breakout_retest_holds": false,
-        "accumulation_candidate": false,
-        "early_reversal_candidate": false,
-        "retest_level": null,
-        "up_down_volume_ratio10": 0.999082,
-        "evidence": [
-          "confirmed_higher_lows"
-        ],
-        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
-      },
-      "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
-    },
-    {
-      "symbol": "2220",
-      "base_date": "2025-08-12",
-      "evaluation_end": "2025-09-09",
-      "base_close": 15.98,
-      "maximum_high_gain_pct": 10.137678,
-      "maximum_close_gain_pct": 7.008766,
-      "classification_at_base": "Early Watch",
-      "detected_in_previous_5_observed_bars": true,
-      "not_entry_reasons": [
-        "insufficient_entry_indicators",
-        "price_not_confirmed",
-        "volume_not_confirmed",
-        "trend_not_confirmed",
-        "upside_below_10pct_or_no_target"
       ],
       "missing_detection_reasons": [],
       "patterns_at_base": {
@@ -12091,7 +12016,7 @@
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
         "retest_level": null,
-        "up_down_volume_ratio10": 1.20518,
+        "up_down_volume_ratio10": 0.993556,
         "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
@@ -12099,11 +12024,11 @@
     },
     {
       "symbol": "2220",
-      "base_date": "2025-09-10",
-      "evaluation_end": "2025-10-09",
-      "base_close": 15.69,
-      "maximum_high_gain_pct": 17.9095,
-      "maximum_close_gain_pct": 14.340351,
+      "base_date": "2025-08-21",
+      "evaluation_end": "2025-09-18",
+      "base_close": 16.51,
+      "maximum_high_gain_pct": 11.689887,
+      "maximum_close_gain_pct": 7.207756,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -12119,16 +12044,17 @@
         "confirmed_higher_lows": false,
         "volatility_contraction": false,
         "momentum_improving": true,
-        "demand_volume_improving": false,
+        "demand_volume_improving": true,
         "false_upside_breakout": false,
         "failed_downside_breakdown": false,
         "breakout_retest_holds": false,
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
         "retest_level": null,
-        "up_down_volume_ratio10": 0.557414,
+        "up_down_volume_ratio10": 1.602773,
         "evidence": [
-          "momentum_improving"
+          "momentum_improving",
+          "demand_volume_improving"
         ],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
@@ -12318,8 +12244,8 @@
       "base_date": "2025-09-03",
       "evaluation_end": "2025-10-02",
       "base_close": 77.592125,
-      "maximum_high_gain_pct": 11.840656,
-      "maximum_close_gain_pct": 8.029976,
+      "maximum_high_gain_pct": 11.840646,
+      "maximum_close_gain_pct": 8.029966,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -12583,7 +12509,7 @@
       "missing_detection_reasons": [],
       "patterns_at_base": {
         "confirmed_higher_lows": false,
-        "volatility_contraction": false,
+        "volatility_contraction": true,
         "momentum_improving": false,
         "demand_volume_improving": false,
         "false_upside_breakout": false,
@@ -12593,7 +12519,9 @@
         "early_reversal_candidate": false,
         "retest_level": null,
         "up_down_volume_ratio10": 0.499264,
-        "evidence": [],
+        "evidence": [
+          "volatility_contraction"
+        ],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
@@ -12722,8 +12650,10 @@
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
+        "trend_not_confirmed",
         "upside_below_10pct_or_no_target",
         "reward_risk_below_minimum_or_missing"
       ],
@@ -13073,11 +13003,11 @@
     },
     {
       "symbol": "2250",
-      "base_date": "2025-07-14",
-      "evaluation_end": "2025-08-11",
-      "base_close": 17.097168,
-      "maximum_high_gain_pct": 13.030997,
-      "maximum_close_gain_pct": 12.169918,
+      "base_date": "2025-08-17",
+      "evaluation_end": "2025-09-14",
+      "base_close": 17.66642,
+      "maximum_high_gain_pct": 11.111108,
+      "maximum_close_gain_pct": 11.111105,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -13090,42 +13020,7 @@
       ],
       "missing_detection_reasons": [],
       "patterns_at_base": {
-        "confirmed_higher_lows": true,
-        "volatility_contraction": false,
-        "momentum_improving": false,
-        "demand_volume_improving": true,
-        "false_upside_breakout": false,
-        "failed_downside_breakdown": false,
-        "breakout_retest_holds": false,
-        "accumulation_candidate": false,
-        "early_reversal_candidate": false,
-        "retest_level": null,
-        "up_down_volume_ratio10": 2.282131,
-        "evidence": [
-          "confirmed_higher_lows",
-          "demand_volume_improving"
-        ],
-        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
-      },
-      "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
-    },
-    {
-      "symbol": "2250",
-      "base_date": "2025-08-12",
-      "evaluation_end": "2025-09-09",
-      "base_close": 17.371979,
-      "maximum_high_gain_pct": 12.994353,
-      "maximum_close_gain_pct": 12.99435,
-      "classification_at_base": "Early Watch",
-      "detected_in_previous_5_observed_bars": true,
-      "not_entry_reasons": [
-        "insufficient_entry_indicators",
-        "price_not_confirmed",
-        "trend_not_confirmed"
-      ],
-      "missing_detection_reasons": [],
-      "patterns_at_base": {
-        "confirmed_higher_lows": true,
+        "confirmed_higher_lows": false,
         "volatility_contraction": false,
         "momentum_improving": false,
         "demand_volume_improving": false,
@@ -13135,22 +13030,20 @@
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
         "retest_level": null,
-        "up_down_volume_ratio10": 0.626015,
-        "evidence": [
-          "confirmed_higher_lows"
-        ],
+        "up_down_volume_ratio10": 0.722071,
+        "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
     },
     {
       "symbol": "2250",
-      "base_date": "2025-09-10",
-      "evaluation_end": "2025-10-09",
-      "base_close": 17.224758,
-      "maximum_high_gain_pct": 11.965807,
-      "maximum_close_gain_pct": 10.997146,
-      "classification_at_base": "Wait",
+      "base_date": "2025-09-15",
+      "evaluation_end": "2025-10-14",
+      "base_close": 16.655506,
+      "maximum_high_gain_pct": 15.792576,
+      "maximum_close_gain_pct": 14.790807,
+      "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
         "insufficient_entry_indicators",
@@ -13162,7 +13055,7 @@
       ],
       "missing_detection_reasons": [],
       "patterns_at_base": {
-        "confirmed_higher_lows": true,
+        "confirmed_higher_lows": false,
         "volatility_contraction": false,
         "momentum_improving": false,
         "demand_volume_improving": false,
@@ -13172,10 +13065,8 @@
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
         "retest_level": null,
-        "up_down_volume_ratio10": 0.510608,
-        "evidence": [
-          "confirmed_higher_lows"
-        ],
+        "up_down_volume_ratio10": 0.239699,
+        "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
@@ -13650,6 +13541,7 @@
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "insufficient_entry_indicators",
         "trend_not_confirmed",
         "upside_below_10pct_or_no_target",
         "reward_risk_below_minimum_or_missing"
@@ -13968,9 +13860,9 @@
       "symbol": "2283",
       "base_date": "2026-02-16",
       "evaluation_end": "2026-03-24",
-      "base_close": 46.240448,
-      "maximum_high_gain_pct": 10.389616,
-      "maximum_close_gain_pct": 9.577924,
+      "base_close": 46.240444,
+      "maximum_high_gain_pct": 10.389625,
+      "maximum_close_gain_pct": 9.577925,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -14075,8 +13967,8 @@
       "base_date": "2025-09-10",
       "evaluation_end": "2025-10-09",
       "base_close": 28.993315,
-      "maximum_high_gain_pct": 10.109479,
-      "maximum_close_gain_pct": 9.787514,
+      "maximum_high_gain_pct": 10.109472,
+      "maximum_close_gain_pct": 9.787507,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -14110,8 +14002,8 @@
       "base_date": "2026-02-10",
       "evaluation_end": "2026-03-11",
       "base_close": 25.035439,
-      "maximum_high_gain_pct": 10.66369,
-      "maximum_close_gain_pct": 9.023121,
+      "maximum_high_gain_pct": 10.663682,
+      "maximum_close_gain_pct": 9.023113,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -14411,7 +14303,7 @@
       "missing_detection_reasons": [],
       "patterns_at_base": {
         "confirmed_higher_lows": true,
-        "volatility_contraction": true,
+        "volatility_contraction": false,
         "momentum_improving": false,
         "demand_volume_improving": false,
         "false_upside_breakout": false,
@@ -14422,8 +14314,7 @@
         "retest_level": null,
         "up_down_volume_ratio10": 0.36061,
         "evidence": [
-          "confirmed_higher_lows",
-          "volatility_contraction"
+          "confirmed_higher_lows"
         ],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
@@ -14613,8 +14504,8 @@
       "symbol": "2288",
       "base_date": "2025-11-11",
       "evaluation_end": "2025-12-09",
-      "base_close": 10.474513,
-      "maximum_high_gain_pct": 11.981572,
+      "base_close": 10.474514,
+      "maximum_high_gain_pct": 11.981561,
       "maximum_close_gain_pct": 9.216591,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
@@ -14684,8 +14575,8 @@
       "base_date": "2026-04-06",
       "evaluation_end": "2026-05-04",
       "base_close": 7.732798,
-      "maximum_high_gain_pct": 10.237207,
-      "maximum_close_gain_pct": 7.740331,
+      "maximum_high_gain_pct": 10.237195,
+      "maximum_close_gain_pct": 7.740319,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -14785,14 +14676,15 @@
     },
     {
       "symbol": "2290",
-      "base_date": "2025-07-16",
-      "evaluation_end": "2025-08-13",
+      "base_date": "2025-07-17",
+      "evaluation_end": "2025-08-14",
       "base_close": 26.751034,
       "maximum_high_gain_pct": 10.47619,
       "maximum_close_gain_pct": 9.727886,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "unverified_or_suspicious_OHLCV",
         "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
@@ -14812,7 +14704,7 @@
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
         "retest_level": null,
-        "up_down_volume_ratio10": 0.370826,
+        "up_down_volume_ratio10": 0.138485,
         "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
@@ -14820,14 +14712,15 @@
     },
     {
       "symbol": "2290",
-      "base_date": "2025-08-14",
-      "evaluation_end": "2025-09-11",
-      "base_close": 29.098572,
-      "maximum_high_gain_pct": 10.524893,
-      "maximum_close_gain_pct": 9.88118,
+      "base_date": "2025-08-19",
+      "evaluation_end": "2025-09-16",
+      "base_close": 29.20776,
+      "maximum_high_gain_pct": 10.111708,
+      "maximum_close_gain_pct": 9.470402,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "failed_upside_breakout",
         "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
@@ -14841,17 +14734,17 @@
         "volatility_contraction": false,
         "momentum_improving": false,
         "demand_volume_improving": true,
-        "false_upside_breakout": false,
+        "false_upside_breakout": true,
         "failed_downside_breakdown": false,
-        "breakout_retest_holds": true,
+        "breakout_retest_holds": false,
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
-        "retest_level": 28.607226,
-        "up_down_volume_ratio10": 2.674904,
+        "retest_level": null,
+        "up_down_volume_ratio10": 2.165763,
         "evidence": [
           "confirmed_higher_lows",
           "demand_volume_improving",
-          "breakout_retest_holds"
+          "false_upside_breakout"
         ],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
@@ -14859,11 +14752,11 @@
     },
     {
       "symbol": "2290",
-      "base_date": "2025-09-14",
-      "evaluation_end": "2025-10-13",
-      "base_close": 30.025827,
-      "maximum_high_gain_pct": 16.281964,
-      "maximum_close_gain_pct": 11.104173,
+      "base_date": "2025-09-17",
+      "evaluation_end": "2025-10-16",
+      "base_close": 30.831259,
+      "maximum_high_gain_pct": 13.244244,
+      "maximum_close_gain_pct": 8.201716,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -14871,13 +14764,14 @@
         "price_not_confirmed",
         "volume_not_confirmed",
         "trend_not_confirmed",
-        "upside_below_10pct_or_no_target"
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
       ],
       "missing_detection_reasons": [],
       "patterns_at_base": {
         "confirmed_higher_lows": false,
         "volatility_contraction": false,
-        "momentum_improving": false,
+        "momentum_improving": true,
         "demand_volume_improving": false,
         "false_upside_breakout": false,
         "failed_downside_breakdown": false,
@@ -14885,8 +14779,10 @@
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
         "retest_level": null,
-        "up_down_volume_ratio10": 0.543201,
-        "evidence": [],
+        "up_down_volume_ratio10": 1.233023,
+        "evidence": [
+          "momentum_improving"
+        ],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
@@ -14897,7 +14793,7 @@
       "evaluation_end": "2026-02-17",
       "base_close": 24.5751,
       "maximum_high_gain_pct": 11.966467,
-      "maximum_close_gain_pct": 11.661579,
+      "maximum_close_gain_pct": 11.661587,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -14938,7 +14834,8 @@
         "price_not_confirmed",
         "volume_not_confirmed",
         "trend_not_confirmed",
-        "upside_below_10pct_or_no_target"
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
       ],
       "missing_detection_reasons": [],
       "patterns_at_base": {
@@ -15468,9 +15365,9 @@
       "symbol": "2320",
       "base_date": "2025-07-21",
       "evaluation_end": "2025-08-18",
-      "base_close": 51.924744,
-      "maximum_high_gain_pct": 11.743118,
-      "maximum_close_gain_pct": 10.847179,
+      "base_close": 51.92474,
+      "maximum_high_gain_pct": 11.743126,
+      "maximum_close_gain_pct": 10.84718,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -15540,8 +15437,8 @@
       "symbol": "2320",
       "base_date": "2025-10-09",
       "evaluation_end": "2025-11-06",
-      "base_close": 60.030087,
-      "maximum_high_gain_pct": 10.096931,
+      "base_close": 60.030083,
+      "maximum_high_gain_pct": 10.096932,
       "maximum_close_gain_pct": 6.300488,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
@@ -17068,9 +16965,9 @@
       "symbol": "2370",
       "base_date": "2025-09-11",
       "evaluation_end": "2025-10-12",
-      "base_close": 27.623022,
-      "maximum_high_gain_pct": 11.805561,
-      "maximum_close_gain_pct": 9.791672,
+      "base_close": 27.623024,
+      "maximum_high_gain_pct": 11.805553,
+      "maximum_close_gain_pct": 9.791665,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -17215,6 +17112,7 @@
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "insufficient_entry_indicators",
         "volume_not_confirmed",
         "trend_not_confirmed",
         "upside_below_10pct_or_no_target",
@@ -18065,43 +17963,6 @@
     },
     {
       "symbol": "2382",
-      "base_date": "2025-07-14",
-      "evaluation_end": "2025-08-11",
-      "base_close": 6.509708,
-      "maximum_high_gain_pct": 15.236679,
-      "maximum_close_gain_pct": 11.316563,
-      "classification_at_base": "Early Watch",
-      "detected_in_previous_5_observed_bars": true,
-      "not_entry_reasons": [
-        "insufficient_entry_indicators",
-        "price_not_confirmed",
-        "volume_not_confirmed",
-        "trend_not_confirmed",
-        "upside_below_10pct_or_no_target",
-        "reward_risk_below_minimum_or_missing"
-      ],
-      "missing_detection_reasons": [],
-      "patterns_at_base": {
-        "confirmed_higher_lows": true,
-        "volatility_contraction": false,
-        "momentum_improving": false,
-        "demand_volume_improving": false,
-        "false_upside_breakout": false,
-        "failed_downside_breakdown": false,
-        "breakout_retest_holds": false,
-        "accumulation_candidate": false,
-        "early_reversal_candidate": false,
-        "retest_level": null,
-        "up_down_volume_ratio10": 0.882146,
-        "evidence": [
-          "confirmed_higher_lows"
-        ],
-        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
-      },
-      "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
-    },
-    {
-      "symbol": "2382",
       "base_date": "2025-08-31",
       "evaluation_end": "2025-09-29",
       "base_close": 7.238348,
@@ -18423,48 +18284,11 @@
     },
     {
       "symbol": "3003",
-      "base_date": "2025-07-16",
-      "evaluation_end": "2025-08-13",
-      "base_close": 14.600288,
-      "maximum_high_gain_pct": 10.434563,
-      "maximum_close_gain_pct": 5.365854,
-      "classification_at_base": "Wait",
-      "detected_in_previous_5_observed_bars": true,
-      "not_entry_reasons": [
-        "insufficient_entry_indicators",
-        "price_not_confirmed",
-        "volume_not_confirmed",
-        "trend_not_confirmed",
-        "upside_below_10pct_or_no_target",
-        "reward_risk_below_minimum_or_missing"
-      ],
-      "missing_detection_reasons": [],
-      "patterns_at_base": {
-        "confirmed_higher_lows": true,
-        "volatility_contraction": false,
-        "momentum_improving": false,
-        "demand_volume_improving": false,
-        "false_upside_breakout": false,
-        "failed_downside_breakdown": false,
-        "breakout_retest_holds": false,
-        "accumulation_candidate": false,
-        "early_reversal_candidate": false,
-        "retest_level": null,
-        "up_down_volume_ratio10": 0.407103,
-        "evidence": [
-          "confirmed_higher_lows"
-        ],
-        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
-      },
-      "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
-    },
-    {
-      "symbol": "3003",
       "base_date": "2025-12-28",
       "evaluation_end": "2026-01-25",
-      "base_close": 11.248708,
-      "maximum_high_gain_pct": 12.66448,
-      "maximum_close_gain_pct": 12.088825,
+      "base_close": 11.248709,
+      "maximum_high_gain_pct": 12.664462,
+      "maximum_close_gain_pct": 12.088807,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -18495,14 +18319,15 @@
     },
     {
       "symbol": "3004",
-      "base_date": "2025-07-14",
-      "evaluation_end": "2025-08-11",
-      "base_close": 7.300002,
-      "maximum_high_gain_pct": 10.897424,
-      "maximum_close_gain_pct": 8.846144,
+      "base_date": "2025-07-17",
+      "evaluation_end": "2025-08-14",
+      "base_close": 7.215771,
+      "maximum_high_gain_pct": 12.191948,
+      "maximum_close_gain_pct": 10.116723,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "unverified_or_suspicious_OHLCV",
         "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
@@ -18512,7 +18337,7 @@
       ],
       "missing_detection_reasons": [],
       "patterns_at_base": {
-        "confirmed_higher_lows": true,
+        "confirmed_higher_lows": false,
         "volatility_contraction": false,
         "momentum_improving": false,
         "demand_volume_improving": false,
@@ -18522,10 +18347,8 @@
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
         "retest_level": null,
-        "up_down_volume_ratio10": 0.722944,
-        "evidence": [
-          "confirmed_higher_lows"
-        ],
+        "up_down_volume_ratio10": 0.642675,
+        "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
@@ -18609,6 +18432,7 @@
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
         "trend_not_confirmed",
@@ -19381,9 +19205,9 @@
       "symbol": "3040",
       "base_date": "2025-09-03",
       "evaluation_end": "2025-10-02",
-      "base_close": 37.460052,
-      "maximum_high_gain_pct": 10.053375,
-      "maximum_close_gain_pct": 8.465592,
+      "base_close": 37.460049,
+      "maximum_high_gain_pct": 10.053387,
+      "maximum_close_gain_pct": 8.465603,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -19699,9 +19523,9 @@
       "symbol": "3092",
       "base_date": "2025-12-30",
       "evaluation_end": "2026-01-27",
-      "base_close": 22.045008,
-      "maximum_high_gain_pct": 10.551052,
-      "maximum_close_gain_pct": 9.953025,
+      "base_close": 22.04501,
+      "maximum_high_gain_pct": 10.551043,
+      "maximum_close_gain_pct": 9.953007,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -19737,9 +19561,9 @@
       "symbol": "3092",
       "base_date": "2026-03-29",
       "evaluation_end": "2026-04-26",
-      "base_close": 22.280432,
-      "maximum_high_gain_pct": 10.313652,
-      "maximum_close_gain_pct": 1.39476,
+      "base_close": 22.280434,
+      "maximum_high_gain_pct": 10.313642,
+      "maximum_close_gain_pct": 1.394752,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -19808,8 +19632,8 @@
       "base_date": "2025-12-25",
       "evaluation_end": "2026-01-22",
       "base_close": 5.989268,
-      "maximum_high_gain_pct": 13.420617,
-      "maximum_close_gain_pct": 8.346968,
+      "maximum_high_gain_pct": 13.420616,
+      "maximum_close_gain_pct": 8.346967,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -20013,8 +19837,8 @@
       "base_date": "2025-12-14",
       "evaluation_end": "2026-01-11",
       "base_close": 97.562042,
-      "maximum_high_gain_pct": 10.693406,
-      "maximum_close_gain_pct": 9.189646,
+      "maximum_high_gain_pct": 10.693398,
+      "maximum_close_gain_pct": 9.189639,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -20047,9 +19871,9 @@
       "symbol": "4004",
       "base_date": "2026-02-18",
       "evaluation_end": "2026-03-26",
-      "base_close": 88.270416,
-      "maximum_high_gain_pct": 17.767579,
-      "maximum_close_gain_pct": 15.54205,
+      "base_close": 88.270424,
+      "maximum_high_gain_pct": 17.767578,
+      "maximum_close_gain_pct": 15.542049,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -20746,6 +20570,7 @@
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
         "trend_not_confirmed",
@@ -20921,8 +20746,8 @@
       "base_date": "2025-12-29",
       "evaluation_end": "2026-01-26",
       "base_close": 3.11686,
-      "maximum_high_gain_pct": 13.63636,
-      "maximum_close_gain_pct": 12.12121,
+      "maximum_high_gain_pct": 13.636368,
+      "maximum_close_gain_pct": 12.121218,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -20997,8 +20822,8 @@
       "base_date": "2025-09-01",
       "evaluation_end": "2025-09-30",
       "base_close": 237.869476,
-      "maximum_high_gain_pct": 10.565107,
-      "maximum_close_gain_pct": 10.565107,
+      "maximum_high_gain_pct": 10.565094,
+      "maximum_close_gain_pct": 10.565094,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -21261,7 +21086,7 @@
       ],
       "missing_detection_reasons": [],
       "patterns_at_base": {
-        "confirmed_higher_lows": false,
+        "confirmed_higher_lows": true,
         "volatility_contraction": false,
         "momentum_improving": false,
         "demand_volume_improving": false,
@@ -21272,7 +21097,9 @@
         "early_reversal_candidate": false,
         "retest_level": null,
         "up_down_volume_ratio10": 0.030748,
-        "evidence": [],
+        "evidence": [
+          "confirmed_higher_lows"
+        ],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
@@ -21388,9 +21215,9 @@
       "symbol": "4016",
       "base_date": "2025-09-09",
       "evaluation_end": "2025-10-08",
-      "base_close": 68.133263,
-      "maximum_high_gain_pct": 10.466059,
-      "maximum_close_gain_pct": 9.566632,
+      "base_close": 68.133255,
+      "maximum_high_gain_pct": 10.466071,
+      "maximum_close_gain_pct": 9.566645,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -21404,7 +21231,7 @@
       "missing_detection_reasons": [],
       "patterns_at_base": {
         "confirmed_higher_lows": true,
-        "volatility_contraction": false,
+        "volatility_contraction": true,
         "momentum_improving": false,
         "demand_volume_improving": false,
         "false_upside_breakout": false,
@@ -21415,7 +21242,8 @@
         "retest_level": null,
         "up_down_volume_ratio10": 0.402893,
         "evidence": [
-          "confirmed_higher_lows"
+          "confirmed_higher_lows",
+          "volatility_contraction"
         ],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
@@ -21425,9 +21253,9 @@
       "symbol": "4016",
       "base_date": "2026-03-12",
       "evaluation_end": "2026-04-16",
-      "base_close": 54.233627,
-      "maximum_high_gain_pct": 15.574331,
-      "maximum_close_gain_pct": 12.346582,
+      "base_close": 54.233631,
+      "maximum_high_gain_pct": 15.574323,
+      "maximum_close_gain_pct": 12.346574,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -21673,49 +21501,11 @@
     },
     {
       "symbol": "4018",
-      "base_date": "2025-07-14",
-      "evaluation_end": "2025-08-11",
-      "base_close": 163.873032,
-      "maximum_high_gain_pct": 10.84339,
-      "maximum_close_gain_pct": 9.036161,
-      "classification_at_base": "Early Watch",
-      "detected_in_previous_5_observed_bars": true,
-      "not_entry_reasons": [
-        "insufficient_entry_indicators",
-        "price_not_confirmed",
-        "volume_not_confirmed",
-        "trend_not_confirmed",
-        "upside_below_10pct_or_no_target",
-        "reward_risk_below_minimum_or_missing"
-      ],
-      "missing_detection_reasons": [],
-      "patterns_at_base": {
-        "confirmed_higher_lows": true,
-        "volatility_contraction": false,
-        "momentum_improving": false,
-        "demand_volume_improving": true,
-        "false_upside_breakout": false,
-        "failed_downside_breakdown": false,
-        "breakout_retest_holds": false,
-        "accumulation_candidate": false,
-        "early_reversal_candidate": false,
-        "retest_level": null,
-        "up_down_volume_ratio10": 2.856367,
-        "evidence": [
-          "confirmed_higher_lows",
-          "demand_volume_improving"
-        ],
-        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
-      },
-      "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
-    },
-    {
-      "symbol": "4018",
       "base_date": "2025-09-04",
       "evaluation_end": "2025-10-05",
       "base_close": 165.08374,
-      "maximum_high_gain_pct": 10.065921,
-      "maximum_close_gain_pct": 8.687848,
+      "maximum_high_gain_pct": 10.065911,
+      "maximum_close_gain_pct": 8.687839,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -21750,9 +21540,9 @@
       "symbol": "4018",
       "base_date": "2025-10-06",
       "evaluation_end": "2025-11-03",
-      "base_close": 177.744476,
-      "maximum_high_gain_pct": 17.974384,
-      "maximum_close_gain_pct": 11.296602,
+      "base_close": 177.744461,
+      "maximum_high_gain_pct": 17.974413,
+      "maximum_close_gain_pct": 11.296612,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -21789,9 +21579,9 @@
       "symbol": "4018",
       "base_date": "2025-11-30",
       "evaluation_end": "2025-12-28",
-      "base_close": 162.516266,
-      "maximum_high_gain_pct": 10.853667,
-      "maximum_close_gain_pct": 9.146348,
+      "base_close": 162.516281,
+      "maximum_high_gain_pct": 10.853657,
+      "maximum_close_gain_pct": 9.146338,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -21824,9 +21614,9 @@
       "symbol": "4018",
       "base_date": "2026-03-12",
       "evaluation_end": "2026-04-16",
-      "base_close": 128.42749,
-      "maximum_high_gain_pct": 12.947146,
-      "maximum_close_gain_pct": 11.245198,
+      "base_close": 128.427505,
+      "maximum_high_gain_pct": 12.947132,
+      "maximum_close_gain_pct": 11.245196,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -21858,8 +21648,8 @@
       "base_date": "2026-05-19",
       "evaluation_end": "2026-06-23",
       "base_close": 114.101776,
-      "maximum_high_gain_pct": 10.645733,
-      "maximum_close_gain_pct": 7.329848,
+      "maximum_high_gain_pct": 10.645726,
+      "maximum_close_gain_pct": 7.329842,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -21892,7 +21682,7 @@
       "base_date": "2025-09-08",
       "evaluation_end": "2025-10-07",
       "base_close": 17.159273,
-      "maximum_high_gain_pct": 11.202205,
+      "maximum_high_gain_pct": 11.202194,
       "maximum_close_gain_pct": 10.00001,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
@@ -21929,8 +21719,8 @@
       "base_date": "2025-10-19",
       "evaluation_end": "2025-11-16",
       "base_close": 18.021927,
-      "maximum_high_gain_pct": 10.249751,
-      "maximum_close_gain_pct": 8.84496,
+      "maximum_high_gain_pct": 10.24974,
+      "maximum_close_gain_pct": 8.84495,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -21965,9 +21755,9 @@
       "symbol": "4019",
       "base_date": "2025-12-02",
       "evaluation_end": "2025-12-30",
-      "base_close": 17.253042,
-      "maximum_high_gain_pct": 10.217394,
-      "maximum_close_gain_pct": 9.836955,
+      "base_close": 17.25304,
+      "maximum_high_gain_pct": 10.217406,
+      "maximum_close_gain_pct": 9.836968,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -22300,19 +22090,18 @@
       "missing_detection_reasons": [],
       "patterns_at_base": {
         "confirmed_higher_lows": true,
-        "volatility_contraction": true,
+        "volatility_contraction": false,
         "momentum_improving": false,
         "demand_volume_improving": true,
         "false_upside_breakout": false,
         "failed_downside_breakdown": false,
         "breakout_retest_holds": false,
-        "accumulation_candidate": true,
+        "accumulation_candidate": false,
         "early_reversal_candidate": false,
         "retest_level": null,
         "up_down_volume_ratio10": 2.015666,
         "evidence": [
           "confirmed_higher_lows",
-          "volatility_contraction",
           "demand_volume_improving"
         ],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
@@ -25017,8 +24806,8 @@
       "base_date": "2025-07-28",
       "evaluation_end": "2025-08-25",
       "base_close": 23.659122,
-      "maximum_high_gain_pct": 11.28651,
-      "maximum_close_gain_pct": 10.655098,
+      "maximum_high_gain_pct": 11.286502,
+      "maximum_close_gain_pct": 10.65509,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -25051,9 +24840,9 @@
       "symbol": "4084",
       "base_date": "2025-08-28",
       "evaluation_end": "2025-09-28",
-      "base_close": 26.198694,
-      "maximum_high_gain_pct": 12.045626,
-      "maximum_close_gain_pct": 10.548833,
+      "base_close": 26.198696,
+      "maximum_high_gain_pct": 12.045611,
+      "maximum_close_gain_pct": 10.548818,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -25075,7 +24864,7 @@
         "breakout_retest_holds": true,
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
-        "retest_level": 25.750538,
+        "retest_level": 25.750536,
         "up_down_volume_ratio10": 5.934952,
         "evidence": [
           "confirmed_higher_lows",
@@ -25090,9 +24879,9 @@
       "symbol": "4084",
       "base_date": "2025-12-30",
       "evaluation_end": "2026-01-27",
-      "base_close": 23.874193,
-      "maximum_high_gain_pct": 11.839991,
-      "maximum_close_gain_pct": 10.239992,
+      "base_close": 23.874191,
+      "maximum_high_gain_pct": 11.839999,
+      "maximum_close_gain_pct": 10.240001,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -25127,7 +24916,7 @@
       "evaluation_end": "2026-05-05",
       "base_close": 19.901527,
       "maximum_high_gain_pct": 11.660264,
-      "maximum_close_gain_pct": 10.268712,
+      "maximum_close_gain_pct": 10.268703,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -25561,8 +25350,7 @@
         "price_not_confirmed",
         "volume_not_confirmed",
         "trend_not_confirmed",
-        "upside_below_10pct_or_no_target",
-        "reward_risk_below_minimum_or_missing"
+        "upside_below_10pct_or_no_target"
       ],
       "missing_detection_reasons": [],
       "patterns_at_base": {
@@ -26001,7 +25789,7 @@
       ],
       "missing_detection_reasons": [],
       "patterns_at_base": {
-        "confirmed_higher_lows": true,
+        "confirmed_higher_lows": false,
         "volatility_contraction": false,
         "momentum_improving": false,
         "demand_volume_improving": false,
@@ -26012,9 +25800,7 @@
         "early_reversal_candidate": false,
         "retest_level": null,
         "up_down_volume_ratio10": 0.108728,
-        "evidence": [
-          "confirmed_higher_lows"
-        ],
+        "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
@@ -26237,9 +26023,9 @@
       "symbol": "4142",
       "base_date": "2025-09-09",
       "evaluation_end": "2025-10-08",
-      "base_close": 113.442673,
-      "maximum_high_gain_pct": 10.828658,
-      "maximum_close_gain_pct": 9.812661,
+      "base_close": 113.442665,
+      "maximum_high_gain_pct": 10.828666,
+      "maximum_close_gain_pct": 9.812668,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -26282,7 +26068,8 @@
         "price_not_confirmed",
         "volume_not_confirmed",
         "trend_not_confirmed",
-        "upside_below_10pct_or_no_target"
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
       ],
       "missing_detection_reasons": [],
       "patterns_at_base": {
@@ -26306,9 +26093,9 @@
       "symbol": "4142",
       "base_date": "2026-03-02",
       "evaluation_end": "2026-04-06",
-      "base_close": 105.364784,
+      "base_close": 105.364792,
       "maximum_high_gain_pct": 11.030088,
-      "maximum_close_gain_pct": 9.298091,
+      "maximum_close_gain_pct": 9.29809,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -26340,8 +26127,8 @@
       "base_date": "2026-04-07",
       "evaluation_end": "2026-05-05",
       "base_close": 110.263252,
-      "maximum_high_gain_pct": 16.114981,
-      "maximum_close_gain_pct": 15.331005,
+      "maximum_high_gain_pct": 16.114974,
+      "maximum_close_gain_pct": 15.330998,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -26386,8 +26173,7 @@
         "price_not_confirmed",
         "volume_not_confirmed",
         "trend_not_confirmed",
-        "upside_below_10pct_or_no_target",
-        "reward_risk_below_minimum_or_missing"
+        "upside_below_10pct_or_no_target"
       ],
       "missing_detection_reasons": [],
       "patterns_at_base": {
@@ -27018,16 +26804,15 @@
       "symbol": "4146",
       "base_date": "2026-01-14",
       "evaluation_end": "2026-02-11",
-      "base_close": 12.062621,
-      "maximum_high_gain_pct": 11.778843,
-      "maximum_close_gain_pct": 11.137824,
+      "base_close": 12.06262,
+      "maximum_high_gain_pct": 11.778852,
+      "maximum_close_gain_pct": 11.137833,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
         "insufficient_entry_indicators",
         "price_not_confirmed",
         "trend_not_confirmed",
-        "upside_below_10pct_or_no_target",
         "reward_risk_below_minimum_or_missing"
       ],
       "missing_detection_reasons": [],
@@ -27052,9 +26837,9 @@
       "symbol": "4146",
       "base_date": "2026-02-25",
       "evaluation_end": "2026-04-01",
-      "base_close": 12.748877,
-      "maximum_high_gain_pct": 11.372244,
-      "maximum_close_gain_pct": 10.310838,
+      "base_close": 12.748876,
+      "maximum_high_gain_pct": 11.372252,
+      "maximum_close_gain_pct": 10.310847,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -27096,6 +26881,7 @@
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
         "trend_not_confirmed"
@@ -27111,7 +26897,7 @@
         "breakout_retest_holds": true,
         "accumulation_candidate": false,
         "early_reversal_candidate": true,
-        "retest_level": 13.889412,
+        "retest_level": 13.889413,
         "up_down_volume_ratio10": 3.651942,
         "evidence": [
           "momentum_improving",
@@ -27989,14 +27775,15 @@
     },
     {
       "symbol": "4160",
-      "base_date": "2025-08-12",
-      "evaluation_end": "2025-09-09",
-      "base_close": 37.240002,
-      "maximum_high_gain_pct": 36.546714,
-      "maximum_close_gain_pct": 34.398488,
+      "base_date": "2025-08-17",
+      "evaluation_end": "2025-09-14",
+      "base_close": 39.400002,
+      "maximum_high_gain_pct": 29.060905,
+      "maximum_close_gain_pct": 27.03045,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "failed_upside_breakout",
         "insufficient_entry_indicators",
         "price_not_confirmed",
         "trend_not_confirmed",
@@ -28008,53 +27795,17 @@
         "confirmed_higher_lows": false,
         "volatility_contraction": false,
         "momentum_improving": true,
-        "demand_volume_improving": true,
-        "false_upside_breakout": false,
+        "demand_volume_improving": false,
+        "false_upside_breakout": true,
         "failed_downside_breakdown": false,
         "breakout_retest_holds": false,
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
         "retest_level": null,
-        "up_down_volume_ratio10": 4.122981,
+        "up_down_volume_ratio10": 1.177008,
         "evidence": [
           "momentum_improving",
-          "demand_volume_improving"
-        ],
-        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
-      },
-      "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
-    },
-    {
-      "symbol": "4160",
-      "base_date": "2025-09-10",
-      "evaluation_end": "2025-10-09",
-      "base_close": 43.84,
-      "maximum_high_gain_pct": 12.408756,
-      "maximum_close_gain_pct": 7.892334,
-      "classification_at_base": "Early Watch",
-      "detected_in_previous_5_observed_bars": true,
-      "not_entry_reasons": [
-        "insufficient_entry_indicators",
-        "price_not_confirmed",
-        "volume_not_confirmed",
-        "trend_not_confirmed",
-        "reward_risk_below_minimum_or_missing"
-      ],
-      "missing_detection_reasons": [],
-      "patterns_at_base": {
-        "confirmed_higher_lows": true,
-        "volatility_contraction": false,
-        "momentum_improving": false,
-        "demand_volume_improving": false,
-        "false_upside_breakout": false,
-        "failed_downside_breakdown": false,
-        "breakout_retest_holds": false,
-        "accumulation_candidate": false,
-        "early_reversal_candidate": false,
-        "retest_level": null,
-        "up_down_volume_ratio10": 1.191861,
-        "evidence": [
-          "confirmed_higher_lows"
+          "false_upside_breakout"
         ],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
@@ -28458,9 +28209,9 @@
       "symbol": "4162",
       "base_date": "2025-08-31",
       "evaluation_end": "2025-09-29",
-      "base_close": 53.501446,
-      "maximum_high_gain_pct": 10.027103,
-      "maximum_close_gain_pct": 8.401084,
+      "base_close": 53.501442,
+      "maximum_high_gain_pct": 10.027111,
+      "maximum_close_gain_pct": 8.401092,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -29102,11 +28853,11 @@
     },
     {
       "symbol": "4170",
-      "base_date": "2025-07-14",
-      "evaluation_end": "2025-08-11",
-      "base_close": 18.4,
-      "maximum_high_gain_pct": 32.608696,
-      "maximum_close_gain_pct": 32.608696,
+      "base_date": "2025-07-17",
+      "evaluation_end": "2025-08-14",
+      "base_close": 17.4,
+      "maximum_high_gain_pct": 40.229886,
+      "maximum_close_gain_pct": 40.229886,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -29114,7 +28865,6 @@
         "price_not_confirmed",
         "volume_not_confirmed",
         "trend_not_confirmed",
-        "upside_below_10pct_or_no_target",
         "reward_risk_below_minimum_or_missing"
       ],
       "missing_detection_reasons": [],
@@ -29129,7 +28879,7 @@
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
         "retest_level": null,
-        "up_down_volume_ratio10": 2.300791,
+        "up_down_volume_ratio10": 1.747634,
         "evidence": [
           "confirmed_higher_lows",
           "demand_volume_improving"
@@ -29433,9 +29183,9 @@
       "symbol": "4190",
       "base_date": "2025-08-26",
       "evaluation_end": "2025-09-24",
-      "base_close": 11.897122,
-      "maximum_high_gain_pct": 12.955788,
-      "maximum_close_gain_pct": 7.913115,
+      "base_close": 11.897123,
+      "maximum_high_gain_pct": 12.955771,
+      "maximum_close_gain_pct": 7.913098,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -29470,15 +29220,16 @@
       "base_date": "2026-01-01",
       "evaluation_end": "2026-01-29",
       "base_close": 12.130856,
-      "maximum_high_gain_pct": 11.335415,
-      "maximum_close_gain_pct": 10.791939,
+      "maximum_high_gain_pct": 11.335407,
+      "maximum_close_gain_pct": 10.791931,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
         "insufficient_entry_indicators",
         "volume_not_confirmed",
         "trend_not_confirmed",
-        "upside_below_10pct_or_no_target"
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
       ],
       "missing_detection_reasons": [],
       "patterns_at_base": {
@@ -29542,7 +29293,7 @@
       "base_date": "2026-05-06",
       "evaluation_end": "2026-06-10",
       "base_close": 14.273136,
-      "maximum_high_gain_pct": 10.990715,
+      "maximum_high_gain_pct": 10.990709,
       "maximum_close_gain_pct": 10.173609,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
@@ -29577,7 +29328,7 @@
       "base_date": "2026-06-14",
       "evaluation_end": "2026-07-12",
       "base_close": 15.598882,
-      "maximum_high_gain_pct": 10.15577,
+      "maximum_high_gain_pct": 10.155782,
       "maximum_close_gain_pct": 9.719634,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
@@ -29612,9 +29363,9 @@
       "symbol": "4191",
       "base_date": "2025-07-30",
       "evaluation_end": "2025-08-27",
-      "base_close": 36.595379,
-      "maximum_high_gain_pct": 10.368416,
-      "maximum_close_gain_pct": 9.999991,
+      "base_close": 36.595375,
+      "maximum_high_gain_pct": 10.368427,
+      "maximum_close_gain_pct": 10.000002,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -29646,9 +29397,9 @@
       "symbol": "4191",
       "base_date": "2025-08-28",
       "evaluation_end": "2025-09-28",
-      "base_close": 37.365803,
-      "maximum_high_gain_pct": 20.229386,
-      "maximum_close_gain_pct": 15.31993,
+      "base_close": 37.365807,
+      "maximum_high_gain_pct": 20.229374,
+      "maximum_close_gain_pct": 15.319918,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -29682,7 +29433,7 @@
       "base_date": "2025-09-29",
       "evaluation_end": "2025-10-27",
       "base_close": 43.421982,
-      "maximum_high_gain_pct": 21.235953,
+      "maximum_high_gain_pct": 21.235962,
       "maximum_close_gain_pct": 17.75281,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
@@ -29717,9 +29468,9 @@
       "symbol": "4191",
       "base_date": "2025-11-25",
       "evaluation_end": "2025-12-23",
-      "base_close": 41.685104,
-      "maximum_high_gain_pct": 13.493776,
-      "maximum_close_gain_pct": 12.118957,
+      "base_close": 41.685101,
+      "maximum_high_gain_pct": 13.493787,
+      "maximum_close_gain_pct": 12.118967,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -30021,7 +29772,7 @@
       "patterns_at_base": {
         "confirmed_higher_lows": false,
         "volatility_contraction": false,
-        "momentum_improving": true,
+        "momentum_improving": false,
         "demand_volume_improving": false,
         "false_upside_breakout": false,
         "failed_downside_breakdown": false,
@@ -30030,9 +29781,7 @@
         "early_reversal_candidate": false,
         "retest_level": null,
         "up_down_volume_ratio10": 0.20217,
-        "evidence": [
-          "momentum_improving"
-        ],
+        "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
@@ -30250,9 +29999,9 @@
       "symbol": "4194",
       "base_date": "2026-05-03",
       "evaluation_end": "2026-06-07",
-      "base_close": 40.557621,
-      "maximum_high_gain_pct": 13.640547,
-      "maximum_close_gain_pct": 11.935483,
+      "base_close": 40.557617,
+      "maximum_high_gain_pct": 13.640557,
+      "maximum_close_gain_pct": 11.935493,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -30879,7 +30628,7 @@
       ],
       "missing_detection_reasons": [],
       "patterns_at_base": {
-        "confirmed_higher_lows": true,
+        "confirmed_higher_lows": false,
         "volatility_contraction": false,
         "momentum_improving": false,
         "demand_volume_improving": false,
@@ -30890,9 +30639,7 @@
         "early_reversal_candidate": false,
         "retest_level": null,
         "up_down_volume_ratio10": 0.894375,
-        "evidence": [
-          "confirmed_higher_lows"
-        ],
+        "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
@@ -30976,6 +30723,7 @@
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
         "trend_not_confirmed",
@@ -31125,7 +30873,7 @@
       "missing_detection_reasons": [],
       "patterns_at_base": {
         "confirmed_higher_lows": false,
-        "volatility_contraction": false,
+        "volatility_contraction": true,
         "momentum_improving": false,
         "demand_volume_improving": true,
         "false_upside_breakout": false,
@@ -31136,6 +30884,7 @@
         "retest_level": 26.08,
         "up_down_volume_ratio10": 4.571879,
         "evidence": [
+          "volatility_contraction",
           "demand_volume_improving",
           "breakout_retest_holds"
         ],
@@ -31645,9 +31394,9 @@
       "symbol": "4261",
       "base_date": "2025-09-07",
       "evaluation_end": "2025-10-06",
-      "base_close": 39.699177,
-      "maximum_high_gain_pct": 10.214166,
-      "maximum_close_gain_pct": 9.884681,
+      "base_close": 39.699173,
+      "maximum_high_gain_pct": 10.214187,
+      "maximum_close_gain_pct": 9.884692,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -31680,9 +31429,9 @@
       "symbol": "4261",
       "base_date": "2025-12-02",
       "evaluation_end": "2025-12-30",
-      "base_close": 37.900616,
-      "maximum_high_gain_pct": 11.220582,
-      "maximum_close_gain_pct": 5.92436,
+      "base_close": 37.900612,
+      "maximum_high_gain_pct": 11.220593,
+      "maximum_close_gain_pct": 5.924371,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -31859,9 +31608,9 @@
       "symbol": "4263",
       "base_date": "2025-09-04",
       "evaluation_end": "2025-10-05",
-      "base_close": 158.558746,
-      "maximum_high_gain_pct": 10.513752,
-      "maximum_close_gain_pct": 9.020319,
+      "base_close": 158.558731,
+      "maximum_high_gain_pct": 10.513763,
+      "maximum_close_gain_pct": 9.02033,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -32270,7 +32019,7 @@
       ],
       "missing_detection_reasons": [],
       "patterns_at_base": {
-        "confirmed_higher_lows": true,
+        "confirmed_higher_lows": false,
         "volatility_contraction": false,
         "momentum_improving": false,
         "demand_volume_improving": false,
@@ -32281,9 +32030,7 @@
         "early_reversal_candidate": false,
         "retest_level": null,
         "up_down_volume_ratio10": 0.385686,
-        "evidence": [
-          "confirmed_higher_lows"
-        ],
+        "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
@@ -32298,6 +32045,7 @@
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "insufficient_entry_indicators",
         "trend_not_confirmed",
         "upside_below_10pct_or_no_target",
         "reward_risk_below_minimum_or_missing"
@@ -32436,8 +32184,8 @@
       "base_date": "2025-09-08",
       "evaluation_end": "2025-10-07",
       "base_close": 7.268015,
-      "maximum_high_gain_pct": 10.164839,
-      "maximum_close_gain_pct": 9.896791,
+      "maximum_high_gain_pct": 10.164832,
+      "maximum_close_gain_pct": 9.896784,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -32473,8 +32221,8 @@
       "base_date": "2025-11-17",
       "evaluation_end": "2025-12-15",
       "base_close": 7.471063,
-      "maximum_high_gain_pct": 10.95177,
-      "maximum_close_gain_pct": 8.735326,
+      "maximum_high_gain_pct": 10.951764,
+      "maximum_close_gain_pct": 8.735333,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -32510,8 +32258,8 @@
       "base_date": "2026-01-19",
       "evaluation_end": "2026-02-16",
       "base_close": 7.80233,
-      "maximum_high_gain_pct": 20.654902,
-      "maximum_close_gain_pct": 13.350118,
+      "maximum_high_gain_pct": 20.654915,
+      "maximum_close_gain_pct": 13.35013,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -32582,13 +32330,15 @@
       "symbol": "4280",
       "base_date": "2026-04-01",
       "evaluation_end": "2026-04-29",
-      "base_close": 9.757827,
-      "maximum_high_gain_pct": 12.487409,
-      "maximum_close_gain_pct": 12.185297,
+      "base_close": 9.757826,
+      "maximum_high_gain_pct": 12.48741,
+      "maximum_close_gain_pct": 12.185298,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "insufficient_entry_indicators",
         "price_not_confirmed",
+        "trend_not_confirmed",
         "upside_below_10pct_or_no_target",
         "reward_risk_below_minimum_or_missing"
       ],
@@ -32618,8 +32368,8 @@
       "base_date": "2026-04-30",
       "evaluation_end": "2026-06-04",
       "base_close": 10.809274,
-      "maximum_high_gain_pct": 45.854431,
-      "maximum_close_gain_pct": 40.730311,
+      "maximum_high_gain_pct": 45.85444,
+      "maximum_close_gain_pct": 40.73032,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -32640,7 +32390,7 @@
         "breakout_retest_holds": true,
         "accumulation_candidate": false,
         "early_reversal_candidate": true,
-        "retest_level": 10.691354,
+        "retest_level": 10.691355,
         "up_down_volume_ratio10": 4.887758,
         "evidence": [
           "confirmed_higher_lows",
@@ -32659,7 +32409,7 @@
       "evaluation_end": "2026-07-06",
       "base_close": 13.401924,
       "maximum_high_gain_pct": 12.619927,
-      "maximum_close_gain_pct": 6.420665,
+      "maximum_close_gain_pct": 6.420658,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -32688,9 +32438,9 @@
       "symbol": "4280",
       "base_date": "2026-07-09",
       "evaluation_end": "2026-08-06",
-      "base_close": 11.582031,
-      "maximum_high_gain_pct": 12.346667,
-      "maximum_close_gain_pct": 10.113474,
+      "base_close": 11.582032,
+      "maximum_high_gain_pct": 12.346657,
+      "maximum_close_gain_pct": 10.113465,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -32743,7 +32493,7 @@
         "breakout_retest_holds": true,
         "accumulation_candidate": false,
         "early_reversal_candidate": true,
-        "retest_level": 12.66012,
+        "retest_level": 12.660121,
         "up_down_volume_ratio10": 0.876113,
         "evidence": [
           "confirmed_higher_lows",
@@ -33227,9 +32977,9 @@
       "symbol": "4292",
       "base_date": "2025-09-07",
       "evaluation_end": "2025-10-06",
-      "base_close": 59.676292,
-      "maximum_high_gain_pct": 11.18262,
-      "maximum_close_gain_pct": 11.021721,
+      "base_close": 59.676289,
+      "maximum_high_gain_pct": 11.182627,
+      "maximum_close_gain_pct": 11.021728,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -34441,7 +34191,7 @@
       "evaluation_end": "2026-02-17",
       "base_close": 29.802896,
       "maximum_high_gain_pct": 10.614892,
-      "maximum_close_gain_pct": 7.184463,
+      "maximum_close_gain_pct": 7.18447,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -34475,8 +34225,8 @@
       "base_date": "2026-02-25",
       "evaluation_end": "2026-04-01",
       "base_close": 25.867758,
-      "maximum_high_gain_pct": 11.409388,
-      "maximum_close_gain_pct": 9.097684,
+      "maximum_high_gain_pct": 11.409395,
+      "maximum_close_gain_pct": 9.097691,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -34540,14 +34290,15 @@
     },
     {
       "symbol": "4324",
-      "base_date": "2025-07-14",
-      "evaluation_end": "2025-08-11",
-      "base_close": 4.633904,
-      "maximum_high_gain_pct": 12.62852,
-      "maximum_close_gain_pct": 6.700699,
+      "base_date": "2025-07-17",
+      "evaluation_end": "2025-08-14",
+      "base_close": 4.458304,
+      "maximum_high_gain_pct": 17.064641,
+      "maximum_close_gain_pct": 10.903339,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "unverified_or_suspicious_OHLCV",
         "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
@@ -34567,7 +34318,7 @@
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
         "retest_level": null,
-        "up_down_volume_ratio10": 2.003373,
+        "up_down_volume_ratio10": 1.473562,
         "evidence": [
           "demand_volume_improving"
         ],
@@ -35758,14 +35509,15 @@
     },
     {
       "symbol": "6002",
-      "base_date": "2025-07-14",
-      "evaluation_end": "2025-08-11",
-      "base_close": 23.5,
-      "maximum_high_gain_pct": 12.170215,
-      "maximum_close_gain_pct": 11.91489,
+      "base_date": "2025-07-17",
+      "evaluation_end": "2025-08-14",
+      "base_close": 23.0,
+      "maximum_high_gain_pct": 14.608698,
+      "maximum_close_gain_pct": 14.347823,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "unverified_or_suspicious_OHLCV",
         "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
@@ -35775,7 +35527,7 @@
       ],
       "missing_detection_reasons": [],
       "patterns_at_base": {
-        "confirmed_higher_lows": true,
+        "confirmed_higher_lows": false,
         "volatility_contraction": false,
         "momentum_improving": false,
         "demand_volume_improving": false,
@@ -35785,10 +35537,8 @@
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
         "retest_level": null,
-        "up_down_volume_ratio10": 0.634215,
-        "evidence": [
-          "confirmed_higher_lows"
-        ],
+        "up_down_volume_ratio10": 0.143858,
+        "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
@@ -36196,8 +35946,7 @@
         "price_not_confirmed",
         "volume_not_confirmed",
         "trend_not_confirmed",
-        "upside_below_10pct_or_no_target",
-        "reward_risk_below_minimum_or_missing"
+        "upside_below_10pct_or_no_target"
       ],
       "missing_detection_reasons": [],
       "patterns_at_base": {
@@ -36448,7 +36197,7 @@
       ],
       "missing_detection_reasons": [],
       "patterns_at_base": {
-        "confirmed_higher_lows": true,
+        "confirmed_higher_lows": false,
         "volatility_contraction": false,
         "momentum_improving": false,
         "demand_volume_improving": false,
@@ -36459,9 +36208,7 @@
         "early_reversal_candidate": false,
         "retest_level": null,
         "up_down_volume_ratio10": 0.205833,
-        "evidence": [
-          "confirmed_higher_lows"
-        ],
+        "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
@@ -36685,9 +36432,9 @@
       "symbol": "6014",
       "base_date": "2025-12-28",
       "evaluation_end": "2026-01-25",
-      "base_close": 38.118538,
-      "maximum_high_gain_pct": 12.935836,
-      "maximum_close_gain_pct": 11.824154,
+      "base_close": 38.118542,
+      "maximum_high_gain_pct": 12.935825,
+      "maximum_close_gain_pct": 11.824143,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -36719,9 +36466,9 @@
       "symbol": "6014",
       "base_date": "2026-02-05",
       "evaluation_end": "2026-03-08",
-      "base_close": 40.795887,
-      "maximum_high_gain_pct": 11.898026,
-      "maximum_close_gain_pct": 11.189803,
+      "base_close": 40.795891,
+      "maximum_high_gain_pct": 11.898025,
+      "maximum_close_gain_pct": 11.189802,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -36792,8 +36539,8 @@
       "base_date": "2026-04-14",
       "evaluation_end": "2026-05-12",
       "base_close": 42.452381,
-      "maximum_high_gain_pct": 11.039555,
-      "maximum_close_gain_pct": 11.039555,
+      "maximum_high_gain_pct": 11.039546,
+      "maximum_close_gain_pct": 11.039546,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -36912,7 +36659,7 @@
       ],
       "missing_detection_reasons": [],
       "patterns_at_base": {
-        "confirmed_higher_lows": false,
+        "confirmed_higher_lows": true,
         "volatility_contraction": false,
         "momentum_improving": false,
         "demand_volume_improving": true,
@@ -36924,6 +36671,7 @@
         "retest_level": null,
         "up_down_volume_ratio10": 3.526498,
         "evidence": [
+          "confirmed_higher_lows",
           "demand_volume_improving"
         ],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
@@ -36935,8 +36683,8 @@
       "base_date": "2026-01-13",
       "evaluation_end": "2026-02-10",
       "base_close": 1.631323,
-      "maximum_high_gain_pct": 18.072293,
-      "maximum_close_gain_pct": 18.072293,
+      "maximum_high_gain_pct": 18.072292,
+      "maximum_close_gain_pct": 18.072292,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -37007,7 +36755,7 @@
       "base_date": "2026-04-22",
       "evaluation_end": "2026-05-20",
       "base_close": 1.837695,
-      "maximum_high_gain_pct": 10.160416,
+      "maximum_high_gain_pct": 10.160429,
       "maximum_close_gain_pct": 9.625665,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
@@ -37181,14 +36929,15 @@
     },
     {
       "symbol": "6016",
-      "base_date": "2025-07-14",
-      "evaluation_end": "2025-08-11",
-      "base_close": 10.020653,
-      "maximum_high_gain_pct": 11.384614,
-      "maximum_close_gain_pct": 4.184616,
+      "base_date": "2025-07-17",
+      "evaluation_end": "2025-08-14",
+      "base_close": 9.817156,
+      "maximum_high_gain_pct": 13.693473,
+      "maximum_close_gain_pct": 6.344228,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "unverified_or_suspicious_OHLCV",
         "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
@@ -37208,7 +36957,7 @@
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
         "retest_level": null,
-        "up_down_volume_ratio10": 0.565921,
+        "up_down_volume_ratio10": 0.553706,
         "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
@@ -38452,15 +38201,13 @@
         "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
-        "trend_not_confirmed",
-        "upside_below_10pct_or_no_target",
-        "reward_risk_below_minimum_or_missing"
+        "trend_not_confirmed"
       ],
       "missing_detection_reasons": [],
       "patterns_at_base": {
         "confirmed_higher_lows": false,
         "volatility_contraction": false,
-        "momentum_improving": true,
+        "momentum_improving": false,
         "demand_volume_improving": false,
         "false_upside_breakout": false,
         "failed_downside_breakdown": false,
@@ -38469,9 +38216,7 @@
         "early_reversal_candidate": false,
         "retest_level": null,
         "up_down_volume_ratio10": 1.122343,
-        "evidence": [
-          "momentum_improving"
-        ],
+        "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
@@ -39154,42 +38899,6 @@
     },
     {
       "symbol": "7020",
-      "base_date": "2025-07-15",
-      "evaluation_end": "2025-08-12",
-      "base_close": 54.157013,
-      "maximum_high_gain_pct": 13.010364,
-      "maximum_close_gain_pct": 13.010364,
-      "classification_at_base": "Wait",
-      "detected_in_previous_5_observed_bars": true,
-      "not_entry_reasons": [
-        "insufficient_entry_indicators",
-        "price_not_confirmed",
-        "trend_not_confirmed",
-        "upside_below_10pct_or_no_target",
-        "reward_risk_below_minimum_or_missing"
-      ],
-      "missing_detection_reasons": [],
-      "patterns_at_base": {
-        "confirmed_higher_lows": true,
-        "volatility_contraction": false,
-        "momentum_improving": false,
-        "demand_volume_improving": false,
-        "false_upside_breakout": false,
-        "failed_downside_breakdown": false,
-        "breakout_retest_holds": false,
-        "accumulation_candidate": false,
-        "early_reversal_candidate": false,
-        "retest_level": null,
-        "up_down_volume_ratio10": 0.942289,
-        "evidence": [
-          "confirmed_higher_lows"
-        ],
-        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
-      },
-      "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
-    },
-    {
-      "symbol": "7020",
       "base_date": "2025-09-02",
       "evaluation_end": "2025-10-01",
       "base_close": 58.817883,
@@ -39229,9 +38938,9 @@
       "symbol": "7020",
       "base_date": "2026-01-06",
       "evaluation_end": "2026-02-03",
-      "base_close": 61.918583,
-      "maximum_high_gain_pct": 10.323563,
-      "maximum_close_gain_pct": 9.93837,
+      "base_close": 61.918579,
+      "maximum_high_gain_pct": 10.323583,
+      "maximum_close_gain_pct": 9.938365,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -39593,9 +39302,9 @@
       "symbol": "7200",
       "base_date": "2025-09-03",
       "evaluation_end": "2025-10-02",
-      "base_close": 127.739441,
-      "maximum_high_gain_pct": 10.015263,
-      "maximum_close_gain_pct": 9.785915,
+      "base_close": 127.739418,
+      "maximum_high_gain_pct": 10.015295,
+      "maximum_close_gain_pct": 9.785947,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -39631,9 +39340,9 @@
       "symbol": "7200",
       "base_date": "2025-11-02",
       "evaluation_end": "2025-11-30",
-      "base_close": 145.341614,
-      "maximum_high_gain_pct": 10.60942,
-      "maximum_close_gain_pct": 8.571178,
+      "base_close": 145.341629,
+      "maximum_high_gain_pct": 10.609419,
+      "maximum_close_gain_pct": 8.571157,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -39669,9 +39378,9 @@
       "symbol": "7200",
       "base_date": "2025-12-01",
       "evaluation_end": "2025-12-29",
-      "base_close": 151.577988,
-      "maximum_high_gain_pct": 14.527674,
-      "maximum_close_gain_pct": 12.24755,
+      "base_close": 151.577972,
+      "maximum_high_gain_pct": 14.527686,
+      "maximum_close_gain_pct": 12.247562,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -39707,8 +39416,8 @@
       "base_date": "2026-01-15",
       "evaluation_end": "2026-02-12",
       "base_close": 164.908936,
-      "maximum_high_gain_pct": 10.29939,
-      "maximum_close_gain_pct": 8.982027,
+      "maximum_high_gain_pct": 10.299399,
+      "maximum_close_gain_pct": 8.982036,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
@@ -39743,12 +39452,13 @@
       "symbol": "7200",
       "base_date": "2026-04-01",
       "evaluation_end": "2026-04-29",
-      "base_close": 156.219116,
-      "maximum_high_gain_pct": 14.358334,
-      "maximum_close_gain_pct": 13.913609,
+      "base_close": 156.219101,
+      "maximum_high_gain_pct": 14.358346,
+      "maximum_close_gain_pct": 13.913621,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
         "trend_not_confirmed",
@@ -39914,14 +39624,15 @@
     },
     {
       "symbol": "7201",
-      "base_date": "2025-07-16",
-      "evaluation_end": "2025-08-13",
+      "base_date": "2025-07-17",
+      "evaluation_end": "2025-08-14",
       "base_close": 5.22,
       "maximum_high_gain_pct": 10.727978,
       "maximum_close_gain_pct": 7.08813,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "unverified_or_suspicious_OHLCV",
         "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
@@ -39941,7 +39652,7 @@
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
         "retest_level": null,
-        "up_down_volume_ratio10": 0.445369,
+        "up_down_volume_ratio10": 0.616587,
         "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
@@ -41387,7 +41098,7 @@
       ],
       "missing_detection_reasons": [],
       "patterns_at_base": {
-        "confirmed_higher_lows": true,
+        "confirmed_higher_lows": false,
         "volatility_contraction": false,
         "momentum_improving": false,
         "demand_volume_improving": false,
@@ -41398,9 +41109,7 @@
         "early_reversal_candidate": false,
         "retest_level": null,
         "up_down_volume_ratio10": 0.138855,
-        "evidence": [
-          "confirmed_higher_lows"
-        ],
+        "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
@@ -41595,7 +41304,6 @@
       "not_entry_reasons": [
         "price_not_confirmed",
         "volume_not_confirmed",
-        "trend_not_confirmed",
         "upside_below_10pct_or_no_target",
         "reward_risk_below_minimum_or_missing"
       ],
@@ -41908,14 +41616,15 @@
     },
     {
       "symbol": "8050",
-      "base_date": "2025-07-16",
-      "evaluation_end": "2025-08-13",
+      "base_date": "2025-07-17",
+      "evaluation_end": "2025-08-14",
       "base_close": 12.97,
       "maximum_high_gain_pct": 10.562836,
       "maximum_close_gain_pct": 6.168082,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "unverified_or_suspicious_OHLCV",
         "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
@@ -41935,7 +41644,7 @@
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
         "retest_level": null,
-        "up_down_volume_ratio10": 0.889571,
+        "up_down_volume_ratio10": 0.979648,
         "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
@@ -41960,7 +41669,7 @@
       "missing_detection_reasons": [],
       "patterns_at_base": {
         "confirmed_higher_lows": false,
-        "volatility_contraction": false,
+        "volatility_contraction": true,
         "momentum_improving": false,
         "demand_volume_improving": false,
         "false_upside_breakout": false,
@@ -41970,7 +41679,9 @@
         "early_reversal_candidate": false,
         "retest_level": null,
         "up_down_volume_ratio10": 0.58301,
-        "evidence": [],
+        "evidence": [
+          "volatility_contraction"
+        ],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
@@ -44308,6 +44019,7 @@
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
         "trend_not_confirmed",
@@ -44565,8 +44277,10 @@
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
+        "trend_not_confirmed",
         "upside_below_10pct_or_no_target",
         "reward_risk_below_minimum_or_missing"
       ],
@@ -45362,7 +45076,7 @@
       "missing_detection_reasons": [],
       "patterns_at_base": {
         "confirmed_higher_lows": true,
-        "volatility_contraction": true,
+        "volatility_contraction": false,
         "momentum_improving": false,
         "demand_volume_improving": false,
         "false_upside_breakout": false,
@@ -45373,8 +45087,7 @@
         "retest_level": null,
         "up_down_volume_ratio10": 0.468709,
         "evidence": [
-          "confirmed_higher_lows",
-          "volatility_contraction"
+          "confirmed_higher_lows"
         ],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
@@ -45523,14 +45236,15 @@
     },
     {
       "symbol": "8280",
-      "base_date": "2025-07-15",
-      "evaluation_end": "2025-08-12",
-      "base_close": 12.88,
-      "maximum_high_gain_pct": 11.180121,
-      "maximum_close_gain_pct": 5.434781,
+      "base_date": "2025-07-17",
+      "evaluation_end": "2025-08-14",
+      "base_close": 12.67,
+      "maximum_high_gain_pct": 13.022886,
+      "maximum_close_gain_pct": 7.182319,
       "classification_at_base": "Early Watch",
       "detected_in_previous_5_observed_bars": true,
       "not_entry_reasons": [
+        "unverified_or_suspicious_OHLCV",
         "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
@@ -45550,7 +45264,7 @@
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
         "retest_level": null,
-        "up_down_volume_ratio10": 0.607724,
+        "up_down_volume_ratio10": 0.708567,
         "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
@@ -45897,7 +45611,7 @@
       "missing_detection_reasons": [],
       "patterns_at_base": {
         "confirmed_higher_lows": true,
-        "volatility_contraction": false,
+        "volatility_contraction": true,
         "momentum_improving": false,
         "demand_volume_improving": false,
         "false_upside_breakout": false,
@@ -45908,7 +45622,8 @@
         "retest_level": null,
         "up_down_volume_ratio10": 1.24355,
         "evidence": [
-          "confirmed_higher_lows"
+          "confirmed_higher_lows",
+          "volatility_contraction"
         ],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
@@ -47178,9 +46893,9 @@
       "symbol": "1030",
       "base_date": "2025-09-03",
       "evaluation_end": "2025-10-02",
-      "base_close": 10.520102,
-      "maximum_high_gain_pct": 11.437175,
-      "maximum_close_gain_pct": 8.9541,
+      "base_close": 10.520103,
+      "maximum_high_gain_pct": 11.437165,
+      "maximum_close_gain_pct": 8.95409,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": false,
       "not_entry_reasons": [
@@ -47222,8 +46937,8 @@
       "base_date": "2026-03-01",
       "evaluation_end": "2026-04-05",
       "base_close": 62.75037,
-      "maximum_high_gain_pct": 10.404928,
-      "maximum_close_gain_pct": 9.584828,
+      "maximum_high_gain_pct": 10.404916,
+      "maximum_close_gain_pct": 9.584816,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": false,
       "not_entry_reasons": [
@@ -47242,7 +46957,7 @@
         "reward_risk_below_minimum_or_missing"
       ],
       "patterns_at_base": {
-        "confirmed_higher_lows": false,
+        "confirmed_higher_lows": true,
         "volatility_contraction": false,
         "momentum_improving": false,
         "demand_volume_improving": false,
@@ -47253,7 +46968,9 @@
         "early_reversal_candidate": false,
         "retest_level": null,
         "up_down_volume_ratio10": 0.228275,
-        "evidence": [],
+        "evidence": [
+          "confirmed_higher_lows"
+        ],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
@@ -47341,8 +47058,8 @@
       "base_date": "2025-10-02",
       "evaluation_end": "2025-10-30",
       "base_close": 11.199553,
-      "maximum_high_gain_pct": 13.595411,
-      "maximum_close_gain_pct": 13.513509,
+      "maximum_high_gain_pct": 13.59541,
+      "maximum_close_gain_pct": 13.513508,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": false,
       "not_entry_reasons": [
@@ -47600,8 +47317,7 @@
         "price_not_confirmed",
         "volume_not_confirmed",
         "trend_not_confirmed",
-        "upside_below_10pct_or_no_target",
-        "reward_risk_below_minimum_or_missing"
+        "upside_below_10pct_or_no_target"
       ],
       "missing_detection_reasons": [
         "no_early_pattern_or_trend_confirmation",
@@ -47609,8 +47325,7 @@
         "price_not_confirmed",
         "volume_not_confirmed",
         "trend_not_confirmed",
-        "upside_below_10pct_or_no_target",
-        "reward_risk_below_minimum_or_missing"
+        "upside_below_10pct_or_no_target"
       ],
       "patterns_at_base": {
         "confirmed_higher_lows": false,
@@ -47809,8 +47524,7 @@
         "price_not_confirmed",
         "volume_not_confirmed",
         "trend_not_confirmed",
-        "upside_below_10pct_or_no_target",
-        "reward_risk_below_minimum_or_missing"
+        "upside_below_10pct_or_no_target"
       ],
       "missing_detection_reasons": [
         "no_early_pattern_or_trend_confirmation",
@@ -47818,8 +47532,7 @@
         "price_not_confirmed",
         "volume_not_confirmed",
         "trend_not_confirmed",
-        "upside_below_10pct_or_no_target",
-        "reward_risk_below_minimum_or_missing"
+        "upside_below_10pct_or_no_target"
       ],
       "patterns_at_base": {
         "confirmed_higher_lows": false,
@@ -47922,9 +47635,9 @@
       "symbol": "1830",
       "base_date": "2026-02-26",
       "evaluation_end": "2026-04-02",
-      "base_close": 79.841827,
-      "maximum_high_gain_pct": 10.590385,
-      "maximum_close_gain_pct": 8.277541,
+      "base_close": 79.84182,
+      "maximum_high_gain_pct": 10.590396,
+      "maximum_close_gain_pct": 8.277552,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": false,
       "not_entry_reasons": [
@@ -48048,8 +47761,8 @@
       "base_date": "2025-07-30",
       "evaluation_end": "2025-08-27",
       "base_close": 90.581329,
-      "maximum_high_gain_pct": 10.735693,
-      "maximum_close_gain_pct": 10.174404,
+      "maximum_high_gain_pct": 10.735702,
+      "maximum_close_gain_pct": 10.174412,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": false,
       "not_entry_reasons": [
@@ -48593,8 +48306,8 @@
       "base_date": "2026-02-26",
       "evaluation_end": "2026-04-02",
       "base_close": 33.724804,
-      "maximum_high_gain_pct": 10.244736,
-      "maximum_close_gain_pct": 9.106428,
+      "maximum_high_gain_pct": 10.244748,
+      "maximum_close_gain_pct": 9.106439,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": false,
       "not_entry_reasons": [
@@ -48807,9 +48520,9 @@
       "symbol": "2222",
       "base_date": "2026-02-26",
       "evaluation_end": "2026-04-02",
-      "base_close": 23.726418,
-      "maximum_high_gain_pct": 12.549066,
-      "maximum_close_gain_pct": 11.981043,
+      "base_close": 23.726419,
+      "maximum_high_gain_pct": 12.549057,
+      "maximum_close_gain_pct": 11.981034,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": false,
       "not_entry_reasons": [
@@ -48924,6 +48637,53 @@
         "retest_level": null,
         "up_down_volume_ratio10": 0.329171,
         "evidence": [],
+        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
+      },
+      "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
+    },
+    {
+      "symbol": "2250",
+      "base_date": "2025-07-17",
+      "evaluation_end": "2025-08-14",
+      "base_close": 16.83217,
+      "maximum_high_gain_pct": 14.810502,
+      "maximum_close_gain_pct": 13.935867,
+      "classification_at_base": "Wait",
+      "detected_in_previous_5_observed_bars": false,
+      "not_entry_reasons": [
+        "unverified_or_suspicious_OHLCV",
+        "insufficient_entry_indicators",
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "trend_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "missing_detection_reasons": [
+        "no_early_pattern_or_trend_confirmation",
+        "unverified_or_suspicious_OHLCV",
+        "insufficient_entry_indicators",
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "trend_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "patterns_at_base": {
+        "confirmed_higher_lows": true,
+        "volatility_contraction": false,
+        "momentum_improving": false,
+        "demand_volume_improving": false,
+        "false_upside_breakout": false,
+        "failed_downside_breakdown": false,
+        "breakout_retest_holds": false,
+        "accumulation_candidate": false,
+        "early_reversal_candidate": false,
+        "retest_level": null,
+        "up_down_volume_ratio10": 1.056301,
+        "evidence": [
+          "confirmed_higher_lows"
+        ],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
@@ -49128,6 +48888,100 @@
         "early_reversal_candidate": false,
         "retest_level": null,
         "up_down_volume_ratio10": 0.603967,
+        "evidence": [
+          "confirmed_higher_lows"
+        ],
+        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
+      },
+      "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
+    },
+    {
+      "symbol": "2382",
+      "base_date": "2025-07-17",
+      "evaluation_end": "2025-08-14",
+      "base_close": 6.249705,
+      "maximum_high_gain_pct": 20.030817,
+      "maximum_close_gain_pct": 15.947614,
+      "classification_at_base": "Wait",
+      "detected_in_previous_5_observed_bars": false,
+      "not_entry_reasons": [
+        "unverified_or_suspicious_OHLCV",
+        "insufficient_entry_indicators",
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "trend_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "missing_detection_reasons": [
+        "no_early_pattern_or_trend_confirmation",
+        "unverified_or_suspicious_OHLCV",
+        "insufficient_entry_indicators",
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "trend_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "patterns_at_base": {
+        "confirmed_higher_lows": true,
+        "volatility_contraction": false,
+        "momentum_improving": false,
+        "demand_volume_improving": false,
+        "false_upside_breakout": false,
+        "failed_downside_breakdown": false,
+        "breakout_retest_holds": false,
+        "accumulation_candidate": false,
+        "early_reversal_candidate": false,
+        "retest_level": null,
+        "up_down_volume_ratio10": 1.118803,
+        "evidence": [
+          "confirmed_higher_lows"
+        ],
+        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
+      },
+      "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
+    },
+    {
+      "symbol": "3003",
+      "base_date": "2025-07-17",
+      "evaluation_end": "2025-08-14",
+      "base_close": 14.600288,
+      "maximum_high_gain_pct": 10.434563,
+      "maximum_close_gain_pct": 5.36586,
+      "classification_at_base": "Wait",
+      "detected_in_previous_5_observed_bars": false,
+      "not_entry_reasons": [
+        "unverified_or_suspicious_OHLCV",
+        "insufficient_entry_indicators",
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "trend_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "missing_detection_reasons": [
+        "no_early_pattern_or_trend_confirmation",
+        "unverified_or_suspicious_OHLCV",
+        "insufficient_entry_indicators",
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "trend_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "patterns_at_base": {
+        "confirmed_higher_lows": true,
+        "volatility_contraction": false,
+        "momentum_improving": false,
+        "demand_volume_improving": false,
+        "false_upside_breakout": false,
+        "failed_downside_breakdown": false,
+        "breakout_retest_holds": false,
+        "accumulation_candidate": false,
+        "early_reversal_candidate": false,
+        "retest_level": null,
+        "up_down_volume_ratio10": 0.289423,
         "evidence": [
           "confirmed_higher_lows"
         ],
@@ -49356,9 +49210,9 @@
       "symbol": "4002",
       "base_date": "2025-09-21",
       "evaluation_end": "2025-10-20",
-      "base_close": 68.520149,
-      "maximum_high_gain_pct": 10.995113,
-      "maximum_close_gain_pct": 9.951272,
+      "base_close": 68.520142,
+      "maximum_high_gain_pct": 10.995126,
+      "maximum_close_gain_pct": 9.951284,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": false,
       "not_entry_reasons": [
@@ -49435,7 +49289,7 @@
       "base_date": "2025-09-14",
       "evaluation_end": "2025-10-13",
       "base_close": 30.867176,
-      "maximum_high_gain_pct": 10.094054,
+      "maximum_high_gain_pct": 10.094042,
       "maximum_close_gain_pct": 9.592475,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": false,
@@ -49856,9 +49710,9 @@
       "symbol": "4084",
       "base_date": "2025-11-09",
       "evaluation_end": "2025-12-07",
-      "base_close": 25.471838,
-      "maximum_high_gain_pct": 10.303938,
-      "maximum_close_gain_pct": 9.562645,
+      "base_close": 25.47184,
+      "maximum_high_gain_pct": 10.30393,
+      "maximum_close_gain_pct": 9.562637,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": false,
       "not_entry_reasons": [
@@ -50116,9 +49970,9 @@
       "symbol": "4150",
       "base_date": "2025-09-11",
       "evaluation_end": "2025-10-12",
-      "base_close": 27.585203,
-      "maximum_high_gain_pct": 11.731852,
-      "maximum_close_gain_pct": 11.662018,
+      "base_close": 27.585205,
+      "maximum_high_gain_pct": 11.731838,
+      "maximum_close_gain_pct": 11.662004,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": false,
       "not_entry_reasons": [
@@ -50159,28 +50013,28 @@
     },
     {
       "symbol": "4160",
-      "base_date": "2025-07-14",
-      "evaluation_end": "2025-08-11",
-      "base_close": 35.5,
-      "maximum_high_gain_pct": 11.380284,
-      "maximum_close_gain_pct": 8.957747,
+      "base_date": "2025-07-17",
+      "evaluation_end": "2025-08-14",
+      "base_close": 34.82,
+      "maximum_high_gain_pct": 14.991388,
+      "maximum_close_gain_pct": 14.991388,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": false,
       "not_entry_reasons": [
+        "unverified_or_suspicious_OHLCV",
         "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
         "trend_not_confirmed",
-        "upside_below_10pct_or_no_target",
         "reward_risk_below_minimum_or_missing"
       ],
       "missing_detection_reasons": [
         "no_early_pattern_or_trend_confirmation",
+        "unverified_or_suspicious_OHLCV",
         "insufficient_entry_indicators",
         "price_not_confirmed",
         "volume_not_confirmed",
         "trend_not_confirmed",
-        "upside_below_10pct_or_no_target",
         "reward_risk_below_minimum_or_missing"
       ],
       "patterns_at_base": {
@@ -50194,7 +50048,7 @@
         "accumulation_candidate": false,
         "early_reversal_candidate": false,
         "retest_level": null,
-        "up_down_volume_ratio10": 0.241755,
+        "up_down_volume_ratio10": 0.360577,
         "evidence": [],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
@@ -50670,8 +50524,8 @@
       "base_date": "2026-03-02",
       "evaluation_end": "2026-04-06",
       "base_close": 145.051468,
-      "maximum_high_gain_pct": 11.426971,
-      "maximum_close_gain_pct": 11.160084,
+      "maximum_high_gain_pct": 11.426982,
+      "maximum_close_gain_pct": 11.160095,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": false,
       "not_entry_reasons": [
@@ -51074,22 +50928,24 @@
       "base_date": "2025-09-08",
       "evaluation_end": "2025-10-07",
       "base_close": 1.85735,
-      "maximum_high_gain_pct": 10.052904,
-      "maximum_close_gain_pct": 8.465604,
+      "maximum_high_gain_pct": 10.052911,
+      "maximum_close_gain_pct": 8.465611,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": false,
       "not_entry_reasons": [
         "insufficient_entry_indicators",
         "price_not_confirmed",
         "trend_not_confirmed",
-        "upside_below_10pct_or_no_target"
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
       ],
       "missing_detection_reasons": [
         "no_early_pattern_or_trend_confirmation",
         "insufficient_entry_indicators",
         "price_not_confirmed",
         "trend_not_confirmed",
-        "upside_below_10pct_or_no_target"
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
       ],
       "patterns_at_base": {
         "confirmed_higher_lows": true,
@@ -51283,8 +51139,8 @@
       "base_date": "2025-07-23",
       "evaluation_end": "2025-08-20",
       "base_close": 41.381935,
-      "maximum_high_gain_pct": 10.690636,
-      "maximum_close_gain_pct": 7.947022,
+      "maximum_high_gain_pct": 10.690645,
+      "maximum_close_gain_pct": 7.947031,
       "classification_at_base": "Wait",
       "detected_in_previous_5_observed_bars": false,
       "not_entry_reasons": [
@@ -51356,6 +51212,53 @@
         "retest_level": null,
         "up_down_volume_ratio10": 0.088567,
         "evidence": [],
+        "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
+      },
+      "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
+    },
+    {
+      "symbol": "7020",
+      "base_date": "2025-07-17",
+      "evaluation_end": "2025-08-14",
+      "base_close": 53.96994,
+      "maximum_high_gain_pct": 15.081449,
+      "maximum_close_gain_pct": 14.109186,
+      "classification_at_base": "Wait",
+      "detected_in_previous_5_observed_bars": false,
+      "not_entry_reasons": [
+        "unverified_or_suspicious_OHLCV",
+        "insufficient_entry_indicators",
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "trend_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "missing_detection_reasons": [
+        "no_early_pattern_or_trend_confirmation",
+        "unverified_or_suspicious_OHLCV",
+        "insufficient_entry_indicators",
+        "price_not_confirmed",
+        "volume_not_confirmed",
+        "trend_not_confirmed",
+        "upside_below_10pct_or_no_target",
+        "reward_risk_below_minimum_or_missing"
+      ],
+      "patterns_at_base": {
+        "confirmed_higher_lows": true,
+        "volatility_contraction": false,
+        "momentum_improving": false,
+        "demand_volume_improving": false,
+        "false_upside_breakout": false,
+        "failed_downside_breakdown": false,
+        "breakout_retest_holds": false,
+        "accumulation_candidate": false,
+        "early_reversal_candidate": false,
+        "retest_level": null,
+        "up_down_volume_ratio10": 0.400399,
+        "evidence": [
+          "confirmed_higher_lows"
+        ],
         "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
       },
       "note": "Retrospective high excursion, not a realizable strategy return; 20 calendar sessions, deduplicated per stock."
@@ -52379,8 +52282,8 @@
     }
   ],
   "note": "Retrospective research, not forward performance. Early Watch counts as detected, not as an Entry or profitable trade.",
-  "run_id": "44628223371",
-  "run_url": "https://github.com/saqerkhalel-gif/tasi-radar-3/actions/runs/44628223371",
-  "run_utc": "2026-11-19T22:24:09.773730+00:00",
-  "expected_session": "2026-11-19"
+  "run_id": "45068551732",
+  "run_url": "https://github.com/saqerkhalel-gif/tasi-radar-3/actions/runs/45068551732",
+  "run_utc": "2026-11-22T20:49:21.281355+00:00",
+  "expected_session": "2026-11-22"
 }
