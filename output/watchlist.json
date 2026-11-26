@@ -1,22 +1,22 @@
 {
-  "expected_session": "2026-11-25",
-  "comparison_run_utc": "2026-11-24T23:36:52.597758+00:00",
+  "expected_session": "2026-11-26",
+  "comparison_run_utc": "2026-11-25T23:15:32.118252+00:00",
   "stocks": [
     {
       "symbol": "7200",
       "status": "analyzed",
       "changes": [],
-      "previous_date": "2026-11-24",
+      "previous_date": "2026-11-25",
       "previous_classification": "Early Watch",
       "current": {
         "symbol": "7200",
-        "date": "2026-11-25",
-        "last_bar": "2026-11-25",
-        "close": 261.0,
+        "date": "2026-11-26",
+        "last_bar": "2026-11-26",
+        "close": 261.4,
         "classification": "Early Watch",
-        "technical_score": -5,
+        "technical_score": 3,
         "data_fresh": true,
-        "expected_session": "2026-11-25",
+        "expected_session": "2026-11-26",
         "confidence": "low",
         "missing_indicators": [
           "synchronized_relative_strength"
@@ -24,7 +24,6 @@
         "entry_blockers": [
           "unverified_or_suspicious_OHLCV",
           "insufficient_entry_indicators",
-          "price_not_confirmed",
           "volume_not_confirmed",
           "trend_not_confirmed",
           "upside_below_10pct_or_no_target",
@@ -38,17 +37,17 @@
           "trend_ema": false,
           "range_contraction": false,
           "higher_lows": false,
-          "volume": 55062.0,
-          "volume_avg20_prior": 41797.5,
-          "volume_ratio20": 1.317352,
-          "rsi14": 47.460221,
-          "macd": -4.640706,
-          "macd_signal": -6.407588,
-          "macd_histogram": 1.766882,
-          "atr14": 9.830744,
-          "ema20": 261.350139,
-          "ema50": 269.300917,
-          "ema200": 236.41215,
+          "volume": 33267.0,
+          "volume_avg20_prior": 40612.35,
+          "volume_ratio20": 0.819135,
+          "rsi14": 47.807669,
+          "macd": -4.108061,
+          "macd_signal": -5.947682,
+          "macd_histogram": 1.839621,
+          "atr14": 9.599975,
+          "ema20": 261.354888,
+          "ema50": 268.991079,
+          "ema200": 236.77866,
           "support20": 242.477331,
           "resistance20": 268.976498,
           "relative_strength_20d_vs_tasi": null,
@@ -72,15 +71,15 @@
             "rejected_or_duplicate_rows": 1
           },
           "quarantined_dates": [
-            "2026-11-25"
+            "2026-11-26"
           ],
           "unverified_quote_repairs": [
             {
-              "date": "2026-11-25",
+              "date": "2026-11-26",
               "field": "Close",
               "source": "Yahoo regularMarketPrice",
-              "quote_timestamp": "2026-11-25T15:14:35+03:00",
-              "value": 261.0,
+              "quote_timestamp": "2026-11-26T15:11:14+03:00",
+              "value": 261.4,
               "reason": "daily Close was null; quote date and OHLC range validated"
             }
           ],
@@ -98,56 +97,56 @@
         "price_structure": {
           "zones": [
             {
-              "low": 240.318511,
-              "high": 245.233883,
+              "low": 240.376203,
+              "high": 245.176191,
               "center": 242.776197,
               "touches": 2,
               "last_pivot_date": "2026-11-10",
               "side": "support"
             },
             {
-              "low": 246.815062,
-              "high": 251.730434,
+              "low": 246.872754,
+              "high": 251.672742,
               "center": 249.272748,
               "touches": 2,
               "last_pivot_date": "2026-11-22",
               "side": "support"
             },
             {
-              "low": 265.277345,
-              "high": 270.192717,
+              "low": 265.335037,
+              "high": 270.135025,
               "center": 267.735031,
               "touches": 4,
               "last_pivot_date": "2026-11-23",
               "side": "resistance"
             },
             {
-              "low": 283.520779,
-              "high": 288.436151,
+              "low": 283.578471,
+              "high": 288.378459,
               "center": 285.978465,
               "touches": 3,
               "last_pivot_date": "2026-09-21",
               "side": "resistance"
             },
             {
-              "low": 290.627077,
-              "high": 295.542449,
+              "low": 290.684769,
+              "high": 295.484757,
               "center": 293.084763,
               "touches": 2,
               "last_pivot_date": "2026-09-07",
               "side": "resistance"
             },
             {
-              "low": 299.460127,
-              "high": 304.375499,
+              "low": 299.517819,
+              "high": 304.317807,
               "center": 301.917813,
               "touches": 3,
               "last_pivot_date": "2026-10-14",
               "side": "resistance"
             },
             {
-              "low": 310.352026,
-              "high": 315.267398,
+              "low": 310.409719,
+              "high": 315.209706,
               "center": 312.809712,
               "touches": 2,
               "last_pivot_date": "2026-09-02",
@@ -155,22 +154,22 @@
             }
           ],
           "nearest_support": {
-            "low": 246.815062,
-            "high": 251.730434,
+            "low": 246.872754,
+            "high": 251.672742,
             "center": 249.272748,
             "touches": 2,
             "last_pivot_date": "2026-11-22",
             "side": "support"
           },
           "nearest_resistance": {
-            "low": 265.277345,
-            "high": 270.192717,
+            "low": 265.335037,
+            "high": 270.135025,
             "center": 267.735031,
             "touches": 4,
             "last_pivot_date": "2026-11-23",
             "side": "resistance"
           },
-          "structural_invalidation": 244.357376,
+          "structural_invalidation": 244.472761,
           "confirmed_higher_lows": true,
           "last_confirmed_lows": [
             {
@@ -206,7 +205,7 @@
           "accumulation_candidate": false,
           "early_reversal_candidate": true,
           "retest_level": null,
-          "up_down_volume_ratio10": 0.941218,
+          "up_down_volume_ratio10": 0.829214,
           "evidence": [
             "confirmed_higher_lows",
             "momentum_improving"
@@ -215,48 +214,49 @@
         },
         "nomination_reasons": [
           "confirmed_higher_lows",
-          "momentum_improving"
+          "momentum_improving",
+          "EMA20_reclaim"
         ],
         "scenario": {
           "trigger": 268.976498,
-          "reclaim_trigger": 261.350139,
+          "reclaim_trigger": 261.354888,
           "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
-          "invalidation": 244.357376,
-          "conditional_target": 265.277345,
+          "invalidation": 244.472761,
+          "conditional_target": 265.335037,
           "target_method": "nearest confirmed overhead pivot zone (conservative lower edge)",
-          "upside_pct": 1.63883,
-          "reward_risk": 0.257011,
+          "upside_pct": 1.50537,
+          "reward_risk": 0.232468,
           "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
         },
         "fibonacci": {
           "direction": "up",
           "high": 336.718715,
           "high_date": "2026-08-26",
-          "low": 219.341978,
+          "low": 219.341962,
           "low_date": "2026-07-28",
           "retracement": {
-            "38.2": 291.880801,
-            "50": 278.030346,
-            "61.8": 264.179891
+            "38.2": 291.880795,
+            "50": 278.030339,
+            "61.8": 264.179882
           },
           "extension": {
-            "127.2": 368.645187,
-            "161.8": 409.257538
+            "127.2": 368.645191,
+            "161.8": 409.257548
           },
           "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
         },
         "bars": 359,
-        "first_bar": "2025-06-23",
+        "first_bar": "2025-06-24",
         "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
         "name": "ام آي اس",
         "sector": "التطبيقات وخدمات التقنية",
         "price_repairs": [
           {
-            "date": "2026-11-25",
+            "date": "2026-11-26",
             "field": "Close",
             "source": "Yahoo regularMarketPrice",
-            "quote_timestamp": "2026-11-25T15:14:35+03:00",
-            "value": 261.0,
+            "quote_timestamp": "2026-11-26T15:11:14+03:00",
+            "value": 261.4,
             "reason": "daily Close was null; quote date and OHLC range validated"
           }
         ]
@@ -266,17 +266,17 @@
       "symbol": "2350",
       "status": "analyzed",
       "changes": [],
-      "previous_date": "2026-11-24",
+      "previous_date": "2026-11-25",
       "previous_classification": "Early Watch",
       "current": {
         "symbol": "2350",
-        "date": "2026-11-25",
-        "last_bar": "2026-11-25",
-        "close": 4.91,
+        "date": "2026-11-26",
+        "last_bar": "2026-11-26",
+        "close": 4.92,
         "classification": "Early Watch",
         "technical_score": -13,
         "data_fresh": true,
-        "expected_session": "2026-11-25",
+        "expected_session": "2026-11-26",
         "confidence": "low",
         "missing_indicators": [
           "synchronized_relative_strength"
@@ -298,17 +298,17 @@
           "trend_ema": false,
           "range_contraction": true,
           "higher_lows": false,
-          "volume": 1997171.0,
-          "volume_avg20_prior": 4376407.5,
-          "volume_ratio20": 0.456349,
-          "rsi14": 48.585445,
-          "macd": 0.025435,
-          "macd_signal": 0.036047,
-          "macd_histogram": -0.010612,
-          "atr14": 0.163516,
-          "ema20": 4.947104,
-          "ema50": 4.959374,
-          "ema200": 5.107352,
+          "volume": 2037731.0,
+          "volume_avg20_prior": 4144084.7,
+          "volume_ratio20": 0.49172,
+          "rsi14": 49.088733,
+          "macd": 0.019989,
+          "macd_signal": 0.032835,
+          "macd_histogram": -0.012847,
+          "atr14": 0.156071,
+          "ema20": 4.944522,
+          "ema50": 4.95783,
+          "ema200": 5.10742,
           "support20": 4.63,
           "resistance20": 5.31,
           "relative_strength_20d_vs_tasi": null,
@@ -332,15 +332,15 @@
             "rejected_or_duplicate_rows": 0
           },
           "quarantined_dates": [
-            "2026-11-25"
+            "2026-11-26"
           ],
           "unverified_quote_repairs": [
             {
-              "date": "2026-11-25",
+              "date": "2026-11-26",
               "field": "Close",
               "source": "Yahoo regularMarketPrice",
-              "quote_timestamp": "2026-11-25T15:18:21+03:00",
-              "value": 4.91,
+              "quote_timestamp": "2026-11-26T15:17:52+03:00",
+              "value": 4.92,
               "reason": "daily Close was null; quote date and OHLC range validated"
             }
           ],
@@ -358,48 +358,56 @@
         "price_structure": {
           "zones": [
             {
-              "low": 4.475788,
-              "high": 4.557546,
+              "low": 4.477649,
+              "high": 4.555684,
               "center": 4.516667,
               "touches": 3,
               "last_pivot_date": "2026-10-25",
               "side": "support"
             },
             {
-              "low": 4.624121,
-              "high": 4.705879,
+              "low": 4.625982,
+              "high": 4.704018,
               "center": 4.665,
               "touches": 2,
               "last_pivot_date": "2026-11-02",
               "side": "support"
             },
             {
-              "low": 4.847692,
-              "high": 4.92945,
+              "low": 4.849554,
+              "high": 4.927589,
               "center": 4.888571,
               "touches": 7,
               "last_pivot_date": "2026-11-22",
               "side": "support"
             },
             {
-              "low": 4.985788,
-              "high": 5.067546,
+              "low": 4.987649,
+              "high": 5.065684,
               "center": 5.026667,
               "touches": 6,
               "last_pivot_date": "2026-11-17",
               "side": "resistance"
             },
             {
-              "low": 5.129121,
-              "high": 5.210879,
-              "center": 5.17,
-              "touches": 8,
+              "low": 5.110982,
+              "high": 5.189018,
+              "center": 5.15,
+              "touches": 6,
               "last_pivot_date": "2026-09-02",
               "side": "resistance"
             },
             {
-              "low": 5.366621,
-              "high": 5.448379,
+              "low": 5.190982,
+              "high": 5.269018,
+              "center": 5.23,
+              "touches": 2,
+              "last_pivot_date": "2026-08-26",
+              "side": "resistance"
+            },
+            {
+              "low": 5.368482,
+              "high": 5.446518,
               "center": 5.4075,
               "touches": 8,
               "last_pivot_date": "2026-11-11",
@@ -407,22 +415,22 @@
             }
           ],
           "nearest_support": {
-            "low": 4.624121,
-            "high": 4.705879,
+            "low": 4.625982,
+            "high": 4.704018,
             "center": 4.665,
             "touches": 2,
             "last_pivot_date": "2026-11-02",
             "side": "support"
           },
           "nearest_resistance": {
-            "low": 4.985788,
-            "high": 5.067546,
+            "low": 4.987649,
+            "high": 5.065684,
             "center": 5.026667,
             "touches": 6,
             "last_pivot_date": "2026-11-17",
             "side": "resistance"
           },
-          "structural_invalidation": 4.583242,
+          "structural_invalidation": 4.586965,
           "confirmed_higher_lows": false,
           "last_confirmed_lows": [
             {
@@ -458,7 +466,7 @@
           "accumulation_candidate": false,
           "early_reversal_candidate": false,
           "retest_level": null,
-          "up_down_volume_ratio10": 0.710231,
+          "up_down_volume_ratio10": 0.451947,
           "evidence": [],
           "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
         },
@@ -467,13 +475,13 @@
         ],
         "scenario": {
           "trigger": 5.31,
-          "reclaim_trigger": 4.947104,
+          "reclaim_trigger": 4.944522,
           "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
-          "invalidation": 4.583242,
-          "conditional_target": 4.985788,
+          "invalidation": 4.586965,
+          "conditional_target": 4.987649,
           "target_method": "nearest confirmed overhead pivot zone (conservative lower edge)",
-          "upside_pct": 1.543537,
-          "reward_risk": 0.231938,
+          "upside_pct": 1.374978,
+          "reward_risk": 0.203128,
           "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
         },
         "fibonacci": {
@@ -494,17 +502,17 @@
           "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
         },
         "bars": 359,
-        "first_bar": "2025-06-23",
+        "first_bar": "2025-06-24",
         "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
         "name": "كيان السعودية",
         "sector": "المواد الأساسية",
         "price_repairs": [
           {
-            "date": "2026-11-25",
+            "date": "2026-11-26",
             "field": "Close",
             "source": "Yahoo regularMarketPrice",
-            "quote_timestamp": "2026-11-25T15:18:21+03:00",
-            "value": 4.91,
+            "quote_timestamp": "2026-11-26T15:17:52+03:00",
+            "value": 4.92,
             "reason": "daily Close was null; quote date and OHLC range validated"
           }
         ]
@@ -514,17 +522,17 @@
       "symbol": "1150",
       "status": "analyzed",
       "changes": [],
-      "previous_date": "2026-11-24",
+      "previous_date": "2026-11-25",
       "previous_classification": "Wait",
       "current": {
         "symbol": "1150",
-        "date": "2026-11-25",
-        "last_bar": "2026-11-25",
-        "close": 21.29,
+        "date": "2026-11-26",
+        "last_bar": "2026-11-26",
+        "close": 21.33,
         "classification": "Wait",
         "technical_score": -17,
         "data_fresh": true,
-        "expected_session": "2026-11-25",
+        "expected_session": "2026-11-26",
         "confidence": "low",
         "missing_indicators": [
           "synchronized_relative_strength"
@@ -546,17 +554,17 @@
           "trend_ema": false,
           "range_contraction": false,
           "higher_lows": false,
-          "volume": 2204189.0,
-          "volume_avg20_prior": 4621557.1,
-          "volume_ratio20": 0.476936,
-          "rsi14": 40.087735,
-          "macd": -0.309107,
-          "macd_signal": -0.343886,
-          "macd_histogram": 0.034779,
-          "atr14": 0.437748,
-          "ema20": 21.726789,
-          "ema50": 22.436423,
-          "ema200": 22.893625,
+          "volume": 3293767.0,
+          "volume_avg20_prior": 4166704.35,
+          "volume_ratio20": 0.790497,
+          "rsi14": 40.852072,
+          "macd": -0.305229,
+          "macd_signal": -0.336154,
+          "macd_histogram": 0.030926,
+          "atr14": 0.415052,
+          "ema20": 21.689,
+          "ema50": 22.393035,
+          "ema200": 22.906337,
           "support20": 20.777387,
           "resistance20": 22.16,
           "relative_strength_20d_vs_tasi": null,
@@ -580,15 +588,15 @@
             "rejected_or_duplicate_rows": 0
           },
           "quarantined_dates": [
-            "2026-11-25"
+            "2026-11-26"
           ],
           "unverified_quote_repairs": [
             {
-              "date": "2026-11-25",
+              "date": "2026-11-26",
               "field": "Close",
               "source": "Yahoo regularMarketPrice",
-              "quote_timestamp": "2026-11-25T15:19:04+03:00",
-              "value": 21.29,
+              "quote_timestamp": "2026-11-26T15:17:21+03:00",
+              "value": 21.33,
               "reason": "daily Close was null; quote date and OHLC range validated"
             }
           ],
@@ -606,48 +614,48 @@
         "price_structure": {
           "zones": [
             {
-              "low": 21.702087,
-              "high": 21.920961,
-              "center": 21.811524,
-              "touches": 3,
-              "last_pivot_date": "2026-11-17",
+              "low": 21.72738,
+              "high": 21.934906,
+              "center": 21.831143,
+              "touches": 4,
+              "last_pivot_date": "2026-11-24",
               "side": "resistance"
             },
             {
-              "low": 23.29107,
-              "high": 23.509944,
+              "low": 23.296744,
+              "high": 23.50427,
               "center": 23.400507,
               "touches": 3,
               "last_pivot_date": "2026-10-18",
               "side": "resistance"
             },
             {
-              "low": 23.778297,
-              "high": 23.997171,
+              "low": 23.783971,
+              "high": 23.991497,
               "center": 23.887734,
               "touches": 3,
               "last_pivot_date": "2026-10-05",
               "side": "resistance"
             },
             {
-              "low": 24.073187,
-              "high": 24.292061,
+              "low": 24.078861,
+              "high": 24.286387,
               "center": 24.182624,
               "touches": 2,
               "last_pivot_date": "2026-09-21",
               "side": "resistance"
             },
             {
-              "low": 24.424089,
-              "high": 24.642963,
+              "low": 24.429763,
+              "high": 24.637289,
               "center": 24.533526,
               "touches": 3,
               "last_pivot_date": "2026-10-06",
               "side": "resistance"
             },
             {
-              "low": 24.766756,
-              "high": 24.98563,
+              "low": 24.77243,
+              "high": 24.979956,
               "center": 24.876193,
               "touches": 3,
               "last_pivot_date": "2026-09-17",
@@ -656,11 +664,11 @@
           ],
           "nearest_support": null,
           "nearest_resistance": {
-            "low": 21.702087,
-            "high": 21.920961,
-            "center": 21.811524,
-            "touches": 3,
-            "last_pivot_date": "2026-11-17",
+            "low": 21.72738,
+            "high": 21.934906,
+            "center": 21.831143,
+            "touches": 4,
+            "last_pivot_date": "2026-11-24",
             "side": "resistance"
           },
           "structural_invalidation": null,
@@ -699,7 +707,7 @@
           "accumulation_candidate": false,
           "early_reversal_candidate": false,
           "retest_level": null,
-          "up_down_volume_ratio10": 0.624208,
+          "up_down_volume_ratio10": 0.57878,
           "evidence": [
             "confirmed_higher_lows"
           ],
@@ -710,13 +718,13 @@
         ],
         "scenario": {
           "trigger": 22.16,
-          "reclaim_trigger": 21.726789,
+          "reclaim_trigger": 21.689,
           "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
           "invalidation": 20.777387,
-          "conditional_target": 21.702087,
+          "conditional_target": 21.72738,
           "target_method": "nearest confirmed overhead pivot zone (conservative lower edge)",
-          "upside_pct": 1.93559,
-          "reward_risk": 0.803895,
+          "upside_pct": 1.86301,
+          "reward_risk": 0.719092,
           "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
         },
         "fibonacci": {
@@ -737,17 +745,17 @@
           "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
         },
         "bars": 359,
-        "first_bar": "2025-06-23",
+        "first_bar": "2025-06-24",
         "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
         "name": "الإنماء",
         "sector": "البنوك",
         "price_repairs": [
           {
-            "date": "2026-11-25",
+            "date": "2026-11-26",
             "field": "Close",
             "source": "Yahoo regularMarketPrice",
-            "quote_timestamp": "2026-11-25T15:19:04+03:00",
-            "value": 21.29,
+            "quote_timestamp": "2026-11-26T15:17:21+03:00",
+            "value": 21.33,
             "reason": "daily Close was null; quote date and OHLC range validated"
           }
         ]
@@ -756,18 +764,20 @@
     {
       "symbol": "1321",
       "status": "analyzed",
-      "changes": [],
-      "previous_date": "2026-11-24",
+      "changes": [
+        "classification_changed"
+      ],
+      "previous_date": "2026-11-25",
       "previous_classification": "Wait",
       "current": {
         "symbol": "1321",
-        "date": "2026-11-25",
-        "last_bar": "2026-11-25",
-        "close": 150.0,
-        "classification": "Wait",
-        "technical_score": -17,
+        "date": "2026-11-26",
+        "last_bar": "2026-11-26",
+        "close": 150.1,
+        "classification": "Early Watch",
+        "technical_score": -12,
         "data_fresh": true,
-        "expected_session": "2026-11-25",
+        "expected_session": "2026-11-26",
         "confidence": "low",
         "missing_indicators": [
           "synchronized_relative_strength"
@@ -787,19 +797,19 @@
           "price_breakout20": false,
           "volume_confirmed": false,
           "trend_ema": false,
-          "range_contraction": false,
+          "range_contraction": true,
           "higher_lows": false,
-          "volume": 159640.0,
-          "volume_avg20_prior": 197391.85,
-          "volume_ratio20": 0.808747,
-          "rsi14": 40.490318,
-          "macd": -4.640094,
-          "macd_signal": -5.476703,
-          "macd_histogram": 0.836609,
-          "atr14": 6.391037,
-          "ema20": 154.186017,
-          "ema50": 165.345117,
-          "ema200": 171.645559,
+          "volume": 83073.0,
+          "volume_avg20_prior": 189389.55,
+          "volume_ratio20": 0.438636,
+          "rsi14": 40.654641,
+          "macd": -4.434477,
+          "macd_signal": -5.268258,
+          "macd_histogram": 0.83378,
+          "atr14": 6.127391,
+          "ema20": 153.796873,
+          "ema50": 164.747272,
+          "ema200": 171.570412,
           "support20": 141.0,
           "resistance20": 159.600006,
           "relative_strength_20d_vs_tasi": null,
@@ -823,15 +833,15 @@
             "rejected_or_duplicate_rows": 0
           },
           "quarantined_dates": [
-            "2026-11-25"
+            "2026-11-26"
           ],
           "unverified_quote_repairs": [
             {
-              "date": "2026-11-25",
+              "date": "2026-11-26",
               "field": "Close",
               "source": "Yahoo regularMarketPrice",
-              "quote_timestamp": "2026-11-25T15:18:00+03:00",
-              "value": 150.0,
+              "quote_timestamp": "2026-11-26T15:17:43+03:00",
+              "value": 150.1,
               "reason": "daily Close was null; quote date and OHLC range validated"
             }
           ],
@@ -849,56 +859,56 @@
         "price_structure": {
           "zones": [
             {
-              "low": 139.402241,
-              "high": 142.597759,
+              "low": 139.468152,
+              "high": 142.531848,
               "center": 141.0,
               "touches": 2,
               "last_pivot_date": "2026-11-04",
               "side": "support"
             },
             {
-              "low": 145.652241,
-              "high": 148.847759,
+              "low": 145.718152,
+              "high": 148.781848,
               "center": 147.25,
               "touches": 2,
               "last_pivot_date": "2026-11-22",
               "side": "support"
             },
             {
-              "low": 157.951934,
-              "high": 161.147453,
+              "low": 158.017846,
+              "high": 161.081541,
               "center": 159.549694,
               "touches": 4,
               "last_pivot_date": "2026-11-17",
               "side": "resistance"
             },
             {
-              "low": 178.326828,
-              "high": 181.522347,
+              "low": 178.39274,
+              "high": 181.456435,
               "center": 179.924587,
               "touches": 2,
               "last_pivot_date": "2026-08-06",
               "side": "resistance"
             },
             {
-              "low": 182.860754,
-              "high": 186.056273,
+              "low": 182.926666,
+              "high": 185.990362,
               "center": 184.458514,
               "touches": 5,
               "last_pivot_date": "2026-10-13",
               "side": "resistance"
             },
             {
-              "low": 187.414426,
-              "high": 190.609945,
+              "low": 187.480338,
+              "high": 190.544033,
               "center": 189.012186,
               "touches": 2,
               "last_pivot_date": "2026-08-25",
               "side": "resistance"
             },
             {
-              "low": 198.197724,
-              "high": 201.393243,
+              "low": 198.263636,
+              "high": 201.327332,
               "center": 199.795484,
               "touches": 3,
               "last_pivot_date": "2026-09-16",
@@ -906,22 +916,22 @@
             }
           ],
           "nearest_support": {
-            "low": 145.652241,
-            "high": 148.847759,
+            "low": 145.718152,
+            "high": 148.781848,
             "center": 147.25,
             "touches": 2,
             "last_pivot_date": "2026-11-22",
             "side": "support"
           },
           "nearest_resistance": {
-            "low": 157.951934,
-            "high": 161.147453,
+            "low": 158.017846,
+            "high": 161.081541,
             "center": 159.549694,
             "touches": 4,
             "last_pivot_date": "2026-11-17",
             "side": "resistance"
           },
-          "structural_invalidation": 144.054481,
+          "structural_invalidation": 144.186304,
           "confirmed_higher_lows": true,
           "last_confirmed_lows": [
             {
@@ -950,62 +960,65 @@
           "confirmed_higher_lows": true,
           "volatility_contraction": false,
           "momentum_improving": false,
-          "demand_volume_improving": false,
+          "demand_volume_improving": true,
           "false_upside_breakout": false,
           "failed_downside_breakdown": false,
           "breakout_retest_holds": false,
           "accumulation_candidate": false,
           "early_reversal_candidate": false,
           "retest_level": null,
-          "up_down_volume_ratio10": 0.821784,
+          "up_down_volume_ratio10": 1.356038,
           "evidence": [
-            "confirmed_higher_lows"
+            "confirmed_higher_lows",
+            "demand_volume_improving"
           ],
           "note": "Observed patterns; Early Watch until all original Entry gates and data-quality gates pass."
         },
         "nomination_reasons": [
-          "confirmed_higher_lows"
+          "confirmed_higher_lows",
+          "demand_volume_improving",
+          "range_contraction_5_vs20"
         ],
         "scenario": {
           "trigger": 159.600006,
-          "reclaim_trigger": 154.186017,
+          "reclaim_trigger": 153.796873,
           "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
-          "invalidation": 144.054481,
-          "conditional_target": 157.951934,
+          "invalidation": 144.186304,
+          "conditional_target": 158.017846,
           "target_method": "nearest confirmed overhead pivot zone (conservative lower edge)",
-          "upside_pct": 5.301289,
-          "reward_risk": 1.337467,
+          "upside_pct": 5.275047,
+          "reward_risk": 1.3389,
           "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
         },
         "fibonacci": {
           "direction": "down",
-          "high": 222.152287,
-          "high_date": "2026-07-21",
+          "high": 215.336598,
+          "high_date": "2026-09-20",
           "low": 141.0,
           "low_date": "2026-11-03",
           "retracement": {
-            "38.2": 172.000174,
-            "50": 181.576143,
-            "61.8": 191.152113
+            "38.2": 169.39658,
+            "50": 178.168299,
+            "61.8": 186.940017
           },
           "extension": {
-            "127.2": 118.926578,
-            "161.8": 90.847887
+            "127.2": 120.780445,
+            "161.8": 95.059983
           },
           "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
         },
         "bars": 359,
-        "first_bar": "2025-06-23",
+        "first_bar": "2025-06-24",
         "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
         "name": "أنابيب الشرق",
         "sector": "المواد الأساسية",
         "price_repairs": [
           {
-            "date": "2026-11-25",
+            "date": "2026-11-26",
             "field": "Close",
             "source": "Yahoo regularMarketPrice",
-            "quote_timestamp": "2026-11-25T15:18:00+03:00",
-            "value": 150.0,
+            "quote_timestamp": "2026-11-26T15:17:43+03:00",
+            "value": 150.1,
             "reason": "daily Close was null; quote date and OHLC range validated"
           }
         ]
@@ -1015,17 +1028,17 @@
       "symbol": "7201",
       "status": "analyzed",
       "changes": [],
-      "previous_date": "2026-11-24",
+      "previous_date": "2026-11-25",
       "previous_classification": "Early Watch",
       "current": {
         "symbol": "7201",
-        "date": "2026-11-25",
-        "last_bar": "2026-11-25",
+        "date": "2026-11-26",
+        "last_bar": "2026-11-26",
         "close": 3.47,
         "classification": "Early Watch",
         "technical_score": -20,
         "data_fresh": true,
-        "expected_session": "2026-11-25",
+        "expected_session": "2026-11-26",
         "confidence": "low",
         "missing_indicators": [
           "synchronized_relative_strength"
@@ -1047,18 +1060,18 @@
           "trend_ema": false,
           "range_contraction": true,
           "higher_lows": false,
-          "volume": 453432.0,
-          "volume_avg20_prior": 1941210.85,
-          "volume_ratio20": 0.233582,
+          "volume": 643220.0,
+          "volume_avg20_prior": 1800194.4,
+          "volume_ratio20": 0.357306,
           "rsi14": 38.845939,
-          "macd": -0.056652,
-          "macd_signal": -0.026431,
-          "macd_histogram": -0.030221,
-          "atr14": 0.162624,
-          "ema20": 3.666518,
-          "ema50": 3.688034,
-          "ema200": 3.776351,
-          "support20": 3.51,
+          "macd": -0.064852,
+          "macd_signal": -0.034115,
+          "macd_histogram": -0.030737,
+          "atr14": 0.156722,
+          "ema20": 3.647802,
+          "ema50": 3.679484,
+          "ema200": 3.780202,
+          "support20": 3.46,
           "resistance20": 4.07,
           "relative_strength_20d_vs_tasi": null,
           "relative_strength_60d_vs_tasi": null
@@ -1081,14 +1094,14 @@
             "rejected_or_duplicate_rows": 0
           },
           "quarantined_dates": [
-            "2026-11-25"
+            "2026-11-26"
           ],
           "unverified_quote_repairs": [
             {
-              "date": "2026-11-25",
+              "date": "2026-11-26",
               "field": "Close",
               "source": "Yahoo regularMarketPrice",
-              "quote_timestamp": "2026-11-25T15:13:03+03:00",
+              "quote_timestamp": "2026-11-26T15:19:49+03:00",
               "value": 3.47,
               "reason": "daily Close was null; quote date and OHLC range validated"
             }
@@ -1107,56 +1120,56 @@
         "price_structure": {
           "zones": [
             {
-              "low": 3.202677,
-              "high": 3.283989,
+              "low": 3.204153,
+              "high": 3.282514,
               "center": 3.243333,
               "touches": 3,
               "last_pivot_date": "2026-10-01",
               "side": "support"
             },
             {
-              "low": 3.395344,
-              "high": 3.476656,
-              "center": 3.436,
-              "touches": 5,
+              "low": 3.415819,
+              "high": 3.494181,
+              "center": 3.455,
+              "touches": 4,
               "last_pivot_date": "2026-10-25",
               "side": "support"
             },
             {
-              "low": 3.531844,
-              "high": 3.613156,
+              "low": 3.533319,
+              "high": 3.61168,
               "center": 3.5725,
               "touches": 4,
               "last_pivot_date": "2026-11-04",
               "side": "resistance"
             },
             {
-              "low": 3.769344,
-              "high": 3.850656,
+              "low": 3.770819,
+              "high": 3.84918,
               "center": 3.81,
               "touches": 3,
               "last_pivot_date": "2026-11-08",
               "side": "resistance"
             },
             {
-              "low": 3.872677,
-              "high": 3.953989,
+              "low": 3.874153,
+              "high": 3.952514,
               "center": 3.913333,
               "touches": 3,
               "last_pivot_date": "2026-10-29",
               "side": "resistance"
             },
             {
-              "low": 4.049344,
-              "high": 4.130656,
+              "low": 4.05082,
+              "high": 4.129181,
               "center": 4.09,
               "touches": 2,
               "last_pivot_date": "2026-11-12",
               "side": "resistance"
             },
             {
-              "low": 4.399344,
-              "high": 4.480656,
+              "low": 4.40082,
+              "high": 4.479181,
               "center": 4.44,
               "touches": 2,
               "last_pivot_date": "2026-10-20",
@@ -1164,22 +1177,22 @@
             }
           ],
           "nearest_support": {
-            "low": 3.202677,
-            "high": 3.283989,
+            "low": 3.204153,
+            "high": 3.282514,
             "center": 3.243333,
             "touches": 3,
             "last_pivot_date": "2026-10-01",
             "side": "support"
           },
           "nearest_resistance": {
-            "low": 3.531844,
-            "high": 3.613156,
+            "low": 3.533319,
+            "high": 3.61168,
             "center": 3.5725,
             "touches": 4,
             "last_pivot_date": "2026-11-04",
             "side": "resistance"
           },
-          "structural_invalidation": 3.162021,
+          "structural_invalidation": 3.164972,
           "confirmed_higher_lows": true,
           "last_confirmed_lows": [
             {
@@ -1215,7 +1228,7 @@
           "accumulation_candidate": false,
           "early_reversal_candidate": false,
           "retest_level": null,
-          "up_down_volume_ratio10": 0.768545,
+          "up_down_volume_ratio10": 0.053228,
           "evidence": [
             "confirmed_higher_lows"
           ],
@@ -1227,13 +1240,13 @@
         ],
         "scenario": {
           "trigger": 4.07,
-          "reclaim_trigger": 3.666518,
+          "reclaim_trigger": 3.647802,
           "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
-          "invalidation": 3.162021,
-          "conditional_target": 3.531844,
+          "invalidation": 3.164972,
+          "conditional_target": 3.533319,
           "target_method": "nearest confirmed overhead pivot zone (conservative lower edge)",
-          "upside_pct": 1.782246,
-          "reward_risk": 0.200806,
+          "upside_pct": 1.824766,
+          "reward_risk": 0.207586,
           "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
         },
         "fibonacci": {
@@ -1254,16 +1267,16 @@
           "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
         },
         "bars": 359,
-        "first_bar": "2025-06-23",
+        "first_bar": "2025-06-24",
         "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
         "name": "بحر العرب",
         "sector": "التطبيقات وخدمات التقنية",
         "price_repairs": [
           {
-            "date": "2026-11-25",
+            "date": "2026-11-26",
             "field": "Close",
             "source": "Yahoo regularMarketPrice",
-            "quote_timestamp": "2026-11-25T15:13:03+03:00",
+            "quote_timestamp": "2026-11-26T15:19:49+03:00",
             "value": 3.47,
             "reason": "daily Close was null; quote date and OHLC range validated"
           }
@@ -1274,17 +1287,17 @@
       "symbol": "3008",
       "status": "analyzed",
       "changes": [],
-      "previous_date": "2026-11-24",
+      "previous_date": "2026-11-25",
       "previous_classification": "Wait",
       "current": {
         "symbol": "3008",
-        "date": "2026-11-25",
-        "last_bar": "2026-11-25",
-        "close": 9.5,
+        "date": "2026-11-26",
+        "last_bar": "2026-11-26",
+        "close": 9.24,
         "classification": "Wait",
         "technical_score": -25,
         "data_fresh": true,
-        "expected_session": "2026-11-25",
+        "expected_session": "2026-11-26",
         "confidence": "low",
         "missing_indicators": [],
         "entry_blockers": [
@@ -1302,38 +1315,38 @@
           "trend_ema": false,
           "range_contraction": false,
           "higher_lows": false,
-          "volume": 544757.0,
-          "volume_avg20_prior": 654693.85,
-          "volume_ratio20": 0.832079,
-          "rsi14": 15.990941,
-          "macd": -0.639297,
-          "macd_signal": -0.408218,
-          "macd_histogram": -0.231079,
-          "atr14": 0.487317,
-          "ema20": 11.324829,
-          "ema50": 12.310772,
-          "ema200": 16.565872,
-          "support20": 9.62,
+          "volume": 700813.0,
+          "volume_avg20_prior": 652859.55,
+          "volume_ratio20": 1.073451,
+          "rsi14": 14.738596,
+          "macd": -0.725008,
+          "macd_signal": -0.471576,
+          "macd_histogram": -0.253432,
+          "atr14": 0.481795,
+          "ema20": 11.126274,
+          "ema50": 12.190351,
+          "ema200": 16.54098,
+          "support20": 9.4,
           "resistance20": 12.532208,
-          "relative_strength_20d_vs_tasi": -21.659101,
-          "relative_strength_60d_vs_tasi": -21.716682
+          "relative_strength_20d_vs_tasi": -24.887275,
+          "relative_strength_60d_vs_tasi": -24.372622
         },
         "relative_strength": {
           "20": {
-            "value_pct_points": -21.659101,
-            "stock_return_pct": -22.751429,
-            "tasi_return_pct": -1.092329,
-            "start_date": "2026-10-28",
-            "end_date": "2026-11-25",
+            "value_pct_points": -24.887275,
+            "stock_return_pct": -24.865601,
+            "tasi_return_pct": 0.021674,
+            "start_date": "2026-10-29",
+            "end_date": "2026-11-26",
             "sessions": 20,
             "reason": null
           },
           "60": {
-            "value_pct_points": -21.716682,
-            "stock_return_pct": -32.407498,
-            "tasi_return_pct": -10.690816,
-            "start_date": "2026-09-01",
-            "end_date": "2026-11-25",
+            "value_pct_points": -24.372622,
+            "stock_return_pct": -34.257398,
+            "tasi_return_pct": -9.884776,
+            "start_date": "2026-09-02",
+            "end_date": "2026-11-26",
             "sessions": 60,
             "reason": null
           }
@@ -1346,15 +1359,15 @@
             "rejected_or_duplicate_rows": 0
           },
           "quarantined_dates": [
-            "2026-11-25"
+            "2026-11-26"
           ],
           "unverified_quote_repairs": [
             {
-              "date": "2026-11-25",
+              "date": "2026-11-26",
               "field": "Close",
               "source": "Yahoo regularMarketPrice",
-              "quote_timestamp": "2026-11-25T15:19:32+03:00",
-              "value": 9.5,
+              "quote_timestamp": "2026-11-26T15:19:59+03:00",
+              "value": 9.24,
               "reason": "daily Close was null; quote date and OHLC range validated"
             }
           ],
@@ -1370,80 +1383,80 @@
         "price_structure": {
           "zones": [
             {
-              "low": 11.356268,
-              "high": 11.599927,
+              "low": 11.357649,
+              "high": 11.598546,
               "center": 11.478097,
               "touches": 2,
               "last_pivot_date": "2026-11-16",
               "side": "resistance"
             },
             {
-              "low": 11.769753,
-              "high": 12.013411,
+              "low": 11.771133,
+              "high": 12.01203,
               "center": 11.891582,
               "touches": 9,
               "last_pivot_date": "2026-11-19",
               "side": "resistance"
             },
             {
-              "low": 12.109204,
-              "high": 12.352863,
+              "low": 12.110585,
+              "high": 12.351482,
               "center": 12.231034,
               "touches": 7,
               "last_pivot_date": "2026-11-12",
               "side": "resistance"
             },
             {
-              "low": 12.488462,
-              "high": 12.73212,
+              "low": 12.489842,
+              "high": 12.730739,
               "center": 12.610291,
               "touches": 3,
               "last_pivot_date": "2026-10-27",
               "side": "resistance"
             },
             {
-              "low": 12.995997,
-              "high": 13.239655,
+              "low": 12.997377,
+              "high": 13.238274,
               "center": 13.117826,
               "touches": 3,
               "last_pivot_date": "2026-10-19",
               "side": "resistance"
             },
             {
-              "low": 13.386408,
-              "high": 13.630067,
+              "low": 13.387789,
+              "high": 13.628686,
               "center": 13.508237,
               "touches": 3,
               "last_pivot_date": "2026-10-22",
               "side": "resistance"
             },
             {
-              "low": 13.78658,
-              "high": 14.030238,
+              "low": 13.78796,
+              "high": 14.028858,
               "center": 13.908409,
               "touches": 4,
               "last_pivot_date": "2026-10-07",
               "side": "resistance"
             },
             {
-              "low": 15.416548,
-              "high": 15.660206,
+              "low": 15.417928,
+              "high": 15.658826,
               "center": 15.538377,
               "touches": 3,
               "last_pivot_date": "2026-09-07",
               "side": "resistance"
             },
             {
-              "low": 16.041206,
-              "high": 16.284865,
+              "low": 16.042587,
+              "high": 16.283484,
               "center": 16.163035,
               "touches": 2,
               "last_pivot_date": "2026-08-26",
               "side": "resistance"
             },
             {
-              "low": 16.626824,
-              "high": 16.870483,
+              "low": 16.628205,
+              "high": 16.869102,
               "center": 16.748653,
               "touches": 3,
               "last_pivot_date": "2026-08-06",
@@ -1452,8 +1465,8 @@
           ],
           "nearest_support": null,
           "nearest_resistance": {
-            "low": 11.356268,
-            "high": 11.599927,
+            "low": 11.357649,
+            "high": 11.598546,
             "center": 11.478097,
             "touches": 2,
             "last_pivot_date": "2026-11-16",
@@ -1504,12 +1517,12 @@
         ],
         "scenario": {
           "trigger": 12.532208,
-          "reclaim_trigger": 11.324829,
+          "reclaim_trigger": 11.126274,
           "trigger_rule": "daily close above resistance or EMA20 reclaim, with prior-20-volume multiple >= 1.5",
           "invalidation": null,
-          "conditional_target": 11.356268,
+          "conditional_target": 11.357649,
           "target_method": "nearest confirmed overhead pivot zone (conservative lower edge)",
-          "upside_pct": 19.539665,
+          "upside_pct": 22.918277,
           "reward_risk": null,
           "forecast_window": "next 5–20 trading sessions; conditional, not a guaranteed return"
         },
@@ -1517,31 +1530,31 @@
           "direction": "down",
           "high": 16.748653,
           "high_date": "2026-08-04",
-          "low": 9.4,
-          "low_date": "2026-11-25",
+          "low": 9.2,
+          "low_date": "2026-11-26",
           "retracement": {
-            "38.2": 12.207185,
-            "50": 13.074327,
-            "61.8": 13.941468
+            "38.2": 12.083585,
+            "50": 12.974327,
+            "61.8": 13.865068
           },
           "extension": {
-            "127.2": 7.401166,
-            "161.8": 4.858532
+            "127.2": 7.146766,
+            "161.8": 4.534932
           },
           "method": "chronological 90-session extrema; heuristic pivots, not manually validated"
         },
         "bars": 360,
-        "first_bar": "2025-06-23",
+        "first_bar": "2025-06-24",
         "source": "Yahoo Finance/yfinance; unofficial adjusted daily prices",
         "name": "الكثيري",
         "sector": "المواد الأساسية",
         "price_repairs": [
           {
-            "date": "2026-11-25",
+            "date": "2026-11-26",
             "field": "Close",
             "source": "Yahoo regularMarketPrice",
-            "quote_timestamp": "2026-11-25T15:19:32+03:00",
-            "value": 9.5,
+            "quote_timestamp": "2026-11-26T15:19:59+03:00",
+            "value": 9.24,
             "reason": "daily Close was null; quote date and OHLC range validated"
           }
         ]
@@ -1549,6 +1562,6 @@
     }
   ],
   "note": "First observation is a baseline, not a newly triggered signal.",
-  "run_utc": "2026-11-25T23:15:32.118252+00:00",
-  "run_url": "https://github.com/saqerkhalel-gif/tasi-radar-3/actions/runs/45719846448"
+  "run_utc": "2026-11-26T23:14:08.893683+00:00",
+  "run_url": "https://github.com/saqerkhalel-gif/tasi-radar-3/actions/runs/45909652529"
 }
